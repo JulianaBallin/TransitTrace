@@ -1,6 +1,6 @@
 """Build the executable Google Colab notebook for the final project."""
 
-# pylint: disable=line-too-long
+# pylint: disable=line-too-long,too-many-lines
 
 from __future__ import annotations
 
@@ -67,6 +67,7 @@ def build_notebook() -> Path:
         ),
         code(
             """
+            # Importa as bibliotecas usadas na leitura, análise e visualização.
             from pathlib import Path
             import warnings
 
@@ -79,6 +80,7 @@ def build_notebook() -> Path:
 
             warnings.filterwarnings("ignore", category=FutureWarning)
 
+            # Mantém a mesma paleta visual em todos os gráficos.
             CREAM = "#FFF8E8"
             TEAL = "#005A67"
             MINT = "#65C3A5"
@@ -99,10 +101,25 @@ def build_notebook() -> Path:
                 "axes.titlesize": 14,
                 "grid.color": "#D8E0E0",
             })
+
+            def parse_dates(values):
+                '''Parse ISO and day-first dates without ambiguity.'''
+                # Separa os dois formatos encontrados antes da conversão.
+                text = values.astype("string").str.strip()
+                is_iso = text.str.fullmatch(r"\\d{4}-\\d{2}-\\d{2}").fillna(False)
+                parsed = pd.to_datetime(
+                    text.where(is_iso), format="%Y-%m-%d", errors="coerce"
+                )
+                return parsed.fillna(
+                    pd.to_datetime(
+                        text.where(~is_iso), format="%d/%m/%Y", errors="coerce"
+                    )
+                )
             """
         ),
         code(
             """
+            # Procura o CSV na estrutura do repositório e no diretório do Colab.
             candidates = [
                 Path("dataset/projeto_integrador_transporte_fretado.csv"),
                 Path("projeto_integrador_transporte_fretado.csv"),
@@ -111,6 +128,7 @@ def build_notebook() -> Path:
             data_path = next((path for path in candidates if path.exists()), None)
 
             if data_path is None:
+                # Solicita o arquivo somente quando ele não está disponível.
                 from google.colab import files
                 uploaded = files.upload()
                 csv_name = next(name for name in uploaded if name.endswith(".csv"))
@@ -147,9 +165,8 @@ def build_notebook() -> Path:
             preview = raw.head(6)
             display(preview)
 
-            parsed_dates = pd.to_datetime(
-                raw["data"], format="mixed", dayfirst=True, errors="coerce"
-            )
+            # Converte apenas uma cópia das datas para descrever o período bruto.
+            parsed_dates = parse_dates(raw["data"])
             diagnosis = pd.DataFrame({
                 "informação": ["Linhas", "Colunas", "Início", "Fim", "Dias de operação"],
                 "valor": [
@@ -177,6 +194,7 @@ def build_notebook() -> Path:
         ),
         code(
             """
+            # Calcula os indicadores iniciais sem alterar a base bruta.
             raw_analysis = raw.assign(pontual=raw["atraso_min"].le(5))
 
             overall_raw = pd.DataFrame({
@@ -190,6 +208,8 @@ def build_notebook() -> Path:
             display(overall_raw)
 
             def punctuality_table(frame, group):
+                '''Summarize trip count and punctuality for one grouping.'''
+                # Agrupa viagens e ordena do pior para o melhor resultado.
                 return (
                     frame.groupby(group, dropna=False)["pontual"]
                     .agg(viagens="size", pontualidade="mean")
@@ -231,6 +251,7 @@ def build_notebook() -> Path:
         ),
         code(
             """
+            # Resume posição, dispersão e extremos do atraso bruto.
             raw_stats = raw["atraso_min"].describe(
                 percentiles=[0.25, 0.50, 0.75, 0.95, 0.99]
             ).rename({
@@ -249,13 +270,12 @@ def build_notebook() -> Path:
         ),
         code(
             """
+            # Usa apenas rótulos canônicos para evitar grupos fragmentados nesta etapa.
             canonical_rows = raw[
                 raw["rota"].astype(str).str.fullmatch(r"R\\d{2}")
                 & raw["turno"].isin(["Manhã", "Tarde", "Noite"])
             ].copy()
-            canonical_rows["data_aux"] = pd.to_datetime(
-                canonical_rows["data"], format="mixed", dayfirst=True, errors="coerce"
-            )
+            canonical_rows["data_aux"] = parse_dates(canonical_rows["data"])
             canonical_rows["pontual"] = canonical_rows["atraso_min"].le(5)
 
             route_stats_raw = canonical_rows.groupby("rota").agg(
@@ -264,6 +284,7 @@ def build_notebook() -> Path:
                 média=("atraso_min", "mean"),
                 mediana=("atraso_min", "median"),
                 desvio=("atraso_min", "std"),
+                iqr=("atraso_min", lambda series: series.quantile(0.75) - series.quantile(0.25)),
             )
             route_stats_raw["pontualidade"] *= 100
             display(route_stats_raw.round(1))
@@ -275,6 +296,103 @@ def build_notebook() -> Path:
                 aggfunc="mean",
             ).mul(100)
             display(monthly_raw.round(1))
+            """
+        ),
+        markdown(
+            """
+            ### Comparações por zona, empresa e semana
+
+            O comando `groupby` reúne viagens da mesma zona ou empresa e calcula pontualidade, mediana e IQR. Em seguida, a tabela semanal usa `pivot_table` para colocar as rotas nas colunas e facilitar a identificação do momento em que o padrão muda.
+
+            Nesta etapa os cálculos ainda usam a base bruta. Os resultados são provisórios e serão recalculados depois da limpeza.
+            """
+        ),
+        code(
+            """
+            # Compara os grupos organizacionais disponíveis na base.
+            for group in ["zona_origem", "empresa"]:
+                group_table = canonical_rows.groupby(group).agg(
+                    viagens=("atraso_min", "size"),
+                    pontualidade=("pontual", "mean"),
+                    mediana=("atraso_min", "median"),
+                    iqr=("atraso_min", lambda series: series.quantile(0.75) - series.quantile(0.25)),
+                )
+                group_table["pontualidade"] *= 100
+                display(group_table.sort_values("pontualidade").round(1))
+
+            # Mostra qual zona e empresa representam cada rota.
+            route_context = canonical_rows.groupby("rota")[["zona_origem", "empresa"]].agg(
+                lambda series: series.mode().iloc[0]
+            )
+            display(route_context.T)
+            """
+        ),
+        markdown(
+            """
+            ### Evolução semanal e investigação de valores extremos
+
+            A tabela semanal responde quando a piora começa. O limite de outlier usa `Q3 + 1,5 × IQR`. Valores até 120 minutos são mantidos porque podem representar atrasos reais. Valores acima desse limite operacional são apenas investigados neste momento, sem correção.
+            """
+        ),
+        code(
+            """
+            # Calcula a pontualidade semanal de cada rota.
+            week_start = canonical_rows["data_aux"].dt.to_period("W-SUN").dt.start_time
+            weekly_raw = canonical_rows.pivot_table(
+                index=week_start,
+                columns="rota",
+                values="pontual",
+                aggfunc="mean",
+            ).mul(100)
+            weekly_raw.index = weekly_raw.index.strftime("%d/%m")
+            weekly_raw.index.name = "semana (início)"
+            display(
+                weekly_raw.round(0).style.format("{:.0f}").background_gradient(
+                    cmap="RdYlGn", vmin=0, vmax=100
+                )
+            )
+
+            # Separa atrasos moderados dos valores fisicamente incompatíveis.
+            raw_q1, raw_q3 = canonical_rows["atraso_min"].quantile([0.25, 0.75])
+            raw_iqr_limit = raw_q3 + 1.5 * (raw_q3 - raw_q1)
+            moderate_outliers = canonical_rows[
+                canonical_rows["atraso_min"].gt(raw_iqr_limit)
+                & canonical_rows["atraso_min"].le(120)
+            ]
+            target_outliers = (
+                moderate_outliers["rota"].isin(["R03", "R05"])
+                & moderate_outliers["data_aux"].ge("2026-04-06")
+            )
+            target_share = (
+                canonical_rows["rota"].isin(["R03", "R05"])
+                & canonical_rows["data_aux"].ge("2026-04-06")
+            ).mean()
+
+            print(f"Extremos acima de 120 min: {canonical_rows['atraso_min'].gt(120).sum()}")
+            print(f"Outliers moderados pelo IQR: {len(moderate_outliers)}")
+            print(
+                f"Em R03/R05 desde 06/04: {target_outliers.sum()} "
+                f"({target_outliers.mean() * 100:.0f}%), embora o recorte represente "
+                f"{target_share * 100:.0f}% das viagens"
+            )
+            display(
+                canonical_rows[canonical_rows["atraso_min"].gt(120)][
+                    ["data", "rota", "turno", "horario_previsto", "horario_chegada", "atraso_min"]
+                ]
+            )
+            """
+        ),
+        markdown(
+            """
+            ### Respostas às perguntas investigativas
+
+            **Duas rotas com atraso médio semelhante apresentam a mesma variabilidade?** Não. R02 tem média de 2,5 minutos e R03 tem média de 3,8 minutos, mas o IQR de R03 é 12 minutos contra 6 minutos em R02. O desvio padrão bruto de R02 é inflado por um valor de 717 minutos. Por isso, o IQR é a medida mais segura nesta comparação inicial.
+
+            **O aumento acontece durante todo o período ou começa em determinado momento?** Em março todas as rotas pioram, com pontualidade entre 74% e 82%, padrão compatível com o pico de chuva. Em abril, as demais rotas se recuperam, enquanto R03 e R05 caem para aproximadamente 53% e 54%. A tabela semanal localiza a ruptura na semana iniciada em 6 de abril.
+
+            **Existe um grupo com comportamento mais instável?** A zona Leste e a Viação Beta têm as menores pontualidades agregadas. Contudo, a empresa também opera R07 e R08, que permanecem estáveis. O grupo instável é formado por R03 e R05.
+
+            **Um valor extremo representa um caso isolado ou faz parte de um padrão?** Os seis valores acima de 700 minutos são casos isolados e incompatíveis com os horários registrados. Os outliers moderados formam um padrão: R03 e R05 após 6 de abril concentram uma parcela desproporcional desses casos.
             """
         ),
         markdown(
@@ -305,17 +423,61 @@ def build_notebook() -> Path:
             - atrasos fora de -60 a 120 minutos e passageiros fora de 0 a 44 viram ausentes, sem apagar a viagem;
             - chuva ausente permanece ausente e não entra no gráfico chuva × atraso;
             - duplicatas são removidas apenas quando todos os campos são iguais.
+
+            Antes da limpeza, investigamos as decisões que removem linhas ou anulam valores. Isso evita descartar evidências legítimas.
+            """
+        ),
+        code(
+            """
+            # Confere se as duplicatas são cópias exatas e consecutivas.
+            raw_as_text = raw.astype("string").fillna("")
+            duplicate_copy = raw.duplicated(keep="first")
+            follows_original = raw_as_text.eq(raw_as_text.shift(1)).all(axis=1)
+            print(f"Cópias exatas: {duplicate_copy.sum()}")
+            print(
+                "Cópias logo após o registro original: "
+                f"{follows_original[duplicate_copy].sum()}"
+            )
+            display(raw[duplicate_copy].head(5))
+
+            # Testa a hipótese de erro de 12 horas nos atrasos extremos.
+            extreme_delay = raw[raw["atraso_min"].gt(120)].copy()
+            scheduled_raw = pd.to_datetime(
+                extreme_delay["horario_previsto"], format="%H:%M"
+            )
+            arrived_raw = pd.to_datetime(
+                extreme_delay["horario_chegada"], format="%H:%M"
+            )
+            extreme_delay["atraso_se_menos_12h"] = (
+                (arrived_raw - scheduled_raw).dt.total_seconds() / 60 - 720
+            )
+            display(
+                extreme_delay[
+                    [
+                        "data", "turno", "rota", "horario_previsto",
+                        "horario_chegada", "atraso_min", "atraso_se_menos_12h",
+                    ]
+                ]
+            )
+            """
+        ),
+        markdown(
+            """
+            **Duplicatas:** as 15 cópias aparecem imediatamente depois do registro original. Como cada rota realiza uma viagem por turno e por dia, uma segunda linha idêntica representa repetição de registro. A remoção é justificável.
+
+            **Atrasos acima de 120 minutos:** os seis casos são do turno da manhã, previstos para 05:45, mas registram chegada entre 17:39 e 18:04. A diferença de aproximadamente 12 horas sugere erro de AM e PM. Como essa explicação não pode ser comprovada, o atraso é marcado como ausente, sem excluir a viagem.
             """
         ),
         code(
             """
             def clean_transport_data(raw_frame):
+                '''Clean the transport data and return an audit log.'''
+                # Preserva o objeto original e identifica cópias exatas.
                 data = raw_frame.copy()
                 duplicate_mask = raw_frame.duplicated(keep="first")
 
-                data["data"] = pd.to_datetime(
-                    data["data"], format="mixed", dayfirst=True, errors="coerce"
-                )
+                # Padroniza datas, turnos, rotas e campos de texto.
+                data["data"] = parse_dates(data["data"])
                 data["turno"] = (
                     data["turno"].astype("string").str.strip().str.casefold()
                     .replace({"manha": "manhã", "noturno": "noite"}).str.title()
@@ -333,7 +495,10 @@ def build_notebook() -> Path:
                         .str.replace("h", ":", regex=False).str.slice(0, 5)
                     )
 
+                # Remove apenas as duplicatas comprovadamente idênticas.
                 data = data.loc[~duplicate_mask].copy()
+
+                # Recalcula o atraso com os horários padronizados.
                 scheduled = pd.to_datetime(
                     data["data"].dt.strftime("%Y-%m-%d") + " " + data["horario_previsto"],
                     errors="coerce",
@@ -351,12 +516,14 @@ def build_notebook() -> Path:
                 invalid_delay = ~data["atraso_calculado"].between(-60, 120)
                 invalid_capacity = ~data["passageiros"].between(0, 44)
 
+                # Mantém a viagem e anula somente o campo inválido.
                 data["atraso_min"] = data["atraso_calculado"].mask(invalid_delay)
                 data["passageiros"] = data["passageiros"].mask(invalid_capacity)
                 data["pontual"] = data["atraso_min"].le(5).where(data["atraso_min"].notna())
                 data["apos_inicio_turno"] = (
                     data["atraso_min"].gt(15).where(data["atraso_min"].notna())
                 )
+                # Cria variáveis auxiliares usadas nas comparações finais.
                 data["mes"] = data["data"].dt.to_period("M").astype("string")
                 data["semana"] = data["data"].dt.to_period("W-SUN").apply(
                     lambda period: period.start_time
@@ -374,7 +541,7 @@ def build_notebook() -> Path:
                     ["Valores ausentes", f"{raw_frame['chuva_mm'].isna().sum()} chuvas ausentes", "Manter NA", "Sem imputação"],
                     ["Duplicados", f"{duplicate_mask.sum()} linhas idênticas", "Remover cópias", f"{len(raw_frame)} → {len(data)}"],
                     ["Atraso divergente", f"{divergent.sum()} linhas", "Recalcular horários", "Indicador coerente"],
-                    ["Valores inválidos", f"{invalid_delay.sum()} atrasos; {invalid_capacity.sum()} lotações", "Marcar NA", "Viagens preservadas"],
+                    ["Valores inválidos", f"{invalid_delay.sum()} atrasos; {invalid_capacity.sum()} lotações", "Marcar NA após investigar", "Viagens preservadas"],
                 ], columns=["Problema", "Evidência", "Tratamento", "Impacto"])
                 return data, log
 
@@ -382,19 +549,34 @@ def build_notebook() -> Path:
             display(cleaning_log)
             """
         ),
+        markdown(
+            """
+            ### Comparação dos indicadores antes e depois da limpeza
+
+            Os indicadores abaixo usam exatamente as mesmas fórmulas nos dois momentos. Assim, a diferença observada vem das correções declaradas no pipeline, e não de uma mudança na definição dos cálculos.
+            """
+        ),
         code(
             """
-            comparison = pd.DataFrame({
-                "indicador": ["Registros", "Rotas distintas", "Turnos distintos", "Atraso médio", "Pontualidade"],
-                "antes": [
-                    len(raw), raw["rota"].nunique(), raw["turno"].nunique(),
-                    f"{raw['atraso_min'].mean():.2f} min", f"{raw['atraso_min'].le(5).mean() * 100:.1f}%"
-                ],
-                "depois": [
-                    len(data), data["rota"].nunique(), data["turno"].nunique(),
-                    f"{data['atraso_min'].mean():.2f} min", f"{data['pontual'].mean() * 100:.1f}%"
-                ],
-            })
+            def calculate_indicators(frame):
+                '''Calculate comparable indicators for one dataset state.'''
+                # Remove ausências somente da métrica de atraso.
+                valid_delay = frame["atraso_min"].dropna()
+                return pd.Series({
+                    "Viagens na base": len(frame),
+                    "Atrasos válidos": len(valid_delay),
+                    "Atraso médio (min)": valid_delay.mean(),
+                    "Mediana do atraso (min)": valid_delay.median(),
+                    "Pontualidade (%)": valid_delay.le(5).mean() * 100,
+                    "Chegadas após o início do turno": valid_delay.gt(15).sum(),
+                    "Chegadas após o início do turno (%)": valid_delay.gt(15).mean() * 100,
+                })
+
+            comparison = pd.concat(
+                [calculate_indicators(raw), calculate_indicators(data)],
+                axis=1,
+                keys=["Antes da limpeza", "Depois da limpeza"],
+            ).round(2)
             display(comparison)
 
             checks = pd.Series({
@@ -409,9 +591,58 @@ def build_notebook() -> Path:
         ),
         markdown(
             """
+            ### Análises estatísticas recalculadas
+
+            O roteiro pede que as análises da Etapa 2 sejam refeitas depois da limpeza. As tabelas seguintes repetem os cálculos de rota, mês, zona e empresa com categorias padronizadas e valores inválidos anulados.
+
+            O objetivo é verificar se a conclusão depende dos problemas de qualidade. Uma hipótese robusta deve continuar visível depois do tratamento.
+            """
+        ),
+        code(
+            """
+            # Recalcula posição e dispersão para cada rota.
+            route_stats = data.groupby("rota").agg(
+                viagens=("atraso_min", "size"),
+                pontualidade=("pontual", "mean"),
+                média=("atraso_min", "mean"),
+                mediana=("atraso_min", "median"),
+                desvio=("atraso_min", "std"),
+                iqr=("atraso_min", lambda series: series.quantile(0.75) - series.quantile(0.25)),
+                após_turno=("apos_inicio_turno", "sum"),
+            )
+            route_stats["pontualidade"] *= 100
+            display(route_stats.round(1))
+
+            # Repete a comparação mensal com as rotas já padronizadas.
+            monthly_clean = data.pivot_table(
+                index="rota", columns="mes", values="pontual", aggfunc="mean"
+            ).mul(100)
+            display(monthly_clean.round(1))
+
+            # Confere se zona e empresa alteram a interpretação final.
+            for group in ["zona_origem", "empresa"]:
+                group_table = data.groupby(group).agg(
+                    viagens=("atraso_min", "size"),
+                    pontualidade=("pontual", "mean"),
+                    mediana=("atraso_min", "median"),
+                    iqr=("atraso_min", lambda series: series.quantile(0.75) - series.quantile(0.25)),
+                )
+                group_table["pontualidade"] *= 100
+                display(group_table.sort_values("pontualidade").round(1))
+
+            clean_stats = data["atraso_min"].describe(
+                percentiles=[0.25, 0.50, 0.75, 0.95, 0.99]
+            )
+            display(clean_stats.round(2).to_frame("atraso_min após a limpeza"))
+            """
+        ),
+        markdown(
+            """
             ### O que mudou após a limpeza
 
-            A média cai porque seis valores fisicamente implausíveis deixam de distorcê-la. A mediana, a queda temporal e a concentração em R03/R05 permanecem. Portanto, a hipótese principal **sobrevive à limpeza**.
+            Todos os indicadores gerais selecionados puderam ser calculados antes da limpeza porque `atraso_min` já era numérico e estava preenchido. A comparação detalhada por rota e turno, porém, não era confiável antes da padronização: grafias diferentes dividiam a mesma rota ou turno em grupos separados. Por isso, os recortes por grupo são apresentados somente depois da limpeza.
+
+            O atraso médio cai de 2,51 para 0,70 minuto e o desvio padrão cai de 36,4 para 7,8 minutos porque seis valores acima de 700 minutos deixam de distorcer os cálculos. A mediana permanece em -1 minuto, a pontualidade varia pouco e as chegadas após o início do turno diminuem de 125 para 116. As comparações por rota e por mês preservam a concentração em R03 e R05. Portanto, a hipótese principal **sobrevive à limpeza**.
 
             | Hipótese | Antes | Depois | Situação |
             |---|---|---|---|
@@ -425,14 +656,25 @@ def build_notebook() -> Path:
             # Etapa 4 · EDA e visualização
 
             Cada gráfico responde uma pergunta. Depois de cada figura registramos evidência, interpretação, hipótese e limitação.
+
+            ### Média móvel
+
+            O cálculo é possível porque a base possui datas ordenadas e observações diárias para todas as rotas. Primeiro calculamos o atraso médio de cada rota em cada dia de operação. Depois aplicamos uma janela de sete dias de operação:
+
+            **Média móvel de 7 dias = média das sete médias diárias mais recentes.**
+
+            A janela exige sete dias completos. Por isso, os seis primeiros dias de cada rota ficam sem valor móvel. O indicador é usado apenas para suavizar oscilações diárias e facilitar a leitura da tendência.
             """
         ),
         code(
             """
-            daily = (
-                data.groupby(["data", "rota"])["atraso_min"].median().unstack()
-                .rolling(7, min_periods=4).median()
-            )
+            # Calcula primeiro uma média por dia e rota.
+            daily_average = data.groupby(
+                ["data", "rota"]
+            )["atraso_min"].mean().unstack()
+
+            # A janela usa sete dias de operação completos.
+            daily = daily_average.rolling(window=7, min_periods=7).mean()
             fig, ax = plt.subplots(figsize=(12, 5.5))
             for route in daily.columns:
                 color, width, alpha = GRAY, 1.2, 0.55
@@ -444,7 +686,7 @@ def build_notebook() -> Path:
                         xytext=(pd.Timestamp("2026-03-10"), 8),
                         arrowprops={"arrowstyle": "->", "color": INK})
             ax.set(title="R03 e R05 mudam de patamar a partir de 6 de abril",
-                   xlabel="Data da viagem", ylabel="Mediana móvel de 7 dias do atraso (min)")
+                   xlabel="Data da viagem", ylabel="Média móvel de 7 dias de operação (min)")
             ax.xaxis.set_major_locator(mdates.MonthLocator())
             ax.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
             ax.grid(axis="x", visible=False)
@@ -462,6 +704,7 @@ def build_notebook() -> Path:
         ),
         code(
             """
+            # Recorta o período posterior para localizar rota e turno.
             after_change = data[data["data"] >= "2026-04-06"]
             heatmap = (
                 after_change.pivot_table(index="rota", columns="turno", values="pontual", aggfunc="mean")
@@ -486,6 +729,7 @@ def build_notebook() -> Path:
         ),
         code(
             """
+            # Conta as ocorrências somente entre viagens não pontuais.
             late = data[data["pontual"].eq(False)]
             occurrences = late["ocorrencia"].value_counts().sort_values()
             bar_colors = [GRAY if label == "Nenhuma" else CORAL for label in occurrences.index]
@@ -498,18 +742,24 @@ def build_notebook() -> Path:
             ax.grid(axis="y", visible=False)
             sns.despine()
             plt.show()
+
+            print("Viagens atrasadas por ocorrência e mês:")
+            display(pd.crosstab(late["ocorrencia"], late["mes"]))
             """
         ),
         markdown(
             """
-            **Evidência:** chuva forte aparece em 180 viagens atrasadas; 147 atrasos não têm ocorrência registrada. Pane mecânica tem mediana mais alta, mas apenas 30 registros.  
-            **Interpretação:** chuva é frequente e pane é severa; nenhum dos dois, isoladamente, explica a concentração temporal e geográfica.  
+            **Evidência:** chuva forte aparece em 180 viagens atrasadas; 147 atrasos não têm ocorrência registrada. Pane mecânica tem mediana mais alta, mas apenas 30 registros. Chuva forte domina em março e diminui até maio, enquanto “Obra na via” surge em abril e continua em maio.
+
+            **Interpretação:** chuva é frequente e pane é severa; nenhum dos dois, isoladamente, explica a concentração temporal e geográfica. A ocorrência que cresce junto com a ruptura é obra.
+
             **Hipótese:** ocorrências pontuais agravam o resultado, enquanto a ruptura tem componente estrutural.  
             **Limitação:** o campo depende do registro do motorista e pode sofrer subnotificação.
             """
         ),
         code(
             """
+            # Compara a distribuição antes e depois da ruptura.
             box_data = data[data["rota"].isin(["R03", "R05"])]
             fig, ax = plt.subplots(figsize=(9, 5.5))
             sns.boxplot(data=box_data, x="rota", y="atraso_min", hue="periodo_ruptura",
@@ -522,6 +772,12 @@ def build_notebook() -> Path:
             ax.legend(handles, labels, title="Período", frameon=False, ncol=3, loc="upper left")
             sns.despine()
             plt.show()
+
+            display(
+                box_data.groupby(["rota", "periodo_ruptura"])["atraso_min"]
+                .agg(média="mean", mediana="median", desvio="std")
+                .round(1)
+            )
             """
         ),
         markdown(
@@ -529,11 +785,14 @@ def build_notebook() -> Path:
             **Evidência:** a mediana das duas rotas passa de valores próximos de zero para patamares acima do limite de pontualidade.  
             **Interpretação:** não é apenas um pequeno conjunto de extremos; a distribuição inteira se desloca.  
             **Hipótese:** a operação cotidiana das duas rotas mudou após 06/04.  
+            **Média ou mediana?** Na base tratada as duas medidas apresentam a mesma mudança. A mediana continua sendo mais segura para o indicador complementar porque sofre menos influência de extremos. A média é usada na janela móvel por ser o cálculo solicitado para suavizar a tendência diária.
+
             **Limitação:** o boxplot agrega manhã, tarde e noite; o heatmap anterior é necessário para localizar o turno.
             """
         ),
         code(
             """
+            # Mantém somente pares observados de chuva e atraso.
             rain = data.dropna(subset=["chuva_mm", "atraso_min"])
             fig, ax = plt.subplots(figsize=(9.5, 5.5))
             for group, color, alpha in [("Demais rotas", GRAY, 0.32), ("R03 e R05", CORAL, 0.62)]:
@@ -549,12 +808,32 @@ def build_notebook() -> Path:
 
             correlation = rain[["chuva_mm", "atraso_min"]].corr(method="spearman").iloc[0, 1]
             print(f"Correlação de Spearman entre chuva e atraso: {correlation:.2f}")
+
+            # Controla período e turno para comparar grupos sob a mesma chuva.
+            rain_band = pd.cut(
+                rain["chuva_mm"],
+                [-np.inf, 0, 10, 25, np.inf],
+                labels=["Sem chuva", "Leve (0-10]", "Moderada (10-25]", "Forte (>25)"],
+            )
+            controlled_rain = rain[
+                rain["data"].ge("2026-04-06")
+                & rain["turno"].isin(["Manhã", "Tarde"])
+            ]
+            punctuality_by_rain = controlled_rain.groupby(
+                [rain_band[controlled_rain.index], controlled_rain["grupo_rotas"]],
+                observed=True,
+            )["pontual"].agg(viagens="size", pontualidade="mean")
+            punctuality_by_rain["pontualidade"] *= 100
+            print("Desde 06/04, turnos diurnos, por faixa de chuva:")
+            display(punctuality_by_rain.round(1).unstack("grupo_rotas"))
             """
         ),
         markdown(
             """
-            **Evidência:** há associação moderada entre chuva e atraso (Spearman ≈ 0,46), principalmente acima de 25 mm. Mesmo com pouca chuva, R03/R05 mantêm atrasos após 06/04.  
-            **Interpretação:** chuva funciona como fator agravante geral, não como explicação suficiente da ruptura.  
+            **Evidência:** há associação moderada entre chuva e atraso (Spearman ≈ 0,46), principalmente acima de 25 mm. Desde 06/04, nos turnos diurnos e sem chuva, R03/R05 têm 26% de pontualidade contra 95% nas demais rotas. Com chuva forte os dois grupos pioram.
+
+            **Interpretação:** chuva funciona como fator agravante geral, não como explicação suficiente da ruptura. Mesmo sem chuva, a diferença entre os grupos permanece próxima de 70 pontos percentuais.
+
             **Hipótese:** a restrição do corredor e a chuva podem se somar.  
             **Limitação:** correlação não mede causalidade e chuva é medida no período, não ao longo de cada trajeto.
             """
@@ -568,6 +847,7 @@ def build_notebook() -> Path:
         ),
         code(
             """
+            # Compara o grupo crítico com as demais rotas no mesmo recorte.
             daytime_after = data[
                 (data["data"] >= "2026-04-06")
                 & data["turno"].isin(["Manhã", "Tarde"])
@@ -620,27 +900,47 @@ def build_notebook() -> Path:
         ),
         code(
             """
+            # Mantém manhã e tarde, onde a ruptura foi observada.
             daytime = data[data["turno"].isin(["Manhã", "Tarde"])]
-            grouped = (
-                daytime.groupby(["data", "grupo_rotas"])["atraso_min"].median().unstack()
-                .rolling(7, min_periods=4).median()
+            grouped_daily = daytime.groupby(
+                ["data", "grupo_rotas"]
+            )["atraso_min"].mean().unstack()
+            grouped = grouped_daily.rolling(window=7, min_periods=7).mean()
+
+            after_group_mean = (
+                daytime[daytime["data"].ge("2026-04-06")]
+                .groupby("grupo_rotas")["atraso_min"]
+                .mean()
             )
 
             fig, (left, right) = plt.subplots(1, 2, figsize=(14, 5.2), sharey=True)
             for route in daily.columns:
                 left.plot(daily.index, daily[route], lw=1.2, alpha=0.75, label=route)
-            left.set(title="Antes · gráfico exploratório", xlabel="Data",
-                     ylabel="Mediana móvel do atraso (min)")
+            left.set(title="Antes · 8 rotas em comparação", xlabel="Data",
+                     ylabel="Média móvel de 7 dias de operação (min)")
             left.legend(ncol=2, frameon=False, fontsize=8)
 
-            right.plot(grouped.index, grouped["Demais rotas"], color=GRAY, lw=2.2, label="Demais rotas")
-            right.plot(grouped.index, grouped["R03 e R05"], color=CORAL, lw=3.4, label="R03 e R05")
+            right.plot(grouped.index, grouped["Demais rotas"], color=GRAY, lw=2.2)
+            right.plot(grouped.index, grouped["R03 e R05"], color=CORAL, lw=3.4)
             right.axvline(pd.Timestamp("2026-04-06"), color=YELLOW, lw=2.2, ls="--")
-            right.annotate("Ruptura em 06/04", xy=(pd.Timestamp("2026-04-06"), 4),
+            right.axhline(5, color=TEAL, lw=1.2, ls=":")
+            right.annotate("06/04: início da ruptura", xy=(pd.Timestamp("2026-04-06"), 4),
                            xytext=(pd.Timestamp("2026-02-22"), 13),
                            arrowprops={"arrowstyle": "->", "color": INK})
-            right.set(title="Depois · mensagem em primeiro plano", xlabel="Data")
-            right.legend(frameon=False)
+            right.text(
+                grouped.index[-1], grouped["R03 e R05"].iloc[-1] + 0.8,
+                f"R03 e R05: {after_group_mean['R03 e R05']:.1f} min",
+                color=CORAL, fontweight="bold", ha="right",
+            )
+            right.text(
+                grouped.index[-1], grouped["Demais rotas"].iloc[-1] - 0.8,
+                f"Demais: {after_group_mean['Demais rotas']:.1f} min",
+                color="#6F7B7F", fontweight="bold", ha="right",
+            )
+            right.set(
+                title="Depois · R03 e R05 chegam 13 min atrasadas em média",
+                xlabel="Data",
+            )
 
             for axis in (left, right):
                 axis.xaxis.set_major_locator(mdates.MonthLocator())
@@ -680,6 +980,7 @@ def build_notebook() -> Path:
         ),
         code(
             """
+            # Exporta somente as colunas necessárias para reproduzir a análise.
             output_columns = [
                 "data", "turno", "rota", "zona_origem", "empresa",
                 "horario_previsto", "horario_chegada", "atraso_min",

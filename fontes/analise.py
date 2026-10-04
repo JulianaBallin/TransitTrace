@@ -34,14 +34,22 @@ def read_raw_data(path: Path = DATA_PATH) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
+def parse_dates(values: pd.Series) -> pd.Series:
+    """Parse the ISO and day-first date layouts without ambiguity."""
+    text = values.astype("string").str.strip()
+    is_iso = text.str.fullmatch(r"\d{4}-\d{2}-\d{2}").fillna(False)
+    parsed = pd.to_datetime(text.where(is_iso), format="%Y-%m-%d", errors="coerce")
+    return parsed.fillna(
+        pd.to_datetime(text.where(~is_iso), format="%d/%m/%Y", errors="coerce")
+    )
+
+
 def clean_data(raw: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Apply the declared cleaning rules and return data plus an audit log."""
     data = raw.copy()
     duplicate_mask = raw.duplicated(keep="first")
 
-    data["data"] = pd.to_datetime(
-        data["data"], format="mixed", dayfirst=True, errors="coerce"
-    )
+    data["data"] = parse_dates(data["data"])
     data["turno"] = (
         data["turno"]
         .astype("string")
@@ -136,7 +144,10 @@ def clean_data(raw: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
                     f"{int(impossible_delay.sum())} atrasos > 120 min e "
                     f"{int(impossible_capacity.sum())} lotações > 44"
                 ),
-                "tratamento": "Marcar como ausente, preservando a viagem",
+                "tratamento": (
+                    "Marcar como ausente, preservando a viagem; "
+                    "os atrasos sugerem erro de 12 h"
+                ),
                 "impacto": "Extremos impossíveis não distorcem médias",
             },
         ]
@@ -160,8 +171,32 @@ def summary_metrics(data: pd.DataFrame) -> dict[str, float | int | str]:
         & data["rota"].isin(["R03", "R05"])
         & data["turno"].isin(["Manhã", "Tarde"])
     ]
+    dry_day = after_change[
+        after_change["turno"].isin(["Manhã", "Tarde"])
+        & after_change["chuva_mm"].eq(0)
+    ]
+    late = data[data["pontual"].eq(False)]
 
     return {
+        "target_trips": int(target_day["atraso_min"].notna().sum()),
+        "target_after_shift": int(target_day["apos_inicio_turno"].sum()),
+        "other_after_shift": int(other_day["apos_inicio_turno"].sum()),
+        "dry_target_punctuality": float(
+            dry_day.loc[
+                dry_day["rota"].isin(["R03", "R05"]), "pontual"
+            ].mean()
+            * 100
+        ),
+        "dry_other_punctuality": float(
+            dry_day.loc[
+                ~dry_day["rota"].isin(["R03", "R05"]), "pontual"
+            ].mean()
+            * 100
+        ),
+        "mechanical_late": int(
+            late["ocorrencia"].isin(["Pane mecânica", "Pneu furado"]).sum()
+        ),
+        "mean_delay": float(data["atraso_min"].mean()),
         "rows_raw": 2463,
         "rows_clean": int(len(data)),
         "valid_delays": int(data["atraso_min"].notna().sum()),
@@ -214,13 +249,12 @@ def create_charts(data: pd.DataFrame) -> list[Path]:
     _set_chart_style()
     paths: list[Path] = []
 
-    daily = (
+    daily_average = (
         data.groupby(["data", "rota"], observed=True)["atraso_min"]
-        .median()
+        .mean()
         .unstack()
-        .rolling(7, min_periods=4)
-        .median()
     )
+    daily = daily_average.rolling(window=7, min_periods=7).mean()
     fig, ax = plt.subplots(figsize=(12, 5.8))
     for route in daily.columns:
         color = GRAY
@@ -244,7 +278,7 @@ def create_charts(data: pd.DataFrame) -> list[Path]:
     ax.text(daily.index[-1], daily["R03"].iloc[-1] - 1.0, "R03", color=CORAL, weight="bold")
     ax.set_title("R03 e R05 mudam de patamar a partir de 6 de abril")
     ax.set_xlabel("Data da viagem")
-    ax.set_ylabel("Mediana móvel de 7 dias do atraso (min)")
+    ax.set_ylabel("Média móvel de 7 dias de operação (min)")
     ax.xaxis.set_major_locator(mdates.MonthLocator())
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
     ax.grid(axis="x", visible=False)
@@ -337,47 +371,61 @@ def create_charts(data: pd.DataFrame) -> list[Path]:
     paths.append(_save(fig, "05_chuva_atraso.png"))
 
     daytime = data[data["turno"].isin(["Manhã", "Tarde"])].copy()
-    grouped = (
+    grouped_daily = (
         daytime.groupby(["data", "grupo_rotas"], observed=True)["atraso_min"]
-        .median()
+        .mean()
         .unstack()
-        .rolling(7, min_periods=4)
-        .median()
     )
-    fig, (left, right) = plt.subplots(1, 2, figsize=(13.2, 5.2), sharey=True)
+    grouped = grouped_daily.rolling(window=7, min_periods=7).mean()
+    after_means = (
+        daytime[daytime["data"] >= "2026-04-06"]
+        .groupby("grupo_rotas", observed=True)["atraso_min"]
+        .mean()
+    )
+    fig, (left, right) = plt.subplots(1, 2, figsize=(13.2, 5.4), sharey=True)
     for route in daily.columns:
         left.plot(daily.index, daily[route], lw=1.25, alpha=0.75, label=route)
-    left.set_title("Versão exploratória")
-    left.set_xlabel("Data")
-    left.set_ylabel("Mediana móvel do atraso (min)")
+    left.set_title("Antes · 8 rotas em comparação")
+    left.set_xlabel("Data da viagem")
+    left.set_ylabel("Média móvel de 7 dias de operação (min)")
     left.legend(ncol=2, frameon=False, fontsize=8)
-    for group, color, width in [
-        ("Demais rotas", GRAY, 2.2),
-        ("R03 e R05", CORAL, 3.4),
-    ]:
-        right.plot(grouped.index, grouped[group], color=color, lw=width, label=group)
+    right.plot(grouped.index, grouped["Demais rotas"], color=GRAY, lw=2.2)
+    right.plot(grouped.index, grouped["R03 e R05"], color=CORAL, lw=3.4)
     right.axvline(pd.Timestamp("2026-04-06"), color=YELLOW, lw=2.1, ls="--")
+    right.axhline(5, color=TEAL, lw=1.2, ls=":")
     right.annotate(
-        "Ruptura em 06/04",
+        "06/04: início da ruptura",
         xy=(pd.Timestamp("2026-04-06"), 4),
         xytext=(pd.Timestamp("2026-02-23"), 13),
         arrowprops={"arrowstyle": "->", "color": INK},
         fontsize=9,
     )
-    right.set_title("Versão explicativa: rotas diurnas")
-    right.set_xlabel("Data")
-    right.legend(frameon=False)
+    right.text(
+        grouped.index[-1],
+        grouped["R03 e R05"].iloc[-1] + 0.8,
+        f"R03 e R05: {after_means['R03 e R05']:.1f} min",
+        color=CORAL,
+        fontweight="bold",
+        ha="right",
+    )
+    right.text(
+        grouped.index[-1],
+        grouped["Demais rotas"].iloc[-1] - 0.8,
+        f"Demais: {after_means['Demais rotas']:.1f} min",
+        color="#6F7B7F",
+        fontweight="bold",
+        ha="right",
+    )
+    right.set_title("Depois · R03 e R05 chegam 13 min atrasadas em média")
+    right.set_xlabel("Data da viagem")
+    right.set_ylabel("Média móvel de 7 dias de operação (min)")
+    right.tick_params(labelleft=True)
     for axis in (left, right):
         axis.xaxis.set_major_locator(mdates.MonthLocator())
         axis.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
         axis.grid(axis="x", visible=False)
         sns.despine(ax=axis)
-    fig.suptitle(
-        "Do gráfico que explora ao gráfico que comunica",
-        fontsize=17,
-        fontweight="bold",
-        y=1.02,
-    )
+    fig.tight_layout()
     paths.append(_save(fig, "06_exploratorio_explicativo.png"))
     return paths
 

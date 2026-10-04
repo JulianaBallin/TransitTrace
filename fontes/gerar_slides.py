@@ -5,6 +5,7 @@
 
 from __future__ import annotations
 
+from io import BytesIO
 from pathlib import Path
 
 from PIL import Image
@@ -12,7 +13,6 @@ from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_CONNECTOR, MSO_SHAPE
 from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
-from pptx.oxml.xmlchemy import OxmlElement
 from pptx.util import Inches, Pt
 
 from analise import (
@@ -34,6 +34,10 @@ ASSET_DIR = PROJECT_DIR / "assets"
 CHART_DIR = PROJECT_DIR / "graficos"
 OUTPUT = PROJECT_DIR / "docs" / "apresentacao" / "apresentacao_rota_em_dia.pptx"
 FONT = "Noto Sans"
+PASTEL_BLUE = "#C7E9F8"
+PASTEL_CORAL = "#F8D2C8"
+PASTEL_MINT = "#CDEDE3"
+PASTEL_YELLOW = "#FBE8AD"
 
 
 def rgb(hex_color: str) -> RGBColor:
@@ -121,11 +125,13 @@ def add_card(
     h: float,
     *,
     color: str = CREAM,
-    radius=True,
+    radius: float | bool = 0.05,
     line: str | None = None,
 ):
     shape_type = MSO_SHAPE.ROUNDED_RECTANGLE if radius else MSO_SHAPE.RECTANGLE
     shape = slide.shapes.add_shape(shape_type, Inches(x), Inches(y), Inches(w), Inches(h))
+    if radius:
+        shape.adjustments[0] = 0.05 if radius is True else float(radius)
     shape.fill.solid()
     shape.fill.fore_color.rgb = rgb(color)
     if line:
@@ -155,51 +161,69 @@ def add_picture_contain(slide, path: Path, x: float, y: float, w: float, h: floa
     )
 
 
-def set_transparency(shape, percent: int = 80) -> None:
-    """Set shape fill transparency through the DrawingML alpha channel."""
-    solid_fill = shape.fill._xPr.solidFill  # pylint: disable=protected-access
-    color_node = solid_fill.getchildren()[0]
-    for alpha in color_node.findall("{http://schemas.openxmlformats.org/drawingml/2006/main}alpha"):
-        color_node.remove(alpha)
-    alpha = OxmlElement("a:alpha")
-    alpha.set("val", str((100 - percent) * 1000))
-    color_node.append(alpha)
+def add_picture_with_opacity(
+    slide,
+    path: Path,
+    x: float,
+    y: float,
+    w: float,
+    h: float,
+    *,
+    opacity: float = 0.20,
+):
+    """Add a transparent PNG while preserving its proportions."""
+    with Image.open(path).convert("RGBA") as image:
+        source_ratio = image.width / image.height
+        alpha = image.getchannel("A").point(lambda value: int(value * opacity))
+        image.putalpha(alpha)
+        buffer = BytesIO()
+        image.save(buffer, format="PNG")
+        buffer.seek(0)
+
+    box_ratio = w / h
+    if source_ratio >= box_ratio:
+        width = w
+        height = w / source_ratio
+        left = x
+        top = y + (h - height) / 2
+    else:
+        height = h
+        width = h * source_ratio
+        left = x + (w - width) / 2
+        top = y
+    return slide.shapes.add_picture(
+        buffer, Inches(left), Inches(top), width=Inches(width), height=Inches(height)
+    )
 
 
-def add_transparent_shape(slide, shape_type, x, y, w, h, color, *, rotation=0):
-    """Add a decorative shape with 80 percent transparency."""
+def add_flat_shape(slide, shape_type, x, y, w, h, color, *, rotation=0):
+    """Add a simple flat decorative shape inspired by the reference deck."""
     shape = slide.shapes.add_shape(
         shape_type, Inches(x), Inches(y), Inches(w), Inches(h)
     )
     shape.fill.solid()
     shape.fill.fore_color.rgb = rgb(color)
-    set_transparency(shape)
     shape.line.fill.background()
     shape.rotation = rotation
     return shape
 
 
-def add_doodles(slide, *, light: bool = True) -> None:
-    pale = CREAM if light else TEAL
-    colors = [YELLOW, CORAL, BLUE, pale]
-    doodles = [
-        (MSO_SHAPE.OVAL, -0.22, -0.20, 0.74, 0.74, colors[0]),
-        (MSO_SHAPE.ARC, 12.40, -0.18, 0.95, 0.95, colors[2]),
-        (MSO_SHAPE.STAR_8_POINT, 12.48, 6.62, 0.70, 0.70, colors[1]),
-        (MSO_SHAPE.MOON, -0.24, 6.55, 0.72, 0.72, colors[3]),
-    ]
-    for shape_type, x, y, w, h, color in doodles:
-        add_transparent_shape(slide, shape_type, x, y, w, h, color)
-
-    add_transparent_shape(slide, MSO_SHAPE.OVAL, 10.85, 0.92, 1.25, 1.25, YELLOW)
-    add_transparent_shape(slide, MSO_SHAPE.RECTANGLE, 11.43, 1.13, 0.09, 0.48, INK)
-    add_transparent_shape(slide, MSO_SHAPE.RECTANGLE, 11.45, 1.50, 0.36, 0.09, INK, rotation=20)
-    add_transparent_shape(slide, MSO_SHAPE.TEAR, 2.05, 5.85, 0.42, 0.58, BLUE, rotation=20)
-    add_transparent_shape(slide, MSO_SHAPE.TEAR, 2.55, 6.23, 0.33, 0.46, BLUE, rotation=20)
-    add_transparent_shape(slide, MSO_SHAPE.ROUNDED_RECTANGLE, 10.55, 5.72, 1.82, 0.94, TEAL)
-    add_transparent_shape(slide, MSO_SHAPE.RECTANGLE, 10.84, 5.90, 1.22, 0.33, BLUE)
-    add_transparent_shape(slide, MSO_SHAPE.OVAL, 10.83, 6.47, 0.31, 0.31, INK)
-    add_transparent_shape(slide, MSO_SHAPE.OVAL, 11.78, 6.47, 0.31, 0.31, INK)
+def add_corner_details(slide, *, variant: int = 0, dark_background: bool = False):
+    """Add restrained organic ornaments to otherwise empty slide corners."""
+    pale = CREAM if dark_background else MINT
+    if variant % 3 == 0:
+        add_flat_shape(slide, MSO_SHAPE.SUN, 12.60, -0.30, 1.08, 1.08, YELLOW)
+        add_flat_shape(slide, MSO_SHAPE.DONUT, -0.36, 6.72, 0.84, 0.84, pale)
+        add_flat_shape(slide, MSO_SHAPE.TEAR, 12.48, 6.46, 0.28, 0.38, BLUE, rotation=18)
+    elif variant % 3 == 1:
+        add_flat_shape(slide, MSO_SHAPE.DONUT, 12.70, -0.32, 0.88, 0.88, pale)
+        add_flat_shape(slide, MSO_SHAPE.SUN, -0.42, 6.66, 1.02, 1.02, CORAL)
+        add_flat_shape(slide, MSO_SHAPE.TEAR, 12.54, 6.43, 0.28, 0.38, BLUE, rotation=-18)
+    else:
+        add_flat_shape(slide, MSO_SHAPE.SUN, 12.67, 6.63, 0.95, 0.95, YELLOW)
+        add_flat_shape(slide, MSO_SHAPE.DONUT, -0.36, 6.71, 0.82, 0.82, pale)
+        add_flat_shape(slide, MSO_SHAPE.TEAR, 12.70, 0.74, 0.26, 0.36, CORAL, rotation=18)
+        add_flat_shape(slide, MSO_SHAPE.TEAR, 12.36, 0.42, 0.21, 0.30, BLUE, rotation=18)
 
 
 def add_header(slide, title: str, number: str, *, color: str = INK) -> None:
@@ -209,68 +233,32 @@ def add_header(slide, title: str, number: str, *, color: str = INK) -> None:
 
 def add_metric_card(slide, value: str, label: str, x: float, y: float, w: float, color: str):
     add_card(slide, x, y, w, 1.25, color=CREAM)
-    add_text(slide, value, x + 0.14, y + 0.13, w - 0.28, 0.52, size=25, color=color, bold=True)
-    add_text(slide, label, x + 0.14, y + 0.69, w - 0.28, 0.38, size=11.5, color=INK)
+    add_text(slide, value, x + 0.14, y + 0.19, w - 0.28, 0.52, size=25, color=color, bold=True)
+    add_text(slide, label, x + 0.14, y + 0.77, w - 0.28, 0.34, size=11.5, color=INK)
 
 
-def add_slide_number(slide, current: int, total: int) -> None:
+def add_slide_number(slide, current: int, total: int, *, color: str = TEAL) -> None:
     """Add a consistent page number to the bottom-right corner."""
-    pill = add_card(slide, 12.18, 7.03, 0.78, 0.28, color=CREAM, line=TEAL)
-    pill.fill.fore_color.rgb = rgb(CREAM)
     add_text(
         slide,
-        f"{current}/{total}",
-        12.22,
-        7.055,
-        0.70,
-        0.20,
-        size=9,
-        color=TEAL,
+        f"{current:02d} / {total:02d}",
+        11.95,
+        7.05,
+        0.92,
+        0.22,
+        size=10,
+        color=color,
         bold=True,
-        align=PP_ALIGN.CENTER,
+        align=PP_ALIGN.RIGHT,
         valign=MSO_ANCHOR.MIDDLE,
         margin=0,
     )
 
 
-def add_bus_drawing(slide, x: float, y: float, scale: float = 1.0) -> None:
-    body = slide.shapes.add_shape(
-        MSO_SHAPE.ROUNDED_RECTANGLE,
-        Inches(x), Inches(y), Inches(2.0 * scale), Inches(1.2 * scale),
-    )
-    body.fill.solid()
-    body.fill.fore_color.rgb = rgb(TEAL)
-    body.line.fill.background()
-    window = slide.shapes.add_shape(
-        MSO_SHAPE.ROUNDED_RECTANGLE,
-        Inches(x + 0.24 * scale), Inches(y + 0.19 * scale),
-        Inches(1.52 * scale), Inches(0.48 * scale),
-    )
-    window.fill.solid()
-    window.fill.fore_color.rgb = rgb(BLUE)
-    window.line.fill.background()
-    for wheel_x in [x + 0.32 * scale, x + 1.48 * scale]:
-        wheel = slide.shapes.add_shape(
-            MSO_SHAPE.OVAL, Inches(wheel_x), Inches(y + 0.98 * scale),
-            Inches(0.34 * scale), Inches(0.34 * scale),
-        )
-        wheel.fill.solid()
-        wheel.fill.fore_color.rgb = rgb(INK)
-        wheel.line.fill.background()
-    for lamp_x in [x + 0.24 * scale, x + 1.58 * scale]:
-        lamp = slide.shapes.add_shape(
-            MSO_SHAPE.OVAL, Inches(lamp_x), Inches(y + 0.77 * scale),
-            Inches(0.16 * scale), Inches(0.16 * scale),
-        )
-        lamp.fill.solid()
-        lamp.fill.fore_color.rgb = rgb(YELLOW)
-        lamp.line.fill.background()
-
-
 def slide_cover(prs: Presentation) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_background(slide, CREAM)
-    add_doodles(slide)
+    add_corner_details(slide, variant=1)
     add_picture_contain(slide, ASSET_DIR / "logo-rota-em-dia.png", 0.05, 0.42, 5.35, 5.25)
     add_text(slide, "Rota em Dia", 5.25, 1.28, 7.0, 0.9, size=42, color=TEAL, bold=True)
     add_text(
@@ -284,7 +272,7 @@ def slide_cover(prs: Presentation) -> None:
         color=INK,
         bold=False,
     )
-    add_card(slide, 5.25, 3.64, 6.7, 1.34, color=MINT)
+    add_card(slide, 5.25, 3.64, 6.7, 1.34, color=PASTEL_MINT)
     add_text(slide, "Fundamentos de IA e Programação", 5.55, 3.92, 6.1, 0.35, size=16, color=TEAL, bold=True)
     add_text(slide, "Projeto Integrador · Outubro de 2026", 5.55, 4.34, 6.1, 0.3, size=13, color=INK)
     add_text(
@@ -305,9 +293,9 @@ def slide_cover(prs: Presentation) -> None:
 
 def slide_summary(prs: Presentation) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
-    set_background(slide, MINT)
-    add_doodles(slide, light=False)
-    add_header(slide, "Sumário", "01", color=TEAL)
+    set_background(slide, TEAL)
+    add_corner_details(slide, variant=0, dark_background=True)
+    add_header(slide, "Sumário", "01", color=CREAM)
     items = [
         ("1", "O Problema", "Atrasos no transporte", CORAL),
         ("2", "As Perguntas", "Três hipóteses", YELLOW),
@@ -315,7 +303,7 @@ def slide_summary(prs: Presentation) -> None:
         ("4", "O Achado", "R03 e R05 desde 06/04", CORAL),
         ("5", "Os Entregáveis", "Colab e relatório", CREAM),
     ]
-    points = [(1.00, 2.05), (3.43, 3.18), (5.88, 2.05), (8.33, 3.18), (10.77, 2.05)]
+    points = [(1.00, 3.00), (3.43, 3.00), (5.88, 3.00), (8.33, 3.00), (10.77, 3.00)]
     centers = [(x + 0.34, y + 0.34) for x, y in points]
     for start, end in zip(centers, centers[1:]):
         connector = slide.shapes.add_connector(
@@ -325,16 +313,18 @@ def slide_summary(prs: Presentation) -> None:
             Inches(end[0]),
             Inches(end[1]),
         )
-        connector.line.color.rgb = rgb(TEAL)
+        connector.line.color.rgb = rgb(CREAM)
         connector.line.width = Pt(5)
 
-    for index, ((number, title, subtitle, color), (x, y)) in enumerate(zip(items, points)):
+    for index, ((number, title, subtitle, color), (x, y)) in enumerate(
+        zip(items, points)
+    ):
         stop = slide.shapes.add_shape(
             MSO_SHAPE.OVAL, Inches(x), Inches(y), Inches(0.68), Inches(0.68)
         )
         stop.fill.solid()
         stop.fill.fore_color.rgb = rgb(color)
-        stop.line.color.rgb = rgb(TEAL)
+        stop.line.color.rgb = rgb(CREAM)
         stop.line.width = Pt(2)
         add_text(
             slide,
@@ -350,37 +340,74 @@ def slide_summary(prs: Presentation) -> None:
             valign=MSO_ANCHOR.MIDDLE,
             margin=0,
         )
-        label_y = 1.22 if index % 2 == 0 else 4.05
-        add_card(slide, x - 0.52, label_y, 1.72, 1.04, color=CREAM, line=TEAL)
-        add_text(slide, title, x - 0.42, label_y + 0.15, 1.52, 0.30, size=13.5, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
-        add_text(slide, subtitle, x - 0.42, label_y + 0.52, 1.52, 0.31, size=9.8, color=INK, align=PP_ALIGN.CENTER)
+        label_y = 1.62 if index % 2 == 0 else 4.12
+        add_text(
+            slide,
+            title,
+            x - 0.58,
+            label_y,
+            1.84,
+            0.38,
+            size=15,
+            color="#FFFFFF",
+            bold=True,
+            align=PP_ALIGN.CENTER,
+        )
+        add_text(
+            slide,
+            subtitle,
+            x - 0.58,
+            label_y + 0.46,
+            1.84,
+            0.38,
+            size=11,
+            color="#FFFFFF",
+            align=PP_ALIGN.CENTER,
+        )
 
     add_text(
         slide,
         "Uma Investigação Guiada Pelas Evidências",
         3.20,
-        5.55,
+        5.80,
         6.90,
         0.50,
         size=20,
-        color=TEAL,
+        color="#FFFFFF",
         bold=True,
         align=PP_ALIGN.CENTER,
     )
-    add_bus_drawing(slide, 9.95, 5.38, 0.82)
+    add_picture_with_opacity(
+        slide,
+        ASSET_DIR / "decoracao-rota-ilustrada.png",
+        11.05,
+        5.20,
+        1.50,
+        1.50,
+        opacity=0.28,
+    )
 
 
 def slide_problem(prs: Presentation, metrics: dict) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_background(slide, CORAL)
-    add_doodles(slide, light=False)
+    add_corner_details(slide, variant=1)
+    add_picture_with_opacity(
+        slide,
+        ASSET_DIR / "decoracao-onibus-ilustrado.png",
+        0.55,
+        4.82,
+        2.75,
+        1.83,
+        opacity=0.28,
+    )
     add_header(slide, "O Problema", "02", color=INK)
-    add_card(slide, 0.72, 1.22, 7.35, 3.55, color=CREAM)
+    add_card(slide, 0.72, 1.22, 7.35, 3.25, color=CREAM)
     add_text(
         slide,
         "Colaboradores chegam atrasados à linha porque os ônibus fretados não cumprem o horário planejado.",
         1.08,
-        1.58,
+        1.72,
         6.65,
         1.12,
         size=24,
@@ -391,7 +418,7 @@ def slide_problem(prs: Presentation, metrics: dict) -> None:
         slide,
         "O RH precisa saber se a piora é geral, onde ela se concentra e qual explicação os dados realmente sustentam.",
         1.08,
-        3.03,
+        3.18,
         6.5,
         0.88,
         size=16,
@@ -401,11 +428,10 @@ def slide_problem(prs: Presentation, metrics: dict) -> None:
     add_metric_card(slide, "3", "Turnos", 10.39, 1.30, 1.75, CORAL)
     add_metric_card(slide, "≤ 5 min", "Limite de pontualidade", 8.48, 2.82, 3.66, TEAL)
     add_metric_card(slide, "15 min", "Margem até o início do turno", 8.48, 4.34, 3.66, CORAL)
-    add_bus_drawing(slide, 1.05, 5.34, 0.9)
     add_text(
         slide,
         f"Pontualidade geral tratada: {metrics['punctuality']:.1f}%",
-        3.25,
+        3.55,
         5.66,
         4.7,
         0.48,
@@ -419,7 +445,7 @@ def slide_problem(prs: Presentation, metrics: dict) -> None:
 def slide_questions(prs: Presentation) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_background(slide, CREAM)
-    add_doodles(slide)
+    add_corner_details(slide, variant=2)
     add_header(slide, "Perguntas e Hipóteses", "03")
     add_card(slide, 0.78, 1.12, 11.75, 1.18, color=TEAL)
     add_text(
@@ -435,9 +461,9 @@ def slide_questions(prs: Presentation) -> None:
         align=PP_ALIGN.CENTER,
     )
     cards = [
-        ("H1", "Chuva", "A chuva forte explica a piora de pontualidade.", BLUE),
-        ("H2", "Corredor", "R03 e R05 enfrentam uma restrição compartilhada.", CORAL),
-        ("H3", "Ocorrências", "Pane, trânsito e pneus explicam a mudança.", YELLOW),
+        ("H1", "Chuva", "A chuva forte explica a piora de pontualidade.", PASTEL_BLUE),
+        ("H2", "Corredor", "R03 e R05 enfrentam uma restrição compartilhada.", PASTEL_CORAL),
+        ("H3", "Ocorrências", "Pane, trânsito e pneus explicam a mudança.", PASTEL_YELLOW),
     ]
     for index, (label, title, text, color) in enumerate(cards):
         x = 0.82 + index * 4.16
@@ -452,7 +478,7 @@ def slide_questions(prs: Presentation) -> None:
 def slide_dataset(prs: Presentation) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_background(slide, TEAL)
-    add_doodles(slide, light=False)
+    add_corner_details(slide, variant=0, dark_background=True)
     add_header(slide, "Dataset e Qualidade", "04", color=CREAM)
     add_metric_card(slide, "2.463", "Linhas recebidas", 0.76, 1.23, 2.24, CORAL)
     add_metric_card(slide, "11", "Variáveis", 3.18, 1.23, 2.24, TEAL)
@@ -476,8 +502,8 @@ def slide_dataset(prs: Presentation) -> None:
         bullet=True,
         spacing=11,
     )
-    add_card(slide, 6.68, 2.88, 5.80, 3.55, color=MINT)
-    add_text(slide, "O Que Precisou de Cuidado", 6.99, 3.12, 5.1, 0.4, size=19, color=TEAL, bold=True)
+    add_card(slide, 6.68, 2.88, 5.80, 3.55, color=PASTEL_MINT)
+    add_text(slide, "O Que Precisou de Cuidado", 6.99, 3.12, 5.1, 0.4, size=19, color=INK, bold=True)
     issues = [
         ("15", "Duplicatas exatas"),
         ("145", "Chuvas ausentes"),
@@ -486,24 +512,24 @@ def slide_dataset(prs: Presentation) -> None:
     ]
     for index, (value, label) in enumerate(issues):
         y = 3.78 + index * 0.57
-        add_text(slide, value, 7.01, y, 0.9, 0.32, size=16, color=CORAL, bold=True, align=PP_ALIGN.RIGHT)
+        add_text(slide, value, 7.01, y, 0.9, 0.32, size=16, color=INK, bold=True, align=PP_ALIGN.RIGHT)
         add_text(slide, label, 8.10, y, 3.8, 0.32, size=14, color=INK)
-    add_text(slide, "Base bruta preservada · regras reproduzíveis", 7.15, 6.02, 4.75, 0.26, size=11.5, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, "Base preservada · indicadores comparados antes × depois", 7.03, 6.02, 5.00, 0.26, size=10.8, color=INK, bold=True, align=PP_ALIGN.CENTER)
 
 
 def slide_result(prs: Presentation, metrics: dict) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_background(slide, CREAM)
-    add_doodles(slide)
+    add_corner_details(slide, variant=1)
     add_header(slide, "Resultado Principal", "05")
     add_picture_contain(slide, CHART_DIR / "01_serie_rotas.png", 0.55, 1.07, 8.85, 5.85)
-    add_card(slide, 9.62, 1.33, 3.05, 1.38, color=CORAL)
+    add_card(slide, 9.62, 1.33, 3.05, 1.38, color=PASTEL_CORAL)
     add_text(slide, "06/04", 9.84, 1.56, 2.58, 0.48, size=28, color=INK, bold=True, align=PP_ALIGN.CENTER)
     add_text(slide, "Início da ruptura", 9.84, 2.09, 2.58, 0.28, size=12, color=INK, align=PP_ALIGN.CENTER)
-    add_card(slide, 9.62, 3.02, 3.05, 1.38, color=MINT)
+    add_card(slide, 9.62, 3.02, 3.05, 1.38, color=PASTEL_MINT)
     add_text(slide, f"{metrics['target_punctuality']:.0f}%", 9.84, 3.24, 2.58, 0.48, size=28, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
     add_text(slide, "Pontualidade R03/R05 · Dia", 9.76, 3.79, 2.72, 0.28, size=11.5, color=TEAL, align=PP_ALIGN.CENTER)
-    add_card(slide, 9.62, 4.72, 3.05, 1.38, color=YELLOW)
+    add_card(slide, 9.62, 4.72, 3.05, 1.38, color=PASTEL_YELLOW)
     add_text(slide, f"{metrics['target_median']:.0f} min", 9.84, 4.95, 2.58, 0.48, size=28, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
     add_text(slide, "Mediana de atraso", 9.84, 5.49, 2.58, 0.28, size=12, color=TEAL, align=PP_ALIGN.CENTER)
 
@@ -511,13 +537,13 @@ def slide_result(prs: Presentation, metrics: dict) -> None:
 def slide_evidence(prs: Presentation) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_background(slide, YELLOW)
-    add_doodles(slide, light=False)
+    add_corner_details(slide, variant=2)
     add_header(slide, "Evidências e Conclusão", "06", color=TEAL)
     add_picture_contain(slide, CHART_DIR / "02_heatmap_rota_turno.png", 0.55, 1.06, 6.58, 5.78)
     cards = [
-        ("Chuva Agrava", "Correlação moderada, mas o efeito aparece em toda a operação.", BLUE),
-        ("Obra Localiza", "“Obra na via” surge em 07/04 somente em R03 e R05.", CORAL),
-        ("Noite Preserva", "As duas rotas mantêm 96% de pontualidade no turno noturno.", MINT),
+        ("Chuva Agrava", "Correlação moderada, mas o efeito aparece em toda a operação.", PASTEL_BLUE),
+        ("Obra Localiza", "“Obra na via” surge em 07/04 somente em R03 e R05.", PASTEL_CORAL),
+        ("Noite Preserva", "As duas rotas mantêm 96% de pontualidade no turno noturno.", PASTEL_MINT),
     ]
     for index, (title, text, color) in enumerate(cards):
         y = 1.23 + index * 1.48
@@ -542,7 +568,7 @@ def slide_evidence(prs: Presentation) -> None:
 def slide_deliverables(prs: Presentation) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_background(slide, BLUE)
-    add_doodles(slide, light=False)
+    add_corner_details(slide, variant=0)
     add_header(slide, "Entregáveis Disponíveis", "07", color=INK)
     add_text(
         slide,
@@ -556,73 +582,121 @@ def slide_deliverables(prs: Presentation) -> None:
         bold=True,
         align=PP_ALIGN.CENTER,
     )
+    notebook_url = "https://colab.research.google.com/github/JulianaBallin/TransitTrace/blob/main/transporte_fretado_rota_em_dia.ipynb"
+    report_url = "https://github.com/JulianaBallin/TransitTrace/blob/main/docs/relatorio/relatorio_tecnico_rota_em_dia.pdf"
 
-    cards = [
-        (
-            0.83,
-            "Notebook no Google Colab",
-            "Código executável, diagnóstico, limpeza, gráficos e conclusão reproduzível.",
-            "Abrir Notebook no Colab",
-            "https://colab.research.google.com/github/JulianaBallin/TransitTrace/blob/main/transporte_fretado_rota_em_dia.ipynb",
-            MINT,
-        ),
-        (
-            6.86,
-            "Relatório Técnico Descritivo",
-            "Método, evidências, limitações, tabelas, recomendações e conclusão detalhada.",
-            "Abrir Relatório Técnico",
-            "https://github.com/JulianaBallin/TransitTrace/blob/main/docs/relatorio/relatorio_tecnico_rota_em_dia.pdf",
-            YELLOW,
-        ),
-    ]
-    for x, title, description, link_label, address, accent in cards:
-        add_card(slide, x, 1.78, 5.63, 4.62, color=CREAM, line=TEAL)
-        add_card(slide, x + 0.28, 2.08, 0.82, 0.82, color=accent)
-        icon = "</>" if x < 2 else "PDF"
-        add_text(
-            slide,
-            icon,
-            x + 0.36,
-            2.27,
-            0.66,
-            0.30,
-            size=13,
-            color=INK,
-            bold=True,
-            align=PP_ALIGN.CENTER,
-            valign=MSO_ANCHOR.MIDDLE,
-            margin=0,
-        )
-        add_text(slide, title, x + 1.28, 2.18, 3.92, 0.63, size=20, color=TEAL, bold=True)
-        add_text(slide, description, x + 0.42, 3.24, 4.78, 1.08, size=15, color=INK, align=PP_ALIGN.CENTER)
-        link = add_card(slide, x + 0.82, 4.72, 4.00, 0.72, color=TEAL)
-        link_text = add_text(
-            slide,
-            link_label,
-            x + 1.00,
-            4.91,
-            3.64,
-            0.28,
-            size=13.5,
-            color=CREAM,
-            bold=True,
-            align=PP_ALIGN.CENTER,
-            valign=MSO_ANCHOR.MIDDLE,
-            margin=0,
-        )
-        link_text.click_action.hyperlink.address = address
-        link.click_action.hyperlink.address = address
-        add_text(slide, "Disponível no Repositório TransitTrace", x + 0.78, 5.72, 4.10, 0.29, size=10.5, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
-
+    add_card(slide, 0.70, 1.62, 5.98, 5.08, color=CREAM, line=TEAL)
     add_text(
         slide,
-        "O Link do Relatório Também Está no Início do Notebook",
-        2.34,
-        6.62,
-        8.64,
-        0.32,
-        size=14,
+        "Notebook no Google Colab",
+        1.02,
+        1.91,
+        5.34,
+        0.43,
+        size=20,
+        color=TEAL,
+        bold=True,
+        align=PP_ALIGN.CENTER,
+    )
+    add_card(slide, 1.00, 2.46, 5.38, 2.68, color="#FFFFFF", radius=False, line=TEAL)
+    add_picture_contain(
+        slide,
+        ASSET_DIR / "preview-notebook.png",
+        1.09,
+        2.55,
+        5.20,
+        2.50,
+    )
+    notebook_button = add_card(slide, 1.54, 5.42, 4.30, 0.66, color=TEAL)
+    notebook_button.click_action.hyperlink.address = notebook_url
+    notebook_text = add_text(
+        slide,
+        "Abrir Notebook no Colab",
+        1.74,
+        5.64,
+        3.90,
+        0.24,
+        size=13.5,
+        color=CREAM,
+        bold=True,
+        align=PP_ALIGN.CENTER,
+        valign=MSO_ANCHOR.MIDDLE,
+        margin=0,
+    )
+    notebook_text.click_action.hyperlink.address = notebook_url
+    add_text(
+        slide,
+        "Código, gráficos e resultados reproduzíveis",
+        1.25,
+        6.28,
+        4.88,
+        0.25,
+        size=10.5,
+        color=TEAL,
+        bold=True,
+        align=PP_ALIGN.CENTER,
+    )
+
+    add_card(slide, 6.76, 1.62, 5.87, 5.08, color=CREAM, line=TEAL)
+    add_text(
+        slide,
+        "Relatório Técnico Descritivo",
+        7.08,
+        1.91,
+        5.23,
+        0.43,
+        size=20,
+        color=TEAL,
+        bold=True,
+        align=PP_ALIGN.CENTER,
+    )
+    add_card(slide, 7.14, 2.46, 2.10, 2.68, color="#FFFFFF", radius=False, line=TEAL)
+    add_picture_contain(
+        slide,
+        ASSET_DIR / "preview-relatorio.png",
+        7.23,
+        2.55,
+        1.92,
+        2.50,
+    )
+    add_text(
+        slide,
+        "14 páginas em formato A4 com método, evidências, tabelas, limitações e recomendações.",
+        9.50,
+        2.76,
+        2.58,
+        1.60,
+        size=13.5,
         color=INK,
+        align=PP_ALIGN.CENTER,
+        valign=MSO_ANCHOR.MIDDLE,
+    )
+    report_button = add_card(slide, 7.56, 5.42, 4.30, 0.66, color=TEAL)
+    report_button.click_action.hyperlink.address = report_url
+    report_text = add_text(
+        slide,
+        "Abrir Relatório Técnico",
+        7.76,
+        5.64,
+        3.90,
+        0.24,
+        size=13.5,
+        color=CREAM,
+        bold=True,
+        align=PP_ALIGN.CENTER,
+        valign=MSO_ANCHOR.MIDDLE,
+        margin=0,
+    )
+    report_text.click_action.hyperlink.address = report_url
+    add_text(
+        slide,
+        "O link também está disponível no início do notebook",
+        7.22,
+        6.28,
+        4.95,
+        0.25,
+        size=10.5,
+        color=TEAL,
         bold=True,
         align=PP_ALIGN.CENTER,
     )
@@ -631,41 +705,48 @@ def slide_deliverables(prs: Presentation) -> None:
 def slide_notebook(prs: Presentation) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_background(slide, CREAM)
-    add_doodles(slide)
+    add_corner_details(slide, variant=1)
     add_header(slide, "Demonstração do Notebook", "08")
-    add_card(slide, 0.70, 1.13, 7.52, 5.88, color="#F2F5F5", line=TEAL)
-    add_card(slide, 0.94, 1.42, 7.04, 0.50, color=TEAL)
-    add_text(slide, "Rota em Dia · Google Colab", 1.19, 1.55, 4.2, 0.22, size=12, color=CREAM, bold=True)
-    steps = [
-        ("1", "Carregar", "CSV + diagnóstico"),
-        ("2", "Investigar", "Estatística + hipóteses"),
-        ("3", "Limpar", "Pipeline + validação"),
-        ("4", "Explicar", "5 gráficos + conclusão"),
-    ]
-    for index, (number, title, detail) in enumerate(steps):
-        y = 2.20 + index * 1.03
-        add_card(slide, 1.10, y, 6.68, 0.78, color=CREAM, line="#D0DADA")
-        add_text(slide, number, 1.31, y + 0.15, 0.48, 0.38, size=19, color=CORAL, bold=True, align=PP_ALIGN.CENTER)
-        add_text(slide, title, 1.98, y + 0.15, 1.72, 0.33, size=15, color=TEAL, bold=True)
-        add_text(slide, detail, 3.65, y + 0.16, 3.62, 0.33, size=13, color=INK)
-    add_card(slide, 8.55, 1.20, 4.12, 2.08, color=MINT)
-    add_text(slide, "Executar Tudo", 8.91, 1.56, 3.42, 0.45, size=24, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
-    add_text(slide, "16 células de código\n20 células de texto", 8.91, 2.25, 3.42, 0.62, size=14, color=INK, align=PP_ALIGN.CENTER)
-    add_card(slide, 8.55, 3.63, 4.12, 2.45, color=CORAL)
-    add_text(slide, "Próximos Passos", 8.89, 3.92, 3.45, 0.40, size=20, color=INK, bold=True, align=PP_ALIGN.CENTER)
+    add_card(slide, 0.70, 1.14, 7.70, 5.82, color="#F2F5F5", line=TEAL)
+    add_card(slide, 0.94, 1.43, 7.22, 5.10, color="#FFFFFF", radius=False, line="#D0DADA")
+    add_picture_contain(
+        slide,
+        ASSET_DIR / "preview-notebook.png",
+        1.02,
+        1.51,
+        7.06,
+        4.94,
+    )
+    add_text(
+        slide,
+        "Prévia real do notebook executado",
+        1.26,
+        6.63,
+        6.58,
+        0.24,
+        size=10.5,
+        color=TEAL,
+        bold=True,
+        align=PP_ALIGN.CENTER,
+    )
+    add_card(slide, 8.62, 1.24, 4.02, 1.84, color=PASTEL_MINT)
+    add_text(slide, "Executar Tudo", 8.95, 1.62, 3.36, 0.42, size=23, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, "16 células de código\n21 células de texto", 8.95, 2.28, 3.36, 0.56, size=14, color=INK, align=PP_ALIGN.CENTER)
+    add_card(slide, 8.62, 3.40, 4.02, 2.70, color=PASTEL_CORAL)
+    add_text(slide, "Roteiro da Demonstração", 8.93, 3.80, 3.40, 0.42, size=19, color=INK, bold=True, align=PP_ALIGN.CENTER)
     add_multiline(
         slide,
-        ["Cruzar cronograma de obras", "Coletar GPS por trecho", "Testar desvio ou antecipação"],
-        8.93,
-        4.53,
-        3.30,
-        1.28,
+        ["Carregar a base", "Executar todas as células", "Explicar o achado principal", "Abrir o relatório técnico"],
+        9.00,
+        4.45,
+        3.20,
+        1.42,
         size=13,
         color=INK,
         bullet=True,
         spacing=6,
     )
-    add_text(slide, "Perguntas?", 9.15, 6.53, 3.0, 0.38, size=20, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, "Perguntas?", 9.12, 6.56, 3.0, 0.38, size=20, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
 
 
 def build_slides() -> Path:
@@ -693,8 +774,11 @@ def build_slides() -> Path:
     slide_notebook(prs)
 
     total = len(prs.slides)
-    for current, slide in enumerate(prs.slides, start=1):
-        add_slide_number(slide, current, total)
+    page_colors = [TEAL, CREAM, INK, TEAL, CREAM, TEAL, TEAL, INK, TEAL]
+    for current, (slide, page_color) in enumerate(
+        zip(prs.slides, page_colors), start=1
+    ):
+        add_slide_number(slide, current, total, color=page_color)
 
     prs.save(OUTPUT)
     return OUTPUT
