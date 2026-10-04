@@ -99,6 +99,15 @@ def build_notebook() -> Path:
                 "axes.titlesize": 14,
                 "grid.color": "#D8E0E0",
             })
+
+            def parse_dates(values):
+                """Interpreta os dois formatos de data da base sem inverter dia e mês."""
+                text = values.astype("string").str.strip()
+                is_iso = text.str.fullmatch(r"\\d{4}-\\d{2}-\\d{2}").fillna(False)
+                parsed = pd.to_datetime(text.where(is_iso), format="%Y-%m-%d", errors="coerce")
+                return parsed.fillna(
+                    pd.to_datetime(text.where(~is_iso), format="%d/%m/%Y", errors="coerce")
+                )
             """
         ),
         code(
@@ -147,9 +156,7 @@ def build_notebook() -> Path:
             preview = raw.head(6)
             display(preview)
 
-            parsed_dates = pd.to_datetime(
-                raw["data"], format="mixed", dayfirst=True, errors="coerce"
-            )
+            parsed_dates = parse_dates(raw["data"])
             diagnosis = pd.DataFrame({
                 "informação": ["Linhas", "Colunas", "Início", "Fim", "Dias de operação"],
                 "valor": [
@@ -253,9 +260,7 @@ def build_notebook() -> Path:
                 raw["rota"].astype(str).str.fullmatch(r"R\\d{2}")
                 & raw["turno"].isin(["Manhã", "Tarde", "Noite"])
             ].copy()
-            canonical_rows["data_aux"] = pd.to_datetime(
-                canonical_rows["data"], format="mixed", dayfirst=True, errors="coerce"
-            )
+            canonical_rows["data_aux"] = parse_dates(canonical_rows["data"])
             canonical_rows["pontual"] = canonical_rows["atraso_min"].le(5)
 
             route_stats_raw = canonical_rows.groupby("rota").agg(
@@ -313,9 +318,7 @@ def build_notebook() -> Path:
                 data = raw_frame.copy()
                 duplicate_mask = raw_frame.duplicated(keep="first")
 
-                data["data"] = pd.to_datetime(
-                    data["data"], format="mixed", dayfirst=True, errors="coerce"
-                )
+                data["data"] = parse_dates(data["data"])
                 data["turno"] = (
                     data["turno"].astype("string").str.strip().str.casefold()
                     .replace({"manha": "manhã", "noturno": "noite"}).str.title()

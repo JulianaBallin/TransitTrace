@@ -34,14 +34,26 @@ def read_raw_data(path: Path = DATA_PATH) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
+def parse_dates(values: pd.Series) -> pd.Series:
+    """Parse the ISO and day-first layouts of the source file explicitly.
+
+    ``format="mixed"`` with ``dayfirst=True`` swaps day and month of ISO strings
+    in pandas 3, so each known layout is parsed on its own.
+    """
+    text = values.astype("string").str.strip()
+    is_iso = text.str.fullmatch(r"\d{4}-\d{2}-\d{2}").fillna(False)
+    parsed = pd.to_datetime(text.where(is_iso), format="%Y-%m-%d", errors="coerce")
+    return parsed.fillna(
+        pd.to_datetime(text.where(~is_iso), format="%d/%m/%Y", errors="coerce")
+    )
+
+
 def clean_data(raw: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Apply the declared cleaning rules and return data plus an audit log."""
     data = raw.copy()
     duplicate_mask = raw.duplicated(keep="first")
 
-    data["data"] = pd.to_datetime(
-        data["data"], format="mixed", dayfirst=True, errors="coerce"
-    )
+    data["data"] = parse_dates(data["data"])
     data["turno"] = (
         data["turno"]
         .astype("string")
