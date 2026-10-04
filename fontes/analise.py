@@ -356,40 +356,67 @@ def create_charts(data: pd.DataFrame) -> list[Path]:
         .rolling(7, min_periods=4)
         .median()
     )
-    fig, (left, right) = plt.subplots(1, 2, figsize=(13.2, 5.2), sharey=True)
+    median_after = (
+        daytime[daytime["data"] >= "2026-04-06"]
+        .groupby("grupo_rotas", observed=True)["atraso_min"]
+        .median()
+    )
+
+    def minutes(value: float) -> str:
+        return f"{value:.0f} min".replace("-", "−")
+
+    fig, (left, right) = plt.subplots(1, 2, figsize=(13.2, 5.4), sharey=True)
     for route in daily.columns:
         left.plot(daily.index, daily[route], lw=1.25, alpha=0.75, label=route)
-    left.set_title("Versão exploratória")
-    left.set_xlabel("Data")
-    left.set_ylabel("Mediana móvel do atraso (min)")
+    left.set_title("Antes · versão exploratória, 8 rotas, 3 turnos")
+    left.set_xlabel("Data da viagem")
+    left.set_ylabel("Mediana móvel de 7 dias do atraso (min)")
     left.legend(ncol=2, frameon=False, fontsize=8)
-    for group, color, width in [
-        ("Demais rotas", GRAY, 2.2),
-        ("R03 e R05", CORAL, 3.4),
-    ]:
-        right.plot(grouped.index, grouped[group], color=color, lw=width, label=group)
+    right.plot(grouped.index, grouped["Demais rotas"], color=GRAY, lw=2.2)
+    right.plot(grouped.index, grouped["R03 e R05"], color=CORAL, lw=3.4)
     right.axvline(pd.Timestamp("2026-04-06"), color=YELLOW, lw=2.1, ls="--")
-    right.annotate(
-        "Ruptura em 06/04",
-        xy=(pd.Timestamp("2026-04-06"), 4),
-        xytext=(pd.Timestamp("2026-02-23"), 13),
-        arrowprops={"arrowstyle": "->", "color": INK},
-        fontsize=9,
+    right.axhline(5, color=TEAL, lw=1.2, ls=":")
+    right.text(
+        pd.Timestamp("2026-02-04"), 5.6, "limite de pontualidade: 5 min", color=TEAL, fontsize=9
     )
-    right.set_title("Versão explicativa: rotas diurnas")
-    right.set_xlabel("Data")
-    right.legend(frameon=False)
+    right.annotate(
+        "06/04: início da ruptura",
+        xy=(pd.Timestamp("2026-04-06"), 1),
+        xytext=(pd.Timestamp("2026-02-20"), 11.5),
+        arrowprops={"arrowstyle": "->", "color": INK},
+        fontsize=10,
+    )
+    right.text(
+        grouped.index[-1],
+        median_after["R03 e R05"] + 1.2,
+        f"R03 e R05\n{minutes(median_after['R03 e R05'])}",
+        color=CORAL,
+        fontweight="bold",
+        ha="right",
+    )
+    right.text(
+        grouped.index[-1],
+        median_after["Demais rotas"] - 4.2,
+        f"Demais rotas\n{minutes(median_after['Demais rotas'])}",
+        color="#6F7B7F",
+        fontweight="bold",
+        ha="right",
+    )
+    right.set_title(
+        "Desde 6 de abril, R03 e R05 chegam com 12 min de atraso\n"
+        "nos turnos diurnos; as demais seguem adiantadas",
+        fontsize=12.5,
+        loc="left",
+    )
+    right.set_xlabel("Data da viagem")
+    right.set_ylabel("Mediana móvel de 7 dias do atraso (min)")
+    right.tick_params(labelleft=True)
     for axis in (left, right):
         axis.xaxis.set_major_locator(mdates.MonthLocator())
         axis.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
         axis.grid(axis="x", visible=False)
         sns.despine(ax=axis)
-    fig.suptitle(
-        "Do gráfico que explora ao gráfico que comunica",
-        fontsize=17,
-        fontweight="bold",
-        y=1.02,
-    )
+    fig.tight_layout()
     paths.append(_save(fig, "06_exploratorio_explicativo.png"))
     return paths
 
