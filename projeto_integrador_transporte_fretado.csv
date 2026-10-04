@@ -1,0 +1,2464 @@
+data,turno,rota,zona_origem,empresa,horario_previsto,horario_chegada,atraso_min,passageiros,chuva_mm,ocorrencia
+2026-02-02,Manhã,R01,Norte,Viação Alfa,05:45,05:44,-1,33,0.0,Nenhuma
+2026-02-02,manha,R02,Norte,Viação Alfa,05:45,05:43,-2,34,0.0,Nenhuma
+2026-02-02,Manhã,R03,Leste,Viação Beta,05:45,05:36,-9,39,0.0,Nenhuma
+2026-02-02,Manhã,R04,Sul,Viação Alfa,05:45,05:39,-6,120,0.0,Nenhuma
+2026-02-02,Manhã,R05,Leste,Viação Beta,05:45,05:42,-3,35,0.0,Nenhuma
+2026-02-02,Manhã,R06,Oeste,Viação Alfa,05:45,05:42,7,41,0.0,Nenhuma
+2026-02-02,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:41,-4,40,0.0,Nenhuma
+2026-02-02,Manhã,R8,Norte,Viação Beta,05:45,05:39,-6,44,0.0,Nenhuma
+2026-02-02,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,44,0.0,Nenhuma
+2026-02-02,Tarde,R02,Norte,Viação Alfa,13:45,13:41,-4,28,0.0,Nenhuma
+2026-02-02,Tarde,R03,Leste,Viação Beta,13:45,13:43,-2,35,0.0,Nenhuma
+2026-02-02,Tarde,R04,Sul,Viação Alfa,13:45,14:02,17,30,0.0,Pneu furado
+2026-02-02,Tarde,R05,Leste,Viação Beta,13:45,13:42:00,-3,36,0.0,Nenhuma
+2026-02-02,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,35,0.0,Nenhuma
+2026-02-02,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,41,0.0,Nenhuma
+2026-02-02,Tarde,R08,Norte,Viação Beta,13:45,13:46,1,35,0.0,Nenhuma
+02/02/2026,Noite,R01,Norte,Viação Alfa,21:45,21:54,9,35,8.5,Trânsito intenso
+2026-02-02,Noite,Rota 02,Norte,Viação Alfa,21:45,21:42,-3,35,8.5,Nenhuma
+2026-02-02,Noite,Rota 03,Leste,Viação Beta,21:45,21:54,9,33,8.5,Trânsito intenso
+2026-02-02,Noite,R04,Sul,Viação Alfa,21:45,21:40,-5,28,8.5,Nenhuma
+2026-02-02,Noite,R05,Leste,Viação Beta,21:45,21:46,1,34,8.5,Nenhuma
+2026-02-02,Noite,R06,Oeste,Viação Alfa,21:45,21:48,3,40,8.5,Nenhuma
+2026-02-02,Noite,R07,Centro-Sul,Viação Beta,21:45,21:40,-5,41,8.5,Nenhuma
+2026-02-02,Noite,R8,Norte,Viação Beta,21:45,21:41,-4,31,8.5,Nenhuma
+2026-02-03,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,42,,Nenhuma
+2026-02-03,Manhã,R02,Norte,Viação Alfa,05:45,05:52,7,41,,Trânsito intenso
+2026-02-03,Manhã,R03,Leste,Viação Beta,05:45,05:42,-3,33,,Nenhuma
+2026-02-03,Manhã,R04,Sul,Viação Alfa,05:45,05:49,4,34,,Nenhuma
+2026-02-03,Manhã,R05,Leste,Viação Beta,05:45,05:44,-1,44,,Nenhuma
+2026-02-03,Manhã,R06,Oeste,Viação Alfa,05:45,05:40,-5,37,,Nenhuma
+2026-02-03,manha,r07,Centro-Sul,Viação Beta,05:45,05:42,-3,34,,Nenhuma
+2026-02-03,Manhã,R08,Norte,Viação Beta,05:45,05:43,-2,40,,Nenhuma
+2026-02-03,Tarde,R01,Norte,Viação Alfa,13:45,13:46,1,42,,Nenhuma
+2026-02-03,Tarde,R02,Norte,Viação Alfa,13:45,13:46,1,44,,Nenhuma
+2026-02-03,Tarde,R03,Leste,Viação Beta,13:45,13:45,0,38,,Nenhuma
+2026-02-03,Tarde,R04,Sul,Viação Alfa,13:45,13:42,-3,37,,Nenhuma
+2026-02-03,Tarde,R05,Leste,Viação Beta,13:45,13:43,-2,41,,Nenhuma
+2026-02-03,Tarde,R06,Oeste,Viação Alfa,13:45,13:43:00,-2,33,,Nenhuma
+2026-02-03,tarde,R07,Centro-Sul,Viação Beta,13:45,13:39,-6,37,,Nenhuma
+2026-02-03,Tarde,R08,Norte,Viação Beta,13:45,13:47,2,36,,Nenhuma
+2026-02-03,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,40,,Nenhuma
+2026-02-03,Noite,R02,Norte,Viação Alfa,21:45,21h37,-8,34,,Nenhuma
+2026-02-03,Noite,R03,Leste,Viação Beta,21:45,21:38,-7,37,,Nenhuma
+2026-02-03,Noite,R04,Sul,Viação Alfa,21:45,21h41,-4,36,,Nenhuma
+2026-02-03,Noite,R05,Leste,Viação Beta,21:45,21:38,-7,39,,Nenhuma
+2026-02-03,Noite,R06,Oeste,Viação Alfa,21:45,21:36,-9,33,,Nenhuma
+2026-02-03,Noite,R07,Centro-Sul,Viação Beta,21:45,21:40,-5,38,,Nenhuma
+2026-02-03,Noite,R08,Norte,Viação Beta,21:45,21:39,-6,43,,Nenhuma
+2026-02-04,Manhã,R01,Norte,Viação Alfa,05:45,05:41,-4,36,0.0,Nenhuma
+2026-02-04,Manhã,R02,Norte,Viação Alfa,05:45,05:44,-1,38,0.0,Nenhuma
+2026-02-04,Manhã,R03,Leste,Viação Beta,05:45,05h44,-1,36,0.0,Nenhuma
+04/02/2026,Manhã,R04,Sul,Viação Alfa,05:45,05h46,1,36,0.0,Nenhuma
+2026-02-04,Manhã,R05,Leste,Viação Beta,05:45,05:42,-3,41,0.0,Nenhuma
+2026-02-04,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,41,0.0,Nenhuma
+2026-02-04,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:40,-5,39,0.0,Nenhuma
+2026-02-04,Manhã,R08,Norte,Viação Beta,05:45,05:39,-6,41,0.0,Nenhuma
+2026-02-04,Tarde,R01,Norte,Viação Alfa,13:45,13:43,-2,38,0.0,Nenhuma
+2026-02-04,Tarde,R02,Norte,Viação Alfa,13:45,13:42,-3,39,0.0,Nenhuma
+2026-02-04,Tarde,R03,Leste,Viação Beta,13:45,13:50,5,38,0.0,Nenhuma
+2026-02-04,Tarde,R04,Sul,Viação Alfa,13:45,13:39,-6,37,0.0,Nenhuma
+2026-02-04,Tarde,R05,Leste,Viação Beta,13:45,13:41,-4,36,0.0,Nenhuma
+2026-02-04,Tarde,R06,Oeste,Viação Alfa,13:45,13:58,13,34,0.0,Trânsito intenso
+04/02/2026,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:37,-8,37,0.0,Nenhuma
+2026-02-04,Tarde,R08,Norte,Viação Beta,13:45,13:37,-8,42,0.0,Nenhuma
+2026-02-04,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,37,9.7,Nenhuma
+2026-02-04,Noite,R02,Norte,Viação Alfa,21:45,21:43,-2,38,9.7,Nenhuma
+2026-02-04,Noite,R03,Leste,Viação Beta,21:45,21:41,-4,33,9.7,Nenhuma
+2026-02-04,Noite,R04,Sul,Viação Alfa,21:45,21:47,2,33,9.7,Nenhuma
+2026-02-04,Noite,R05,Leste,Viação Beta,21:45,21:43,-2,35,9.7,Nenhuma
+2026-02-04,Noite,R06,Oeste,Viação Alfa,21:45,21:52:00,7,37,9.7,Nenhuma
+04/02/2026,Noite,R07,Centro-Sul,Viação Beta,21:45,21h45,0,38,9.7,Nenhuma
+2026-02-04,Noite,R08,Norte,Viação Beta,21:45,21:46,1,39,9.7,Nenhuma
+2026-02-05,Manhã,R01,Norte,Viação Alfa,05:45,05:41,-4,34,0.0,Nenhuma
+2026-02-05,Manhã,R02,Norte,Viação Alfa,05:45,05:41,-4,35,0.0,Nenhuma
+2026-02-05,Manhã,R03,Leste,Viação Beta,05:45,05:44,-1,36,0.0,Nenhuma
+2026-02-05,Manhã,R04,Sul,Viação Alfa,05:45,05:43,-2,38,0.0,Nenhuma
+2026-02-05,Manhã,R05,Leste,Viação Beta,05:45,05:43,-2,39,0.0,Nenhuma
+2026-02-05,Manhã,R06,Oeste,Viação Alfa,05:45,05:38,-7,36,0.0,Nenhuma
+2026-02-05,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:46,1,43,0.0,Nenhuma
+2026-02-05,Manhã,R08,Norte,Viação Beta,05:45,05:45,0,35,0.0,Nenhuma
+2026-02-05,Tarde,R01,Norte,Viação Alfa,13:45,13:40,-5,35,0.0,Nenhuma
+2026-02-05,Tarde,R02,Norte,Viação Alfa,13:45,13:36,-9,34,0.0,Nenhuma
+2026-02-05,Tarde,R03,Leste,Viação Beta,13:45,13:40,-5,41,0.0,Nenhuma
+2026-02-05,Tarde,R04,Sul,Viação Alfa,13:45,13:47,2,39,0.0,Nenhuma
+2026-02-05,tarde,R05,Leste,Viação Beta,13:45,13:43,-2,41,0.0,Nenhuma
+2026-02-05,Tarde,R06,Oeste,Viação Alfa,13:45,13:39,-6,43,0.0,Nenhuma
+2026-02-05,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:39,-6,40,0.0,Nenhuma
+2026-02-05,tarde,R08,Norte,Viação Beta,13:45,13:43,-2,38,0.0,Nenhuma
+2026-02-05,Noite,R01,Norte,Viação Alfa,21:45,21:49,4,44,20.7,Chuva forte
+2026-02-05,Noite,R02,Norte,Viação Alfa,21:45,21:46,1,40,20.7,Chuva forte
+2026-02-05,Noite,R02,Norte,Viação Alfa,21:45,21:46,1,40,20.7,Chuva forte
+2026-02-05,Noite,R03,Leste,Viação Beta,21:45,21:52,7,41,20.7,Chuva forte
+2026-02-05,Noite,R04,Sul,Viação Alfa,21:45,21:50,5,33,20.7,Chuva forte
+2026-02-05,Noite,R05,Leste,Viação Beta,21:45,21:49,4,36,20.7,Chuva forte
+2026-02-05,Noite,R06,Oeste,Viação Alfa,21:45,21:46,1,35,20.7,Chuva forte
+2026-02-05,Noite,R07,Centro-Sul,Viação Beta,21:45,21:51,6,36,20.7,Chuva forte
+2026-02-05,Noite,R08,Norte,Viação Beta,21:45,21:44,-1,44,20.7,Chuva forte
+2026-02-06,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,44,3.5,Nenhuma
+2026-02-06,Manhã,R02,Norte,Viação Alfa,05:45,05:41,-4,34,3.5,Nenhuma
+2026-02-06,Manhã,R03,Leste,Viação Beta,05:45,05:46,1,44,3.5,Nenhuma
+2026-02-06,Manhã,R04,Sul,Viação Alfa,05:45,05:45,0,39,3.5,Nenhuma
+2026-02-06,Manhã,R05,Leste,Viação Beta,05:45,05:48,3,31,3.5,Nenhuma
+2026-02-06,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,43,3.5,Nenhuma
+2026-02-06,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:48,3,38,3.5,Nenhuma
+2026-02-06,Manhã,R08,Norte,Viação Beta,05:45,05:43,-2,39,3.5,Nenhuma
+2026-02-06,Tarde,R01,Norte,Viação Alfa,13:45,13:39,-6,44,0.8,Nenhuma
+2026-02-06,Tarde,R02,Norte,Viação Alfa,13:45,13:42,-3,39,0.8,Nenhuma
+2026-02-06,Tarde,R03,Leste,Viação Beta,13:45,13:45,0,33,0.8,Nenhuma
+2026-02-06,Tarde,R04,Sul,Viação Alfa,13:45,13:40,-5,36,0.8,Nenhuma
+2026-02-06,Tarde,R05,Leste,Viação Beta,13:45,13:39,-6,40,0.8,Nenhuma
+2026-02-06,Tarde,R06,Oeste,Viação Alfa,13:45,13:43,-2,41,0.8,Nenhuma
+2026-02-06,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:43,-2,44,0.8,Nenhuma
+2026-02-06,Tarde,R08,Norte,Viação Beta,13:45,13:45,0,42,0.8,Nenhuma
+2026-02-06,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,40,0.0,Nenhuma
+2026-02-06,Noite,R02,Norte,Viação Alfa,21:45,21:52,7,43,0.0,Pneu furado
+06/02/2026,Noite,R03,Leste,Viação Beta,21:45,21:45,0,32,0.0,Nenhuma
+2026-02-06,Noite,R04,Sul,Viação Alfa,21:45,21:40,-5,39,0.0,Nenhuma
+2026-02-06,Noite,R05,Leste,Viação Beta,21:45,21:38,-7,30,0.0,Nenhuma
+2026-02-06,Noite,R06,Oeste,Viação Alfa,21:45,21:38,-7,35,0.0,Nenhuma
+2026-02-06,Noite,R07,Centro-Sul,Viação Beta,21:45,21:38,-7,34,0.0,Nenhuma
+2026-02-06,Noite,R08,Norte,Viação Beta,21:45,21:46,1,44,0.0,Nenhuma
+2026-02-07,MANHÃ,R01,Norte,Viação Alfa,05:45,05:42,-3,42,0.0,Nenhuma
+2026-02-07,Manhã,R02,Norte,Viação Alfa,05:45,05:44,-1,37,0.0,Nenhuma
+2026-02-07,Manhã,R03,Leste,Viação Beta,05:45,05:37,-8,28,0.0,Nenhuma
+2026-02-07,Manhã,R04,Sul,Viação Alfa,05:45,05:39,-6,88,0.0,Nenhuma
+2026-02-07,Manhã,R05,Leste,Viação Beta,05:45,05:41,-4,37,0.0,Nenhuma
+2026-02-07,Manhã,R6,Oeste,Viação Alfa,05:45,05:38,-7,36,0.0,Nenhuma
+2026-02-07,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:44,-1,37,0.0,Nenhuma
+2026-02-07,Manhã,R08,Norte,Viação Beta,05:45,05:41,-4,33,0.0,Nenhuma
+2026-02-07,Tarde,R01,Norte,Viação Alfa,13:45,13:42,-3,26,0.9,Nenhuma
+2026-02-07,Tarde,R02,Norte,Viação Alfa,13:45,13:46,1,41,0.9,Nenhuma
+2026-02-07,Tarde,R03,Leste,Viação Beta,13:45,13:36,-9,37,0.9,Nenhuma
+2026-02-07,Tarde,R04,Sul,Viação Alfa,13:45,13:42,-3,34,0.9,Nenhuma
+2026-02-07,Tarde,R05,Leste,Viação Beta,13:45,13:44,-1,38,0.9,Nenhuma
+2026-02-07,Tarde,R06,Oeste,Viação Alfa,13:45,13:41,-4,41,0.9,Nenhuma
+2026-02-07,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,40,0.9,Nenhuma
+07/02/2026,Tarde,R08,Norte,Viação Beta,13:45,13:39,-6,35,0.9,Nenhuma
+2026-02-07,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,36,0.0,Nenhuma
+2026-02-07,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,37,0.0,Nenhuma
+2026-02-07,Noite,R03,Leste,Viação Beta,21:45,21:44,-1,44,0.0,Nenhuma
+2026-02-07,Noite,R04,Sul,Viação Alfa,21:45,21:38,-7,31,0.0,Nenhuma
+2026-02-07,Noite,R05,Leste,Viação Beta,21:45,21:41,-4,37,0.0,Nenhuma
+2026-02-07,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,42,0.0,Nenhuma
+2026-02-07,Noite,R07,Centro-Sul,Viação Beta,21:45,21:49,4,42,0.0,Trânsito intenso
+2026-02-07,Noite,R08,Norte,Viação Beta,21:45,21:43,-2,31,0.0,Nenhuma
+2026-02-09,Manhã,R01,Norte,Viação Alfa,05:45,05h49,4,39,17.7,Nenhuma
+2026-02-09,Manhã,R02,Norte,Viação Alfa,05:45,05:51,6,43,17.7,Nenhuma
+2026-02-09,Manhã,R03,Leste,Viação Beta,05:45,05:46,1,34,17.7,Nenhuma
+2026-02-09,Manhã,R04,Sul,Viação Alfa,05:45,05:49,4,40,17.7,Nenhuma
+2026-02-09,Manhã,R05,Leste,Viação Beta,05:45,05:48,3,39,17.7,Nenhuma
+2026-02-09,Manhã,R06,Oeste,Viação Alfa,05:45,05:45,0,42,17.7,Nenhuma
+09/02/2026,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:46,1,40,17.7,Nenhuma
+2026-02-09,Manhã,R08,Norte,Viação Beta,05:45,05:45,0,37,17.7,Nenhuma
+09/02/2026,Tarde,R01,Norte,Viação Alfa,13:45,13:42,-3,43,0.0,Nenhuma
+2026-02-09,Tarde,R02,Norte,Viação Alfa,13:45,13:43,-2,38,0.0,Nenhuma
+2026-02-09,Tarde,R03,Leste,Viação Beta,13:45,13:39,-6,38,0.0,Nenhuma
+2026-02-09,Tarde,R04,Sul,Viação Alfa,13:45,13:40,-5,37,0.0,Nenhuma
+2026-02-09,Tarde,R05,Leste,Viação Beta,13:45,13:38,-7,42,0.0,Nenhuma
+2026-02-09,Tarde,R06,Oeste,Viação Alfa,13:45,13:43,-2,36,0.0,Nenhuma
+2026-02-09,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:36,-9,34,0.0,Nenhuma
+2026-02-09,Tarde,R08,Norte,Viação Beta,13:45,13:35,-10,32,0.0,Nenhuma
+2026-02-09,Noite,R1,Norte,Viação Alfa,21:45,21:41,-4,30,0.2,Nenhuma
+2026-02-09,Noite,R02,Norte,Viação Alfa,21:45,21:40:00,-5,39,0.2,Nenhuma
+2026-02-09,Noite,R03,Leste,Viação Beta,21:45,21:46,1,38,0.2,Nenhuma
+2026-02-09,Noite,R04,Sul,Viação Alfa,21:45,21:47,2,34,0.2,Nenhuma
+2026-02-09,Noite,R05,Leste,Viação Beta,21:45,21:38,13,44,0.2,Nenhuma
+2026-02-09,Noite,R06,Oeste,Viação Alfa,21:45,21:39,-6,34,0.2,Nenhuma
+2026-02-09,Noite,R07,Centro-Sul,Viação Beta,21:45,21:40,-5,38,0.2,Nenhuma
+2026-02-09,Noite,R08,Norte,Viação Beta,21:45,21:38,-7,38,0.2,Nenhuma
+2026-02-10,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,37,0.0,Nenhuma
+2026-02-10,Manhã,Rota 02,Norte,Viação Alfa,05:45,05:42,-3,36,0.0,Nenhuma
+2026-02-10,Manhã,R03,Leste,Viação Beta,05:45,05:40,-5,31,0.0,Nenhuma
+2026-02-10,Manhã,R04,Sul,Viação Alfa,05:45,05:43,-2,30,0.0,Nenhuma
+10/02/2026,Manhã,R05,Leste,Viação Beta,05:45,05:42,-3,37,0.0,Nenhuma
+2026-02-10,Manhã,R06,Oeste,Viação Alfa,05:45,05:42,-3,35,0.0,Nenhuma
+10/02/2026,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:54,9,40,0.0,Trânsito intenso
+2026-02-10,MANHÃ,R08,Norte,Viação Beta,05:45,05:46,1,35,0.0,Nenhuma
+2026-02-10,Tarde,R01,Norte,Viação Alfa,13:45,13:45,0,37,3.0,Nenhuma
+2026-02-10,Tarde,R02,Norte,Viação Alfa,13:45,13:38,-7,32,3.0,Nenhuma
+2026-02-10,Tarde,R03,Leste,Viação Beta,13:45,13:49,4,41,3.0,Nenhuma
+2026-02-10,Tarde,R04,Sul,Viação Alfa,13:45,13:42,-3,39,3.0,Nenhuma
+2026-02-10,Tarde,R05,Leste,Viação Beta,13:45,13:44,-1,37,3.0,Nenhuma
+2026-02-10,Tarde,R06,Oeste,Viação Alfa,13:45,13:48,3,34,3.0,Nenhuma
+2026-02-10,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:43,-2,37,3.0,Nenhuma
+2026-02-10,Tarde,R08,Norte,Viação Beta,13:45,13:40,-5,36,3.0,Nenhuma
+2026-02-10,Noite,R01,Norte,Viação Alfa,21:45,21:45,0,43,0.0,Nenhuma
+2026-02-10,Noite,R02,Norte,Viação Alfa,21:45,21:38,-7,37,0.0,Nenhuma
+2026-02-10,Noite,R03,Leste,Viação Beta,21:45,21:34,-11,38,0.0,Nenhuma
+2026-02-10,Noite,R04,Sul,Viação Alfa,21:45,21h45,0,44,0.0,Nenhuma
+2026-02-10,Noite,R05,Leste,Viação Beta,21:45,21:44,-1,38,0.0,Nenhuma
+2026-02-10,Noite,R06,Oeste,Viação Alfa,21:45,21:44,-1,40,0.0,Nenhuma
+2026-02-10,Noite,R07,Centro-Sul,Viação Beta,21:45,21:34,-11,35,0.0,Nenhuma
+2026-02-10,Noite,R08,Norte,Viação Beta,21:45,21:44,-1,32,0.0,Nenhuma
+2026-02-11,Manhã,R01,Norte,Viação Alfa,05:45,05:41,-4,31,10.7,Nenhuma
+2026-02-11,Manhã,R02,Norte,Viação Alfa,05:45,05:47,2,34,10.7,Nenhuma
+2026-02-11,Manhã,R03,Leste,Viação Beta,05:45,05:49,4,40,10.7,Nenhuma
+2026-02-11,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,38,10.7,Nenhuma
+2026-02-11,Manhã,R05,Leste,Viação Beta,05:45,05:44,-1,42,10.7,Nenhuma
+2026-02-11,Manhã,R06,Oeste,Viação Alfa,05:45,05:46,1,37,10.7,Nenhuma
+2026-02-11,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:47,2,31,10.7,Nenhuma
+2026-02-11,Manhã,R08,Norte,Viação Beta,05:45,05:48,3,35,10.7,Nenhuma
+2026-02-11,Tarde,R01,Norte,Viação Alfa,13:45,13:47,2,34,11.6,Nenhuma
+2026-02-11,tarde,R02,Norte,Viação Alfa,13:45,13:48,3,40,11.6,Nenhuma
+2026-02-11,Tarde,R03,Leste,Viação Beta,13:45,13:47,2,35,11.6,Nenhuma
+2026-02-11,Tarde,R04,Sul,Viação Alfa,13:45,13:47,2,37,11.6,Nenhuma
+2026-02-11,Tarde,R05,Leste,Viação Beta,13:45,13:51,6,42,11.6,Nenhuma
+2026-02-11,Tarde,R06,Oeste,Viação Alfa,13:45,13:49,4,34,11.6,Nenhuma
+2026-02-11,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:47,2,43,11.6,Nenhuma
+2026-02-11,Tarde,R08,Norte,Viação Beta,13:45,13:49,4,39,11.6,Nenhuma
+2026-02-11,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,38,2.2,Nenhuma
+2026-02-11,Noite,R02,Norte,Viação Alfa,21:45,21:37,-8,36,2.2,Nenhuma
+2026-02-11,Noite,R03,Leste,Viação Beta,21:45,21:38,-7,40,2.2,Nenhuma
+2026-02-11,Noite,R04,Sul,Viação Alfa,21:45,21:40,-5,34,2.2,Nenhuma
+2026-02-11,Noite,R05,Leste,Viação Beta,21:45,21:40,-5,40,2.2,Nenhuma
+2026-02-11,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,35,2.2,Nenhuma
+2026-02-11,Noite,R7,Centro-Sul,Viação Beta,21:45,21:42,-3,380,2.2,Nenhuma
+2026-02-11,Noite,R08,Norte,Viação Beta,21:45,21:37,-8,44,2.2,Nenhuma
+2026-02-12,Manhã,R01,Norte,Viação Alfa,05:45,05:41,-4,32,0.0,Nenhuma
+2026-02-12,Manhã,R02,Norte,Viação Alfa,05:45,05:47,2,41,0.0,Nenhuma
+2026-02-12,Manhã,R03,Leste,Viação Beta,05:45,05:40,-5,31,0.0,Nenhuma
+2026-02-12,Manhã,R04,Sul,Viação Alfa,05:45,05:40,-5,39,0.0,Nenhuma
+2026-02-12,Manhã,R05,Leste,Viação Beta,05:45,05:47,2,37,0.0,Nenhuma
+2026-02-12,Manhã,R06,Oeste,Viação Alfa,05:45,05:44,-1,35,0.0,Nenhuma
+2026-02-12,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:44,-1,40,0.0,Nenhuma
+2026-02-12,Manhã,R08,Norte,Viação Beta,05:45,05:38,-7,38,0.0,Nenhuma
+2026-02-12,Tarde,R01,Norte,Viação Alfa,13:45,13:45,0,37,12.3,Nenhuma
+2026-02-12,Tarde,R02,Norte,Viação Alfa,13:45,13:51,6,37,12.3,Nenhuma
+2026-02-12,Tarde,R03,Leste,Viação Beta,13:45,13:46,1,41,12.3,Nenhuma
+2026-02-12,Tarde,R04,Sul,Viação Alfa,13:45,13:49,4,43,12.3,Nenhuma
+2026-02-12,Tarde,R05,Leste,Viação Beta,13:45,13:47,2,38,12.3,Nenhuma
+2026-02-12,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,37,12.3,Nenhuma
+2026-02-12,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:47,2,34,12.3,Nenhuma
+2026-02-12,Tarde,R08,Norte,Viação Beta,13:45,13:44,-1,27,12.3,Nenhuma
+2026-02-12,Noite,R01,Norte,Viação Alfa,21:45,21:41,-4,37,0.0,Nenhuma
+2026-02-12,Noite,R02,Norte,Viação Alfa,21:45,21:41,-4,39,0.0,Nenhuma
+2026-02-12,Noite,R03,Leste,Viação Beta,21:45,21:40,-5,41,0.0,Nenhuma
+2026-02-12,Noite,R04,Sul,Viação Alfa,21:45,21:39,-6,40,0.0,Nenhuma
+2026-02-12,Noite,R05,Leste,Viação Beta,21:45,21:38,-7,44,0.0,Nenhuma
+2026-02-12,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,38,0.0,Nenhuma
+2026-02-12,Noite,R07,Centro-Sul,Viação Beta,21:45,21:38,-7,35,0.0,Nenhuma
+2026-02-12,noite,R08,Norte,Viação Beta,21:45,21:39,-6,39,0.0,Nenhuma
+2026-02-13,Manhã,R01,Norte,Viação Alfa,05:45,05:40,-5,43,0.0,Nenhuma
+2026-02-13,Manhã,R02,Norte,Viação Alfa,05:45,05:38,-7,34,0.0,Nenhuma
+2026-02-13,Manhã,R03,Leste,Viação Beta,05:45,05:44,-1,34,0.0,Nenhuma
+2026-02-13,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,43,0.0,Nenhuma
+2026-02-13,Manhã,R05,Leste,Viação Beta,05:45,05:50,5,38,0.0,Nenhuma
+2026-02-13,Manhã,R06,Oeste,Viação Alfa,05:45,05:48,3,41,0.0,Nenhuma
+2026-02-13,Manhã,R07,Centro-Sul,Viação Beta,05:45,05h41,-4,40,0.0,Nenhuma
+2026-02-13,Manhã,R08,Norte,Viação Beta,05:45,05:42,-3,43,0.0,Nenhuma
+2026-02-13,Tarde,R01,Norte,Viação Alfa,13:45,13h39,-6,40,0.0,Nenhuma
+2026-02-13,Tarde,R02,Norte,Viação Alfa,13:45,13:41,-4,44,0.0,Nenhuma
+2026-02-13,Tarde,R03,Leste,Viação Beta,13:45,13:42,-3,42,0.0,Nenhuma
+2026-02-13,Tarde,R04,Sul,Viação Alfa,13:45,13:43,-2,38,0.0,Nenhuma
+2026-02-13,Tarde,R05,Leste,Viação Beta,13:45,13:39,-6,44,0.0,Nenhuma
+2026-02-13,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,34,0.0,Nenhuma
+2026-02-13,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:43,-2,32,0.0,Nenhuma
+13/02/2026,Tarde,R08,Norte,Viação Beta,13:45,13:41,-4,36,0.0,Nenhuma
+2026-02-13,Noite,R01,Norte,Viação Alfa,21:45,21:45,0,39,0.0,Nenhuma
+2026-02-13,Noite,R02,Norte,Viação Alfa,21:45,21:34,-11,34,0.0,Nenhuma
+2026-02-13,Noite,R03,Leste,Viação Beta,21:45,21:41,-4,40,0.0,Nenhuma
+2026-02-13,Noite,R04,Sul,Viação Alfa,21:45,21:43,-2,38,0.0,Nenhuma
+2026-02-13,Noite,R05,Leste,Viação Beta,21:45,21:43,-2,39,0.0,Nenhuma
+2026-02-13,Noite,R06,Oeste,Viação Alfa,21:45,21:44,-1,35,0.0,Nenhuma
+2026-02-13,Noite,R07,Centro-Sul,Viação Beta,21:45,21:42,-3,38,0.0,Nenhuma
+2026-02-13,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,40,0.0,Nenhuma
+2026-02-14,Manhã,R01,Norte,Viação Alfa,05:45,05:48,3,34,14.3,Nenhuma
+2026-02-14,Manhã,R02,Norte,Viação Alfa,05:45,05:49,4,36,14.3,Nenhuma
+2026-02-14,Manhã,R03,Leste,Viação Beta,05:45,05:43,-2,36,14.3,Nenhuma
+2026-02-14,Manhã,R04,Sul,Viação Alfa,05:45,05:47,2,36,14.3,Nenhuma
+2026-02-14,Manhã,R05,Leste,Viação Beta,05:45,05:53,8,40,14.3,Nenhuma
+2026-02-14,Manhã,R06,Oeste,Viação Alfa,05:45,05:44,-1,30,14.3,Nenhuma
+2026-02-14,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:49,4,33,14.3,Nenhuma
+14/02/2026,Manhã,R08,Norte,Viação Beta,05:45,06:28,43,29,14.3,Pane mecânica
+2026-02-14,Tarde,R01,Norte,Viação Alfa,13:45,13:46,1,40,1.4,Nenhuma
+2026-02-14,Tarde,R02,Norte,Viação Alfa,13:45,13:44,-1,38,1.4,Nenhuma
+2026-02-14,Tarde,R03,Leste,Viação Beta,13:45,13:44,-1,41,1.4,Nenhuma
+2026-02-14,Tarde,R04,Sul,Viação Alfa,13:45,13:45,0,36,1.4,Nenhuma
+2026-02-14,Tarde,R05,Leste,Viação Beta,13:45,13:43,-2,40,1.4,Nenhuma
+2026-02-14,Tarde,R06,Oeste,Viação Alfa,13:45,13h38,-7,38,1.4,Nenhuma
+2026-02-14,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:45,0,33,1.4,Nenhuma
+2026-02-14,Tarde,R08,Norte,Viação Beta,13:45,13:45,0,32,1.4,Nenhuma
+2026-02-14,Noite,R01,Norte,Viação Alfa,21:45,21:54,9,31,26.3,Chuva forte
+2026-02-14,Noite,R02,Norte,Viação Alfa,21:45,21:54,9,36,26.3,Chuva forte
+2026-02-14,Noite,R03,Leste,Viação Beta,21:45,21:48,3,36,26.3,Chuva forte
+2026-02-14,Noite,r04,Sul,Viação Alfa,21:45,21:51,6,29,26.3,Chuva forte
+2026-02-14,Noite,R05,Leste,Viação Beta,21:45,21:49,4,44,26.3,Chuva forte
+2026-02-14,Noite,R06,Oeste,Viação Alfa,21:45,21:46,1,38,26.3,Chuva forte
+14/02/2026,Noite,R07,Centro-Sul,Viação Beta,21:45,21:49,4,38,26.3,Chuva forte
+2026-02-14,Noite,R08,Norte,Viação Beta,21:45,21:51,6,43,26.3,Chuva forte
+2026-02-16,Manhã,R01,Norte,Viação Alfa,05:45,05:47,2,41,5.4,Nenhuma
+2026-02-16,Manhã,R02,Norte,Viação Alfa,05:45,05:42,-3,41,5.4,Nenhuma
+2026-02-16,Manhã,R03,Leste,Viação Beta,05:45,05:41,-4,38,5.4,Nenhuma
+2026-02-16,Manhã,R04,Sul,Viação Alfa,05:45,05:46,1,36,5.4,Nenhuma
+2026-02-16,Manhã,R05,Leste,Viação Beta,05:45,05:45,0,32,5.4,Nenhuma
+2026-02-16,Manhã,R06,Oeste,Viação Alfa,05:45,05:52,7,40,5.4,Nenhuma
+2026-02-16,Manhã,r07,Centro-Sul,Viação Beta,05:45,05:38,-7,40,5.4,Nenhuma
+2026-02-16,Manhã,R08,Norte,Viação Beta,05:45,05:40,-5,34,5.4,Nenhuma
+2026-02-16,Tarde,R01,Norte,Viação Alfa,13:45,13:43,-2,38,7.4,Nenhuma
+2026-02-16,Tarde,R02,Norte,Viação Alfa,13:45,13:44:00,-1,38,7.4,Nenhuma
+2026-02-16,Tarde,R03,Leste,Viação Beta,13:45,13:45,0,44,7.4,Nenhuma
+2026-02-16,Tarde,R04,Sul,Viação Alfa,13:45,13:44,-1,36,7.4,Nenhuma
+2026-02-16,Tarde,R05,Leste,Viação Beta,13:45,13:47,2,35,7.4,Nenhuma
+2026-02-16,Tarde,R06,Oeste,Viação Alfa,13:45,13:43,-2,44,7.4,Nenhuma
+2026-02-16,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:38,-7,38,7.4,Nenhuma
+16/02/2026,Tarde,R08,Norte,Viação Beta,13:45,13:47,2,36,7.4,Nenhuma
+2026-02-16,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,31,13.9,Nenhuma
+2026-02-16,Noite,R02,Norte,Viação Alfa,21:45,21:45,0,44,13.9,Nenhuma
+2026-02-16,Noite,R03,Leste,Viação Beta,21:45,21:47,2,38,13.9,Nenhuma
+2026-02-16,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,40,13.9,Nenhuma
+2026-02-16,Noite,R05,Leste,Viação Beta,21:45,21:44,-1,37,13.9,Nenhuma
+2026-02-16,Noite,R06,Oeste,Viação Alfa,21:45,21:46,1,35,13.9,Nenhuma
+2026-02-16,Noite,R07,Centro-Sul,Viação Beta,21:45,21:43,-2,37,13.9,Nenhuma
+2026-02-16,Noite,R08,Norte,Viação Beta,21:45,21:38,-7,35,13.9,Nenhuma
+2026-02-17,Manhã,R01,Norte,Viação Alfa,05:45,05:42,7,40,8.2,Nenhuma
+2026-02-17,Manhã,R02,Norte,Viação Alfa,05:45,05:45,0,38,8.2,Nenhuma
+2026-02-17,Manhã,R03,Leste,Viação Beta,05:45,05:45,0,36,8.2,Nenhuma
+2026-02-17,Manhã,R04,Sul,Viação Alfa,05:45,05:45,0,40,8.2,Nenhuma
+2026-02-17,Manhã,R05,Leste,Viação Beta,05:45,05:42,-3,35,8.2,Nenhuma
+2026-02-17,Manhã,R06,Oeste,Viação Alfa,05:45,05:44,-1,41,8.2,Nenhuma
+2026-02-17,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:43,-2,38,8.2,Nenhuma
+2026-02-17,Manhã,R08,Norte,Viação Beta,05:45,05:47,2,35,8.2,Nenhuma
+2026-02-17,Tarde,R01,Norte,Viação Alfa,13:45,13:44,-1,42,0.0,Nenhuma
+2026-02-17,Tarde,R02,Norte,Viação Alfa,13:45,13:41,-4,34,0.0,Nenhuma
+2026-02-17,Tarde,R03,Leste,Viação Beta,13:45,13:51,6,39,0.0,Nenhuma
+2026-02-17,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,37,0.0,Nenhuma
+2026-02-17,Tarde,R05,Leste,Viação Beta,13:45,13:39,-6,44,0.0,Nenhuma
+2026-02-17,Tarde,R06,Oeste,Viação Alfa,13:45,13:41:00,-4,36,0.0,Nenhuma
+17/02/2026,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,38,0.0,Nenhuma
+2026-02-17,Tarde,R08,Norte,Viação Beta,13:45,13:47,2,38,0.0,Nenhuma
+2026-02-17,Noite,R01,Norte,Viação Alfa,21:45,21:39,-6,40,0.0,Nenhuma
+2026-02-17,Noite,R02,Norte,Viação Alfa,21:45,21:41,-4,36,0.0,Nenhuma
+2026-02-17,Noite,R03,Leste,Viação Beta,21:45,21:44,-1,39,0.0,Nenhuma
+2026-02-17,Noite,R04,Sul,Viação Alfa,21:45,21:53,8,39,0.0,Trânsito intenso
+2026-02-17,Noite,R05,Leste,Viação Beta,21:45,21:37,-8,40,0.0,Nenhuma
+2026-02-17,Noite,R06,Oeste,Viação Alfa,21:45,21:39,-6,33,0.0,Nenhuma
+2026-02-17,Noite,R07,Centro-Sul,Viação Beta,21:45,21:45,0,44,0.0,Nenhuma
+2026-02-17,Noite,R08,Norte,Viação Beta,21:45,21:48,3,42,0.0,Pneu furado
+2026-02-18,Manhã,R01,Norte,Viação Alfa,05:45,05:36:00,-9,37,0.0,Nenhuma
+2026-02-18,Manhã,R02,Norte,Viação Alfa,05:45,05:46,1,35,0.0,Nenhuma
+2026-02-18,Manhã,R03,Leste,Viação Beta,05:45,05:41,-4,39,0.0,Nenhuma
+2026-02-18,Manhã,R04,Sul,Viação Alfa,05:45,05:40,-5,39,0.0,Nenhuma
+2026-02-18,Manhã,R05,Leste,Viação Beta,05:45,05:42,-3,38,0.0,Nenhuma
+2026-02-18,Manhã,R06,Oeste,Viação Alfa,05:45,06:02,17,31,0.0,Pane mecânica
+2026-02-18,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:38,-7,40,0.0,Nenhuma
+2026-02-18,Manhã,R08,Norte,Viação Beta,05:45,05:54,9,39,0.0,Trânsito intenso
+2026-02-18,Tarde,R01,Norte,Viação Alfa,13:45,13:44,-1,39,7.9,Nenhuma
+2026-02-18,Tarde,R02,Norte,Viação Alfa,13:45,13:45,0,42,7.9,Nenhuma
+2026-02-18,Tarde,R03,Leste,Viação Beta,13:45,14:19,34,37,7.9,Pane mecânica
+2026-02-18,Tarde,R04,Sul,Viação Alfa,13:45,13:50,5,31,7.9,Nenhuma
+2026-02-18,Tarde,R05,Leste,Viação Beta,13:45,13:49:00,4,40,7.9,Nenhuma
+18/02/2026,Tarde,R06,Oeste,Viação Alfa,13:45,13:47,2,36,7.9,Nenhuma
+2026-02-18,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:49,4,40,7.9,Nenhuma
+2026-02-18,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,36,7.9,Nenhuma
+2026-02-18,noite,R01,Norte,Viação Alfa,21:45,21:49,4,44,15.7,Nenhuma
+2026-02-18,Noite,R02,Norte,Viação Alfa,21:45,21:47,2,30,15.7,Nenhuma
+2026-02-18,Noite,R03,Leste,Viação Beta,21:45,21:43,-2,32,15.7,Nenhuma
+2026-02-18,Noite,R04,Sul,Viação Alfa,21:45,21:43,-2,34,15.7,Nenhuma
+2026-02-18,Noite,R05,Leste,Viação Beta,21:45,21:47,2,38,15.7,Nenhuma
+2026-02-18,Noite,R06,Oeste,Viação Alfa,21:45,21:47,2,43,15.7,Nenhuma
+2026-02-18,Noite,R07,Centro-Sul,Viação Beta,21:45,21:44,-1,42,15.7,Nenhuma
+2026-02-18,Noite,R08,Norte,Viação Beta,21:45,22:02,17,35,15.7,Trânsito intenso
+2026-02-19,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,37,0.0,Nenhuma
+2026-02-19,Manhã,R02,Norte,Viação Alfa,05:45,05:47,2,44,0.0,Nenhuma
+2026-02-19,Manhã,R03,Leste,Viação Beta,05:45,05:45,0,38,0.0,Nenhuma
+2026-02-19,Manhã,R04,Sul,Viação Alfa,05:45,05:40,-5,44,0.0,Nenhuma
+2026-02-19,Manhã,R05,Leste,Viação Beta,05:45,05:40,-5,37,0.0,Nenhuma
+19/02/2026,Manhã,R06,Oeste,Viação Alfa,05:45,05:42,-3,30,0.0,Nenhuma
+2026-02-19,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:42,-3,30,0.0,Nenhuma
+2026-02-19,Manhã,R08,Norte,Viação Beta,05:45,05:40,-5,44,0.0,Nenhuma
+2026-02-19,Tarde,R01,Norte,Viação Alfa,13:45,13:43,-2,44,0.0,Nenhuma
+2026-02-19,Tarde,R02,Norte,Viação Alfa,13:45,13:46,1,38,0.0,Nenhuma
+2026-02-19,Tarde,R03,Leste,Viação Beta,13:45,13:46,1,41,0.0,Nenhuma
+2026-02-19,Tarde,R04,Sul,Viação Alfa,13:45,13:40,-5,42,0.0,Nenhuma
+2026-02-19,Tarde,R05,Leste,Viação Beta,13:45,13:38,-7,38,0.0,Nenhuma
+2026-02-19,Tarde,R06,Oeste,Viação Alfa,13:45,13:39,-6,44,0.0,Nenhuma
+2026-02-19,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:44,-1,44,0.0,Nenhuma
+2026-02-19,Tarde,R08,Norte,Viação Beta,13:45,13:41:00,-4,23,0.0,Nenhuma
+2026-02-19,Noite,r01,Norte,Viação Alfa,21:45,21:45,0,40,9.8,Nenhuma
+2026-02-19,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,43,9.8,Nenhuma
+2026-02-19,Noite,R03,Leste,Viação Beta,21:45,21:46,1,35,9.8,Nenhuma
+2026-02-19,Noite,R04,Sul,Viação Alfa,21:45,21:50,5,37,9.8,Nenhuma
+2026-02-19,Noite,r05,Leste,Viação Beta,21:45,21:44,-1,40,9.8,Nenhuma
+2026-02-19,Noite,r05,Leste,Viação Beta,21:45,21:44,-1,40,9.8,Nenhuma
+2026-02-19,Noite,R06,Oeste,Viação Alfa,21:45,21:44,-1,39,9.8,Nenhuma
+2026-02-19,Noite,R07,Centro-Sul,Viação Beta,21:45,21:43,-2,36,9.8,Nenhuma
+2026-02-19,Noite,R08,Norte,Viação Beta,21:45,21:42,-3,39,9.8,Nenhuma
+2026-02-20,manha,R01,Norte,Viação Alfa,05:45,05:37,-8,34,0.0,Nenhuma
+2026-02-20,Manhã,R02,Norte,Viação Alfa,05:45,05h45,0,39,0.0,Nenhuma
+2026-02-20,Manhã,R03,Leste,Viação Beta,05:45,05:41,-4,42,0.0,Nenhuma
+2026-02-20,MANHÃ,R04,Sul,Viação Alfa,05:45,05h40,-5,37,0.0,Nenhuma
+2026-02-20,Manhã,R05,Leste,Viação Beta,05:45,05:37,-8,38,0.0,Nenhuma
+20/02/2026,Manhã,R06,Oeste,Viação Alfa,05:45,05:45,0,37,0.0,Nenhuma
+2026-02-20,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:39,-6,44,0.0,Nenhuma
+2026-02-20,Manhã,R08,Norte,Viação Beta,05:45,05:38,-7,44,0.0,Nenhuma
+2026-02-20,Tarde,R01,Norte,Viação Alfa,13:45,13:46,1,34,7.2,Nenhuma
+2026-02-20,Tarde,R02,Norte,Viação Alfa,13:45,13:42,-3,40,7.2,Nenhuma
+2026-02-20,Tarde,R03,Leste,Viação Beta,13:45,13:45,0,40,7.2,Nenhuma
+2026-02-20,Tarde,R04,Sul,Viação Alfa,13:45,13:44,-1,40,7.2,Nenhuma
+2026-02-20,Tarde,R05,Leste,Viação Beta,13:45,13:48,3,37,7.2,Nenhuma
+2026-02-20,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,41,7.2,Nenhuma
+2026-02-20,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:41,-4,37,7.2,Nenhuma
+2026-02-20,Tarde,R08,Norte,Viação Beta,13:45,13:45,0,44,7.2,Nenhuma
+2026-02-20,Noite,R01,Norte,Viação Alfa,21:45,21:47,2,41,20.9,Chuva forte
+2026-02-20,Noite,R02,Norte,Viação Alfa,21:45,21:45,0,39,20.9,Chuva forte
+2026-02-20,Noite,R03,Leste,Viação Beta,21:45,21:46,1,32,20.9,Chuva forte
+2026-02-20,Noite,R04,Sul,Viação Alfa,21:45,21:46,1,38,20.9,Chuva forte
+2026-02-20,Noite,R05,Leste,Viação Beta,21:45,21:52,7,37,20.9,Chuva forte
+2026-02-20,Noite,R06,Oeste,Viação Alfa,21:45,21:45,0,35,20.9,Chuva forte
+2026-02-20,Noite,R07,Centro-Sul,Viação Beta,21:45,21:45,0,35,20.9,Chuva forte
+2026-02-20,Noite,R08,Norte,Viação Beta,21:45,21:47,2,37,20.9,Chuva forte
+2026-02-21,Manhã,R01,Norte,Viação Alfa,05:45,05:45,0,36,3.8,Nenhuma
+2026-02-21,Manhã,R02,Norte,Viação Alfa,05:45,17:42,717,39,3.8,Nenhuma
+2026-02-21,Manhã,Rota 03,Leste,Viação Beta,05:45,05:46,1,37,3.8,Nenhuma
+2026-02-21,Manhã,R04,Sul,Viação Alfa,05:45,06:13,28,35,3.8,Pneu furado
+2026-02-21,Manhã,R05,Leste,Viação Beta,05:45,05:47,2,41,3.8,Nenhuma
+2026-02-21,Manhã,R06,Oeste,Viação Alfa,05:45,05:42,-3,31,3.8,Nenhuma
+2026-02-21,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:38,-7,39,3.8,Nenhuma
+2026-02-21,Manhã,R08,Norte,Viação Beta,05:45,05:46,1,41,3.8,Nenhuma
+2026-02-21,Tarde,R01,Norte,Viação Alfa,13:45,13h53,8,36,17.9,Nenhuma
+2026-02-21,Tarde,R02,Norte,Viação Alfa,13:45,13:45,0,36,17.9,Nenhuma
+2026-02-21,Tarde,R03,Leste,Viação Beta,13:45,13:45,0,38,17.9,Nenhuma
+2026-02-21,tarde,R04,Sul,Viação Alfa,13:45,13:51:00,6,41,17.9,Nenhuma
+2026-02-21,Tarde,R05,Leste,Viação Beta,13:45,13:50,5,40,17.9,Nenhuma
+2026-02-21,Tarde,R06,Oeste,Viação Alfa,13:45,13:50,5,32,17.9,Nenhuma
+2026-02-21,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:53,8,42,17.9,Nenhuma
+2026-02-21,Tarde,R08,Norte,Viação Beta,13:45,13:47,2,36,17.9,Nenhuma
+2026-02-21,Noite,R01,Norte,Viação Alfa,21:45,21:48,3,31,17.7,Nenhuma
+2026-02-21,Noite,R02,Norte,Viação Alfa,21:45,21:42,-3,28,17.7,Nenhuma
+2026-02-21,Noite,R03,Leste,Viação Beta,21:45,21:50,5,38,17.7,Nenhuma
+2026-02-21,Noite,R04,Sul,Viação Alfa,21:45,21:48,3,29,17.7,Nenhuma
+21/02/2026,Noite,R05,Leste,Viação Beta,21:45,21:47,2,40,17.7,Nenhuma
+2026-02-21,Noite,R06,Oeste,Viação Alfa,21:45,21:45,0,37,17.7,Nenhuma
+2026-02-21,Noite,R07,Centro-Sul,Viação Beta,21:45,21:46,1,39,17.7,Nenhuma
+2026-02-21,Noite,R08,Norte,Viação Beta,21:45,21:46,1,39,17.7,Nenhuma
+2026-02-23,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,39,11.5,Nenhuma
+2026-02-23,Manhã,R02,Norte,Viação Alfa,05:45,05:41,-4,36,11.5,Nenhuma
+2026-02-23,Manhã,R03,Leste,Viação Beta,05:45,05:45,0,38,11.5,Nenhuma
+2026-02-23,Manhã,R04,Sul,Viação Alfa,05:45,05:47,2,37,11.5,Nenhuma
+2026-02-23,Manhã,R05,Leste,Viação Beta,05:45,05:49,4,34,11.5,Nenhuma
+2026-02-23,Manhã,R06,Oeste,Viação Alfa,05:45,05:48,3,44,11.5,Nenhuma
+2026-02-23,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:46,1,37,11.5,Nenhuma
+2026-02-23,Manhã,R08,Norte,Viação Beta,05:45,05:46,1,43,11.5,Nenhuma
+2026-02-23,Tarde,R01,Norte,Viação Alfa,13:45,13:39,-6,42,0.0,Nenhuma
+2026-02-23,Tarde,R02,Norte,Viação Alfa,13:45,13:46,1,39,0.0,Nenhuma
+2026-02-23,Tarde,R03,Leste,Viação Beta,13:45,13:43,-2,32,0.0,Nenhuma
+2026-02-23,tarde,R04,Sul,Viação Alfa,13:45,13:45,0,43,0.0,Nenhuma
+2026-02-23,Tarde,R05,Leste,Viação Beta,13:45,13:45,0,38,0.0,Nenhuma
+2026-02-23,Tarde,R06,Oeste,Viação Alfa,13:45,13:50,5,42,0.0,Nenhuma
+2026-02-23,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:41,-4,42,0.0,Nenhuma
+2026-02-23,Tarde,R08,Norte,Viação Beta,13:45,13:45,0,37,0.0,Nenhuma
+2026-02-23,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,38,2.5,Nenhuma
+2026-02-23,Noite,R02,Norte,Viação Alfa,21:45,21:43,-2,40,2.5,Nenhuma
+2026-02-23,Noite,R03,Leste,Viação Beta,21:45,21:45,0,37,2.5,Nenhuma
+2026-02-23,Noite,R04,Sul,Viação Alfa,21:45,21:45,0,37,2.5,Nenhuma
+2026-02-23,Noite,R05,Leste,Viação Beta,21:45,21:44,-1,32,2.5,Nenhuma
+2026-02-23,Noite,R06,Oeste,Viação Alfa,21:45,21:44,-1,33,2.5,Nenhuma
+2026-02-23,Noite,R07,Centro-Sul,Viação Beta,21:45,21:36,-9,40,2.5,Nenhuma
+2026-02-23,Noite,R08,Norte,Viação Beta,21:45,21:46,1,37,2.5,Nenhuma
+24/02/2026,Manhã,R01,Norte,Viação Alfa,05:45,05:59,14,36,6.4,Trânsito intenso
+24/02/2026,Manhã,R02,Norte,Viação Alfa,05:45,06:03,18,38,6.4,Pneu furado
+2026-02-24,Manhã,R03,Leste,Viação Beta,05:45,05:43,-2,41,6.4,Nenhuma
+2026-02-24,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,38,6.4,Nenhuma
+2026-02-24,Manhã,R05,Leste,Viação Beta,05:45,05:43,-2,37,6.4,Nenhuma
+2026-02-24,Manhã,R06,Oeste,Viação Alfa,05:45,05:42,-3,38,6.4,Nenhuma
+2026-02-24,Manhã,R7,Centro-Sul,Viação Beta,05:45,05:45,0,35,6.4,Nenhuma
+2026-02-24,Manhã,R08,Norte,Viação Beta,05:45,05:39,-6,44,6.4,Nenhuma
+2026-02-24,Tarde,R01,Norte,Viação Alfa,13:45,13:53,8,39,31.0,Chuva forte
+2026-02-24,Tarde,R02,Norte,Viação Alfa,13:45,13:50,5,42,31.0,Chuva forte
+24/02/2026,Tarde,R03,Leste,Viação Beta,13:45,13:58,13,34,31.0,Chuva forte
+2026-02-24,Tarde,R04,Sul,Viação Alfa,13:45,13:52,7,32,31.0,Chuva forte
+2026-02-24,tarde,R05,Leste,Viação Beta,13:45,13:53,8,44,31.0,Chuva forte
+2026-02-24,tarde,R05,Leste,Viação Beta,13:45,13:53,8,44,31.0,Chuva forte
+2026-02-24,Tarde,R06,Oeste,Viação Alfa,13:45,13:58,13,41,31.0,Chuva forte
+24/02/2026,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:54,9,32,31.0,Chuva forte
+2026-02-24,Tarde,R08,Norte,Viação Beta,13:45,13:56,11,40,31.0,Chuva forte
+2026-02-24,Noite,R01,Norte,Viação Alfa,21:45,21:39,-6,34,1.2,Nenhuma
+2026-02-24,Noite,R02,Norte,Viação Alfa,21:45,21:41,-4,40,1.2,Nenhuma
+2026-02-24,Noite,Rota 03,Leste,Viação Beta,21:45,21:47,2,35,1.2,Nenhuma
+2026-02-24,Noite,R04,Sul,Viação Alfa,21:45,21:43,-2,38,1.2,Nenhuma
+2026-02-24,Noite,R05,Leste,Viação Beta,21:45,21:38,-7,30,1.2,Nenhuma
+2026-02-24,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,38,1.2,Nenhuma
+2026-02-24,Noite,R07,Centro-Sul,Viação Beta,21:45,21:43,-2,33,1.2,Nenhuma
+2026-02-24,Noite,R08,Norte,Viação Beta,21:45,21:44,-1,37,1.2,Nenhuma
+25/02/2026,Manhã,R01,Norte,Viação Alfa,05:45,05:42:00,-3,39,0.4,Nenhuma
+2026-02-25,Manhã,Rota 02,Norte,Viação Alfa,05:45,05:37,-8,26,0.4,Nenhuma
+2026-02-25,Manhã,R03,Leste,Viação Beta,05:45,05:40,-5,33,0.4,Nenhuma
+2026-02-25,Manhã,R04,Sul,Viação Alfa,05:45,05:46,1,38,0.4,Nenhuma
+2026-02-25,Manhã,R05,Leste,Viação Beta,05:45,05:45,0,44,0.4,Nenhuma
+25/02/2026,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,40,0.4,Nenhuma
+2026-02-25,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:41,-4,39,0.4,Nenhuma
+2026-02-25,Manhã,R08,Norte,Viação Beta,05:45,05h58,13,35,0.4,Trânsito intenso
+25/02/2026,Tarde,R01,Norte,Viação Alfa,13:45,13:49,4,37,15.1,Nenhuma
+2026-02-25,Tarde,R02,Norte,Viação Alfa,13:45,13:43,-2,40,15.1,Nenhuma
+2026-02-25,Tarde,R03,Leste,Viação Beta,13:45,13:51,6,32,15.1,Nenhuma
+2026-02-25,Tarde,R04,Sul,Viação Alfa,13:45,13:44,-1,39,15.1,Nenhuma
+25/02/2026,Tarde,R05,Leste,Viação Beta,13:45,13:50,5,25,15.1,Nenhuma
+2026-02-25,Tarde,R06,Oeste,Viação Alfa,13:45,13:48,3,39,15.1,Nenhuma
+2026-02-25,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:48,3,34,15.1,Nenhuma
+2026-02-25,Tarde,R08,Norte,Viação Beta,13:45,13:45,0,36,15.1,Nenhuma
+2026-02-25,Noite,R01,Norte,Viação Alfa,21:45,21:41,-4,38,2.3,Nenhuma
+2026-02-25,Noite,R02,Norte,Viação Alfa,21:45,21:40,-5,44,2.3,Nenhuma
+2026-02-25,Noite,R03,Leste,Viação Beta,21:45,21:41,-4,40,2.3,Nenhuma
+2026-02-25,Noite,R04,Sul,Viação Alfa,21:45,21:35,-10,38,2.3,Nenhuma
+2026-02-25,Noite,R05,Leste,Viação Beta,21:45,21:40,-5,43,2.3,Nenhuma
+2026-02-25,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,41,2.3,Nenhuma
+2026-02-25,Noite,R07,Centro-Sul,Viação Beta,21:45,21:41,-4,44,2.3,Nenhuma
+2026-02-25,Noite,R08,Norte,Viação Beta,21:45,21:42,-3,39,2.3,Nenhuma
+2026-02-26,Manhã,R01,Norte,Viação Alfa,05:45,05:40,-5,34,0.0,Nenhuma
+2026-02-26,Manhã,R02,Norte,Viação Alfa,05:45,05:41,-4,36,0.0,Nenhuma
+2026-02-26,Manhã,R03,Leste,Viação Beta,05:45,05:39,-6,44,0.0,Nenhuma
+2026-02-26,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,39,0.0,Nenhuma
+2026-02-26,Manhã,R5,Leste,Viação Beta,05:45,05:38,-7,40,0.0,Nenhuma
+2026-02-26,Manhã,R06,Oeste,Viação Alfa,05:45,05:39,-6,30,0.0,Nenhuma
+2026-02-26,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:45,0,35,0.0,Nenhuma
+2026-02-26,Manhã,R08,Norte,Viação Beta,05:45,05:41,-4,44,0.0,Nenhuma
+2026-02-26,Tarde,R01,Norte,Viação Alfa,13:45,13:35,-10,36,0.0,Nenhuma
+2026-02-26,Tarde,R02,Norte,Viação Alfa,13:45,13:43,-2,41,0.0,Nenhuma
+2026-02-26,Tarde,R03,Leste,Viação Beta,13:45,13:48,3,30,0.0,Nenhuma
+2026-02-26,Tarde,R04,Sul,Viação Alfa,13:45,13:39,-6,43,0.0,Nenhuma
+2026-02-26,Tarde,R05,Leste,Viação Beta,13:45,13:40,-5,36,0.0,Nenhuma
+2026-02-26,Tarde,R06,Oeste,Viação Alfa,13:45,13:45,0,42,0.0,Nenhuma
+2026-02-26,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:45,0,39,0.0,Nenhuma
+2026-02-26,Tarde,R08,Norte,Viação Beta,13:45,13:55,10,36,0.0,Trânsito intenso
+2026-02-26,Noite,R01,Norte,Viação Alfa,21:45,21:48,3,44,16.6,Nenhuma
+2026-02-26,Noite,R02,Norte,Viação Alfa,21:45,21:42,-3,37,16.6,Nenhuma
+2026-02-26,Noite,R03,Leste,Viação Beta,21:45,21:42,-3,33,16.6,Nenhuma
+2026-02-26,Noite,R04,Sul,Viação Alfa,21:45,21:48,3,34,16.6,Nenhuma
+2026-02-26,Noite,R05,Leste,Viação Beta,21:45,21:41,-4,38,16.6,Nenhuma
+2026-02-26,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,44,16.6,Nenhuma
+2026-02-26,Noite,R07,Centro-Sul,Viação Beta,21:45,21:44,-1,38,16.6,Nenhuma
+2026-02-26,Noite,R08,Norte,Viação Beta,21:45,21:47,2,41,16.6,Nenhuma
+2026-02-27,Manhã,R01,Norte,Viação Alfa,05:45,05:41,-4,34,1.9,Nenhuma
+2026-02-27,Manhã,R02,Norte,Viação Alfa,05:45,05:38,-7,44,1.9,Nenhuma
+2026-02-27,Manhã,R03,Leste,Viação Beta,05:45,05:37,-8,31,1.9,Nenhuma
+2026-02-27,Manhã,R04,Sul,Viação Alfa,05:45,05:48,3,35,1.9,Nenhuma
+2026-02-27,Manhã,R05,Leste,Viação Beta,05:45,05:47:00,2,30,1.9,Nenhuma
+2026-02-27,Manhã,R06,Oeste,Viação Alfa,05:45,05:42:00,-3,36,1.9,Nenhuma
+2026-02-27,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:40,-5,38,1.9,Nenhuma
+2026-02-27,Manhã,R08,Norte,Viação Beta,05:45,05:42,-3,35,1.9,Nenhuma
+2026-02-27,Tarde,R01,Norte,Viação Alfa,13:45,13:42,-3,43,4.4,Nenhuma
+2026-02-27,Tarde,Rota 02,Norte,Viação Alfa,13:45,13:45,0,40,4.4,Nenhuma
+2026-02-27,Tarde,R03,Leste,Viação Beta,13:45,13:47,2,32,4.4,Nenhuma
+2026-02-27,Tarde,R4,Sul,Viação Alfa,13:45,13:45,0,44,4.4,Nenhuma
+2026-02-27,Tarde,R05,Leste,Viação Beta,13:45,13:41,-4,39,4.4,Nenhuma
+2026-02-27,Tarde,R06,Oeste,Viação Alfa,13:45,13:44,-1,41,4.4,Nenhuma
+2026-02-27,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:41,-4,36,4.4,Nenhuma
+27/02/2026,Tarde,R08,Norte,Viação Beta,13:45,14:03,18,39,4.4,Trânsito intenso
+2026-02-27,Noite,R01,Norte,Viação Alfa,21:45,21:47,2,42,0.0,Nenhuma
+2026-02-27,Noite,R02,Norte,Viação Alfa,21:45,21:35,-10,37,0.0,Nenhuma
+2026-02-27,Noite,R03,Leste,Viação Beta,21:45,21:47,2,42,0.0,Nenhuma
+2026-02-27,Noite,R04,Sul,Viação Alfa,21:45,21:38,-7,37,0.0,Nenhuma
+2026-02-27,Noite,r05,Leste,Viação Beta,21:45,21:40,-5,35,0.0,Nenhuma
+2026-02-27,Noite,R06,Oeste,Viação Alfa,21:45,21:39,-6,35,0.0,Nenhuma
+2026-02-27,Noite,R07,Centro-Sul,Viação Beta,21:45,21:41,-4,36,0.0,Nenhuma
+2026-02-27,Noite,R08,Norte,Viação Beta,21:45,21:45,0,27,0.0,Nenhuma
+2026-02-28,Manhã,R01,Norte,Viação Alfa,05:45,05:48,3,38,19.3,Nenhuma
+2026-02-28,Manhã,R02,Norte,Viação Alfa,05:45,05:51,6,37,19.3,Nenhuma
+2026-02-28,Manhã,R03,Leste,Viação Beta,05:45,05:48,3,38,19.3,Nenhuma
+2026-02-28,Manhã,R04,Sul,Viação Alfa,05:45,05:47,2,37,19.3,Nenhuma
+2026-02-28,Manhã,R05,Leste,Viação Beta,05:45,05:43,-2,32,19.3,Nenhuma
+2026-02-28,Manhã,R06,Oeste,Viação Alfa,05:45,05:42,-3,40,19.3,Nenhuma
+2026-02-28,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:46,1,37,19.3,Nenhuma
+2026-02-28,Manhã,R08,Norte,Viação Beta,05:45,05:49,4,37,19.3,Nenhuma
+2026-02-28,Tarde,R01,Norte,Viação Alfa,13:45,13:46,1,33,4.6,Nenhuma
+2026-02-28,Tarde,R02,Norte,Viação Alfa,13:45,13:47,2,30,4.6,Nenhuma
+2026-02-28,Tarde,R03,Leste,Viação Beta,13:45,13:46,1,37,4.6,Nenhuma
+2026-02-28,Tarde,R04,Sul,Viação Alfa,13:45,13:43,-2,35,4.6,Nenhuma
+2026-02-28,Tarde,R05,Leste,Viação Beta,13:45,13h42,-3,41,4.6,Nenhuma
+2026-02-28,Tarde,R06,Oeste,Viação Alfa,13:45,13:40,-5,40,4.6,Nenhuma
+2026-02-28,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:45,0,41,4.6,Nenhuma
+2026-02-28,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,38,4.6,Nenhuma
+2026-02-28,Noite,R01,Norte,Viação Alfa,21:45,21:49,4,31,14.9,Nenhuma
+2026-02-28,Noite,R02,Norte,Viação Alfa,21:45,21:41,-4,38,14.9,Nenhuma
+2026-02-28,Noite,R03,Leste,Viação Beta,21:45,21:48,3,41,14.9,Nenhuma
+2026-02-28,Noite,R04,Sul,Viação Alfa,21:45,21:46,1,38,14.9,Nenhuma
+2026-02-28,Noturno,R05,Leste,Viação Beta,21:45,21:47,2,39,14.9,Nenhuma
+2026-02-28,Noite,R06,Oeste,Viação Alfa,21:45,21:45,0,42,14.9,Nenhuma
+2026-02-28,Noite,R07,Centro-Sul,Viação Beta,21:45,21:44,-1,31,14.9,Nenhuma
+2026-02-28,Noite,R08,Norte,Viação Beta,21:45,21:49,4,38,14.9,Nenhuma
+02/03/2026,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,37,8.7,Nenhuma
+2026-03-02,Manhã,Rota 02,Norte,Viação Alfa,05:45,05:47,2,36,8.7,Nenhuma
+2026-03-02,Manhã,R03,Leste,Viação Beta,05:45,05:50,5,31,8.7,Nenhuma
+2026-03-02,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,34,8.7,Nenhuma
+2026-03-02,Manhã,R05,Leste,Viação Beta,05:45,05:39,-6,37,8.7,Nenhuma
+2026-03-02,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,40,8.7,Nenhuma
+2026-03-02,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:45,0,41,8.7,Nenhuma
+2026-03-02,Manhã,R08,Norte,Viação Beta,05:45,06:01,16,31,8.7,Pneu furado
+2026-03-02,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,34,7.1,Nenhuma
+2026-03-02,Tarde,R02,Norte,Viação Alfa,13:45,13:42,-3,34,7.1,Nenhuma
+2026-03-02,Tarde,R03,Leste,Viação Beta,13:45,13:44,-1,36,7.1,Nenhuma
+2026-03-02,Tarde,R04,Sul,Viação Alfa,13:45,13:47,2,35,7.1,Nenhuma
+2026-03-02,Tarde,R05,Leste,Viação Beta,13:45,13:48,3,44,7.1,Nenhuma
+2026-03-02,Tarde,R06,Oeste,Viação Alfa,13:45,13:47,2,36,7.1,Nenhuma
+2026-03-02,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:39,-6,35,7.1,Nenhuma
+2026-03-02,Tarde,R08,Norte,Viação Beta,13:45,13:44,-1,39,7.1,Nenhuma
+2026-03-02,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,37,0.0,Nenhuma
+2026-03-02,Noite,R02,Norte,Viação Alfa,21:45,21:42,-3,36,0.0,Nenhuma
+2026-03-02,Noite,R03,Leste,Viação Beta,21:45,21:41,-4,35,0.0,Nenhuma
+2026-03-02,Noite,R04,Sul,Viação Alfa,21:45,21:39,-6,34,0.0,Nenhuma
+2026-03-02,Noite,R05,Leste,Viação Beta,21:45,21:40,-5,44,0.0,Nenhuma
+2026-03-02,Noite,R06,Oeste,Viação Alfa,21:45,21:38,-7,34,0.0,Nenhuma
+2026-03-02,Noite,R07,Centro-Sul,Viação Beta,21:45,21:41,-4,41,0.0,Nenhuma
+2026-03-02,Noite,R08,Norte,Viação Beta,21:45,21:36,-9,41,0.0,Nenhuma
+2026-03-03,Manhã,R01,Norte,Viação Alfa,05:45,05:45,0,39,,Nenhuma
+2026-03-03,Manhã,R02,Norte,Viação Alfa,05:45,05:36:00,-9,37,,Nenhuma
+2026-03-03,Manhã,R03,Leste,Viação Beta,05:45,05:46,1,35,,Nenhuma
+2026-03-03,Manhã,R04,Sul,Viação Alfa,05:45,05:38,-7,37,,Nenhuma
+2026-03-03,Manhã,R05,Leste,Viação Beta,05:45,05:46,1,36,,Nenhuma
+2026-03-03,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,36,,Nenhuma
+2026-03-03,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:43,-2,33,,Nenhuma
+2026-03-03,Manhã,R08,Norte,Viação Beta,05:45,05:38:00,-7,39,,Nenhuma
+2026-03-03,Tarde,R01,Norte,Viação Alfa,13:45,13:40,-5,35,,Nenhuma
+2026-03-03,Tarde,R02,Norte,Viação Alfa,13:45,13:40,-5,29,,Nenhuma
+2026-03-03,Tarde,R03,Leste,Viação Beta,13:45,13:40,-5,41,,Nenhuma
+2026-03-03,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,41,,Nenhuma
+2026-03-03,Tarde,R05,Leste,Viação Beta,13:45,13:43,-2,29,,Nenhuma
+2026-03-03,Tarde,R06,Oeste,Viação Alfa,13:45,13:37,-8,33,,Nenhuma
+2026-03-03,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,38,,Nenhuma
+2026-03-03,Tarde,R08,Norte,Viação Beta,13:45,13:44,-1,38,,Nenhuma
+2026-03-03,Noite,R01,Norte,Viação Alfa,21:45,21:51,6,39,,Chuva forte
+2026-03-03,Noite,R02,Norte,Viação Alfa,21:45,21:56,11,38,,Chuva forte
+2026-03-03,Noite,R03,Leste,Viação Beta,21:45,21:55,10,40,,Chuva forte
+2026-03-03,Noite,R04,Sul,Viação Alfa,21:45,22:00,15,31,,Chuva forte
+2026-03-03,Noite,R05,Leste,Viação Beta,21:45,21:52,7,41,,Chuva forte
+2026-03-03,Noite,R06,Oeste,Viação Alfa,21:45,21:52,7,35,,Chuva forte
+2026-03-03,Noite,R07,Centro-Sul,Viação Beta,21:45,21:57,12,36,,Chuva forte
+2026-03-03,Noite,R08,Norte,Viação Beta,21:45,21:55,10,33,,Chuva forte
+04/03/2026,Manhã,R01,Norte,Viação Alfa,05:45,05:44,-1,39,15.6,Nenhuma
+2026-03-04,Manhã,R02,Norte,Viação Alfa,05:45,05:49,4,37,15.6,Nenhuma
+2026-03-04,Manhã,R03,Leste,Viação Beta,05:45,06:10,25,34,15.6,Pane mecânica
+2026-03-04,Manhã,R04,Sul,Viação Alfa,05:45,05:47,2,33,15.6,Nenhuma
+2026-03-04,Manhã,R05,Leste,Viação Beta,05:45,05:47,2,42,15.6,Nenhuma
+2026-03-04,Manhã,R06,Oeste,Viação Alfa,05:45,05:48,3,40,15.6,Nenhuma
+2026-03-04,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:48,3,39,15.6,Nenhuma
+2026-03-04,Manhã,R08,Norte,Viação Beta,05:45,05:48,3,36,15.6,Nenhuma
+2026-03-04,Tarde,R01,Norte,Viação Alfa,13:45,13:38,-7,39,0.0,Nenhuma
+2026-03-04,Tarde,R02,Norte,Viação Alfa,13:45,13:42:00,-3,39,0.0,Nenhuma
+2026-03-04,Tarde,R03,Leste,Viação Beta,13:45,13:39,-6,41,0.0,Nenhuma
+2026-03-04,Tarde,R04,Sul,Viação Alfa,13:45,13:45,0,37,0.0,Nenhuma
+2026-03-04,Tarde,R05,Leste,Viação Beta,13:45,13:40,-5,40,0.0,Nenhuma
+2026-03-04,Tarde,R06,Oeste,Viação Alfa,13:45,13:39,-6,35,0.0,Nenhuma
+2026-03-04,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:39,-6,38,0.0,Nenhuma
+2026-03-04,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,34,0.0,Nenhuma
+2026-03-04,Noite,R01,Norte,Viação Alfa,21:45,21:44,-1,39,5.9,Nenhuma
+2026-03-04,Noite,R02,Norte,Viação Alfa,21:45,21:39,-6,41,5.9,Nenhuma
+2026-03-04,Noite,R03,Leste,Viação Beta,21:45,21:49,4,41,5.9,Nenhuma
+2026-03-04,Noite,R04,Sul,Viação Alfa,21:45,21:44,-1,31,5.9,Nenhuma
+2026-03-04,Noite,R05,Leste,Viação Beta,21:45,21:47:00,2,34,5.9,Nenhuma
+2026-03-04,Noite,R06,Oeste,Viação Alfa,21:45,21:38,-7,41,5.9,Nenhuma
+2026-03-04,Noite,R07,Centro-Sul,Viação Beta,21:45,21:42,-3,41,5.9,Nenhuma
+2026-03-04,Noite,R08,Norte,Viação Beta,21:45,21:40,-5,42,5.9,Nenhuma
+2026-03-05,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,33,,Nenhuma
+2026-03-05,Manhã,R02,Norte,Viação Alfa,05:45,05:47,2,38,,Nenhuma
+2026-03-05,Manhã,R03,Leste,Viação Beta,05:45,05:45,0,43,,Nenhuma
+2026-03-05,Manhã,R04,Sul,Viação Alfa,05:45,17:46,721,43,,Nenhuma
+2026-03-05,Manhã,R05,Leste,Viação Beta,05:45,05:48:00,-7,44,,Nenhuma
+2026-03-05,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,37,,Nenhuma
+2026-03-05,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:51,6,40,,Nenhuma
+2026-03-05,Manhã,R08,Norte,Viação Beta,05:45,05:40,-5,43,,Nenhuma
+2026-03-05,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,44,,Nenhuma
+2026-03-05,Tarde,R02,Norte,Viação Alfa,13:45,13:40,-5,32,,Nenhuma
+2026-03-05,Tarde,R03,Leste,Viação Beta,13:45,13h45,0,37,,Nenhuma
+2026-03-05,Tarde,R04,Sul,Viação Alfa,13:45,13:42,-3,39,,Nenhuma
+2026-03-05,Tarde,R05,Leste,Viação Beta,13:45,13:42:00,-3,34,,Nenhuma
+2026-03-05,Tarde,R05,Leste,Viação Beta,13:45,13:42:00,-3,34,,Nenhuma
+2026-03-05,Tarde,R06,Oeste,Viação Alfa,13:45,13:51,6,38,,Nenhuma
+2026-03-05,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,42,,Nenhuma
+2026-03-05,Tarde,R08,Norte,Viação Beta,13:45,13:47,2,38,,Nenhuma
+2026-03-05,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,36,,Nenhuma
+2026-03-05,Noite,R02,Norte,Viação Alfa,21:45,21:46,1,42,,Nenhuma
+2026-03-05,Noite,Rota 03,Leste,Viação Beta,21:45,21:47,2,35,,Nenhuma
+2026-03-05,Noite,R04,Sul,Viação Alfa,21:45,21:46,1,40,,Nenhuma
+2026-03-05,Noite,R05,Leste,Viação Beta,21:45,21:42,-3,38,,Nenhuma
+2026-03-05,Noite,R06,Oeste,Viação Alfa,21:45,21:47,2,44,,Nenhuma
+2026-03-05,Noite,R07,Centro-Sul,Viação Beta,21:45,21:40,-5,42,,Nenhuma
+2026-03-05,Noite,R08,Norte,Viação Beta,21:45,21:39,-6,34,,Nenhuma
+2026-03-06,Manhã,R01,Norte,Viação Alfa,05:45,05:38,-7,36,0.0,Nenhuma
+2026-03-06,Manhã,R02,Norte,Viação Alfa,05:45,05:42,-3,41,0.0,Nenhuma
+2026-03-06,Manhã,R03,Leste,Viação Beta,05:45,05:38,-7,38,0.0,Nenhuma
+2026-03-06,Manhã,R04,Sul,Viação Alfa,05:45,05:39,-6,44,0.0,Nenhuma
+2026-03-06,Manhã,R05,Leste,Viação Beta,05:45,05:44,-1,37,0.0,Nenhuma
+2026-03-06,Manhã,R06,Oeste,Viação Alfa,05:45,05:44,-1,40,0.0,Nenhuma
+2026-03-06,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:47,2,44,0.0,Nenhuma
+2026-03-06,Manhã,R08,Norte,Viação Beta,05:45,05:42,-3,37,0.0,Nenhuma
+2026-03-06,Tarde,R01,Norte,Viação Alfa,13:45,13:40,-5,36,4.0,Nenhuma
+2026-03-06,Tarde,R2,Norte,Viação Alfa,13:45,13h47,2,36,4.0,Nenhuma
+2026-03-06,Tarde,Rota 03,Leste,Viação Beta,13:45,13:40,-5,33,4.0,Nenhuma
+2026-03-06,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,39,4.0,Nenhuma
+2026-03-06,Tarde,R05,Leste,Viação Beta,13:45,13:43,-2,40,4.0,Nenhuma
+06/03/2026,Tarde,R06,Oeste,Viação Alfa,13:45,13:47,2,40,4.0,Nenhuma
+2026-03-06,Tarde,R07,Centro-Sul,Viação Beta,13:45,13h43,-2,44,4.0,Nenhuma
+2026-03-06,Tarde,R08,Norte,Viação Beta,13:45,13:43,-2,42,4.0,Nenhuma
+2026-03-06,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,39,0.0,Nenhuma
+2026-03-06,Noite,R02,Norte,Viação Alfa,21:45,21:38,-7,44,0.0,Nenhuma
+2026-03-06,Noite,R03,Leste,Viação Beta,21:45,21:39,-6,38,0.0,Nenhuma
+2026-03-06,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,32,0.0,Nenhuma
+2026-03-06,Noite,R05,Leste,Viação Beta,21:45,21:36,-9,41,0.0,Nenhuma
+2026-03-06,Noite,R06,Oeste,Viação Alfa,21:45,21:39,-6,39,0.0,Nenhuma
+2026-03-06,Noite,R07,Centro-Sul,Viação Beta,21:45,21:35,-10,34,0.0,Nenhuma
+2026-03-06,Noite,R08,Norte,Viação Beta,21:45,21:40,-5,43,0.0,Nenhuma
+2026-03-07,Manhã,r01,Norte,Viação Alfa,05:45,05:45,0,33,1.1,Nenhuma
+2026-03-07,Manhã,R02,Norte,Viação Alfa,05:45,05:51,6,30,1.1,Nenhuma
+2026-03-07,Manhã,R03,Leste,Viação Beta,05:45,05:42,-3,39,1.1,Nenhuma
+2026-03-07,Manhã,R04,Sul,Viação Alfa,05:45,05:43,-2,41,1.1,Nenhuma
+2026-03-07,Manhã,R05,Leste,Viação Beta,05:45,05:44,-1,37,1.1,Nenhuma
+2026-03-07,Manhã,Rota 06,Oeste,Viação Alfa,05:45,05:41,-4,35,1.1,Nenhuma
+2026-03-07,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:41,-4,35,1.1,Nenhuma
+2026-03-07,Manhã,R08,Norte,Viação Beta,05:45,05:40,-5,42,1.1,Nenhuma
+07/03/2026,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,35,0.0,Nenhuma
+2026-03-07,Tarde,R02,Norte,Viação Alfa,13:45,13:40,-5,40,0.0,Nenhuma
+2026-03-07,Tarde,R03,Leste,Viação Beta,13:45,13:47,2,33,0.0,Nenhuma
+2026-03-07,Tarde,R04,Sul,Viação Alfa,13:45,13:45,0,38,0.0,Nenhuma
+2026-03-07,Tarde,R05,Leste,Viação Beta,13:45,13:40,-5,38,0.0,Nenhuma
+2026-03-07,Tarde,R6,Oeste,Viação Alfa,13:45,13:39,-6,35,0.0,Nenhuma
+2026-03-07,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,40,0.0,Nenhuma
+2026-03-07,Tarde,R08,Norte,Viação Beta,13:45,13:39,-6,37,0.0,Nenhuma
+2026-03-07,Noite,R01,Norte,Viação Alfa,21:45,21:47,2,41,17.5,Nenhuma
+2026-03-07,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,44,17.5,Nenhuma
+2026-03-07,Noite,R03,Leste,Viação Beta,21:45,21:43,-2,36,17.5,Nenhuma
+2026-03-07,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,39,17.5,Nenhuma
+2026-03-07,Noite,R05,Leste,Viação Beta,21:45,21:51,6,35,17.5,Nenhuma
+2026-03-07,Noite,R06,Oeste,Viação Alfa,21:45,21:36,-9,36,17.5,Nenhuma
+2026-03-07,Noite,R07,Centro-Sul,Viação Beta,21:45,21:45,0,31,17.5,Nenhuma
+2026-03-07,Noite,R08,Norte,Viação Beta,21:45,21h46,1,39,17.5,Nenhuma
+2026-03-09,Manhã,R01,Norte,Viação Alfa,05:45,06:34,49,44,32.2,Pane mecânica
+2026-03-09,Manhã,R02,Norte,Viação Alfa,05:45,05:54,9,42,32.2,Chuva forte
+2026-03-09,Manhã,R03,Leste,Viação Beta,05:45,05:51,6,31,32.2,Chuva forte
+2026-03-09,Manhã,R04,Sul,Viação Alfa,05:45,05:52,7,39,32.2,Chuva forte
+2026-03-09,Manhã,R05,Leste,Viação Beta,05:45,05:54,9,34,32.2,Chuva forte
+2026-03-09,Manhã,R06,Oeste,Viação Alfa,05:45,05:48,3,32,32.2,Chuva forte
+2026-03-09,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:57,12,38,32.2,Chuva forte
+09/03/2026,Manhã,R08,Norte,Viação Beta,05:45,05:54,9,41,32.2,Chuva forte
+2026-03-09,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,39,3.8,Nenhuma
+2026-03-09,Tarde,R02,Norte,Viação Alfa,13:45,13:42,-3,42,3.8,Nenhuma
+2026-03-09,Tarde,R03,Leste,Viação Beta,13:45,13:40,-5,37,3.8,Nenhuma
+2026-03-09,Tarde,R04,Sul,Viação Alfa,13:45,13:48,3,35,3.8,Nenhuma
+2026-03-09,Tarde,R05,Leste,Viação Beta,13:45,13:50:00,5,44,3.8,Trânsito intenso
+2026-03-09,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,37,3.8,Nenhuma
+2026-03-09,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,37,3.8,Nenhuma
+2026-03-09,Tarde,R08,Norte,Viação Beta,13:45,13:47,2,36,3.8,Nenhuma
+2026-03-09,Noite,R01,Norte,Viação Alfa,21:45,22:00,15,44,36.9,Chuva forte
+2026-03-09,Noite,R02,Norte,Viação Alfa,21:45,21:53,8,43,36.9,Chuva forte
+2026-03-09,Noite,R03,Leste,Viação Beta,21:45,21:54,9,40,36.9,Chuva forte
+2026-03-09,Noite,R04,Sul,Viação Alfa,21:45,21:50,5,38,36.9,Chuva forte
+2026-03-09,Noite,R05,Leste,Viação Beta,21:45,21:48,3,38,36.9,Chuva forte
+2026-03-09,Noite,R06,Oeste,Viação Alfa,21:45,22:12,27,44,36.9,Chuva forte
+2026-03-09,Noite,R07,Centro-Sul,Viação Beta,21:45,22:11,26,37,36.9,Pneu furado
+2026-03-09,Noite,R08,Norte,Viação Beta,21:45,21:49,4,34,36.9,Chuva forte
+2026-03-10,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,38,1.8,Nenhuma
+2026-03-10,Manhã,R02,Norte,Viação Alfa,05:45,05:41,-4,38,1.8,Nenhuma
+2026-03-10,Manhã,R02,Norte,Viação Alfa,05:45,05:41,-4,38,1.8,Nenhuma
+2026-03-10,Manhã,R03,Leste,Viação Beta,05:45,05:41,-4,38,1.8,Nenhuma
+2026-03-10,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,30,1.8,Nenhuma
+2026-03-10,Manhã,R05,Leste,Viação Beta,05:45,05:42,-3,39,1.8,Nenhuma
+2026-03-10,Manhã,R06,Oeste,Viação Alfa,05:45,05:41,-4,36,1.8,Nenhuma
+2026-03-10,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:40,-5,35,1.8,Nenhuma
+2026-03-10,Manhã,R08,Norte,Viação Beta,05:45,05:38,-7,31,1.8,Nenhuma
+2026-03-10,Tarde,R01,Norte,Viação Alfa,13:45,13:56,11,36,26.9,Chuva forte
+2026-03-10,Tarde,R02,Norte,Viação Alfa,13:45,13:53,8,37,26.9,Chuva forte
+2026-03-10,Tarde,R03,Leste,Viação Beta,13:45,13:53,8,31,26.9,Chuva forte
+2026-03-10,Tarde,R04,Sul,Viação Alfa,13:45,13:55,10,36,26.9,Chuva forte
+2026-03-10,Tarde,R05,Leste,Viação Beta,13:45,13:52,7,38,26.9,Chuva forte
+2026-03-10,Tarde,R06,Oeste,Viação Alfa,13:45,13:52,7,41,26.9,Chuva forte
+2026-03-10,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:52,7,44,26.9,Chuva forte
+2026-03-10,Tarde,R08,Norte,Viação Beta,13:45,13:49,4,39,26.9,Chuva forte
+2026-03-10,Noite,R01,Norte,Viação Alfa,21:45,21:41,-4,32,12.3,Nenhuma
+2026-03-10,Noite,R02,Norte,Viação Alfa,21:45,21:42,-3,40,12.3,Nenhuma
+2026-03-10,Noite,R03,Leste,Viação Beta,21:45,21:40,-5,41,12.3,Nenhuma
+2026-03-10,Noite,R04,Sul,Viação Alfa,21:45,21:51,6,44,12.3,Nenhuma
+2026-03-10,Noite,R5,Leste,Viação Beta,21:45,21:50,5,42,12.3,Nenhuma
+2026-03-10,Noite,R06,Oeste,Viação Alfa,21:45,21:44,-1,40,12.3,Nenhuma
+2026-03-10,Noite,R07,Centro-Sul,Viação Beta,21:45,21:46,1,40,12.3,Nenhuma
+2026-03-10,Noite,R08,Norte,Viação Beta,21:45,21:40,-5,41,12.3,Nenhuma
+2026-03-11,Manhã,R01,Norte,Viação Alfa,05:45,05:40,-5,34,,Nenhuma
+2026-03-11,Manhã,R02,Norte,Viação Alfa,05:45,05:42,-3,39,,Nenhuma
+2026-03-11,Manhã,R03,Leste,Viação Beta,05:45,05:36,-9,41,,Nenhuma
+2026-03-11,Manhã,R04,Sul,Viação Alfa,05:45,05h43,-2,31,,Nenhuma
+2026-03-11,Manhã,R05,Leste,Viação Beta,05:45,05:41,-4,32,,Nenhuma
+2026-03-11,Manhã,R06,Oeste,Viação Alfa,05:45,05:42:00,-3,34,,Nenhuma
+2026-03-11,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:43,-2,37,,Nenhuma
+2026-03-11,Manhã,R08,Norte,Viação Beta,05:45,05:46,1,41,,Nenhuma
+2026-03-11,Tarde,R01,Norte,Viação Alfa,13:45,13:43,-2,36,,Nenhuma
+2026-03-11,Tarde,R02,Norte,Viação Alfa,13:45,13:40,-5,37,,Nenhuma
+2026-03-11,Tarde,R03,Leste,Viação Beta,13:45,13:43,-2,42,,Nenhuma
+2026-03-11,Tarde,Rota 04,Sul,Viação Alfa,13:45,13:39,-6,39,,Nenhuma
+2026-03-11,Tarde,R05,Leste,Viação Beta,13:45,13:40,-5,44,,Nenhuma
+2026-03-11,Tarde,R06,Oeste,Viação Alfa,13:45,13:40,-5,35,,Nenhuma
+2026-03-11,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:41,-4,40,,Nenhuma
+2026-03-11,Tarde,R08,Norte,Viação Beta,13:45,13:50,5,42,,Nenhuma
+2026-03-11,Noite,R1,Norte,Viação Alfa,21:45,21:52,7,36,,Chuva forte
+2026-03-11,Noite,R02,Norte,Viação Alfa,21:45,21:54,9,34,,Chuva forte
+2026-03-11,Noite,R03,Leste,Viação Beta,21:45,21:49,4,34,,Chuva forte
+2026-03-11,Noite,R04,Sul,Viação Alfa,21:45,21:53,8,31,,Chuva forte
+11/03/2026,Noite,R05,Leste,Viação Beta,21:45,21:58,13,33,,Chuva forte
+2026-03-11,Noite,R06,Oeste,Viação Alfa,21:45,22:00,15,32,,Chuva forte
+2026-03-11,Noite,R07,Centro-Sul,Viação Beta,21:45,21:56,11,36,,Chuva forte
+2026-03-11,Noite,R08,Norte,Viação Beta,21:45,21:54:00,9,32,,Chuva forte
+2026-03-12,Manhã,R01,Norte,Viação Alfa,05:45,05:41,-4,38,0.0,Nenhuma
+2026-03-12,Manhã,R02,Norte,Viação Alfa,05:45,05:45,0,42,0.0,Nenhuma
+2026-03-12,Manhã,R03,Leste,Viação Beta,05:45,05:40,-5,39,0.0,Nenhuma
+2026-03-12,Manhã,R04,Sul,Viação Alfa,05:45,05:43,-2,38,0.0,Nenhuma
+2026-03-12,Manhã,R05,Leste,Viação Beta,05:45,05:38,-7,34,0.0,Nenhuma
+2026-03-12,Manhã,R06,Oeste,Viação Alfa,05:45,05:41,-4,39,0.0,Nenhuma
+2026-03-12,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:42,-3,44,0.0,Nenhuma
+2026-03-12,Manhã,R08,Norte,Viação Beta,05:45,05:41,-4,36,0.0,Nenhuma
+2026-03-12,Tarde,R01,Norte,Viação Alfa,13:45,13:49,4,34,18.8,Nenhuma
+2026-03-12,Tarde,R02,Norte,Viação Alfa,13:45,13:51,6,40,18.8,Nenhuma
+2026-03-12,Tarde,R03,Leste,Viação Beta,13:45,13:45,0,42,18.8,Nenhuma
+2026-03-12,Tarde,R04,Sul,Viação Alfa,13:45,13:50,5,30,18.8,Nenhuma
+2026-03-12,Tarde,R05,Leste,Viação Beta,13:45,13:45,0,28,18.8,Nenhuma
+2026-03-12,Tarde,R06,Oeste,Viação Alfa,13:45,14:22,37,37,18.8,Pane mecânica
+2026-03-12,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:52,7,37,18.8,Nenhuma
+2026-03-12,Tarde,R08,Norte,Viação Beta,13:45,13h50,5,34,18.8,Nenhuma
+2026-03-12,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,40,0.1,Nenhuma
+2026-03-12,Noite,R02,Norte,Viação Alfa,21:45,21:41,-4,36,0.1,Nenhuma
+2026-03-12,Noite,R03,Leste,Viação Beta,21:45,21:45,0,37,0.1,Nenhuma
+2026-03-12,Noite,R04,Sul,Viação Alfa,21:45,21:40,-5,39,0.1,Nenhuma
+2026-03-12,Noite,R05,Leste,Viação Beta,21:45,21:46,1,37,0.1,Nenhuma
+2026-03-12,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,44,0.1,Nenhuma
+2026-03-12,Noite,R07,Centro-Sul,Viação Beta,21:45,21:43,-2,32,0.1,Nenhuma
+2026-03-12,Noite,R08,Norte,Viação Beta,21:45,21:35,-10,43,0.1,Nenhuma
+2026-03-13,Manhã,R01,Norte,Viação Alfa,05:45,05:49,4,40,17.7,Nenhuma
+2026-03-13,Manhã,R02,Norte,Viação Alfa,05:45,05:38,-7,41,17.7,Nenhuma
+13/03/2026,Manhã,R03,Leste,Viação Beta,05:45,05:46,1,37,17.7,Nenhuma
+2026-03-13,Manhã,R04,Sul,Viação Alfa,05:45,06:04,19,37,17.7,Trânsito intenso
+2026-03-13,Manhã,R05,Leste,Viação Beta,05:45,05:47,2,40,17.7,Nenhuma
+2026-03-13,Manhã,R06,Oeste,Viação Alfa,05:45,05:54,9,39,17.7,Nenhuma
+2026-03-13,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:47,2,35,17.7,Nenhuma
+2026-03-13,Manhã,R08,Norte,Viação Beta,05:45,05:49,4,39,17.7,Nenhuma
+2026-03-13,Tarde,R01,Norte,Viação Alfa,13:45,14:05,20,33,58.3,Chuva forte
+2026-03-13,Tarde,R02,Norte,Viação Alfa,13:45,14:44,59,35,58.3,Pane mecânica
+2026-03-13,Tarde,R03,Leste,Viação Beta,13:45,14:00,15,37,58.3,Chuva forte
+2026-03-13,Tarde,R04,Sul,Viação Alfa,13:45,14:01,16,40,58.3,Chuva forte
+2026-03-13,Tarde,r05,Leste,Viação Beta,13:45,13:57,12,43,58.3,Chuva forte
+2026-03-13,Tarde,R06,Oeste,Viação Alfa,13:45,14:00,15,39,58.3,Chuva forte
+2026-03-13,Tarde,R07,Centro-Sul,Viação Beta,13:45,14:01,16,37,58.3,Chuva forte
+2026-03-13,Tarde,R08,Norte,Viação Beta,13:45,14:00,15,37,58.3,Chuva forte
+2026-03-13,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,37,7.8,Nenhuma
+13/03/2026,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,39,7.8,Nenhuma
+2026-03-13,Noite,R3,Leste,Viação Beta,21:45,21:46,1,36,7.8,Nenhuma
+2026-03-13,Noite,R04,Sul,Viação Alfa,21:45,21:44,-11,33,7.8,Nenhuma
+2026-03-13,Noite,R05,Leste,Viação Beta,21:45,21:47,2,40,7.8,Nenhuma
+2026-03-13,Noite,R06,Oeste,Viação Alfa,21:45,21:37,-8,32,7.8,Nenhuma
+2026-03-13,Noite,R07,Centro-Sul,Viação Beta,21:45,21:57,12,38,7.8,Pneu furado
+2026-03-13,Noite,R08,Norte,Viação Beta,21:45,21:45,0,33,7.8,Nenhuma
+2026-03-14,Manhã,R01,Norte,Viação Alfa,05:45,05:44,-1,39,4.9,Nenhuma
+2026-03-14,Manhã,R02,Norte,Viação Alfa,05:45,05:36,-9,40,4.9,Nenhuma
+2026-03-14,Manhã,R03,Leste,Viação Beta,05:45,05:41,-4,42,4.9,Nenhuma
+2026-03-14,Manhã,R04,Sul,Viação Alfa,05:45,05:45,0,38,4.9,Nenhuma
+2026-03-14,Manhã,R05,Leste,Viação Beta,05:45,05:46,1,38,4.9,Nenhuma
+2026-03-14,Manhã,R06,Oeste,Viação Alfa,05:45,05:48,3,39,4.9,Nenhuma
+2026-03-14,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:39,-6,32,4.9,Nenhuma
+2026-03-14,Manhã,R08,Norte,Viação Beta,05:45,05:45,0,43,4.9,Nenhuma
+2026-03-14,Tarde,R01,Norte,Viação Alfa,13:45,13:48,3,44,4.5,Nenhuma
+2026-03-14,Tarde,R02,Norte,Viação Alfa,13:45,13:43,-2,37,4.5,Nenhuma
+2026-03-14,Tarde,R03,Leste,Viação Beta,13:45,13:40,-5,38,4.5,Nenhuma
+2026-03-14,Tarde,R04,Sul,Viação Alfa,13:45,13h47,2,37,4.5,Nenhuma
+2026-03-14,Tarde,R05,Leste,Viação Beta,13:45,13:46,1,27,4.5,Nenhuma
+2026-03-14,Tarde,R06,Oeste,Viação Alfa,13:45,13:44,-1,42,4.5,Nenhuma
+2026-03-14,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:40,-5,40,4.5,Nenhuma
+2026-03-14,Tarde,R08,Norte,Viação Beta,13:45,13:46,1,40,4.5,Nenhuma
+2026-03-14,Noite,R01,Norte,Viação Alfa,21:45,21:47,2,34,9.1,Nenhuma
+2026-03-14,Noite,R02,Norte,Viação Alfa,21:45,21:45,0,39,9.1,Nenhuma
+2026-03-14,Noite,R03,Leste,Viação Beta,21:45,21:40,-5,41,9.1,Nenhuma
+2026-03-14,Noite,R04,Sul,Viação Alfa,21:45,21:49,4,32,9.1,Nenhuma
+2026-03-14,Noite,R05,Leste,Viação Beta,21:45,21:39,-6,38,9.1,Nenhuma
+2026-03-14,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,37,9.1,Nenhuma
+2026-03-14,Noite,R07,Centro-Sul,Viação Beta,21:45,21:45,0,35,9.1,Nenhuma
+2026-03-14,Noite,R08,Norte,Viação Beta,21:45,21:39,-6,40,9.1,Nenhuma
+2026-03-16,Manhã,R01,Norte,Viação Alfa,05:45,05:56,11,42,27.4,Chuva forte
+2026-03-16,Manhã,R02,Norte,Viação Alfa,05:45,05:51,6,35,27.4,Chuva forte
+2026-03-16,Manhã,R03,Leste,Viação Beta,05:45,05:51,6,38,27.4,Chuva forte
+2026-03-16,Manhã,R04,Sul,Viação Alfa,05:45,05:43,-2,37,27.4,Chuva forte
+2026-03-16,Manhã,R05,Leste,Viação Beta,05:45,05:56,11,40,27.4,Chuva forte
+2026-03-16,Manhã,R06,Oeste,Viação Alfa,05:45,05:50,5,39,27.4,Chuva forte
+2026-03-16,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:55,10,41,27.4,Chuva forte
+2026-03-16,Manhã,R08,Norte,Viação Beta,05:45,05h55,10,37,27.4,Chuva forte
+16/03/2026,Tarde,R01,Norte,Viação Alfa,13:45,13:49,4,39,6.1,Nenhuma
+2026-03-16,Tarde,R02,Norte,Viação Alfa,13:45,13:48,3,32,6.1,Nenhuma
+16/03/2026,Tarde,R03,Leste,Viação Beta,13:45,13:44,-1,36,6.1,Nenhuma
+2026-03-16,Tarde,R04,Sul,Viação Alfa,13:45,13:46,1,40,6.1,Nenhuma
+2026-03-16,Tarde,R05,Leste,Viação Beta,13:45,13:40,-5,40,6.1,Nenhuma
+2026-03-16,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,37,6.1,Nenhuma
+2026-03-16,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:43,-2,38,6.1,Nenhuma
+2026-03-16,Tarde,R08,Norte,Viação Beta,13:45,13:47,2,40,6.1,Nenhuma
+2026-03-16,Noite,R01,Norte,Viação Alfa,21:45,21:44,-1,42,12.9,Nenhuma
+2026-03-16,Noite,R02,Norte,Viação Alfa,21:45,21:45,0,32,12.9,Nenhuma
+2026-03-16,Noite,R03,Leste,Viação Beta,21:45,21:47,2,39,12.9,Nenhuma
+16/03/2026,Noite,R04,Sul,Viação Alfa,21:45,21:45,0,39,12.9,Nenhuma
+2026-03-16,Noite,R05,Leste,Viação Beta,21:45,21h51,6,44,12.9,Nenhuma
+2026-03-16,Noite,R06,Oeste,Viação Alfa,21:45,21h45,0,33,12.9,Nenhuma
+2026-03-16,Noite,R07,Centro-Sul,Viação Beta,21:45,21:45,0,43,12.9,Nenhuma
+2026-03-16,Noite,R08,Norte,Viação Beta,21:45,21:46,1,43,12.9,Nenhuma
+2026-03-17,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,38,5.9,Nenhuma
+2026-03-17,Manhã,R02,Norte,Viação Alfa,05:45,05:56,11,39,5.9,Trânsito intenso
+2026-03-17,Manhã,R03,Leste,Viação Beta,05:45,05:43,-2,30,5.9,Nenhuma
+2026-03-17,Manhã,R04,Sul,Viação Alfa,05:45,05:47,2,37,5.9,Nenhuma
+2026-03-17,Manhã,R05,Leste,Viação Beta,05:45,05:43,-2,37,5.9,Nenhuma
+2026-03-17,Manhã,R06,Oeste,Viação Alfa,05:45,05:38,-7,39,5.9,Nenhuma
+2026-03-17,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:44,-1,36,5.9,Nenhuma
+2026-03-17,Manhã,R08,Norte,Viação Beta,05:45,05:45,0,38,5.9,Nenhuma
+2026-03-17,Tarde,R01,Norte,Viação Alfa,13:45,13:47,2,40,14.1,Nenhuma
+2026-03-17,Tarde,R2,Norte,Viação Alfa,13:45,14:07,22,37,14.1,Pneu furado
+2026-03-17,Tarde,R03,Leste,Viação Beta,13:45,13:46,1,36,14.1,Nenhuma
+2026-03-17,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,43,14.1,Nenhuma
+2026-03-17,Tarde,R05,Leste,Viação Beta,13:45,13:44,-1,34,14.1,Nenhuma
+2026-03-17,Tarde,R06,Oeste,Viação Alfa,13:45,13:56,11,33,14.1,Pane mecânica
+2026-03-17,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:49,4,33,14.1,Nenhuma
+2026-03-17,Tarde,R08,Norte,Viação Beta,13:45,13:53,8,39,14.1,Nenhuma
+2026-03-17,Noite,R01,Norte,Viação Alfa,21:45,21:59,14,38,11.6,Trânsito intenso
+2026-03-17,Noite,R02,Norte,Viação Alfa,21:45,21:46,1,39,11.6,Nenhuma
+2026-03-17,Noite,R03,Leste,Viação Beta,21:45,21:47,2,40,11.6,Nenhuma
+2026-03-17,Noite,R04,Sul,Viação Alfa,21:45,21:39,-6,42,11.6,Nenhuma
+2026-03-17,Noite,R05,Leste,Viação Beta,21:45,21:47,2,37,11.6,Nenhuma
+2026-03-17,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,43,11.6,Nenhuma
+2026-03-17,Noite,R07,Centro-Sul,Viação Beta,21:45,21:48,3,32,11.6,Nenhuma
+2026-03-17,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,35,11.6,Nenhuma
+2026-03-18,Manhã,R01,Norte,Viação Alfa,05:45,05:38,-7,33,0.0,Nenhuma
+2026-03-18,Manhã,R02,Norte,Viação Alfa,05:45,05:40,-5,44,0.0,Nenhuma
+2026-03-18,Manhã,R03,Leste,Viação Beta,05:45,05:43,-2,38,0.0,Nenhuma
+2026-03-18,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,33,0.0,Nenhuma
+2026-03-18,Manhã,R05,Leste,Viação Beta,05:45,05:47,2,32,0.0,Nenhuma
+2026-03-18,Manhã,R06,Oeste,Viação Alfa,05:45,05:41,-4,41,0.0,Nenhuma
+2026-03-18,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:44,-1,39,0.0,Nenhuma
+2026-03-18,Manhã,R08,Norte,Viação Beta,05:45,05:42,-3,29,0.0,Nenhuma
+2026-03-18,Tarde,R01,Norte,Viação Alfa,13:45,13:44,-1,37,0.0,Nenhuma
+2026-03-18,Tarde,R02,Norte,Viação Alfa,13:45,13:47,2,42,0.0,Nenhuma
+2026-03-18,Tarde,R03,Leste,Viação Beta,13:45,13:40,-5,42,0.0,Nenhuma
+2026-03-18,Tarde,R04,Sul,Viação Alfa,13:45,13:50,5,43,0.0,Nenhuma
+2026-03-18,Tarde,R05,Leste,Viação Beta,13:45,14:21,36,40,0.0,Pane mecânica
+2026-03-18,Tarde,R06,Oeste,Viação Alfa,13:45,13:43,-2,40,0.0,Nenhuma
+2026-03-18,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:39,-6,35,0.0,Nenhuma
+2026-03-18,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,37,0.0,Nenhuma
+2026-03-18,Noite,R01,Norte,Viação Alfa,21:45,21:48,3,38,12.0,Nenhuma
+2026-03-18,Noite,R02,Norte,Viação Alfa,21:45,21:40,15,34,12.0,Nenhuma
+2026-03-18,Noite,R03,Leste,Viação Beta,21:45,21:45,0,40,12.0,Nenhuma
+2026-03-18,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,37,12.0,Nenhuma
+2026-03-18,noite,R05,Leste,Viação Beta,21:45,21:44,-1,38,12.0,Nenhuma
+2026-03-18,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,36,12.0,Nenhuma
+2026-03-18,Noite,R07,Centro-Sul,Viação Beta,21:45,21:46,1,34,12.0,Nenhuma
+2026-03-18,Noite,R08,Norte,Viação Beta,21:45,21:47,2,35,12.0,Nenhuma
+2026-03-19,Manhã,R01,Norte,Viação Alfa,05:45,05:38,-7,37,0.0,Nenhuma
+2026-03-19,Manhã,R02,Norte,Viação Alfa,05:45,05:40,-5,37,0.0,Nenhuma
+2026-03-19,Manhã,R03,Leste,Viação Beta,05:45,05:42,-3,37,0.0,Nenhuma
+2026-03-19,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,31,0.0,Nenhuma
+2026-03-19,Manhã,R05,Leste,Viação Beta,05:45,05:56,11,41,0.0,Trânsito intenso
+2026-03-19,Manhã,R06,Oeste,Viação Alfa,05:45,05h47,2,36,0.0,Nenhuma
+19/03/2026,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:43,-2,43,0.0,Nenhuma
+2026-03-19,Manhã,R08,Norte,Viação Beta,05:45,05:41,-4,29,0.0,Nenhuma
+2026-03-19,Tarde,R01,Norte,Viação Alfa,13:45,13:39,-6,39,6.4,Nenhuma
+2026-03-19,Tarde,Rota 02,Norte,Viação Alfa,13:45,13:44,-1,31,6.4,Nenhuma
+2026-03-19,Tarde,R03,Leste,Viação Beta,13:45,13:40,-5,35,6.4,Nenhuma
+2026-03-19,Tarde,r04,Sul,Viação Alfa,13:45,13:40,-5,44,6.4,Nenhuma
+19/03/2026,Tarde,R05,Leste,Viação Beta,13:45,13:45,0,44,6.4,Nenhuma
+2026-03-19,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,39,6.4,Nenhuma
+2026-03-19,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:44,-1,33,6.4,Nenhuma
+2026-03-19,Tarde,R08,Norte,Viação Beta,13:45,13:44,-1,34,6.4,Nenhuma
+2026-03-19,Noite,R01,Norte,Viação Alfa,21:45,21:41,-4,38,6.3,Nenhuma
+19/03/2026,Noite,R02,Norte,Viação Alfa,21:45,21:40,-5,36,6.3,Nenhuma
+2026-03-19,Noite,R03,Leste,Viação Beta,21:45,21:43,-2,43,6.3,Nenhuma
+2026-03-19,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,34,6.3,Nenhuma
+2026-03-19,Noite,R05,Leste,Viação Beta,21:45,21:42,-3,40,6.3,Nenhuma
+2026-03-19,Noite,R06,Oeste,Viação Alfa,21:45,21:37,-8,31,6.3,Nenhuma
+2026-03-19,Noite,R07,Centro-Sul,Viação Beta,21:45,21:42,-3,36,6.3,Nenhuma
+2026-03-19,Noite,R08,Norte,Viação Beta,21:45,21:49,4,41,6.3,Trânsito intenso
+2026-03-20,Manhã,R01,Norte,Viação Alfa,05:45,05:59,14,33,45.5,Chuva forte
+2026-03-20,Manhã,R02,Norte,Viação Alfa,05:45,06:00:00,15,44,45.5,Chuva forte
+2026-03-20,Manhã,R03,Leste,Viação Beta,05:45,05:57,12,40,45.5,Chuva forte
+2026-03-20,Manhã,R04,Sul,Viação Alfa,05:45,06:27,42,37,45.5,Pane mecânica
+2026-03-20,Manhã,R05,Leste,Viação Beta,05:45,05:59,14,33,45.5,Chuva forte
+2026-03-20,Manhã,R06,Oeste,Viação Alfa,05:45,05:55,10,34,45.5,Chuva forte
+2026-03-20,Manhã,R07,Centro-Sul,Viação Beta,05:45,06:03,18,39,45.5,Chuva forte
+2026-03-20,Manhã,r08,Norte,Viação Beta,05:45,05:59,14,38,45.5,Chuva forte
+2026-03-20,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,34,0.0,Nenhuma
+2026-03-20,Tarde,R02,Norte,Viação Alfa,13:45,13:41,-4,42,0.0,Nenhuma
+2026-03-20,Tarde,R03,Leste,Viação Beta,13:45,13:49,4,38,0.0,Nenhuma
+2026-03-20,Tarde,R04,Sul,Viação Alfa,13:45,13:38,-7,36,0.0,Nenhuma
+2026-03-20,Tarde,R05,Leste,Viação Beta,13:45,13:43,-2,31,0.0,Nenhuma
+2026-03-20,Tarde,R06,Oeste,Viação Alfa,13:45,13:43,-2,39,0.0,Nenhuma
+2026-03-20,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:40,-5,28,0.0,Nenhuma
+2026-03-20,Tarde,R08,Norte,Viação Beta,13:45,13:46,1,35,0.0,Nenhuma
+2026-03-20,Noite,R01,Norte,Viação Alfa,21:45,21:49,4,38,14.8,Nenhuma
+2026-03-20,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,36,14.8,Nenhuma
+2026-03-20,Noite,R03,Leste,Viação Beta,21:45,21:43,-2,33,14.8,Nenhuma
+2026-03-20,Noite,R04,Sul,Viação Alfa,21:45,21:44,-1,40,14.8,Nenhuma
+2026-03-20,Noite,R05,Leste,Viação Beta,21:45,21:51,6,39,14.8,Trânsito intenso
+2026-03-20,Noite,R06,Oeste,Viação Alfa,21:45,21:52,7,44,14.8,Nenhuma
+2026-03-20,Noite,R07,Centro-Sul,Viação Beta,21:45,21:42,-3,40,14.8,Nenhuma
+2026-03-20,Noite,R08,Norte,Viação Beta,21:45,21:48,3,36,14.8,Nenhuma
+2026-03-21,Manhã,Rota 01,Norte,Viação Alfa,05:45,05:37,-8,34,0.0,Nenhuma
+2026-03-21,Manhã,R02,Norte,Viação Alfa,05:45,05:47,2,43,0.0,Nenhuma
+2026-03-21,Manhã,R03,Leste,Viação Beta,05:45,05:45,0,39,0.0,Nenhuma
+2026-03-21,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,33,0.0,Nenhuma
+2026-03-21,Manhã,R05,Leste,Viação Beta,05:45,05:40,-5,31,0.0,Nenhuma
+2026-03-21,Manhã,R06,Oeste,Viação Alfa,05:45,05:47,2,41,0.0,Nenhuma
+2026-03-21,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:43,-2,35,0.0,Nenhuma
+2026-03-21,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:43,-2,35,0.0,Nenhuma
+2026-03-21,Manhã,R08,Norte,Viação Beta,05:45,05h41,-4,39,0.0,Nenhuma
+2026-03-21,Tarde,R01,Norte,Viação Alfa,13:45,13:53,8,39,42.7,Chuva forte
+2026-03-21,Tarde,R02,Norte,Viação Alfa,13:45,14:06,21,42,42.7,Chuva forte
+2026-03-21,Tarde,R03,Leste,Viação Beta,13:45,13:57,12,37,42.7,Chuva forte
+2026-03-21,Tarde,R04,Sul,Viação Alfa,13:45,14:01,16,39,42.7,Chuva forte
+2026-03-21,Tarde,R05,Leste,Viação Beta,13:45,13:54,9,33,42.7,Chuva forte
+2026-03-21,Tarde,R06,Oeste,Viação Alfa,13:45,13:59,14,44,42.7,Chuva forte
+2026-03-21,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:56,11,44,42.7,Chuva forte
+2026-03-21,Tarde,R08,Norte,Viação Beta,13:45,13:57,12,38,42.7,Chuva forte
+2026-03-21,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,39,0.0,Nenhuma
+2026-03-21,Noite,R02,Norte,Viação Alfa,21:45,21:37,-8,37,0.0,Nenhuma
+2026-03-21,Noite,R03,Leste,Viação Beta,21:45,21:38,-7,35,0.0,Nenhuma
+2026-03-21,Noite,R04,Sul,Viação Alfa,21:45,21:40,-5,41,0.0,Nenhuma
+2026-03-21,Noite,R05,Leste,Viação Beta,21:45,21:39,-6,44,0.0,Nenhuma
+2026-03-21,Noite,R06,Oeste,Viação Alfa,21:45,21:37,-8,37,0.0,Nenhuma
+2026-03-21,Noite,R07,Centro-Sul,Viação Beta,21:45,21:39,-6,39,0.0,Nenhuma
+2026-03-21,Noite,R08,Norte,Viação Beta,21:45,21:42:00,-3,35,0.0,Nenhuma
+2026-03-23,Manhã,R01,Norte,Viação Alfa,05:45,05:52,7,44,36.7,Chuva forte
+2026-03-23,Manhã,R02,Norte,Viação Alfa,05:45,05:55,10,30,36.7,Chuva forte
+2026-03-23,Manhã,R03,Leste,Viação Beta,05:45,05:57,12,38,36.7,Chuva forte
+2026-03-23,Manhã,R04,Sul,Viação Alfa,05:45,05:52,7,30,36.7,Chuva forte
+2026-03-23,Manhã,R05,Leste,Viação Beta,05:45,05:54,9,42,36.7,Chuva forte
+2026-03-23,Manhã,R06,Oeste,Viação Alfa,05:45,05:50,5,38,36.7,Chuva forte
+2026-03-23,Manhã,R06,Oeste,Viação Alfa,05:45,05:50,5,38,36.7,Chuva forte
+2026-03-23,Manhã,R07,Centro-Sul,Viação Beta,05:45,06:09,24,35,36.7,Chuva forte
+2026-03-23,Manhã,R08,Norte,Viação Beta,05:45,05:54,9,41,36.7,Chuva forte
+23/03/2026,Tarde,R01,Norte,Viação Alfa,13:45,14:16,31,34,74.8,Chuva forte
+23/03/2026,Tarde,R02,Norte,Viação Alfa,13:45,14:08,23,40,74.8,Chuva forte
+2026-03-23,Tarde,R03,Leste,Viação Beta,13:45,14:08,23,36,74.8,Chuva forte
+2026-03-23,Tarde,R04,Sul,Viação Alfa,13:45,14:11,26,40,74.8,Chuva forte
+2026-03-23,Tarde,R05,Leste,Viação Beta,13:45,14:06,21,40,74.8,Chuva forte
+2026-03-23,Tarde,R06,Oeste,Viação Alfa,13:45,14:05,20,41,74.8,Chuva forte
+2026-03-23,Tarde,R07,Centro-Sul,Viação Beta,13:45,14:02,17,43,74.8,Chuva forte
+2026-03-23,Tarde,R08,Norte,Viação Beta,13:45,14:16,31,39,74.8,Chuva forte
+2026-03-23,Noite,R01,Norte,Viação Alfa,21:45,21:38,-7,41,0.0,Nenhuma
+2026-03-23,Noite,R02,Norte,Viação Alfa,21:45,22:10,25,37,0.0,Pneu furado
+2026-03-23,Noite,R03,Leste,Viação Beta,21:45,21:45,0,42,0.0,Nenhuma
+2026-03-23,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,33,0.0,Nenhuma
+2026-03-23,Noite,R05,Leste,Viação Beta,21:45,21:43,-2,37,0.0,Nenhuma
+2026-03-23,Noite,R06,Oeste,Viação Alfa,21:45,21:37,-8,38,0.0,Nenhuma
+2026-03-23,Noite,R07,Centro-Sul,Viação Beta,21:45,21h41,-4,37,0.0,Nenhuma
+2026-03-23,Noite,R08,Norte,Viação Beta,21:45,21:45,0,41,0.0,Nenhuma
+2026-03-24,Manhã,R01,Norte,Viação Alfa,05:45,05:48,3,38,20.6,Chuva forte
+2026-03-24,Manhã,R02,Norte,Viação Alfa,05:45,05:49,4,43,20.6,Chuva forte
+2026-03-24,Manhã,R03,Leste,Viação Beta,05:45,05:46,1,36,20.6,Chuva forte
+2026-03-24,Manhã,R04,Sul,Viação Alfa,05:45,05:52,7,40,20.6,Chuva forte
+2026-03-24,Manhã,R05,Leste,Viação Beta,05:45,05:50,5,36,20.6,Chuva forte
+2026-03-24,Manhã,R06,Oeste,Viação Alfa,05:45,05:49,4,36,20.6,Chuva forte
+2026-03-24,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:51,6,44,20.6,Chuva forte
+2026-03-24,Manhã,R08,Norte,Viação Beta,05:45,05:48,3,36,20.6,Chuva forte
+2026-03-24,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,36,0.0,Nenhuma
+2026-03-24,Tarde,R02,Norte,Viação Alfa,13:45,13:46,1,40,0.0,Nenhuma
+2026-03-24,Tarde,R03,Leste,Viação Beta,13:45,13:38,-7,37,0.0,Nenhuma
+2026-03-24,Tarde,R04,Sul,Viação Alfa,13:45,13:43,-2,39,0.0,Nenhuma
+2026-03-24,Tarde,R04,Sul,Viação Alfa,13:45,13:43,-2,39,0.0,Nenhuma
+2026-03-24,Tarde,R05,Leste,Viação Beta,13:45,13:39,-6,34,0.0,Nenhuma
+2026-03-24,Tarde,R06,Oeste,Viação Alfa,13:45,13:45,0,41,0.0,Nenhuma
+2026-03-24,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:37,-8,31,0.0,Nenhuma
+2026-03-24,Tarde,R08,Norte,Viação Beta,13:45,13:38,-7,34,0.0,Nenhuma
+2026-03-24,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,43,0.0,Nenhuma
+2026-03-24,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,44,0.0,Nenhuma
+2026-03-24,Noite,R03,Leste,Viação Beta,21:45,21:38,-7,42,0.0,Nenhuma
+2026-03-24,Noite,R04,Sul,Viação Alfa,21:45,21:49,4,32,0.0,Nenhuma
+2026-03-24,Noite,R05,Leste,Viação Beta,21:45,21:39,-6,38,0.0,Nenhuma
+2026-03-24,Noite,R06,Oeste,Viação Alfa,21:45,21:36,-9,40,0.0,Nenhuma
+2026-03-24,Noite,R07,Centro-Sul,Viação Beta,21:45,21:41,-4,40,0.0,Nenhuma
+2026-03-24,Noite,R08,Norte,Viação Beta,21:45,21:42,-3,37,0.0,Nenhuma
+2026-03-25,Manhã,R01,Norte,Viação Alfa,05:45,05:46,1,38,4.2,Nenhuma
+2026-03-25,MANHÃ,R02,Norte,Viação Alfa,05:45,05:45,0,38,4.2,Nenhuma
+2026-03-25,Manhã,R03,Leste,Viação Beta,05:45,05:37,-8,39,4.2,Nenhuma
+2026-03-25,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,32,4.2,Nenhuma
+2026-03-25,Manhã,R05,Leste,Viação Beta,05:45,05:40,-5,32,4.2,Nenhuma
+2026-03-25,Manhã,R06,Oeste,Viação Alfa,05:45,05:40,-5,35,4.2,Nenhuma
+2026-03-25,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:41,-4,41,4.2,Nenhuma
+2026-03-25,Manhã,R08,Norte,Viação Beta,05:45,05:42,-3,44,4.2,Nenhuma
+2026-03-25,Tarde,R01,Norte,Viação Alfa,13:45,13:48,3,38,13.7,Nenhuma
+2026-03-25,Tarde,R02,Norte,Viação Alfa,13:45,13:47,2,34,13.7,Nenhuma
+2026-03-25,Tarde,R03,Leste,Viação Beta,13:45,13:51,6,36,13.7,Nenhuma
+2026-03-25,Tarde,R04,Sul,Viação Alfa,13:45,13:48,3,38,13.7,Nenhuma
+2026-03-25,Tarde,R05,Leste,Viação Beta,13:45,13:45,0,41,13.7,Nenhuma
+2026-03-25,Tarde,R06,Oeste,Viação Alfa,13:45,13:44,-1,32,13.7,Nenhuma
+2026-03-25,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:51:00,6,30,13.7,Nenhuma
+2026-03-25,Tarde,R08,Norte,Viação Beta,13:45,13:52,7,30,13.7,Nenhuma
+2026-03-25,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,38,7.4,Nenhuma
+2026-03-25,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,38,7.4,Nenhuma
+2026-03-25,Noite,R2,Norte,Viação Alfa,21:45,21h46,1,37,7.4,Nenhuma
+2026-03-25,Noite,R03,Leste,Viação Beta,21:45,21:44,-1,34,7.4,Nenhuma
+2026-03-25,Noite,R04,Sul,Viação Alfa,21:45,21:43,-2,39,7.4,Nenhuma
+2026-03-25,Noite,R05,Leste,Viação Beta,21:45,21:36,-9,35,7.4,Nenhuma
+2026-03-25,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,37,7.4,Nenhuma
+2026-03-25,Noite,R07,Centro-Sul,Viação Beta,21:45,21:41,-4,41,7.4,Nenhuma
+2026-03-25,Noite,R08,Norte,Viação Beta,21:45,21:46,1,34,7.4,Nenhuma
+2026-03-26,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,41,3.7,Nenhuma
+2026-03-26,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,34,3.7,Nenhuma
+2026-03-26,Manhã,R03,Leste,Viação Beta,05:45,05:46,1,44,3.7,Nenhuma
+2026-03-26,Manhã,R04,Sul,Viação Alfa,05:45,05:47,2,34,3.7,Nenhuma
+2026-03-26,Manhã,R05,Leste,Viação Beta,05:45,05:42,-3,40,3.7,Nenhuma
+26/03/2026,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,38,3.7,Nenhuma
+26/03/2026,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,38,3.7,Nenhuma
+2026-03-26,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:44,-1,33,3.7,Nenhuma
+2026-03-26,Manhã,R08,Norte,Viação Beta,05:45,05:44,-1,41,3.7,Nenhuma
+2026-03-26,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,35,0.0,Nenhuma
+2026-03-26,Tarde,R02,Norte,Viação Alfa,13:45,13:36,-9,35,0.0,Nenhuma
+2026-03-26,Tarde,R03,Leste,Viação Beta,13:45,13:45,0,44,0.0,Nenhuma
+2026-03-26,Tarde,R04,Sul,Viação Alfa,13:45,13:44,-1,36,0.0,Nenhuma
+2026-03-26,Tarde,R05,Leste,Viação Beta,13:45,14:02,17,32,0.0,Pane mecânica
+2026-03-26,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,36,0.0,Nenhuma
+2026-03-26,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:43,-2,36,0.0,Nenhuma
+2026-03-26,Tarde,R08,Norte,Viação Beta,13:45,13:44,-1,41,0.0,Nenhuma
+2026-03-26,Noite,R01,Norte,Viação Alfa,21:45,21:52,7,41,0.0,Trânsito intenso
+2026-03-26,Noite,R02,Norte,Viação Alfa,21:45,21:41,-4,32,0.0,Nenhuma
+2026-03-26,Noite,R03,Leste,Viação Beta,21:45,21:39,-6,38,0.0,Nenhuma
+2026-03-26,Noite,R04,Sul,Viação Alfa,21:45,21:43,-2,37,0.0,Nenhuma
+2026-03-26,Noite,R05,Leste,Viação Beta,21:45,21:49,4,36,0.0,Nenhuma
+2026-03-26,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,40,0.0,Nenhuma
+2026-03-26,Noite,R07,Centro-Sul,Viação Beta,21:45,21:47,2,28,0.0,Nenhuma
+2026-03-26,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,37,0.0,Nenhuma
+2026-03-27,Manhã,R01,Norte,Viação Alfa,05:45,05:48,3,37,21.3,Chuva forte
+2026-03-27,Manhã,R02,Norte,Viação Alfa,05:45,05:51,6,40,21.3,Chuva forte
+2026-03-27,Manhã,R03,Leste,Viação Beta,05:45,05:48,3,34,21.3,Chuva forte
+2026-03-27,Manhã,R04,Sul,Viação Alfa,05:45,05:52,7,33,21.3,Chuva forte
+2026-03-27,Manhã,R05,Leste,Viação Beta,05:45,05:50,5,36,21.3,Chuva forte
+2026-03-27,Manhã,R06,Oeste,Viação Alfa,05:45,05:46,1,42,21.3,Chuva forte
+2026-03-27,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:52,7,29,21.3,Chuva forte
+2026-03-27,Manhã,R08,Norte,Viação Beta,05:45,05:55,10,38,21.3,Chuva forte
+2026-03-27,tarde,R01,Norte,Viação Alfa,13:45,13:46,1,37,0.0,Nenhuma
+2026-03-27,Tarde,R02,Norte,Viação Alfa,13:45,13:38,-7,43,0.0,Nenhuma
+2026-03-27,Tarde,R03,Leste,Viação Beta,13:45,13:36,-9,32,0.0,Nenhuma
+2026-03-27,Tarde,R04,Sul,Viação Alfa,13:45,13:37,-8,36,0.0,Nenhuma
+2026-03-27,Tarde,R05,Leste,Viação Beta,13:45,13:40,-5,41,0.0,Nenhuma
+2026-03-27,Tarde,R06,Oeste,Viação Alfa,13:45,13:44,-1,44,0.0,Nenhuma
+2026-03-27,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:36,-9,39,0.0,Nenhuma
+2026-03-27,Tarde,R08,Norte,Viação Beta,13:45,13:41,-4,33,0.0,Nenhuma
+2026-03-27,Noite,R01,Norte,Viação Alfa,21:45,21:47,2,40,16.4,Nenhuma
+2026-03-27,Noite,R02,Norte,Viação Alfa,21:45,21:48,3,39,16.4,Nenhuma
+2026-03-27,Noite,R03,Leste,Viação Beta,21:45,21:50,5,39,16.4,Nenhuma
+2026-03-27,Noite,R04,Sul,Viação Alfa,21:45,21:44:00,-1,37,16.4,Nenhuma
+2026-03-27,Noturno,R05,Leste,Viação Beta,21:45,21:44,-1,42,16.4,Nenhuma
+2026-03-27,Noite,R06,Oeste,Viação Alfa,21:45,21:44,-1,39,16.4,Nenhuma
+2026-03-27,Noite,R07,Centro-Sul,Viação Beta,21:45,21:49,4,39,16.4,Nenhuma
+2026-03-27,Noite,R08,Norte,Viação Beta,21:45,21:46,1,42,16.4,Nenhuma
+2026-03-28,Manhã,R01,Norte,Viação Alfa,05:45,05:41,-4,35,0.0,Nenhuma
+2026-03-28,Manhã,R02,Norte,Viação Alfa,05:45,05:41,-4,34,0.0,Nenhuma
+2026-03-28,Manhã,R03,Leste,Viação Beta,05:45,06:22,37,41,0.0,Pane mecânica
+2026-03-28,Manhã,R04,Sul,Viação Alfa,05:45,05:47,2,44,0.0,Nenhuma
+2026-03-28,Manhã,R05,Leste,Viação Beta,05:45,05:42,-3,35,0.0,Nenhuma
+2026-03-28,Manhã,Rota 06,Oeste,Viação Alfa,05:45,05:43,-2,39,0.0,Nenhuma
+2026-03-28,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:46,1,40,0.0,Nenhuma
+2026-03-28,Manhã,R08,Norte,Viação Beta,05:45,05:44,-1,42,0.0,Nenhuma
+2026-03-28,Tarde,R01,Norte,Viação Alfa,13:45,14:00,15,34,37.5,Chuva forte
+2026-03-28,Tarde,R02,Norte,Viação Alfa,13:45,13:55,10,38,37.5,Chuva forte
+2026-03-28,Tarde,R03,Leste,Viação Beta,13:45,13:54,9,28,37.5,Chuva forte
+2026-03-28,Tarde,R04,Sul,Viação Alfa,13:45,13:59,14,35,37.5,Chuva forte
+2026-03-28,Tarde,R05,Leste,Viação Beta,13:45,13:52,7,40,37.5,Chuva forte
+2026-03-28,Tarde,R06,Oeste,Viação Alfa,13:45,13:55,10,33,37.5,Chuva forte
+2026-03-28,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:55,10,35,37.5,Chuva forte
+2026-03-28,Tarde,R08,Norte,Viação Beta,13:45,13:53,8,33,37.5,Chuva forte
+2026-03-28,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,42,0.0,Nenhuma
+2026-03-28,Noite,R02,Norte,Viação Alfa,21:45,21:38,-7,38,0.0,Nenhuma
+2026-03-28,Noite,R03,Leste,Viação Beta,21:45,21:35,-10,43,0.0,Nenhuma
+2026-03-28,Noite,R04,Sul,Viação Alfa,21:45,21:38,-7,44,0.0,Nenhuma
+2026-03-28,Noite,R05,Leste,Viação Beta,21:45,21:39,-6,39,0.0,Nenhuma
+2026-03-28,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,36,0.0,Nenhuma
+2026-03-28,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,36,0.0,Nenhuma
+2026-03-28,Noite,R07,Centro-Sul,Viação Beta,21:45,21:47,2,43,0.0,Nenhuma
+2026-03-28,Noite,R08,Norte,Viação Beta,21:45,21:37,-8,40,0.0,Nenhuma
+2026-03-30,Manhã,R01,Norte,Viação Alfa,05:45,05:45,0,37,2.3,Nenhuma
+2026-03-30,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,38,2.3,Nenhuma
+2026-03-30,Manhã,R03,Leste,Viação Beta,05:45,05:48,23,39,2.3,Nenhuma
+2026-03-30,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,37,2.3,Nenhuma
+2026-03-30,Manhã,R05,Leste,Viação Beta,05:45,05:42,-3,33,2.3,Nenhuma
+2026-03-30,Manhã,R05,Leste,Viação Beta,05:45,05:42,-3,33,2.3,Nenhuma
+2026-03-30,Manhã,R06,Oeste,Viação Alfa,05:45,05:38,-7,32,2.3,Nenhuma
+2026-03-30,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:41,-4,40,2.3,Nenhuma
+2026-03-30,Manhã,R08,Norte,Viação Beta,05:45,05:48,3,40,2.3,Nenhuma
+2026-03-30,Tarde,R01,Norte,Viação Alfa,13:45,13:43,-2,37,6.7,Nenhuma
+2026-03-30,tarde,R02,Norte,Viação Alfa,13:45,13:47,2,39,6.7,Nenhuma
+2026-03-30,Tarde,R03,Leste,Viação Beta,13:45,13:44,-1,33,6.7,Nenhuma
+2026-03-30,Tarde,R04,Sul,Viação Alfa,13:45,13:47,2,41,6.7,Nenhuma
+2026-03-30,Tarde,R05,Leste,Viação Beta,13:45,13:45,0,43,6.7,Nenhuma
+2026-03-30,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,43,6.7,Nenhuma
+2026-03-30,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:44,-1,35,6.7,Nenhuma
+2026-03-30,Tarde,R08,Norte,Viação Beta,13:45,13:50,5,38,6.7,Nenhuma
+2026-03-30,Noite,R01,Norte,Viação Alfa,21:45,21:44,-1,35,17.3,Nenhuma
+2026-03-30,Noite,R02,Norte,Viação Alfa,21:45,21:47,2,31,17.3,Nenhuma
+2026-03-30,Noite,R03,Leste,Viação Beta,21:45,21:52,7,42,17.3,Nenhuma
+2026-03-30,Noite,R04,Sul,Viação Alfa,21:45,21:50,5,35,17.3,Nenhuma
+2026-03-30,Noite,R05,Leste,Viação Beta,21:45,21:53,8,40,17.3,Nenhuma
+2026-03-30,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,35,17.3,Nenhuma
+2026-03-30,Noite,R07,Centro-Sul,Viação Beta,21:45,21:49,4,35,17.3,Nenhuma
+2026-03-30,Noite,R08,Norte,Viação Beta,21:45,21:44,-1,41,17.3,Nenhuma
+2026-03-31,Manhã,R01,Norte,Viação Alfa,05:45,05:44,-1,39,,Nenhuma
+2026-03-31,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,34,,Nenhuma
+2026-03-31,Manhã,R03,Leste,Viação Beta,05:45,05:47,2,39,,Nenhuma
+2026-03-31,Manhã,R04,Sul,Viação Alfa,05:45,05:43,-2,35,,Nenhuma
+2026-03-31,Manhã,R05,Leste,Viação Beta,05:45,05:42:00,-3,39,,Nenhuma
+2026-03-31,Manhã,R06,Oeste,Viação Alfa,05:45,05:41,-4,42,,Nenhuma
+2026-03-31,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:36,-9,42,,Nenhuma
+2026-03-31,Manhã,R08,Norte,Viação Beta,05:45,05:45,0,32,,Nenhuma
+2026-03-31,Tarde,R01,Norte,Viação Alfa,13:45,13:59,14,42,,Chuva forte
+2026-03-31,Tarde,R02,Norte,Viação Alfa,13:45,14:01,16,39,,Chuva forte
+2026-03-31,Tarde,R03,Leste,Viação Beta,13:45,14:01,16,29,,Chuva forte
+2026-03-31,Tarde,R04,Sul,Viação Alfa,13:45,14:00,15,43,,Chuva forte
+2026-03-31,Tarde,R05,Leste,Viação Beta,13:45,13:59:00,14,32,,Chuva forte
+2026-03-31,tarde,R06,Oeste,Viação Alfa,13:45,14:01,16,36,,Chuva forte
+2026-03-31,Tarde,R07,Centro-Sul,Viação Beta,13:45,14:11,26,36,,Chuva forte
+2026-03-31,Tarde,R08,Norte,Viação Beta,13:45,14:00,15,39,,Chuva forte
+2026-03-31,Noite,R01,Norte,Viação Alfa,21:45,21:44:00,-1,42,,Nenhuma
+2026-03-31,Noite,R02,Norte,Viação Alfa,21:45,21:41,-4,42,,Nenhuma
+2026-03-31,Noite,R03,Leste,Viação Beta,21:45,21h43,-2,36,,Nenhuma
+2026-03-31,Noite,R04,Sul,Viação Alfa,21:45,21:38,-7,42,,Nenhuma
+2026-03-31,Noite,R05,Leste,Viação Beta,21:45,21:39,-6,43,,Nenhuma
+2026-03-31,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,40,,Nenhuma
+2026-03-31,Noite,R07,Centro-Sul,Viação Beta,21:45,21:51,6,39,,Trânsito intenso
+2026-03-31,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,38,,Nenhuma
+2026-04-01,Manhã,R01,Norte,Viação Alfa,05:45,05:47,2,39,5.4,Nenhuma
+2026-04-01,Manhã,R02,Norte,Viação Alfa,05:45,05:46,1,39,5.4,Nenhuma
+2026-04-01,Manhã,R03,Leste,Viação Beta,05:45,05:42,-3,29,5.4,Nenhuma
+2026-04-01,Manhã,R04,Sul,Viação Alfa,05:45,06:00,15,37,5.4,Pane mecânica
+2026-04-01,Manhã,R05,Leste,Viação Beta,05:45,05:40,-5,39,5.4,Nenhuma
+2026-04-01,Manhã,R06,Oeste,Viação Alfa,05:45,05:44,-1,43,5.4,Nenhuma
+2026-04-01,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:41,-4,40,5.4,Nenhuma
+2026-04-01,Manhã,R08,Norte,Viação Beta,05:45,05:43,-2,44,5.4,Nenhuma
+2026-04-01,Tarde,R01,Norte,Viação Alfa,13:45,13:39,-6,42,0.0,Nenhuma
+2026-04-01,tarde,R02,Norte,Viação Alfa,13:45,13:41,-4,37,0.0,Nenhuma
+2026-04-01,Tarde,R03,Leste,Viação Beta,13:45,13:39,-6,37,0.0,Nenhuma
+2026-04-01,Tarde,R4,Sul,Viação Alfa,13:45,13:45,0,38,0.0,Nenhuma
+2026-04-01,Tarde,R05,Leste,Viação Beta,13:45,13:41,-4,40,0.0,Nenhuma
+2026-04-01,Tarde,R05,Leste,Viação Beta,13:45,13:41,-4,40,0.0,Nenhuma
+2026-04-01,Tarde,R06,Oeste,Viação Alfa,13:45,13:44,-1,36,0.0,Nenhuma
+01/04/2026,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,37,0.0,Nenhuma
+2026-04-01,Tarde,R08,Norte,Viação Beta,13:45,13:48,3,33,0.0,Nenhuma
+2026-04-01,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,38,0.0,Nenhuma
+2026-04-01,Noite,R02,Norte,Viação Alfa,21:45,21:38,-7,33,0.0,Nenhuma
+2026-04-01,Noite,R03,Leste,Viação Beta,21:45,21:38,-7,35,0.0,Nenhuma
+2026-04-01,Noite,Rota 04,Sul,Viação Alfa,21:45,21:41,-4,28,0.0,Nenhuma
+2026-04-01,Noite,R05,Leste,Viação Beta,21:45,21:37,-8,38,0.0,Nenhuma
+2026-04-01,Noite,R06,Oeste,Viação Alfa,21:45,21:40,-5,34,0.0,Nenhuma
+2026-04-01,Noite,R07,Centro-Sul,Viação Beta,21:45,21:58,13,35,0.0,Pneu furado
+2026-04-01,Noite,R8,Norte,Viação Beta,21:45,21:42,-3,36,0.0,Nenhuma
+2026-04-02,Manhã,R01,Norte,Viação Alfa,05:45,05:39,-6,42,0.0,Nenhuma
+2026-04-02,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,39,0.0,Nenhuma
+2026-04-02,Manhã,R03,Leste,Viação Beta,05:45,05:43,-2,32,0.0,Nenhuma
+02/04/2026,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,38,0.0,Nenhuma
+02/04/2026,Manhã,R05,Leste,Viação Beta,05:45,05:45,0,34,0.0,Nenhuma
+2026-04-02,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,38,0.0,Nenhuma
+2026-04-02,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:39,-6,30,0.0,Nenhuma
+2026-04-02,Manhã,R08,Norte,Viação Beta,05:45,05:39:00,-6,39,0.0,Nenhuma
+2026-04-02,Tarde,Rota 01,Norte,Viação Alfa,13:45,13:43,-2,40,0.0,Nenhuma
+2026-04-02,Tarde,R02,Norte,Viação Alfa,13:45,13:44,-1,33,0.0,Nenhuma
+2026-04-02,Tarde,R03,Leste,Viação Beta,13:45,13:44,-1,44,0.0,Nenhuma
+2026-04-02,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,36,0.0,Nenhuma
+2026-04-02,Tarde,R05,Leste,Viação Beta,13:45,13:41,-4,38,0.0,Nenhuma
+2026-04-02,Tarde,R06,Oeste,Viação Alfa,13:45,13:43,-2,43,0.0,Nenhuma
+2026-04-02,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:39,-6,33,0.0,Nenhuma
+2026-04-02,Tarde,R08,Norte,Viação Beta,13:45,13:58,13,42,0.0,Pneu furado
+2026-04-02,Noite,R01,Norte,Viação Alfa,21:45,21:37,-8,44,0.0,Nenhuma
+2026-04-02,Noite,R02,Norte,Viação Alfa,21:45,21:36,-9,35,0.0,Nenhuma
+2026-04-02,Noite,R03,Leste,Viação Beta,21:45,21:32,-13,42,0.0,Nenhuma
+2026-04-02,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,29,0.0,Nenhuma
+02/04/2026,Noite,R05,Leste,Viação Beta,21:45,21:40,-5,40,0.0,Nenhuma
+2026-04-02,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,41,0.0,Nenhuma
+2026-04-02,Noite,Rota 07,Centro-Sul,Viação Beta,21:45,21:43,-2,35,0.0,Nenhuma
+2026-04-02,Noite,R08,Norte,Viação Beta,21:45,21:40,-5,38,0.0,Nenhuma
+2026-04-03,Manhã,R01,Norte,Viação Alfa,05:45,05:40,-5,37,0.0,Nenhuma
+2026-04-03,Manhã,R02,Norte,Viação Alfa,05:45,05:44,-1,39,0.0,Nenhuma
+2026-04-03,Manhã,R03,Leste,Viação Beta,05:45,05:41,6,38,0.0,Nenhuma
+2026-04-03,Manhã,R04,Sul,Viação Alfa,05:45,05:40,-5,42,0.0,Nenhuma
+2026-04-03,Manhã,R05,Leste,Viação Beta,05:45,05:41,-4,36,0.0,Nenhuma
+2026-04-03,Manhã,R06,Oeste,Viação Alfa,05:45,05:35,-10,36,0.0,Nenhuma
+2026-04-03,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:42,-3,40,0.0,Nenhuma
+2026-04-03,Manhã,R08,Norte,Viação Beta,05:45,05:41,-4,41,0.0,Nenhuma
+2026-04-03,Tarde,R01,Norte,Viação Alfa,13:45,13:37,-8,44,0.0,Nenhuma
+2026-04-03,Tarde,R02,Norte,Viação Alfa,13:45,13:45,0,34,0.0,Nenhuma
+2026-04-03,Tarde,R03,Leste,Viação Beta,13:45,13:50,5,43,0.0,Trânsito intenso
+2026-04-03,Tarde,R04,Sul,Viação Alfa,13:45,13:42,-3,36,0.0,Nenhuma
+2026-04-03,Tarde,R05,Leste,Viação Beta,13:45,13:43,-2,34,0.0,Nenhuma
+2026-04-03,Tarde,R06,Oeste,Viação Alfa,13:45,13:43,-2,44,0.0,Nenhuma
+2026-04-03,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,36,0.0,Nenhuma
+2026-04-03,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,39,0.0,Nenhuma
+2026-04-03,Noite,R01,Norte,Viação Alfa,21:45,21:44,-1,39,7.6,Nenhuma
+2026-04-03,Noite,R02,Norte,Viação Alfa,21:45,21h40,-5,41,7.6,Nenhuma
+2026-04-03,Noite,R03,Leste,Viação Beta,21:45,21:40,-5,41,7.6,Nenhuma
+2026-04-03,Noite,R04,Sul,Viação Alfa,21:45,21:43,-2,34,7.6,Nenhuma
+2026-04-03,Noite,R05,Leste,Viação Beta,21:45,21:41,-4,32,7.6,Nenhuma
+2026-04-03,Noite,R06,Oeste,Viação Alfa,21:45,21:44,-1,40,7.6,Nenhuma
+2026-04-03,Noite,R07,Centro-Sul,Viação Beta,21:45,21:40,-5,33,7.6,Nenhuma
+2026-04-03,Noite,R08,Norte,Viação Beta,21:45,21:43,-2,35,7.6,Nenhuma
+2026-04-04,Manhã,R01,Norte,Viação Alfa,05:45,05:51,6,32,30.4,Chuva forte
+2026-04-04,Manhã,R02,Norte,Viação Alfa,05:45,05:51,6,35,30.4,Chuva forte
+2026-04-04,Manhã,R03,Leste,Viação Beta,05:45,05:51,26,42,30.4,Chuva forte
+2026-04-04,Manhã,R04,Sul,Viação Alfa,05:45,05:52,7,41,30.4,Chuva forte
+2026-04-04,Manhã,R05,Leste,Viação Beta,05:45,06:21,36,32,30.4,Pane mecânica
+2026-04-04,Manhã,R06,Oeste,Viação Alfa,05:45,05:52,7,44,30.4,Chuva forte
+2026-04-04,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:51,6,32,30.4,Chuva forte
+2026-04-04,Manhã,R08,Norte,Viação Beta,05:45,05:55,10,34,30.4,Chuva forte
+2026-04-04,Tarde,R01,Norte,Viação Alfa,13:45,13:46,1,33,8.0,Nenhuma
+2026-04-04,Tarde,R02,Norte,Viação Alfa,13:45,13:48,3,40,8.0,Nenhuma
+2026-04-04,Tarde,R03,Leste,Viação Beta,13:45,13:41,-4,34,8.0,Nenhuma
+2026-04-04,Tarde,R04,Sul,Viação Alfa,13:45,13h50,5,34,8.0,Nenhuma
+2026-04-04,Tarde,R05,Leste,Viação Beta,13:45,13:44,-1,38,8.0,Nenhuma
+2026-04-04,Tarde,R06,Oeste,Viação Alfa,13:45,13:44,-1,35,8.0,Nenhuma
+2026-04-04,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:47:00,2,36,8.0,Nenhuma
+2026-04-04,Tarde,R08,Norte,Viação Beta,13:45,13:44,-1,35,8.0,Nenhuma
+2026-04-04,Noite,R01,Norte,Viação Alfa,21:45,21:44,-1,35,0.0,Nenhuma
+2026-04-04,Noite,R02,Norte,Viação Alfa,21:45,21:38,-7,40,0.0,Nenhuma
+2026-04-04,Noite,R03,Leste,Viação Beta,21:45,21:43,-2,32,0.0,Nenhuma
+2026-04-04,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,34,0.0,Nenhuma
+2026-04-04,Noite,R05,Leste,Viação Beta,21:45,21:39,-6,44,0.0,Nenhuma
+2026-04-04,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,35,0.0,Nenhuma
+2026-04-04,Noite,R07,Centro-Sul,Viação Beta,21:45,21:36,-9,35,0.0,Nenhuma
+2026-04-04,Noite,Rota 08,Norte,Viação Beta,21:45,21:56,11,35,0.0,Trânsito intenso
+2026-04-06,Manhã,R01,Norte,Viação Alfa,05:45,05:50,5,38,10.9,Nenhuma
+2026-04-06,Manhã,R02,Norte,Viação Alfa,05:45,05:48,3,32,10.9,Nenhuma
+2026-04-06,Manhã,R03,Leste,Viação Beta,05:45,05:56,11,33,10.9,Nenhuma
+2026-04-06,Manhã,R04,Sul,Viação Alfa,05:45,05:48,3,34,10.9,Nenhuma
+2026-04-06,Manhã,R05,Leste,Viação Beta,05:45,05:57,12,39,10.9,Nenhuma
+2026-04-06,Manhã,R06,Oeste,Viação Alfa,05:45,05:45,0,35,10.9,Nenhuma
+2026-04-06,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:45,0,42,10.9,Nenhuma
+2026-04-06,Manhã,R08,Norte,Viação Beta,05:45,05:44,-1,29,10.9,Nenhuma
+2026-04-06,Tarde,R01,Norte,Viação Alfa,13:45,13:42:00,-3,42,4.5,Nenhuma
+2026-04-06,Tarde,R02,Norte,Viação Alfa,13:45,13:45,0,40,4.5,Nenhuma
+2026-04-06,Tarde,R03,Leste,Viação Beta,13:45,13h49,4,28,4.5,Nenhuma
+2026-04-06,Tarde,R04,Sul,Viação Alfa,13:45,13:43,-2,38,4.5,Nenhuma
+2026-04-06,tarde,R05,Leste,Viação Beta,13:45,13:59,14,40,4.5,Nenhuma
+2026-04-06,Tarde,R06,Oeste,Viação Alfa,13:45,13:45,0,38,4.5,Nenhuma
+2026-04-06,tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,40,4.5,Nenhuma
+2026-04-06,Tarde,R08,Norte,Viação Beta,13:45,13:39,-6,38,4.5,Nenhuma
+2026-04-06,Noite,R01,Norte,Viação Alfa,21:45,21h52,7,40,21.4,Chuva forte
+2026-04-06,Noite,R02,Norte,Viação Alfa,21:45,21:53,8,39,21.4,Chuva forte
+2026-04-06,Noite,R03,Leste,Viação Beta,21:45,21:46:00,1,39,21.4,Chuva forte
+2026-04-06,Noite,R04,Sul,Viação Alfa,21:45,21:37,-8,36,21.4,Chuva forte
+2026-04-06,Noite,R05,Leste,Viação Beta,21:45,21h47,2,37,21.4,Chuva forte
+2026-04-06,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,37,21.4,Chuva forte
+2026-04-06,Noite,R07,Centro-Sul,Viação Beta,21:45,21:51,6,38,21.4,Chuva forte
+2026-04-06,Noite,R08,Norte,Viação Beta,21:45,21:43,-2,34,21.4,Chuva forte
+2026-04-07,Manhã,R01,Norte,Viação Alfa,05:45,05:47:00,2,36,16.0,Nenhuma
+2026-04-07,Manhã,R02,Norte,Viação Alfa,05:45,05:48,3,38,16.0,Nenhuma
+2026-04-07,Manhã,R03,Leste,Viação Beta,05:45,06:10,25,34,16.0,Obra na via
+2026-04-07,Manhã,R04,Sul,Viação Alfa,05:45,05:56,11,37,16.0,Nenhuma
+2026-04-07,Manhã,R05,Leste,Viação Beta,05:45,06:05,20,36,16.0,Nenhuma
+2026-04-07,Manhã,R06,Oeste,Viação Alfa,05:45,05:52,7,42,16.0,Nenhuma
+2026-04-07,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:46,1,37,16.0,Nenhuma
+2026-04-07,Manhã,R08,Norte,Viação Beta,05:45,05:54,9,44,16.0,Trânsito intenso
+2026-04-07,Tarde,R01,Norte,Viação Alfa,13:45,13:40,-5,44,0.0,Nenhuma
+2026-04-07,Tarde,R02,Norte,Viação Alfa,13:45,13:39,-6,40,0.0,Nenhuma
+2026-04-07,Tarde,R03,Leste,Viação Beta,13:45,13:48,3,39,0.0,Nenhuma
+2026-04-07,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,33,0.0,Nenhuma
+2026-04-07,Tarde,R05,Leste,Viação Beta,13:45,13:54,9,40,0.0,Nenhuma
+2026-04-07,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,44,0.0,Nenhuma
+2026-04-07,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:43,-2,44,0.0,Nenhuma
+2026-04-07,Tarde,R08,Norte,Viação Beta,13:45,13:44,-1,39,0.0,Nenhuma
+2026-04-07,Noite,R01,Norte,Viação Alfa,21:45,21:45,0,36,3.2,Nenhuma
+2026-04-07,Noite,R02,Norte,Viação Alfa,21:45,21:43,-2,41,3.2,Nenhuma
+2026-04-07,Noite,R03,Leste,Viação Beta,21:45,21:43,-2,28,3.2,Nenhuma
+2026-04-07,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,44,3.2,Nenhuma
+2026-04-07,Noite,R05,Leste,Viação Beta,21:45,21:40,-5,37,3.2,Nenhuma
+2026-04-07,Noite,R06,Oeste,Viação Alfa,21:45,21:45,0,32,3.2,Nenhuma
+2026-04-07,Noite,R07,Centro-Sul,Viação Beta,21:45,21:42,-3,39,3.2,Nenhuma
+2026-04-07,Noite,R08,Norte,Viação Beta,21:45,21:44,-1,34,3.2,Nenhuma
+2026-04-08,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,36,2.4,Nenhuma
+2026-04-08,Manhã,R02,Norte,Viação Alfa,05:45,05:42,-3,40,2.4,Nenhuma
+2026-04-08,Manhã,R03,Leste,Viação Beta,05:45,05:48,3,37,2.4,Nenhuma
+2026-04-08,Manhã,R04,Sul,Viação Alfa,05:45,05:45,0,36,2.4,Nenhuma
+2026-04-08,Manhã,R05,Leste,Viação Beta,05:45,05:50,5,38,2.4,Obra na via
+2026-04-08,Manhã,R06,Oeste,Viação Alfa,05:45,05:37,-8,40,2.4,Nenhuma
+2026-04-08,Manhã,Rota 07,Centro-Sul,Viação Beta,05:45,05:40,-5,37,2.4,Nenhuma
+2026-04-08,Manhã,R08,Norte,Viação Beta,05:45,05:38,-7,43,2.4,Nenhuma
+08/04/2026,Tarde,R01,Norte,Viação Alfa,13:45,13:46,1,31,18.3,Nenhuma
+2026-04-08,Tarde,R02,Norte,Viação Alfa,13:45,13:46,1,33,18.3,Nenhuma
+2026-04-08,Tarde,R03,Leste,Viação Beta,13:45,13:49,4,30,18.3,Nenhuma
+2026-04-08,Tarde,R04,Sul,Viação Alfa,13:45,13:51,6,35,18.3,Nenhuma
+2026-04-08,Tarde,R05,Leste,Viação Beta,13:45,13:56,11,38,18.3,Obra na via
+2026-04-08,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,34,18.3,Nenhuma
+2026-04-08,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:48,3,31,18.3,Nenhuma
+2026-04-08,Tarde,R8,Norte,Viação Beta,13:45,13:45,0,39,18.3,Nenhuma
+2026-04-08,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,39,0.0,Nenhuma
+2026-04-08,Noite,R02,Norte,Viação Alfa,21:45,21:43,-2,37,0.0,Nenhuma
+2026-04-08,Noite,R03,Leste,Viação Beta,21:45,21:38,-7,36,0.0,Nenhuma
+2026-04-08,Noite,R04,Sul,Viação Alfa,21:45,21:38,-7,39,0.0,Nenhuma
+2026-04-08,Noite,R05,Leste,Viação Beta,21:45,21:38,-7,33,0.0,Nenhuma
+2026-04-08,Noite,R06,Oeste,Viação Alfa,21:45,21:45,0,41,0.0,Nenhuma
+2026-04-08,Noite,R07,Centro-Sul,Viação Beta,21:45,21:47,2,38,0.0,Nenhuma
+2026-04-08,Noite,R08,Norte,Viação Beta,21:45,21:36,-9,35,0.0,Nenhuma
+2026-04-09,Manhã,R01,Norte,Viação Alfa,05:45,05:38,-7,42,0.0,Nenhuma
+2026-04-09,Manhã,R02,Norte,Viação Alfa,05:45,05:39,-6,39,0.0,Nenhuma
+2026-04-09,Manhã,R03,Leste,Viação Beta,05:45,05:50,5,35,0.0,Nenhuma
+2026-04-09,Manhã,R04,Sul,Viação Alfa,05:45,05:39,-6,38,0.0,Nenhuma
+2026-04-09,Manhã,R05,Leste,Viação Beta,05:45,05:56,11,41,0.0,Obra na via
+2026-04-09,Manhã,R06,Oeste,Viação Alfa,05:45,05:40,-5,37,0.0,Nenhuma
+2026-04-09,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:43,-2,34,0.0,Nenhuma
+2026-04-09,Manhã,R08,Norte,Viação Beta,05:45,05:38,-7,37,0.0,Nenhuma
+2026-04-09,Tarde,R01,Norte,Viação Alfa,13:45,13:48:00,3,36,7.6,Nenhuma
+2026-04-09,Tarde,R02,Norte,Viação Alfa,13:45,13:45,0,42,7.6,Nenhuma
+2026-04-09,Tarde,R03,Leste,Viação Beta,13:45,13:48,3,44,7.6,Nenhuma
+09/04/2026,Tarde,R04,Sul,Viação Alfa,13:45,13:45,0,33,7.6,Nenhuma
+2026-04-09,Tarde,R05,Leste,Viação Beta,13:45,13:52,7,37,7.6,Nenhuma
+2026-04-09,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,38,7.6,Nenhuma
+2026-04-09,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:44,-1,41,7.6,Nenhuma
+2026-04-09,Tarde,R08,Norte,Viação Beta,13:45,13:44,-1,32,7.6,Nenhuma
+2026-04-09,Noite,R01,Norte,Viação Alfa,21:45,21:44,-1,37,0.0,Nenhuma
+2026-04-09,Noite,R02,Norte,Viação Alfa,21:45,21:43,-2,37,0.0,Nenhuma
+2026-04-09,Noite,R03,Leste,Viação Beta,21:45,21:42,-3,37,0.0,Nenhuma
+2026-04-09,Noite,R04,Sul,Viação Alfa,21:45,21:37,-8,32,0.0,Nenhuma
+2026-04-09,Noite,R05,Leste,Viação Beta,21:45,21:37,-8,42,0.0,Nenhuma
+2026-04-09,Noite,R06,Oeste,Viação Alfa,21:45,22:26,41,34,0.0,Pane mecânica
+2026-04-09,Noite,R07,Centro-Sul,Viação Beta,21:45,21:38,-7,33,0.0,Nenhuma
+2026-04-09,Noite,R08,Norte,Viação Beta,21:45,21:45,0,40,0.0,Nenhuma
+2026-04-10,MANHÃ,R01,Norte,Viação Alfa,05:45,05:50,5,34,,Nenhuma
+2026-04-10,Manhã,R02,Norte,Viação Alfa,05:45,05:38,-7,35,,Nenhuma
+2026-04-10,Manhã,R03,Leste,Viação Beta,05:45,05:50,5,43,,Nenhuma
+2026-04-10,Manhã,R04,Sul,Viação Alfa,05:45,05:39,-6,35,,Nenhuma
+2026-04-10,Manhã,R05,Leste,Viação Beta,05:45,05:59,14,37,,Nenhuma
+2026-04-10,Manhã,R06,Oeste,Viação Alfa,05:45,05:46,1,31,,Nenhuma
+10/04/2026,manha,R07,Centro-Sul,Viação Beta,05:45,05:44,-1,36,,Nenhuma
+2026-04-10,Manhã,R08,Norte,Viação Beta,05:45,05:44,-1,44,,Nenhuma
+2026-04-10,Tarde,R01,Norte,Viação Alfa,13:45,13:47,2,38,,Nenhuma
+2026-04-10,Tarde,R02,Norte,Viação Alfa,13:45,13:39,-6,36,,Nenhuma
+2026-04-10,Tarde,R03,Leste,Viação Beta,13:45,13:52,7,35,,Nenhuma
+2026-04-10,Tarde,R04,Sul,Viação Alfa,13:45,13:45,0,39,,Nenhuma
+2026-04-10,Tarde,r05,Leste,Viação Beta,13:45,13:56,11,36,,Nenhuma
+2026-04-10,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,41,,Nenhuma
+2026-04-10,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:40,15,34,,Nenhuma
+2026-04-10,Tarde,R08,Norte,Viação Beta,13:45,13:41,-4,37,,Nenhuma
+2026-04-10,Noite,R01,Norte,Viação Alfa,21:45,21:52,7,39,,Chuva forte
+2026-04-10,Noite,R02,Norte,Viação Alfa,21:45,21:54,9,41,,Chuva forte
+2026-04-10,Noite,R03,Leste,Viação Beta,21:45,21:47,2,37,,Chuva forte
+2026-04-10,Noite,R04,Sul,Viação Alfa,21:45,21:48,3,41,,Chuva forte
+2026-04-10,Noite,R05,Leste,Viação Beta,21:45,21:48,3,36,,Chuva forte
+2026-04-10,Noite,R06,Oeste,Viação Alfa,21:45,21:58,13,35,,Chuva forte
+2026-04-10,Noite,R07,Centro-Sul,Viação Beta,21:45,21:45,0,41,,Chuva forte
+2026-04-10,Noite,R08,Norte,Viação Beta,21:45,21:53,8,41,,Chuva forte
+2026-04-11,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,33,6.2,Nenhuma
+2026-04-11,Manhã,R02,Norte,Viação Alfa,05:45,05:42,-3,34,6.2,Nenhuma
+2026-04-11,Manhã,R03,Leste,Viação Beta,05:45,06:01,16,37,6.2,Obra na via
+11/04/2026,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,33,6.2,Nenhuma
+2026-04-11,Manhã,R05,Leste,Viação Beta,05:45,05:57,12,35,6.2,Nenhuma
+2026-04-11,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,43,6.2,Nenhuma
+2026-04-11,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:41,-4,40,6.2,Nenhuma
+2026-04-11,Manhã,R08,Norte,Viação Beta,05:45,05:51,6,43,6.2,Nenhuma
+2026-04-11,Tarde,R01,Norte,Viação Alfa,13:45,13:40,-5,39,0.6,Nenhuma
+2026-04-11,Tarde,R02,Norte,Viação Alfa,13:45,13:46,1,33,0.6,Nenhuma
+2026-04-11,Tarde,R3,Leste,Viação Beta,13:45,13:55,10,35,0.6,Nenhuma
+11/04/2026,Tarde,R04,Sul,Viação Alfa,13:45,13:46,1,36,0.6,Nenhuma
+2026-04-11,Tarde,R05,Leste,Viação Beta,13:45,13:46,1,41,0.6,Nenhuma
+11/04/2026,Tarde,R06,Oeste,Viação Alfa,13:45,13:40,-5,40,0.6,Nenhuma
+2026-04-11,Tarde,R07,Centro-Sul,Viação Beta,13:45,13h42,-3,37,0.6,Nenhuma
+2026-04-11,Tarde,R08,Norte,Viação Beta,13:45,13:41,-4,35,0.6,Nenhuma
+2026-04-11,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,41,0.0,Nenhuma
+2026-04-11,Noite,R02,Norte,Viação Alfa,21:45,21:45,0,38,0.0,Nenhuma
+2026-04-11,Noite,R03,Leste,Viação Beta,21:45,21:37,-8,43,0.0,Nenhuma
+2026-04-11,Noite,R04,Sul,Viação Alfa,21:45,21:43:00,-2,41,0.0,Nenhuma
+11/04/2026,Noite,R05,Leste,Viação Beta,21:45,21:45,0,37,0.0,Nenhuma
+2026-04-11,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,40,0.0,Nenhuma
+2026-04-11,Noite,R07,Centro-Sul,Viação Beta,21:45,21:39,-6,36,0.0,Nenhuma
+2026-04-11,Noite,R08,Norte,Viação Beta,21:45,21:39,-6,33,0.0,Nenhuma
+2026-04-13,Manhã,R01,Norte,Viação Alfa,05:45,05:40,-5,35,8.4,Nenhuma
+2026-04-13,Manhã,R02,Norte,Viação Alfa,05:45,05:50,5,37,8.4,Nenhuma
+2026-04-13,Manhã,R03,Leste,Viação Beta,05:45,06:09,24,39,8.4,Obra na via
+2026-04-13,Manhã,R04,Sul,Viação Alfa,05:45,05:47,2,44,8.4,Nenhuma
+2026-04-13,Manhã,R05,Leste,Viação Beta,05:45,06:11,26,33,8.4,Nenhuma
+2026-04-13,Manhã,R06,Oeste,Viação Alfa,05:45,05:49,4,39,8.4,Nenhuma
+2026-04-13,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:42,-3,38,8.4,Nenhuma
+2026-04-13,Manhã,R08,Norte,Viação Beta,05:45,05:47,2,32,8.4,Nenhuma
+2026-04-13,Tarde,R01,Norte,Viação Alfa,13:45,13:46,1,32,11.0,Nenhuma
+2026-04-13,Tarde,R02,Norte,Viação Alfa,13:45,13:47,2,39,11.0,Nenhuma
+2026-04-13,Tarde,R03,Leste,Viação Beta,13:45,13:55:00,10,42,11.0,Nenhuma
+2026-04-13,Tarde,R04,Sul,Viação Alfa,13:45,13:43,-2,43,11.0,Nenhuma
+2026-04-13,Tarde,R05,Leste,Viação Beta,13:45,13:57,12,35,11.0,Nenhuma
+2026-04-13,Tarde,R06,Oeste,Viação Alfa,13:45,13:45,0,39,11.0,Nenhuma
+2026-04-13,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:46,1,41,11.0,Nenhuma
+2026-04-13,Tarde,R08,Norte,Viação Beta,13:45,13:49,4,35,11.0,Nenhuma
+2026-04-13,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,34,0.0,Nenhuma
+2026-04-13,Noite,R02,Norte,Viação Alfa,21:45,21:40,-5,44,0.0,Nenhuma
+2026-04-13,Noite,R03,Leste,Viação Beta,21:45,21:42,-3,36,0.0,Nenhuma
+2026-04-13,Noite,R04,Sul,Viação Alfa,21:45,21:38,-7,42,0.0,Nenhuma
+2026-04-13,Noite,R05,Leste,Viação Beta,21:45,21:40,-5,33,0.0,Nenhuma
+2026-04-13,Noite,R06,Oeste,Viação Alfa,21:45,21:38,-7,41,0.0,Nenhuma
+2026-04-13,Noite,R07,Centro-Sul,Viação Beta,21:45,21:34,-11,38,0.0,Nenhuma
+2026-04-13,Noite,R08,Norte,Viação Beta,21:45,21:36,-9,39,0.0,Nenhuma
+2026-04-14,Manhã,R01,Norte,Viação Alfa,05:45,05:54,9,32,43.1,Chuva forte
+2026-04-14,Manhã,R02,Norte,Viação Alfa,05:45,06:00,15,34,43.1,Chuva forte
+2026-04-14,Manhã,R03,Leste,Viação Beta,05:45,06:15,30,38,43.1,Chuva forte
+2026-04-14,Manhã,R04,Sul,Viação Alfa,05:45,05:51,6,37,43.1,Chuva forte
+2026-04-14,Manhã,R05,Leste,Viação Beta,05:45,06:10,25,41,43.1,Obra na via
+2026-04-14,Manhã,R06,Oeste,Viação Alfa,05:45,05:53,8,44,43.1,Chuva forte
+2026-04-14,Manhã,R07,Centro-Sul,Viação Beta,05:45,05h55,10,30,43.1,Chuva forte
+2026-04-14,Manhã,R08,Norte,Viação Beta,05:45,05:57,12,40,43.1,Chuva forte
+2026-04-14,Tarde,R01,Norte,Viação Alfa,13:45,13:56,11,36,28.4,Chuva forte
+2026-04-14,tarde,R02,Norte,Viação Alfa,13:45,13:55,10,34,28.4,Chuva forte
+2026-04-14,Tarde,R03,Leste,Viação Beta,13:45,13:58,13,40,28.4,Chuva forte
+2026-04-14,Tarde,R04,Sul,Viação Alfa,13:45,13:54,9,35,28.4,Chuva forte
+2026-04-14,Tarde,Rota 05,Leste,Viação Beta,13:45,14:05,20,40,28.4,Obra na via
+2026-04-14,Tarde,R06,Oeste,Viação Alfa,13:45,13:53,8,38,28.4,Chuva forte
+14/04/2026,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:52,7,41,28.4,Chuva forte
+2026-04-14,Tarde,R08,Norte,Viação Beta,13:45,13:56,11,41,28.4,Chuva forte
+2026-04-14,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,40,0.0,Nenhuma
+2026-04-14,Noite,R02,Norte,Viação Alfa,21:45,21:36,-9,35,0.0,Nenhuma
+2026-04-14,Noite,R03,Leste,Viação Beta,21:45,21:41,-4,44,0.0,Nenhuma
+2026-04-14,Noite,R04,Sul,Viação Alfa,21:45,21:39,-6,44,0.0,Nenhuma
+2026-04-14,Noite,R05,Leste,Viação Beta,21:45,21:40,-5,34,0.0,Nenhuma
+2026-04-14,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,44,0.0,Nenhuma
+2026-04-14,Noite,R07,Centro-Sul,Viação Beta,21:45,21:42,-3,34,0.0,Nenhuma
+2026-04-14,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,36,0.0,Nenhuma
+2026-04-15,Manhã,R01,Norte,Viação Alfa,05:45,05:46,1,31,4.1,Nenhuma
+2026-04-15,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,37,4.1,Nenhuma
+2026-04-15,Manhã,R03,Leste,Viação Beta,05:45,05:56,11,38,4.1,Nenhuma
+2026-04-15,Manhã,R04,Sul,Viação Alfa,05:45,05:41,-4,43,4.1,Nenhuma
+2026-04-15,Manhã,R05,Leste,Viação Beta,05:45,06:02,17,30,4.1,Nenhuma
+2026-04-15,Manhã,R06,Oeste,Viação Alfa,05:45,05:41,-4,42,4.1,Nenhuma
+2026-04-15,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:45,0,44,4.1,Nenhuma
+2026-04-15,Manhã,R08,Norte,Viação Beta,05:45,05:44,-1,35,4.1,Nenhuma
+2026-04-15,Tarde,R01,Norte,Viação Alfa,13:45,13:39,-6,43,0.0,Nenhuma
+2026-04-15,Tarde,R02,Norte,Viação Alfa,13:45,13:44,-1,36,0.0,Nenhuma
+2026-04-15,Tarde,R03,Leste,Viação Beta,13:45,13:50,5,34,0.0,Nenhuma
+2026-04-15,Tarde,R04,Sul,Viação Alfa,13:45,13:40,-5,37,0.0,Nenhuma
+2026-04-15,Tarde,R05,Leste,Viação Beta,13:45,13h52,7,33,0.0,Nenhuma
+2026-04-15,Tarde,R06,Oeste,Viação Alfa,13:45,13:41,-4,37,0.0,Nenhuma
+2026-04-15,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:39,-6,33,0.0,Nenhuma
+2026-04-15,Tarde,R08,Norte,Viação Beta,13:45,13:45,0,39,0.0,Nenhuma
+2026-04-15,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,32,1.0,Nenhuma
+2026-04-15,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,39,1.0,Nenhuma
+2026-04-15,Noturno,R03,Leste,Viação Beta,21:45,21:44,-1,33,1.0,Nenhuma
+2026-04-15,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,38,1.0,Nenhuma
+2026-04-15,Noite,R05,Leste,Viação Beta,21:45,21:47,2,36,1.0,Nenhuma
+2026-04-15,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,31,1.0,Nenhuma
+2026-04-15,Noite,R07,Centro-Sul,Viação Beta,21:45,21h43,-2,34,1.0,Nenhuma
+2026-04-15,Noite,R08,Norte,Viação Beta,21:45,21:42,-3,38,1.0,Nenhuma
+2026-04-16,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,39,0.0,Nenhuma
+2026-04-16,Manhã,R02,Norte,Viação Alfa,05:45,05:41,-4,37,0.0,Nenhuma
+2026-04-16,Manhã,R03,Leste,Viação Beta,05:45,06:06,21,39,0.0,Nenhuma
+2026-04-16,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,39,0.0,Nenhuma
+2026-04-16,Manhã,R05,Leste,Viação Beta,05:45,05:59,14,38,0.0,Nenhuma
+2026-04-16,Manhã,R06,Oeste,Viação Alfa,05:45,05:50,5,44,0.0,Trânsito intenso
+2026-04-16,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:46,1,40,0.0,Nenhuma
+2026-04-16,Manhã,R08,Norte,Viação Beta,05:45,05:42,-3,37,0.0,Nenhuma
+2026-04-16,Tarde,R01,Norte,Viação Alfa,13:45,13:44,-1,31,0.0,Nenhuma
+2026-04-16,Tarde,R02,Norte,Viação Alfa,13:45,13:43,-2,35,0.0,Nenhuma
+2026-04-16,Tarde,R03,Leste,Viação Beta,13:45,14:02,17,35,0.0,Nenhuma
+2026-04-16,Tarde,R04,Sul,Viação Alfa,13:45,13:52,7,35,0.0,Trânsito intenso
+2026-04-16,Tarde,R05,Leste,Viação Beta,13:45,13:49:00,4,35,0.0,Nenhuma
+2026-04-16,Tarde,R06,Oeste,Viação Alfa,13:45,13:43,-2,41,0.0,Nenhuma
+2026-04-16,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:44,-1,43,0.0,Nenhuma
+2026-04-16,Tarde,R08,Norte,Viação Beta,13:45,13:36,-9,33,0.0,Nenhuma
+2026-04-16,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,37,15.8,Nenhuma
+2026-04-16,Noite,R02,Norte,Viação Alfa,21:45,21:39,-6,42,15.8,Nenhuma
+2026-04-16,Noite,R03,Leste,Viação Beta,21:45,21:47,2,38,15.8,Nenhuma
+2026-04-16,Noite,R04,Sul,Viação Alfa,21:45,21:53,8,41,15.8,Nenhuma
+2026-04-16,Noite,R05,Leste,Viação Beta,21:45,21:46,1,43,15.8,Nenhuma
+2026-04-16,Noite,R06,Oeste,Viação Alfa,21:45,21:44,-1,37,15.8,Nenhuma
+2026-04-16,Noite,R07,Centro-Sul,Viação Beta,21:45,21:49,4,33,15.8,Nenhuma
+2026-04-16,Noite,R08,Norte,Viação Beta,21:45,21:47,2,37,15.8,Nenhuma
+2026-04-17,Manhã,R01,Norte,Viação Alfa,05:45,05:48,3,39,14.6,Nenhuma
+2026-04-17,Manhã,R02,Norte,Viação Alfa,05:45,05:39,-6,36,14.6,Nenhuma
+2026-04-17,Manhã,R03,Leste,Viação Beta,05:45,06:13,28,41,14.6,Nenhuma
+2026-04-17,Manhã,R04,Sul,Viação Alfa,05:45,05:43,-2,34,14.6,Nenhuma
+2026-04-17,Manhã,R05,Leste,Viação Beta,05:45,06:04,19,38,14.6,Obra na via
+2026-04-17,Manhã,R06,Oeste,Viação Alfa,05:45,05:49,4,42,14.6,Nenhuma
+2026-04-17,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:47,2,39,14.6,Nenhuma
+2026-04-17,Manhã,R08,Norte,Viação Beta,05:45,05:46,1,36,14.6,Nenhuma
+2026-04-17,Tarde,R01,Norte,Viação Alfa,13:45,13:43,-2,42,0.0,Nenhuma
+2026-04-17,Tarde,R02,Norte,Viação Alfa,13:45,13:44,-1,31,0.0,Nenhuma
+2026-04-17,Tarde,R03,Leste,Viação Beta,13:45,13:52,7,32,0.0,Nenhuma
+2026-04-17,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,34,0.0,Nenhuma
+2026-04-17,Tarde,R05,Leste,Viação Beta,13:45,13:57,12,39,0.0,Nenhuma
+2026-04-17,Tarde,R06,Oeste,Viação Alfa,13:45,13:39,-6,43,0.0,Nenhuma
+2026-04-17,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:44,-1,29,0.0,Nenhuma
+2026-04-17,Tarde,R08,Norte,Viação Beta,13:45,13:46,1,38,0.0,Nenhuma
+2026-04-17,Noite,R01,Norte,Viação Alfa,21:45,21:50,5,37,27.2,Chuva forte
+2026-04-17,Noite,R02,Norte,Viação Alfa,21:45,21:49,4,38,27.2,Chuva forte
+2026-04-17,Noite,R03,Leste,Viação Beta,21:45,21:50,5,35,27.2,Chuva forte
+2026-04-17,Noite,R04,Sul,Viação Alfa,21:45,21:52,7,37,27.2,Chuva forte
+2026-04-17,Noite,R05,Leste,Viação Beta,21:45,21:50,5,37,27.2,Chuva forte
+2026-04-17,Noite,R06,Oeste,Viação Alfa,21:45,21:55,10,34,27.2,Chuva forte
+2026-04-17,Noite,R07,Centro-Sul,Viação Beta,21:45,21:52,7,37,27.2,Chuva forte
+2026-04-17,Noite,R08,Norte,Viação Beta,21:45,21:53,8,35,27.2,Chuva forte
+2026-04-18,Manhã,R01,Norte,Viação Alfa,05:45,05:41,-4,34,0.0,Nenhuma
+2026-04-18,Manhã,R02,Norte,Viação Alfa,05:45,05:42,-3,39,0.0,Nenhuma
+2026-04-18,Manhã,R03,Leste,Viação Beta,05:45,05:59,14,34,0.0,Obra na via
+2026-04-18,Manhã,R04,Sul,Viação Alfa,05:45,05h43,-2,39,0.0,Nenhuma
+2026-04-18,Manhã,R05,Leste,Viação Beta,05:45,05:57,12,43,0.0,Nenhuma
+2026-04-18,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,35,0.0,Nenhuma
+2026-04-18,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:41,-4,32,0.0,Nenhuma
+18/04/2026,Manhã,R08,Norte,Viação Beta,05:45,05:42,-3,33,0.0,Nenhuma
+2026-04-18,Tarde,R01,Norte,Viação Alfa,13:45,13:42,-3,35,0.0,Nenhuma
+2026-04-18,Tarde,R02,Norte,Viação Alfa,13:45,13:49,4,39,0.0,Nenhuma
+2026-04-18,Tarde,R03,Leste,Viação Beta,13:45,13:56,11,31,0.0,Nenhuma
+2026-04-18,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,38,0.0,Nenhuma
+2026-04-18,Tarde,R05,Leste,Viação Beta,13:45,13:50,5,34,0.0,Nenhuma
+2026-04-18,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,36,0.0,Nenhuma
+2026-04-18,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:39,-6,37,0.0,Nenhuma
+2026-04-18,Tarde,R08,Norte,Viação Beta,13:45,13:39,-6,40,0.0,Nenhuma
+2026-04-18,Noite,R01,Norte,Viação Alfa,21:45,21:41,-4,34,0.0,Nenhuma
+2026-04-18,Noite,R02,Norte,Viação Alfa,21:45,21:34,-11,44,0.0,Nenhuma
+2026-04-18,Noite,R03,Leste,Viação Beta,21:45,21:38,-7,38,0.0,Nenhuma
+2026-04-18,Noite,R04,Sul,Viação Alfa,21:45,21:43,-2,44,0.0,Nenhuma
+2026-04-18,Noite,R05,Leste,Viação Beta,21:45,21:43,-2,36,0.0,Nenhuma
+2026-04-18,Noite,R06,Oeste,Viação Alfa,21:45,21:40,-5,41,0.0,Nenhuma
+2026-04-18,Noite,R07,Centro-Sul,Viação Beta,21:45,21:36,-9,40,0.0,Nenhuma
+2026-04-18,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,29,0.0,Nenhuma
+2026-04-20,Manhã,R01,Norte,Viação Alfa,05:45,05:55,10,44,23.7,Chuva forte
+2026-04-20,Manhã,R02,Norte,Viação Alfa,05:45,05:44,-1,34,23.7,Chuva forte
+2026-04-20,Manhã,R03,Leste,Viação Beta,05:45,06:05,20,39,23.7,Obra na via
+2026-04-20,Manhã,R04,Sul,Viação Alfa,05:45,05h50,5,33,23.7,Chuva forte
+2026-04-20,Manhã,R05,Leste,Viação Beta,05:45,06:06,21,34,23.7,Chuva forte
+2026-04-20,Manhã,R06,Oeste,Viação Alfa,05:45,05:48,3,37,23.7,Chuva forte
+2026-04-20,Manhã,R07,Centro-Sul,Viação Beta,05:45,05h48,3,39,23.7,Chuva forte
+2026-04-20,Manhã,Rota 08,Norte,Viação Beta,05:45,05:50,5,37,23.7,Chuva forte
+2026-04-20,Tarde,R01,Norte,Viação Alfa,13:45,13:39,-6,36,0.0,Nenhuma
+2026-04-20,Tarde,R02,Norte,Viação Alfa,13:45,13:45,0,39,0.0,Nenhuma
+2026-04-20,Tarde,R03,Leste,Viação Beta,13:45,13:48,3,41,0.0,Nenhuma
+2026-04-20,Tarde,R04,Sul,Viação Alfa,13:45,13:38,-7,28,0.0,Nenhuma
+2026-04-20,Tarde,R05,Leste,Viação Beta,13:45,13:50,5,33,0.0,Nenhuma
+2026-04-20,Tarde,R06,Oeste,Viação Alfa,13:45,13:44,-1,38,0.0,Nenhuma
+2026-04-20,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,36,0.0,Nenhuma
+2026-04-20,Tarde,R08,Norte,Viação Beta,13:45,13:38,-7,35,0.0,Nenhuma
+2026-04-20,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,37,0.5,Nenhuma
+2026-04-20,Noite,R02,Norte,Viação Alfa,21:45,21:40,-5,44,0.5,Nenhuma
+2026-04-20,Noite,R03,Leste,Viação Beta,21:45,21:42,-3,36,0.5,Nenhuma
+2026-04-20,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,42,0.5,Nenhuma
+2026-04-20,Noite,R05,Leste,Viação Beta,21:45,21:42,-3,40,0.5,Nenhuma
+2026-04-20,Noite,R06,Oeste,Viação Alfa,21:45,21:36,-9,44,0.5,Nenhuma
+2026-04-20,Noite,R07,Centro-Sul,Viação Beta,21:45,21:39,-6,37,0.5,Nenhuma
+2026-04-20,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,38,0.5,Nenhuma
+2026-04-21,Manhã,R01,Norte,Viação Alfa,05:45,05:52,7,36,23.4,Chuva forte
+2026-04-21,Manhã,R02,Norte,Viação Alfa,05:45,05:51,6,37,23.4,Chuva forte
+2026-04-21,Manhã,R03,Leste,Viação Beta,05:45,06:10,25,40,23.4,Chuva forte
+2026-04-21,Manhã,R04,Sul,Viação Alfa,05:45,05:51,6,35,23.4,Chuva forte
+2026-04-21,Manhã,R05,Leste,Viação Beta,05:45,06:10,25,34,23.4,Chuva forte
+2026-04-21,Manhã,R06,Oeste,Viação Alfa,05:45,05:55,10,32,23.4,Chuva forte
+2026-04-21,Manhã,R07,Centro-Sul,Viação Beta,05:45,17:49,724,44,23.4,Chuva forte
+2026-04-21,Manhã,R08,Norte,Viação Beta,05:45,05:46,1,40,23.4,Chuva forte
+2026-04-21,Tarde,R01,Norte,Viação Alfa,13:45,13:43,-2,44,0.0,Nenhuma
+2026-04-21,Tarde,R02,Norte,Viação Alfa,13:45,13:43,-2,42,0.0,Nenhuma
+2026-04-21,Tarde,R03,Leste,Viação Beta,13:45,13:53,8,40,0.0,Obra na via
+2026-04-21,Tarde,Rota 04,Sul,Viação Alfa,13:45,13:40,-5,36,0.0,Nenhuma
+2026-04-21,Tarde,R05,Leste,Viação Beta,13:45,13:47,2,34,0.0,Nenhuma
+2026-04-21,Tarde,R06,Oeste,Viação Alfa,13:45,13:40:00,-5,43,0.0,Nenhuma
+2026-04-21,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:41,-4,43,0.0,Nenhuma
+2026-04-21,Tarde,R08,Norte,Viação Beta,13:45,13:40,-5,41,0.0,Nenhuma
+2026-04-21,Noite,R01,Norte,Viação Alfa,21:45,21:45,0,37,0.0,Nenhuma
+2026-04-21,Noite,R02,Norte,Viação Alfa,21:45,21:36,-9,33,0.0,Nenhuma
+2026-04-21,Noite,R03,Leste,Viação Beta,21:45,21:34,-11,39,0.0,Nenhuma
+2026-04-21,Noite,R04,Sul,Viação Alfa,21:45,21:37,-8,43,0.0,Nenhuma
+2026-04-21,Noite,R05,Leste,Viação Beta,21:45,21:41,-4,38,0.0,Nenhuma
+2026-04-21,Noite,R06,Oeste,Viação Alfa,21:45,21:39,-6,40,0.0,Nenhuma
+2026-04-21,Noite,R07,Centro-Sul,Viação Beta,21:45,21:45,0,29,0.0,Nenhuma
+2026-04-21,Noite,R08,Norte,Viação Beta,21:45,21:40,-5,33,0.0,Nenhuma
+2026-04-22,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,29,0.0,Nenhuma
+2026-04-22,Manhã,R02,Norte,Viação Alfa,05:45,05:36,-9,34,0.0,Nenhuma
+2026-04-22,Manhã,R03,Leste,Viação Beta,05:45,06:04,19,43,0.0,Nenhuma
+2026-04-22,manha,R04,Sul,Viação Alfa,05:45,05:42:00,-3,33,0.0,Nenhuma
+2026-04-22,Manhã,R05,Leste,Viação Beta,05:45,05:52,7,35,0.0,Nenhuma
+2026-04-22,Manhã,R06,Oeste,Viação Alfa,05:45,05:42,-3,32,0.0,Nenhuma
+2026-04-22,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:46,1,38,0.0,Nenhuma
+2026-04-22,Manhã,R08,Norte,Viação Beta,05:45,06:26,41,40,0.0,Pane mecânica
+2026-04-22,Tarde,R01,Norte,Viação Alfa,13:45,13:43,-2,41,1.0,Nenhuma
+2026-04-22,Tarde,R02,Norte,Viação Alfa,13:45,13h41,-4,36,1.0,Nenhuma
+2026-04-22,Tarde,R03,Leste,Viação Beta,13:45,13:55,10,36,1.0,Obra na via
+2026-04-22,Tarde,R04,Sul,Viação Alfa,13:45,13h45,0,35,1.0,Nenhuma
+2026-04-22,Tarde,R05,Leste,Viação Beta,13:45,13:50,5,39,1.0,Nenhuma
+2026-04-22,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,38,1.0,Nenhuma
+2026-04-22,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:37,-8,43,1.0,Nenhuma
+2026-04-22,Tarde,R08,Norte,Viação Beta,13:45,13:41,-4,36,1.0,Nenhuma
+2026-04-22,Noite,R01,Norte,Viação Alfa,21:45,21:41,-4,37,0.0,Nenhuma
+2026-04-22,Noite,R02,Norte,Viação Alfa,21:45,21:42,-3,37,0.0,Nenhuma
+2026-04-22,Noite,R03,Leste,Viação Beta,21:45,21:38,-7,30,0.0,Nenhuma
+2026-04-22,Noite,R04,Sul,Viação Alfa,21:45,21:43,-2,37,0.0,Nenhuma
+2026-04-22,Noite,R05,Leste,Viação Beta,21:45,21:36,-9,37,0.0,Nenhuma
+2026-04-22,Noite,R06,Oeste,Viação Alfa,21:45,22:12,27,36,0.0,Pane mecânica
+2026-04-22,Noite,R07,Centro-Sul,Viação Beta,21:45,21:41,-4,34,0.0,Nenhuma
+2026-04-22,Noite,R08,Norte,Viação Beta,21:45,21:43,-2,38,0.0,Nenhuma
+2026-04-23,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,34,0.0,Nenhuma
+2026-04-23,Manhã,R02,Norte,Viação Alfa,05:45,05:36,-9,39,0.0,Nenhuma
+2026-04-23,Manhã,R03,Leste,Viação Beta,05:45,05:58,13,35,0.0,Nenhuma
+2026-04-23,Manhã,R04,Sul,Viação Alfa,05:45,05:37,-8,34,0.0,Nenhuma
+23/04/2026,Manhã,R05,Leste,Viação Beta,05:45,05:58,13,39,0.0,Nenhuma
+2026-04-23,Manhã,R06,Oeste,Viação Alfa,05:45,05:45:00,0,30,0.0,Nenhuma
+2026-04-23,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:39,-6,40,0.0,Nenhuma
+2026-04-23,Manhã,R08,Norte,Viação Beta,05:45,05:39,-6,43,0.0,Nenhuma
+2026-04-23,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,37,9.9,Nenhuma
+2026-04-23,Tarde,R02,Norte,Viação Alfa,13:45,13:39,-6,44,9.9,Nenhuma
+2026-04-23,Tarde,R03,Leste,Viação Beta,13:45,13:57,12,34,9.9,Nenhuma
+2026-04-23,Tarde,R04,Sul,Viação Alfa,13:45,13:47,2,42,9.9,Nenhuma
+2026-04-23,Tarde,R05,Leste,Viação Beta,13:45,14:00,15,38,9.9,Nenhuma
+2026-04-23,Tarde,R06,Oeste,Viação Alfa,13:45,13:41,-4,43,9.9,Nenhuma
+2026-04-23,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:46,1,37,9.9,Nenhuma
+2026-04-23,Tarde,R08,Norte,Viação Beta,13:45,13:44,-1,44,9.9,Nenhuma
+2026-04-23,Noite,Rota 01,Norte,Viação Alfa,21:45,21:41,-4,39,2.3,Nenhuma
+2026-04-23,Noite,R02,Norte,Viação Alfa,21:45,21:40,-5,38,2.3,Nenhuma
+2026-04-23,Noite,R03,Leste,Viação Beta,21:45,21:41,-4,39,2.3,Nenhuma
+2026-04-23,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,37,2.3,Nenhuma
+2026-04-23,Noite,R05,Leste,Viação Beta,21:45,21:36,-9,35,2.3,Nenhuma
+2026-04-23,Noite,R06,Oeste,Viação Alfa,21:45,21:40,-5,34,2.3,Nenhuma
+2026-04-23,Noite,R07,Centro-Sul,Viação Beta,21:45,21:40,-5,38,2.3,Nenhuma
+2026-04-23,Noite,R08,Norte,Viação Beta,21:45,21:38,-7,33,2.3,Nenhuma
+2026-04-24,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,33,0.3,Nenhuma
+2026-04-24,Manhã,R02,Norte,Viação Alfa,05:45,05:47,2,36,0.3,Nenhuma
+2026-04-24,Manhã,R03,Leste,Viação Beta,05:45,06:00,15,44,0.3,Nenhuma
+2026-04-24,Manhã,R04,Sul,Viação Alfa,05:45,05:55:00,10,40,0.3,Pane mecânica
+2026-04-24,Manhã,R05,Leste,Viação Beta,05:45,06:01,16,37,0.3,Nenhuma
+2026-04-24,Manhã,R06,Oeste,Viação Alfa,05:45,05:45,0,37,0.3,Nenhuma
+2026-04-24,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:43,-2,36,0.3,Nenhuma
+2026-04-24,Manhã,R08,Norte,Viação Beta,05:45,05:40,-5,44,0.3,Nenhuma
+2026-04-24,Tarde,R01,Norte,Viação Alfa,13:45,13:52,7,44,26.6,Chuva forte
+2026-04-24,Tarde,R02,Norte,Viação Alfa,13:45,13:51,6,42,26.6,Chuva forte
+2026-04-24,Tarde,R03,Leste,Viação Beta,13:45,14:03,18,33,26.6,Chuva forte
+2026-04-24,Tarde,R04,Sul,Viação Alfa,13:45,13:53,8,40,26.6,Chuva forte
+2026-04-24,Tarde,R05,Leste,Viação Beta,13:45,14:00,15,34,26.6,Chuva forte
+2026-04-24,Tarde,R06,Oeste,Viação Alfa,13:45,13:51,6,32,26.6,Chuva forte
+2026-04-24,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:57,12,34,26.6,Chuva forte
+2026-04-24,Tarde,R08,Norte,Viação Beta,13:45,13:55,10,36,26.6,Chuva forte
+2026-04-24,Tarde,R08,Norte,Viação Beta,13:45,13:55,10,36,26.6,Chuva forte
+2026-04-24,Noite,R01,Norte,Viação Alfa,21:45,21:44,-1,36,5.5,Nenhuma
+24/04/2026,Noite,R02,Norte,Viação Alfa,21:45,21:40,-5,40,5.5,Nenhuma
+2026-04-24,Noite,R03,Leste,Viação Beta,21:45,21:41,-4,37,5.5,Nenhuma
+2026-04-24,Noite,R04,Sul,Viação Alfa,21:45,21:44,-1,39,5.5,Nenhuma
+2026-04-24,Noite,R05,Leste,Viação Beta,21:45,21:44,-1,36,5.5,Nenhuma
+2026-04-24,Noite,R06,Oeste,Viação Alfa,21:45,21:48:00,3,31,5.5,Nenhuma
+2026-04-24,Noite,R07,Centro-Sul,Viação Beta,21:45,21:44,-1,120,5.5,Nenhuma
+2026-04-24,Noite,R08,Norte,Viação Beta,21:45,21:40,-5,37,5.5,Nenhuma
+2026-04-25,Manhã,R01,Norte,Viação Alfa,05:45,05:45,0,37,1.1,Nenhuma
+2026-04-25,Manhã,R02,Norte,Viação Alfa,05:45,05:47,2,40,1.1,Nenhuma
+25/04/2026,Manhã,R03,Leste,Viação Beta,05:45,06:02,17,36,1.1,Nenhuma
+2026-04-25,Manhã,R04,Sul,Viação Alfa,05:45,05:38,-7,41,1.1,Nenhuma
+2026-04-25,Manhã,R05,Leste,Viação Beta,05:45,05:59,14,40,1.1,Nenhuma
+2026-04-25,Manhã,R06,Oeste,Viação Alfa,05:45,05:40,-5,38,1.1,Nenhuma
+2026-04-25,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:45,0,39,1.1,Nenhuma
+2026-04-25,Manhã,R08,Norte,Viação Beta,05:45,05:49,4,36,1.1,Nenhuma
+2026-04-25,Tarde,R01,Norte,Viação Alfa,13:45,13:38,-7,33,0.0,Nenhuma
+2026-04-25,Tarde,R02,Norte,Viação Alfa,13:45,13:56,11,37,0.0,Trânsito intenso
+2026-04-25,Tarde,R03,Leste,Viação Beta,13:45,13:53,8,35,0.0,Nenhuma
+2026-04-25,Tarde,R04,Sul,Viação Alfa,13:45,13:39,-6,39,0.0,Nenhuma
+2026-04-25,Tarde,R05,Leste,Viação Beta,13:45,13:51,6,44,0.0,Nenhuma
+2026-04-25,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,33,0.0,Nenhuma
+2026-04-25,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:41,-4,40,0.0,Nenhuma
+25/04/2026,Tarde,R08,Norte,Viação Beta,13:45,13:39,-6,39,0.0,Nenhuma
+2026-04-25,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,40,3.6,Nenhuma
+2026-04-25,Noite,R02,Norte,Viação Alfa,21:45,21:37,-8,35,3.6,Nenhuma
+2026-04-25,Noite,R03,Leste,Viação Beta,21:45,21:45,0,35,3.6,Nenhuma
+2026-04-25,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,36,3.6,Nenhuma
+2026-04-25,Noite,R05,Leste,Viação Beta,21:45,21:39,-6,40,3.6,Nenhuma
+2026-04-25,Noite,R06,Oeste,Viação Alfa,21:45,21:39,-6,44,3.6,Nenhuma
+2026-04-25,Noite,R07,Centro-Sul,Viação Beta,21:45,21:47,2,88,3.6,Nenhuma
+2026-04-25,Noite,R08,Norte,Viação Beta,21:45,21:35,-10,40,3.6,Nenhuma
+2026-04-27,Manhã,R1,Norte,Viação Alfa,05:45,05:45,0,39,4.0,Nenhuma
+2026-04-27,Manhã,R02,Norte,Viação Alfa,05:45,05:40,-5,31,4.0,Nenhuma
+2026-04-27,Manhã,R03,Leste,Viação Beta,05:45,06:09,24,40,4.0,Obra na via
+2026-04-27,Manhã,R4,Sul,Viação Alfa,05:45,05:49,4,34,4.0,Nenhuma
+2026-04-27,Manhã,R05,Leste,Viação Beta,05:45,06:01,16,42,4.0,Nenhuma
+2026-04-27,Manhã,R06,Oeste,Viação Alfa,05:45,05h47,2,34,4.0,Nenhuma
+2026-04-27,Manhã,R07,Centro-Sul,Viação Beta,05:45,06:05,20,37,4.0,Pneu furado
+2026-04-27,Manhã,R08,Norte,Viação Beta,05:45,05:38,-7,38,4.0,Nenhuma
+2026-04-27,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,29,0.0,Nenhuma
+2026-04-27,Tarde,R02,Norte,Viação Alfa,13:45,13:40,-5,35,0.0,Nenhuma
+2026-04-27,Tarde,R03,Leste,Viação Beta,13:45,13:54,9,39,0.0,Nenhuma
+2026-04-27,Tarde,R04,Sul,Viação Alfa,13:45,13:44,-1,42,0.0,Nenhuma
+2026-04-27,Tarde,R05,Leste,Viação Beta,13:45,14:23,38,38,0.0,Pneu furado
+2026-04-27,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,36,0.0,Nenhuma
+2026-04-27,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:35,-10,37,0.0,Nenhuma
+2026-04-27,Tarde,R8,Norte,Viação Beta,13:45,13:42,-3,32,0.0,Nenhuma
+2026-04-27,Noite,R01,Norte,Viação Alfa,21:45,21:44,-1,43,1.6,Nenhuma
+2026-04-27,Noite,R02,Norte,Viação Alfa,21:45,21:42,-3,37,1.6,Nenhuma
+2026-04-27,Noite,R03,Leste,Viação Beta,21:45,21:45,0,34,1.6,Nenhuma
+2026-04-27,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,36,1.6,Nenhuma
+2026-04-27,Noite,R05,Leste,Viação Beta,21:45,21:45,0,44,1.6,Nenhuma
+2026-04-27,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,30,1.6,Nenhuma
+2026-04-27,Noite,R07,Centro-Sul,Viação Beta,21:45,21:43,-2,35,1.6,Nenhuma
+2026-04-27,Noite,R08,Norte,Viação Beta,21:45,21:42,-3,44,1.6,Nenhuma
+2026-04-28,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,35,10.2,Nenhuma
+2026-04-28,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,43,10.2,Nenhuma
+2026-04-28,Manhã,R03,Leste,Viação Beta,05:45,06:08,23,40,10.2,Nenhuma
+2026-04-28,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,31,10.2,Nenhuma
+2026-04-28,MANHÃ,R05,Leste,Viação Beta,05:45,06:00,15,38,10.2,Nenhuma
+2026-04-28,Manhã,R06,Oeste,Viação Alfa,05:45,05:39,-6,41,10.2,Nenhuma
+2026-04-28,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:47,2,36,10.2,Nenhuma
+2026-04-28,Manhã,r08,Norte,Viação Beta,05:45,05:46,1,34,10.2,Nenhuma
+2026-04-28,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,31,6.4,Nenhuma
+2026-04-28,Tarde,R02,Norte,Viação Alfa,13:45,13:46,1,37,6.4,Nenhuma
+2026-04-28,Tarde,R03,Leste,Viação Beta,13:45,13:56,11,31,6.4,Obra na via
+2026-04-28,Tarde,R04,Sul,Viação Alfa,13:45,13:42,-3,34,6.4,Nenhuma
+2026-04-28,Tarde,R05,Leste,Viação Beta,13:45,13:55,10,32,6.4,Nenhuma
+2026-04-28,Tarde,R06,Oeste,Viação Alfa,13:45,13:48,3,36,6.4,Nenhuma
+2026-04-28,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:46,1,32,6.4,Nenhuma
+2026-04-28,Tarde,R08,Norte,Viação Beta,13:45,13:40,-5,36,6.4,Nenhuma
+2026-04-28,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,42,0.0,Nenhuma
+2026-04-28,Noite,R02,Norte,Viação Alfa,21:45,21:38,-7,42,0.0,Nenhuma
+2026-04-28,Noite,R03,Leste,Viação Beta,21:45,21:37,-8,30,0.0,Nenhuma
+2026-04-28,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,41,0.0,Nenhuma
+2026-04-28,Noite,R05,Leste,Viação Beta,21:45,21:37,-8,37,0.0,Nenhuma
+2026-04-28,Noite,R06,Oeste,Viação Alfa,21:45,21:35,-10,38,0.0,Nenhuma
+2026-04-28,Noite,R07,Centro-Sul,Viação Beta,21:45,21:38,-7,35,0.0,Nenhuma
+2026-04-28,Noite,R08,Norte,Viação Beta,21:45,21:39,-6,35,0.0,Nenhuma
+2026-04-29,Manhã,R01,Norte,Viação Alfa,05:45,05:36,-9,33,0.0,Nenhuma
+2026-04-29,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,34,0.0,Nenhuma
+2026-04-29,Manhã,R03,Leste,Viação Beta,05:45,05:52,7,42,0.0,Obra na via
+2026-04-29,Manhã,r04,Sul,Viação Alfa,05:45,05:47,2,37,0.0,Nenhuma
+2026-04-29,Manhã,R05,Leste,Viação Beta,05:45,05:53,8,35,0.0,Obra na via
+2026-04-29,Manhã,R06,Oeste,Viação Alfa,05:45,05:43,-2,35,0.0,Nenhuma
+2026-04-29,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:43,-2,34,0.0,Nenhuma
+2026-04-29,Manhã,R08,Norte,Viação Beta,05:45,05:41,-4,41,0.0,Nenhuma
+2026-04-29,Tarde,R01,Norte,Viação Alfa,13:45,14:15,30,39,92.6,Chuva forte
+2026-04-29,Tarde,R02,Norte,Viação Alfa,13:45,14:13,28,39,92.6,Chuva forte
+2026-04-29,Tarde,R03,Leste,Viação Beta,13:45,14:32,47,34,92.6,Chuva forte
+2026-04-29,Tarde,R04,Sul,Viação Alfa,13:45,14:17,32,29,92.6,Chuva forte
+29/04/2026,Tarde,R05,Leste,Viação Beta,13:45,14:19,34,32,92.6,Chuva forte
+2026-04-29,Tarde,R06,Oeste,Viação Alfa,13:45,14:15,30,44,92.6,Chuva forte
+2026-04-29,Tarde,R07,Centro-Sul,Viação Beta,13:45,14:17,32,34,92.6,Chuva forte
+2026-04-29,Tarde,R08,Norte,Viação Beta,13:45,14:17,32,39,92.6,Chuva forte
+2026-04-29,Noite,R01,Norte,Viação Alfa,21:45,21:47,2,38,10.5,Nenhuma
+2026-04-29,Noite,R02,Norte,Viação Alfa,21:45,21:40,-5,41,10.5,Nenhuma
+2026-04-29,Noite,R03,Leste,Viação Beta,21:45,21:46,1,40,10.5,Nenhuma
+2026-04-29,Noite,R04,Sul,Viação Alfa,21:45,21:57,12,36,10.5,Pneu furado
+29/04/2026,Noite,R05,Leste,Viação Beta,21:45,21:45,0,35,10.5,Nenhuma
+29/04/2026,Noite,R06,Oeste,Viação Alfa,21:45,21:47,2,36,10.5,Nenhuma
+2026-04-29,Noite,R07,Centro-Sul,Viação Beta,21:45,21:45,0,39,10.5,Nenhuma
+2026-04-29,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,40,10.5,Nenhuma
+2026-04-30,Manhã,R01,Norte,Viação Alfa,05:45,05:41,-4,44,1.3,Nenhuma
+2026-04-30,Manhã,R02,Norte,Viação Alfa,05:45,05h45,0,28,1.3,Nenhuma
+2026-04-30,Manhã,R03,Leste,Viação Beta,05:45,06:01,16,35,1.3,Nenhuma
+2026-04-30,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,35,1.3,Nenhuma
+2026-04-30,Manhã,R05,Leste,Viação Beta,05:45,05:57,12,36,1.3,Nenhuma
+30/04/2026,Manhã,R06,Oeste,Viação Alfa,05:45,05:41,-4,34,1.3,Nenhuma
+2026-04-30,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:35,-10,41,1.3,Nenhuma
+2026-04-30,Manhã,R08,Norte,Viação Beta,05:45,17:39,714,40,1.3,Nenhuma
+2026-04-30,Tarde,R01,Norte,Viação Alfa,13:45,13:46,1,42,16.0,Nenhuma
+2026-04-30,Tarde,R02,Norte,Viação Alfa,13:45,13:48,3,38,16.0,Nenhuma
+2026-04-30,Tarde,R03,Leste,Viação Beta,13:45,14:01:00,16,36,16.0,Obra na via
+2026-04-30,Tarde,R04,Sul,Viação Alfa,13:45,13:52,7,37,16.0,Nenhuma
+2026-04-30,Tarde,R05,Leste,Viação Beta,13:45,13:56,11,34,16.0,Nenhuma
+30/04/2026,Tarde,R06,Oeste,Viação Alfa,13:45,13:43,-2,38,16.0,Nenhuma
+2026-04-30,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:46,1,33,16.0,Nenhuma
+2026-04-30,Tarde,R08,Norte,Viação Beta,13:45,13:51,6,41,16.0,Nenhuma
+2026-04-30,Noturno,R01,Norte,Viação Alfa,21:45,21:43,-2,32,0.0,Nenhuma
+2026-04-30,Noite,R02,Norte,Viação Alfa,21:45,21:39,-6,37,0.0,Nenhuma
+2026-04-30,Noite,R03,Leste,Viação Beta,21:45,21:42,-3,43,0.0,Nenhuma
+2026-04-30,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,38,0.0,Nenhuma
+30/04/2026,Noturno,R05,Leste,Viação Beta,21:45,21:39,-6,37,0.0,Nenhuma
+30/04/2026,Noite,R06,Oeste,Viação Alfa,21:45,21:38,-7,37,0.0,Nenhuma
+2026-04-30,Noite,R07,Centro-Sul,Viação Beta,21:45,21:41,-4,43,0.0,Nenhuma
+2026-04-30,Noite,R08,Norte,Viação Beta,21:45,21:42,-3,40,0.0,Nenhuma
+2026-05-01,Manhã,R01,Norte,Viação Alfa,05:45,05:45,0,40,0.0,Nenhuma
+2026-05-01,Manhã,R02,Norte,Viação Alfa,05:45,05:41,-4,31,0.0,Nenhuma
+2026-05-01,Manhã,R03,Leste,Viação Beta,05:45,05:53,8,38,0.0,Nenhuma
+2026-05-01,Manhã,R04,Sul,Viação Alfa,05:45,05:46,1,36,0.0,Nenhuma
+2026-05-01,Manhã,R05,Leste,Viação Beta,05:45,06h00,15,30,0.0,Nenhuma
+2026-05-01,Manhã,r06,Oeste,Viação Alfa,05:45,05:44,-1,38,0.0,Nenhuma
+2026-05-01,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:50,5,36,0.0,Nenhuma
+2026-05-01,Manhã,R08,Norte,Viação Beta,05:45,05:42,-3,31,0.0,Nenhuma
+2026-05-01,Tarde,R01,Norte,Viação Alfa,13:45,13:42,-3,35,0.0,Nenhuma
+2026-05-01,Tarde,R02,Norte,Viação Alfa,13:45,14:00,15,40,0.0,Pane mecânica
+01/05/2026,Tarde,R03,Leste,Viação Beta,13:45,13:52,7,40,0.0,Nenhuma
+2026-05-01,Tarde,R04,Sul,Viação Alfa,13:45,13:42,-3,44,0.0,Nenhuma
+2026-05-01,Tarde,R05,Leste,Viação Beta,13:45,14:13,28,33,0.0,Trânsito intenso
+2026-05-01,Tarde,R06,Oeste,Viação Alfa,13:45,13:47,2,38,0.0,Nenhuma
+2026-05-01,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:38,-7,40,0.0,Nenhuma
+01/05/2026,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,32,0.0,Nenhuma
+2026-05-01,Noite,R01,Norte,Viação Alfa,21:45,21h47,2,39,0.0,Trânsito intenso
+2026-05-01,Noite,R02,Norte,Viação Alfa,21:45,21:38:00,-7,36,0.0,Nenhuma
+2026-05-01,Noite,R03,Leste,Viação Beta,21:45,21:40:00,-5,39,0.0,Nenhuma
+2026-05-01,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,39,0.0,Nenhuma
+2026-05-01,Noite,R05,Leste,Viação Beta,21:45,21:38,-7,43,0.0,Nenhuma
+2026-05-01,Noite,R06,Oeste,Viação Alfa,21:45,21:40,-5,34,0.0,Nenhuma
+2026-05-01,Noite,R07,Centro-Sul,Viação Beta,21:45,21:41,-4,44,0.0,Nenhuma
+2026-05-01,Noite,R08,Norte,Viação Beta,21:45,21:42,-3,43,0.0,Nenhuma
+2026-05-02,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,42,0.0,Nenhuma
+2026-05-02,Manhã,R02,Norte,Viação Alfa,05:45,06:08,23,33,0.0,Pneu furado
+2026-05-02,Manhã,R03,Leste,Viação Beta,05:45,06:00,15,41,0.0,Nenhuma
+02/05/2026,Manhã,R04,Sul,Viação Alfa,05:45,05:45,0,33,0.0,Nenhuma
+2026-05-02,Manhã,R05,Leste,Viação Beta,05:45,05:57,12,39,0.0,Nenhuma
+2026-05-02,Manhã,R06,Oeste,Viação Alfa,05:45,05:38,-7,36,0.0,Nenhuma
+2026-05-02,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:45,0,35,0.0,Nenhuma
+2026-05-02,Manhã,R08,Norte,Viação Beta,05:45,05:41,-4,37,0.0,Nenhuma
+2026-05-02,Tarde,R01,Norte,Viação Alfa,13:45,13:46,1,37,0.0,Nenhuma
+2026-05-02,Tarde,R02,Norte,Viação Alfa,13:45,13:43,-2,39,0.0,Nenhuma
+2026-05-02,Tarde,R03,Leste,Viação Beta,13:45,13:44,-1,37,0.0,Nenhuma
+2026-05-02,Tarde,R04,Sul,Viação Alfa,13:45,13:45,0,42,0.0,Nenhuma
+2026-05-02,Tarde,R05,Leste,Viação Beta,13:45,13:50,5,36,0.0,Obra na via
+2026-05-02,Tarde,R06,Oeste,Viação Alfa,13:45,13:45,0,38,0.0,Nenhuma
+2026-05-02,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:49,4,44,0.0,Nenhuma
+2026-05-02,Tarde,R08,Norte,Viação Beta,13:45,13:36,-9,38,0.0,Nenhuma
+2026-05-02,Noite,R01,Norte,Viação Alfa,21:45,21:41,-4,33,0.0,Nenhuma
+2026-05-02,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,34,0.0,Nenhuma
+2026-05-02,Noite,R03,Leste,Viação Beta,21:45,21:44,-1,39,0.0,Nenhuma
+2026-05-02,Noite,R04,Sul,Viação Alfa,21:45,21:36,-9,44,0.0,Nenhuma
+2026-05-02,Noite,R05,Leste,Viação Beta,21:45,21:40:00,-5,44,0.0,Nenhuma
+2026-05-02,Noite,R06,Oeste,Viação Alfa,21:45,21:40,-5,25,0.0,Nenhuma
+2026-05-02,Noite,R07,Centro-Sul,Viação Beta,21:45,21:41,-4,42,0.0,Nenhuma
+2026-05-02,Noite,R08,Norte,Viação Beta,21:45,21:46,1,36,0.0,Nenhuma
+2026-05-04,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,38,2.1,Nenhuma
+2026-05-04,Manhã,R02,Norte,Viação Alfa,05:45,05:45,0,39,2.1,Nenhuma
+2026-05-04,Manhã,R03,Leste,Viação Beta,05:45,05:57,12,44,2.1,Nenhuma
+2026-05-04,Manhã,R04,Sul,Viação Alfa,05:45,05:46,1,36,2.1,Nenhuma
+2026-05-04,Manhã,R05,Leste,Viação Beta,05:45,06:02,17,40,2.1,Nenhuma
+2026-05-04,Manhã,R06,Oeste,Viação Alfa,05:45,05:38,-7,43,2.1,Nenhuma
+2026-05-04,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:36,-9,37,2.1,Nenhuma
+2026-05-04,Manhã,R08,Norte,Viação Beta,05:45,05:46,1,35,2.1,Nenhuma
+2026-05-04,Tarde,R01,Norte,Viação Alfa,13:45,13:40,-5,30,0.0,Nenhuma
+2026-05-04,Tarde,R02,Norte,Viação Alfa,13:45,13:39,-6,40,0.0,Nenhuma
+2026-05-04,Tarde,R03,Leste,Viação Beta,13:45,13:43,-2,44,0.0,Nenhuma
+2026-05-04,Tarde,R04,Sul,Viação Alfa,13:45,13:48,3,31,0.0,Nenhuma
+2026-05-04,Tarde,R5,Leste,Viação Beta,13:45,13:54,9,34,0.0,Nenhuma
+2026-05-04,Tarde,R06,Oeste,Viação Alfa,13:45,13:40,-5,38,0.0,Nenhuma
+2026-05-04,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:40,-5,38,0.0,Nenhuma
+2026-05-04,Tarde,R08,Norte,Viação Beta,13:45,13:39,-6,40,0.0,Nenhuma
+2026-05-04,Noite,R01,Norte,Viação Alfa,21:45,21:46,1,42,6.2,Nenhuma
+2026-05-04,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,41,6.2,Nenhuma
+2026-05-04,Noite,R03,Leste,Viação Beta,21:45,21:38,-7,36,6.2,Nenhuma
+2026-05-04,Noite,R04,Sul,Viação Alfa,21:45,21:43,-2,40,6.2,Nenhuma
+2026-05-04,Noite,R05,Leste,Viação Beta,21:45,21:39,-6,37,6.2,Nenhuma
+2026-05-04,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,34,6.2,Nenhuma
+2026-05-04,Noite,R07,Centro-Sul,Viação Beta,21:45,21h42,-3,34,6.2,Nenhuma
+2026-05-04,Noite,R08,Norte,Viação Beta,21:45,21:36,-9,39,6.2,Nenhuma
+2026-05-05,Manhã,R01,Norte,Viação Alfa,05:45,05:46,1,38,0.0,Nenhuma
+2026-05-05,Manhã,R02,Norte,Viação Alfa,05:45,05:41,-4,32,0.0,Nenhuma
+2026-05-05,Manhã,R03,Leste,Viação Beta,05:45,06:02,17,27,0.0,Obra na via
+2026-05-05,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,44,0.0,Nenhuma
+2026-05-05,Manhã,R05,Leste,Viação Beta,05:45,05:57,12,34,0.0,Nenhuma
+2026-05-05,Manhã,R06,Oeste,Viação Alfa,05:45,05:38,-7,36,0.0,Nenhuma
+2026-05-05,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:47,2,35,0.0,Nenhuma
+2026-05-05,Manhã,R08,Norte,Viação Beta,05:45,05:43,-2,34,0.0,Nenhuma
+2026-05-05,Tarde,R01,Norte,Viação Alfa,13:45,13:44,-1,38,0.0,Nenhuma
+2026-05-05,Tarde,R02,Norte,Viação Alfa,13:45,13:49,4,39,0.0,Nenhuma
+2026-05-05,Tarde,R03,Leste,Viação Beta,13:45,14:01,16,41,0.0,Nenhuma
+2026-05-05,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,36,0.0,Nenhuma
+2026-05-05,Tarde,R05,Leste,Viação Beta,13:45,13:41,-4,37,0.0,Nenhuma
+2026-05-05,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,39,0.0,Nenhuma
+2026-05-05,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:46,1,38,0.0,Nenhuma
+2026-05-05,Tarde,r08,Norte,Viação Beta,13:45,13:43:00,-2,44,0.0,Nenhuma
+2026-05-05,Noite,R01,Norte,Viação Alfa,21:45,21:36,-9,38,0.0,Nenhuma
+2026-05-05,Noite,R02,Norte,Viação Alfa,21:45,21:49,4,30,0.0,Trânsito intenso
+2026-05-05,Noite,R03,Leste,Viação Beta,21:45,21:39,-6,34,0.0,Nenhuma
+2026-05-05,Noite,R04,Sul,Viação Alfa,21:45,21:40,-5,36,0.0,Nenhuma
+2026-05-05,Noite,R05,Leste,Viação Beta,21:45,21:42,-3,36,0.0,Nenhuma
+2026-05-05,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,41,0.0,Nenhuma
+2026-05-05,Noite,R07,Centro-Sul,Viação Beta,21:45,21:40,-5,32,0.0,Nenhuma
+2026-05-05,Noite,R08,Norte,Viação Beta,21:45,21:40,-5,39,0.0,Nenhuma
+06/05/2026,Manhã,R01,Norte,Viação Alfa,05:45,05:37,-8,36,0.0,Nenhuma
+2026-05-06,Manhã,R02,Norte,Viação Alfa,05:45,05:46,1,40,0.0,Nenhuma
+2026-05-06,Manhã,R03,Leste,Viação Beta,05:45,05:56,11,42,0.0,Nenhuma
+2026-05-06,Manhã,R04,Sul,Viação Alfa,05:45,05:45,0,32,0.0,Nenhuma
+2026-05-06,Manhã,R05,Leste,Viação Beta,05:45,06:06,21,34,0.0,Nenhuma
+2026-05-06,Manhã,R06,Oeste,Viação Alfa,05:45,05:39,-6,35,0.0,Nenhuma
+2026-05-06,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:39,-6,38,0.0,Nenhuma
+2026-05-06,Manhã,R08,Norte,Viação Beta,05:45,05:35,-10,39,0.0,Nenhuma
+2026-05-06,Tarde,R01,Norte,Viação Alfa,13:45,13:42,-3,44,4.3,Nenhuma
+2026-05-06,Tarde,R02,Norte,Viação Alfa,13:45,13:50,5,35,4.3,Trânsito intenso
+2026-05-06,Tarde,R03,Leste,Viação Beta,13:45,13:53,8,37,4.3,Nenhuma
+2026-05-06,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,41,4.3,Nenhuma
+2026-05-06,Tarde,R05,Leste,Viação Beta,13:45,13:55,10,40,4.3,Obra na via
+2026-05-06,Tarde,R06,Oeste,Viação Alfa,13:45,13:35,-10,44,4.3,Nenhuma
+2026-05-06,Tarde,R7,Centro-Sul,Viação Beta,13:45,13:46,1,44,4.3,Nenhuma
+2026-05-06,Tarde,R08,Norte,Viação Beta,13:45,13:40,-5,33,4.3,Nenhuma
+2026-05-06,noite,R01,Norte,Viação Alfa,21:45,21:43,-2,34,0.0,Nenhuma
+2026-05-06,Noite,R02,Norte,Viação Alfa,21:45,21:38,-7,41,0.0,Nenhuma
+2026-05-06,Noturno,R03,Leste,Viação Beta,21:45,21:43,-2,36,0.0,Nenhuma
+2026-05-06,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,41,0.0,Nenhuma
+2026-05-06,Noite,R05,Leste,Viação Beta,21:45,21:35,-10,32,0.0,Nenhuma
+2026-05-06,Noite,R06,Oeste,Viação Alfa,21:45,21:38,-7,41,0.0,Nenhuma
+2026-05-06,Noite,R07,Centro-Sul,Viação Beta,21:45,21:44,-1,36,0.0,Nenhuma
+2026-05-06,Noite,R08,Norte,Viação Beta,21:45,21:42,-3,32,0.0,Nenhuma
+2026-05-07,Manhã,R01,Norte,Viação Alfa,05:45,05:39,-6,44,0.0,Nenhuma
+2026-05-07,Manhã,R02,Norte,Viação Alfa,05:45,05:46,1,30,0.0,Nenhuma
+2026-05-07,Manhã,R03,Leste,Viação Beta,05:45,05:44,-1,31,0.0,Obra na via
+2026-05-07,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,32,0.0,Nenhuma
+2026-05-07,Manhã,R05,Leste,Viação Beta,05:45,05:59,14,32,0.0,Nenhuma
+2026-05-07,Manhã,R06,Oeste,Viação Alfa,05:45,05:40,-5,41,0.0,Nenhuma
+2026-05-07,Manhã,R07,Centro-Sul,Viação Beta,05:45,05h39,-6,43,0.0,Nenhuma
+2026-05-07,Manhã,R08,Norte,Viação Beta,05:45,05:38,-7,39,0.0,Nenhuma
+2026-05-07,Tarde,R01,Norte,Viação Alfa,13:45,13:40,-5,33,0.0,Nenhuma
+2026-05-07,Tarde,R02,Norte,Viação Alfa,13:45,13:42,-3,33,0.0,Nenhuma
+2026-05-07,Tarde,R03,Leste,Viação Beta,13:45,13:50,5,44,0.0,Nenhuma
+2026-05-07,Tarde,R04,Sul,Viação Alfa,13:45,13:42,-3,33,0.0,Nenhuma
+2026-05-07,Tarde,R05,Leste,Viação Beta,13:45,13:54,9,37,0.0,Obra na via
+2026-05-07,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,37,0.0,Nenhuma
+2026-05-07,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:39,-6,40,0.0,Nenhuma
+2026-05-07,Tarde,R08,Norte,Viação Beta,13:45,14:10,25,36,0.0,Pane mecânica
+2026-05-07,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,38,0.0,Nenhuma
+2026-05-07,Noite,R02,Norte,Viação Alfa,21:45,21:40,-5,41,0.0,Nenhuma
+2026-05-07,Noite,R03,Leste,Viação Beta,21:45,21:44,-1,38,0.0,Nenhuma
+07/05/2026,Noite,R04,Sul,Viação Alfa,21:45,21:44,-1,34,0.0,Nenhuma
+2026-05-07,Noite,R05,Leste,Viação Beta,21:45,21:41,-4,32,0.0,Nenhuma
+2026-05-07,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,29,0.0,Nenhuma
+2026-05-07,Noite,R07,Centro-Sul,Viação Beta,21:45,21:39,-6,41,0.0,Nenhuma
+2026-05-07,Noite,R08,Norte,Viação Beta,21:45,21:43,-2,39,0.0,Nenhuma
+2026-05-08,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,35,0.0,Nenhuma
+2026-05-08,Manhã,R02,Norte,Viação Alfa,05:45,05:44,-1,37,0.0,Nenhuma
+2026-05-08,Manhã,R03,Leste,Viação Beta,05:45,05:47,2,35,0.0,Nenhuma
+2026-05-08,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,34,0.0,Nenhuma
+2026-05-08,Manhã,R05,Leste,Viação Beta,05:45,05h57,12,36,0.0,Nenhuma
+2026-05-08,Manhã,R06,Oeste,Viação Alfa,05:45,05:41,-4,28,0.0,Nenhuma
+2026-05-08,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:44,-1,41,0.0,Nenhuma
+2026-05-08,Manhã,R08,Norte,Viação Beta,05:45,05:41,-4,31,0.0,Nenhuma
+2026-05-08,Tarde,R01,Norte,Viação Alfa,13:45,13:39,-6,37,0.0,Nenhuma
+2026-05-08,Tarde,R02,Norte,Viação Alfa,13:45,13:44,-1,42,0.0,Nenhuma
+2026-05-08,Tarde,R03,Leste,Viação Beta,13:45,13:44,-1,40,0.0,Nenhuma
+2026-05-08,Tarde,R04,Sul,Viação Alfa,13:45,13:43,-2,41,0.0,Nenhuma
+2026-05-08,Tarde,R05,Leste,Viação Beta,13:45,14:01,16,29,0.0,Nenhuma
+2026-05-08,Tarde,R06,Oeste,Viação Alfa,13:45,13:46,1,37,0.0,Nenhuma
+2026-05-08,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,41,0.0,Nenhuma
+2026-05-08,Tarde,R08,Norte,Viação Beta,13:45,13:41,-4,35,0.0,Nenhuma
+2026-05-08,Noite,R01,Norte,Viação Alfa,21:45,21:38,-7,35,0.0,Nenhuma
+2026-05-08,Noite,R02,Norte,Viação Alfa,21:45,21:39,-6,35,0.0,Nenhuma
+2026-05-08,Noite,R03,Leste,Viação Beta,21:45,21:44,-1,37,0.0,Nenhuma
+2026-05-08,Noite,R04,Sul,Viação Alfa,21:45,21:44,-1,35,0.0,Nenhuma
+2026-05-08,Noite,R05,Leste,Viação Beta,21:45,21:46,1,38,0.0,Nenhuma
+2026-05-08,Noite,R06,Oeste,Viação Alfa,21:45,21:40,-5,40,0.0,Nenhuma
+2026-05-08,Noite,R07,Centro-Sul,Viação Beta,21:45,21:37,-8,36,0.0,Nenhuma
+2026-05-08,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,35,0.0,Nenhuma
+2026-05-09,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,36,0.0,Nenhuma
+2026-05-09,Manhã,R02,Norte,Viação Alfa,05:45,05:42,-3,38,0.0,Nenhuma
+2026-05-09,Manhã,R03,Leste,Viação Beta,05:45,06:01,16,42,0.0,Nenhuma
+2026-05-09,Manhã,R04,Sul,Viação Alfa,05:45,17:44,719,37,0.0,Nenhuma
+2026-05-09,Manhã,R05,Leste,Viação Beta,05:45,06:33,48,39,0.0,Pane mecânica
+2026-05-09,Manhã,R06,Oeste,Viação Alfa,05:45,05:45,0,43,0.0,Nenhuma
+2026-05-09,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:41,-4,36,0.0,Nenhuma
+2026-05-09,Manhã,R08,Norte,Viação Beta,05:45,05:43,-2,34,0.0,Nenhuma
+2026-05-09,Tarde,R01,Norte,Viação Alfa,13:45,13:42,-3,33,0.0,Nenhuma
+09/05/2026,Tarde,R02,Norte,Viação Alfa,13:45,13:43,-2,44,0.0,Nenhuma
+2026-05-09,Tarde,R03,Leste,Viação Beta,13:45,13:58,13,34,0.0,Obra na via
+2026-05-09,Tarde,R04,Sul,Viação Alfa,13:45,13:44,-1,34,0.0,Nenhuma
+2026-05-09,Tarde,R05,Leste,Viação Beta,13:45,13:55,10,35,0.0,Nenhuma
+2026-05-09,Tarde,R06,Oeste,Viação Alfa,13:45,13:45,0,33,0.0,Nenhuma
+2026-05-09,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,40,0.0,Nenhuma
+2026-05-09,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,42,0.0,Nenhuma
+09/05/2026,Noite,R01,Norte,Viação Alfa,21:45,21:48,3,33,8.9,Nenhuma
+2026-05-09,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,33,8.9,Nenhuma
+2026-05-09,Noite,R03,Leste,Viação Beta,21:45,21:42,-3,40,8.9,Nenhuma
+2026-05-09,Noite,R04,Sul,Viação Alfa,21:45,21:47,2,39,8.9,Trânsito intenso
+2026-05-09,Noite,R05,Leste,Viação Beta,21:45,21:42,-3,37,8.9,Nenhuma
+2026-05-09,Noite,R06,Oeste,Viação Alfa,21:45,21:38,-7,44,8.9,Nenhuma
+2026-05-09,Noite,R07,Centro-Sul,Viação Beta,21:45,21:43,-2,40,8.9,Nenhuma
+2026-05-09,Noite,R08,Norte,Viação Beta,21:45,21:45,0,36,8.9,Nenhuma
+2026-05-11,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,32,0.0,Nenhuma
+2026-05-11,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,40,0.0,Nenhuma
+2026-05-11,Manhã,R03,Leste,Viação Beta,05:45,05:57,12,31,0.0,Nenhuma
+2026-05-11,Manhã,R04,Sul,Viação Alfa,05:45,05:43,-2,40,0.0,Nenhuma
+2026-05-11,Manhã,R05,Leste,Viação Beta,05:45,06:07,22,41,0.0,Nenhuma
+11/05/2026,Manhã,R06,Oeste,Viação Alfa,05:45,05:41,-4,39,0.0,Nenhuma
+2026-05-11,Manhã,R07,Centro-Sul,Viação Beta,05:45,05h41,-4,44,0.0,Nenhuma
+2026-05-11,Manhã,R08,Norte,Viação Beta,05:45,05:42:00,-3,37,0.0,Nenhuma
+2026-05-11,Tarde,R01,Norte,Viação Alfa,13:45,13:46,1,37,0.0,Nenhuma
+2026-05-11,Tarde,R02,Norte,Viação Alfa,13:45,14:05,20,35,0.0,Pneu furado
+2026-05-11,Tarde,R03,Leste,Viação Beta,13:45,13:50,5,40,0.0,Nenhuma
+2026-05-11,Tarde,R04,Sul,Viação Alfa,13:45,13:37,-8,44,0.0,Nenhuma
+2026-05-11,Tarde,R05,Leste,Viação Beta,13:45,13:54,9,34,0.0,Nenhuma
+2026-05-11,Tarde,R06,Oeste,Viação Alfa,13:45,13:37,-8,35,0.0,Nenhuma
+2026-05-11,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:41,-4,38,0.0,Nenhuma
+2026-05-11,Tarde,r08,Norte,Viação Beta,13:45,13:41,-4,44,0.0,Nenhuma
+2026-05-11,Noite,R01,Norte,Viação Alfa,21:45,21:39,-6,38,0.0,Nenhuma
+11/05/2026,Noite,R02,Norte,Viação Alfa,21:45,21:43,-2,41,0.0,Nenhuma
+2026-05-11,Noite,R03,Leste,Viação Beta,21:45,21:41,-4,43,0.0,Nenhuma
+2026-05-11,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,41,0.0,Nenhuma
+2026-05-11,Noite,R05,Leste,Viação Beta,21:45,21:33,-12,37,0.0,Nenhuma
+2026-05-11,Noite,R06,Oeste,Viação Alfa,21:45,21:36,-9,35,0.0,Nenhuma
+2026-05-11,Noite,R07,Centro-Sul,Viação Beta,21:45,21:44,-1,36,0.0,Nenhuma
+2026-05-11,Noite,R08,Norte,Viação Beta,21:45,21:39,-6,43,0.0,Nenhuma
+2026-05-12,Manhã,R01,Norte,Viação Alfa,05:45,05:51,6,35,10.2,Nenhuma
+2026-05-12,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,37,10.2,Nenhuma
+2026-05-12,Manhã,R03,Leste,Viação Beta,05:45,06:09,24,35,10.2,Nenhuma
+2026-05-12,manha,R04,Sul,Viação Alfa,05:45,05:49,4,35,10.2,Nenhuma
+2026-05-12,Manhã,R05,Leste,Viação Beta,05:45,05:59,14,37,10.2,Nenhuma
+2026-05-12,Manhã,R06,Oeste,Viação Alfa,05:45,05:45,0,33,10.2,Nenhuma
+2026-05-12,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:48,3,39,10.2,Nenhuma
+2026-05-12,Manhã,R08,Norte,Viação Beta,05:45,05:40,-5,34,10.2,Nenhuma
+2026-05-12,Tarde,R01,Norte,Viação Alfa,13:45,13:44,-1,30,13.0,Nenhuma
+2026-05-12,tarde,R02,Norte,Viação Alfa,13:45,13:48,3,34,13.0,Nenhuma
+2026-05-12,Tarde,R03,Leste,Viação Beta,13:45,14:02,17,32,13.0,Nenhuma
+2026-05-12,Tarde,R04,Sul,Viação Alfa,13:45,13:47,2,42,13.0,Nenhuma
+12/05/2026,Tarde,R05,Leste,Viação Beta,13:45,13:54,9,39,13.0,Obra na via
+2026-05-12,Tarde,r06,Oeste,Viação Alfa,13:45,13:43,-2,36,13.0,Nenhuma
+2026-05-12,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:46,1,37,13.0,Nenhuma
+2026-05-12,Tarde,R08,Norte,Viação Beta,13:45,13:41,-4,33,13.0,Nenhuma
+2026-05-12,Noite,R01,Norte,Viação Alfa,21:45,22:03,18,29,0.0,Pane mecânica
+2026-05-12,Noite,Rota 02,Norte,Viação Alfa,21:45,21:40,-5,38,0.0,Nenhuma
+2026-05-12,Noite,R03,Leste,Viação Beta,21:45,21:41,-4,37,0.0,Nenhuma
+2026-05-12,Noite,R04,Sul,Viação Alfa,21:45,21:38,-7,36,0.0,Nenhuma
+2026-05-12,Noite,R05,Leste,Viação Beta,21:45,21:59,14,38,0.0,Trânsito intenso
+2026-05-12,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,42,0.0,Nenhuma
+2026-05-12,Noite,R07,Centro-Sul,Viação Beta,21:45,21:37,-8,30,0.0,Nenhuma
+2026-05-12,Noite,R08,Norte,Viação Beta,21:45,21:44,-1,37,0.0,Nenhuma
+2026-05-13,Manhã,R01,Norte,Viação Alfa,05:45,05:54,9,41,28.8,Chuva forte
+2026-05-13,Manhã,R02,Norte,Viação Alfa,05:45,05:52,7,39,28.8,Chuva forte
+2026-05-13,Manhã,R03,Leste,Viação Beta,05:45,05:55,10,41,28.8,Obra na via
+2026-05-13,Manhã,R04,Sul,Viação Alfa,05:45,05:53,8,42,28.8,Chuva forte
+2026-05-13,Manhã,R05,Leste,Viação Beta,05:45,06:18,33,40,28.8,Chuva forte
+2026-05-13,Manhã,R06,Oeste,Viação Alfa,05:45,05:55,10,37,28.8,Chuva forte
+2026-05-13,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:55,10,40,28.8,Chuva forte
+2026-05-13,Manhã,R08,Norte,Viação Beta,05:45,05:54,9,32,28.8,Chuva forte
+2026-05-13,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,39,0.0,Nenhuma
+2026-05-13,Tarde,R02,Norte,Viação Alfa,13:45,13:47,2,35,0.0,Nenhuma
+2026-05-13,Tarde,R03,Leste,Viação Beta,13:45,13:50,5,35,0.0,Nenhuma
+13/05/2026,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,34,0.0,Nenhuma
+2026-05-13,Tarde,R05,Leste,Viação Beta,13:45,13:48,3,35,0.0,Nenhuma
+2026-05-13,Tarde,R06,Oeste,Viação Alfa,13:45,13:37,-8,34,0.0,Nenhuma
+2026-05-13,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:44,-1,40,0.0,Nenhuma
+2026-05-13,Tarde,R08,Norte,Viação Beta,13:45,13:39,-6,33,0.0,Nenhuma
+2026-05-13,Noite,R01,Norte,Viação Alfa,21:45,21:42,-3,38,0.0,Nenhuma
+2026-05-13,Noite,R02,Norte,Viação Alfa,21:45,21:55,10,41,0.0,Trânsito intenso
+2026-05-13,Noite,R03,Leste,Viação Beta,21:45,21:42,-3,37,0.0,Nenhuma
+2026-05-13,Noite,r04,Sul,Viação Alfa,21:45,21h42,-3,37,0.0,Nenhuma
+2026-05-13,Noite,R05,Leste,Viação Beta,21:45,21:45,0,41,0.0,Nenhuma
+2026-05-13,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,35,0.0,Nenhuma
+2026-05-13,Noite,R07,Centro-Sul,Viação Beta,21:45,21:46,1,36,0.0,Trânsito intenso
+2026-05-13,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,34,0.0,Nenhuma
+2026-05-14,Manhã,R01,Norte,Viação Alfa,05:45,05:47,2,38,2.4,Nenhuma
+2026-05-14,Manhã,R02,Norte,Viação Alfa,05:45,05:45,0,34,2.4,Nenhuma
+2026-05-14,Manhã,R03,Leste,Viação Beta,05:45,06:03,18,35,2.4,Nenhuma
+2026-05-14,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,33,2.4,Nenhuma
+2026-05-14,Manhã,R05,Leste,Viação Beta,05:45,06:03,18,28,2.4,Nenhuma
+2026-05-14,Manhã,R06,Oeste,Viação Alfa,05:45,05:44,-1,36,2.4,Nenhuma
+2026-05-14,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:39,-6,33,2.4,Nenhuma
+2026-05-14,Manhã,R08,Norte,Viação Beta,05:45,05:43,-2,37,2.4,Nenhuma
+2026-05-14,Tarde,R01,Norte,Viação Alfa,13:45,13:45,0,41,0.0,Nenhuma
+2026-05-14,Tarde,R02,Norte,Viação Alfa,13:45,13:38,-7,40,0.0,Nenhuma
+14/05/2026,Tarde,R03,Leste,Viação Beta,13:45,13:53,8,35,0.0,Nenhuma
+2026-05-14,Tarde,R04,Sul,Viação Alfa,13:45,13:49,4,41,0.0,Nenhuma
+2026-05-14,Tarde,R05,Leste,Viação Beta,13:45,13:54,9,40,0.0,Nenhuma
+2026-05-14,Tarde,R06,Oeste,Viação Alfa,13:45,13:45,0,34,0.0,Nenhuma
+2026-05-14,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:40,-5,33,0.0,Nenhuma
+2026-05-14,Tarde,R08,Norte,Viação Beta,13:45,13:46,1,34,0.0,Nenhuma
+2026-05-14,Noite,R01,Norte,Viação Alfa,21:45,21:46,1,33,0.6,Nenhuma
+2026-05-14,Noite,R02,Norte,Viação Alfa,21:45,21:41,-4,39,0.6,Nenhuma
+2026-05-14,Noite,R03,Leste,Viação Beta,21:45,21:37,-8,43,0.6,Nenhuma
+2026-05-14,Noite,R04,Sul,Viação Alfa,21:45,21:43,-2,36,0.6,Nenhuma
+2026-05-14,Noite,R05,Leste,Viação Beta,21:45,21:43,-2,38,0.6,Nenhuma
+2026-05-14,Noite,R06,Oeste,Viação Alfa,21:45,21:40,15,44,0.6,Nenhuma
+2026-05-14,Noite,R07,Centro-Sul,Viação Beta,21:45,21:44,-1,40,0.6,Nenhuma
+2026-05-14,Noite,R08,Norte,Viação Beta,21:45,21:38,-7,39,0.6,Nenhuma
+2026-05-15,Manhã,R01,Norte,Viação Alfa,05:45,05:37,-8,30,0.0,Nenhuma
+2026-05-15,Manhã,R02,Norte,Viação Alfa,05:45,05:40:00,-5,31,0.0,Nenhuma
+2026-05-15,Manhã,R03,Leste,Viação Beta,05:45,05:54,9,44,0.0,Obra na via
+2026-05-15,Manhã,R04,Sul,Viação Alfa,05:45,05:35,-10,29,0.0,Nenhuma
+2026-05-15,Manhã,R05,Leste,Viação Beta,05:45,05:51,6,36,0.0,Nenhuma
+2026-05-15,Manhã,R06,Oeste,Viação Alfa,05:45,05h43,-2,38,0.0,Nenhuma
+2026-05-15,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:40,-5,34,0.0,Nenhuma
+2026-05-15,Manhã,R08,Norte,Viação Beta,05:45,05:40,-5,44,0.0,Nenhuma
+2026-05-15,Tarde,R01,Norte,Viação Alfa,13:45,13:39,-6,37,0.0,Nenhuma
+2026-05-15,Tarde,R02,Norte,Viação Alfa,13:45,13:52,7,35,0.0,Trânsito intenso
+2026-05-15,tarde,R03,Leste,Viação Beta,13:45,13:39,-6,43,0.0,Nenhuma
+2026-05-15,Tarde,R04,Sul,Viação Alfa,13:45,13:45,0,41,0.0,Nenhuma
+15/05/2026,Tarde,R05,Leste,Viação Beta,13:45,13:57,12,32,0.0,Nenhuma
+2026-05-15,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,32,0.0,Nenhuma
+2026-05-15,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:44,-1,38,0.0,Nenhuma
+2026-05-15,Tarde,R08,Norte,Viação Beta,13:45,13:39,-6,34,0.0,Nenhuma
+2026-05-15,Noite,R01,Norte,Viação Alfa,21:45,21:53,8,35,27.9,Chuva forte
+2026-05-15,Noite,R02,Norte,Viação Alfa,21:45,21:52,7,44,27.9,Chuva forte
+2026-05-15,Noite,R03,Leste,Viação Beta,21:45,21:52,7,38,27.9,Chuva forte
+2026-05-15,Noite,R04,Sul,Viação Alfa,21:45,21h50,5,37,27.9,Chuva forte
+2026-05-15,Noite,R05,Leste,Viação Beta,21:45,21:53,8,44,27.9,Chuva forte
+2026-05-15,Noite,R06,Oeste,Viação Alfa,21:45,21:54,9,39,27.9,Chuva forte
+2026-05-15,Noite,R07,Centro-Sul,Viação Beta,21:45,21:53,8,40,27.9,Chuva forte
+15/05/2026,Noite,R08,Norte,Viação Beta,21:45,21:46:00,1,42,27.9,Chuva forte
+2026-05-16,Manhã,R01,Norte,Viação Alfa,05:45,05:43,-2,42,0.0,Nenhuma
+2026-05-16,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,39,0.0,Nenhuma
+2026-05-16,Manhã,R03,Leste,Viação Beta,05:45,05:51,6,43,0.0,Nenhuma
+2026-05-16,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,38,0.0,Nenhuma
+16/05/2026,Manhã,Rota 05,Leste,Viação Beta,05:45,05:57,12,40,0.0,Obra na via
+2026-05-16,Manhã,R06,Oeste,Viação Alfa,05:45,05:42,-3,34,0.0,Nenhuma
+2026-05-16,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:40,-5,39,0.0,Nenhuma
+2026-05-16,Manhã,R08,Norte,Viação Beta,05:45,05:43,-2,37,0.0,Nenhuma
+2026-05-16,Tarde,R01,Norte,Viação Alfa,13:45,13:42,-3,43,0.0,Nenhuma
+2026-05-16,Tarde,R02,Norte,Viação Alfa,13:45,13:43,-2,37,0.0,Nenhuma
+2026-05-16,Tarde,R03,Leste,Viação Beta,13:45,13:56,11,31,0.0,Nenhuma
+2026-05-16,Tarde,R04,Sul,Viação Alfa,13:45,13:42,-3,40,0.0,Nenhuma
+2026-05-16,tarde,R05,Leste,Viação Beta,13:45,13:55,10,38,0.0,Nenhuma
+2026-05-16,Tarde,R06,Oeste,Viação Alfa,13:45,13:42,-3,34,0.0,Nenhuma
+2026-05-16,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,38,0.0,Nenhuma
+2026-05-16,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,40,0.0,Nenhuma
+2026-05-16,Noite,R01,Norte,Viação Alfa,21:45,21:45,0,30,0.0,Nenhuma
+2026-05-16,Noite,R02,Norte,Viação Alfa,21:45,21:42,-3,38,0.0,Nenhuma
+2026-05-16,Noite,R02,Norte,Viação Alfa,21:45,21:42,-3,38,0.0,Nenhuma
+2026-05-16,Noite,R03,Leste,Viação Beta,21:45,21:41,-4,44,0.0,Nenhuma
+2026-05-16,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,36,0.0,Nenhuma
+16/05/2026,Noite,R05,Leste,Viação Beta,21:45,21:40,-5,36,0.0,Nenhuma
+2026-05-16,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,35,0.0,Nenhuma
+2026-05-16,Noite,R07,Centro-Sul,Viação Beta,21:45,21:37,-8,41,0.0,Nenhuma
+2026-05-16,Noite,R08,Norte,Viação Beta,21:45,21:44,-1,42,0.0,Nenhuma
+2026-05-18,Manhã,R01,Norte,Viação Alfa,05:45,05:45,0,38,0.0,Nenhuma
+2026-05-18,Manhã,R02,Norte,Viação Alfa,05:45,05:45,0,41,0.0,Nenhuma
+2026-05-18,Manhã,R03,Leste,Viação Beta,05:45,05:56,11,35,0.0,Nenhuma
+18/05/2026,Manhã,R04,Sul,Viação Alfa,05:45,05:47,2,35,0.0,Nenhuma
+2026-05-18,Manhã,R05,Leste,Viação Beta,05:45,06:03,18,28,0.0,Nenhuma
+2026-05-18,Manhã,R06,Oeste,Viação Alfa,05:45,05:46,1,38,0.0,Nenhuma
+2026-05-18,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:43,-2,35,0.0,Nenhuma
+2026-05-18,Manhã,R08,Norte,Viação Beta,05:45,05:41,-4,29,0.0,Nenhuma
+2026-05-18,Tarde,R01,Norte,Viação Alfa,13:45,13:49,4,33,4.7,Nenhuma
+2026-05-18,Tarde,R02,Norte,Viação Alfa,13:45,13:49,4,35,4.7,Nenhuma
+2026-05-18,Tarde,R03,Leste,Viação Beta,13:45,13:49,4,42,4.7,Nenhuma
+18/05/2026,Tarde,R04,Sul,Viação Alfa,13:45,13:41,-4,28,4.7,Nenhuma
+2026-05-18,Tarde,R05,Leste,Viação Beta,13:45,13:54,9,33,4.7,Nenhuma
+2026-05-18,Tarde,R06,Oeste,Viação Alfa,13:45,13:40,-5,36,4.7,Nenhuma
+2026-05-18,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:42,-3,40,4.7,Nenhuma
+2026-05-18,Tarde,R08,Norte,Viação Beta,13:45,13:45,0,35,4.7,Nenhuma
+2026-05-18,Noite,R01,Norte,Viação Alfa,21:45,21:50,5,39,12.4,Nenhuma
+2026-05-18,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,38,12.4,Nenhuma
+2026-05-18,Noite,R03,Leste,Viação Beta,21:45,21:44,-1,37,12.4,Nenhuma
+2026-05-18,Noite,R04,Sul,Viação Alfa,21:45,21:47,2,40,12.4,Nenhuma
+2026-05-18,Noite,R05,Leste,Viação Beta,21:45,21:44,-1,36,12.4,Nenhuma
+2026-05-18,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,43,12.4,Nenhuma
+2026-05-18,Noite,R07,Centro-Sul,Viação Beta,21:45,21:41,-4,42,12.4,Nenhuma
+2026-05-18,Noite,R08,Norte,Viação Beta,21:45,21:44,-1,36,12.4,Nenhuma
+2026-05-19,Manhã,Rota 01,Norte,Viação Alfa,05:45,05:39,-6,41,0.0,Nenhuma
+2026-05-19,Manhã,R2,Norte,Viação Alfa,05:45,05:41,-4,37,0.0,Nenhuma
+2026-05-19,Manhã,R03,Leste,Viação Beta,05:45,06:00,15,43,0.0,Nenhuma
+2026-05-19,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,40,0.0,Nenhuma
+2026-05-19,Manhã,R05,Leste,Viação Beta,05:45,06:17,32,41,0.0,Pneu furado
+2026-05-19,Manhã,R06,Oeste,Viação Alfa,05:45,05:44,-1,33,0.0,Nenhuma
+2026-05-19,Manhã,Rota 07,Centro-Sul,Viação Beta,05:45,05:39,-6,36,0.0,Nenhuma
+2026-05-19,Manhã,R08,Norte,Viação Beta,05:45,05:46,1,43,0.0,Nenhuma
+2026-05-19,Tarde,R01,Norte,Viação Alfa,13:45,13:47,2,37,4.1,Nenhuma
+2026-05-19,Tarde,R02,Norte,Viação Alfa,13:45,13:49,4,41,4.1,Nenhuma
+2026-05-19,Tarde,R03,Leste,Viação Beta,13:45,13:53,8,37,4.1,Obra na via
+2026-05-19,Tarde,R04,Sul,Viação Alfa,13:45,13:43,-2,36,4.1,Nenhuma
+2026-05-19,Tarde,R05,Leste,Viação Beta,13:45,13:51,6,37,4.1,Nenhuma
+19/05/2026,Tarde,R06,Oeste,Viação Alfa,13:45,13:44,-1,38,4.1,Nenhuma
+2026-05-19,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:45,0,43,4.1,Nenhuma
+2026-05-19,Tarde,R08,Norte,Viação Beta,13:45,13:43,-2,38,4.1,Nenhuma
+2026-05-19,Noite,R01,Norte,Viação Alfa,21:45,21:39,-6,42,1.5,Nenhuma
+2026-05-19,Noite,R02,Norte,Viação Alfa,21:45,21:40,-5,36,1.5,Nenhuma
+2026-05-19,Noturno,R03,Leste,Viação Beta,21:45,21:37,-8,40,1.5,Nenhuma
+2026-05-19,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,33,1.5,Nenhuma
+2026-05-19,Noite,R05,Leste,Viação Beta,21:45,21:35,-10,44,1.5,Nenhuma
+2026-05-19,noite,R06,Oeste,Viação Alfa,21:45,21:53,8,41,1.5,Trânsito intenso
+2026-05-19,Noite,R07,Centro-Sul,Viação Beta,21:45,21h34,-11,35,1.5,Nenhuma
+2026-05-19,Noite,R08,Norte,Viação Beta,21:45,21:41,-4,44,1.5,Nenhuma
+2026-05-20,Manhã,R01,Norte,Viação Alfa,05:45,05:44,-1,37,0.0,Nenhuma
+2026-05-20,Manhã,R02,Norte,Viação Alfa,05:45,05:44,-1,41,0.0,Nenhuma
+2026-05-20,Manhã,R03,Leste,Viação Beta,05:45,05:55,10,37,0.0,Nenhuma
+2026-05-20,Manhã,R04,Sul,Viação Alfa,05:45,05:44,-1,41,0.0,Nenhuma
+2026-05-20,Manhã,R05,Leste,Viação Beta,05:45,05:58,13,38,0.0,Nenhuma
+2026-05-20,Manhã,R06,Oeste,Viação Alfa,05:45,05:42,-3,35,0.0,Nenhuma
+2026-05-20,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:42,-3,38,0.0,Nenhuma
+2026-05-20,Manhã,R08,Norte,Viação Beta,05:45,05:44,-1,33,0.0,Nenhuma
+2026-05-20,Tarde,R01,Norte,Viação Alfa,13:45,13:42,-3,36,0.0,Nenhuma
+2026-05-20,Tarde,R02,Norte,Viação Alfa,13:45,13:59,14,44,0.0,Pneu furado
+2026-05-20,Tarde,R03,Leste,Viação Beta,13:45,13:55,10,35,0.0,Obra na via
+2026-05-20,Tarde,R04,Sul,Viação Alfa,13:45,13:43,-2,40,0.0,Nenhuma
+2026-05-20,Tarde,R05,Leste,Viação Beta,13:45,13:53,8,33,0.0,Nenhuma
+2026-05-20,Tarde,R06,Oeste,Viação Alfa,13:45,13:51,6,34,0.0,Nenhuma
+2026-05-20,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:41,-4,31,0.0,Nenhuma
+2026-05-20,Tarde,R08,Norte,Viação Beta,13:45,13:41,-4,37,0.0,Nenhuma
+2026-05-20,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,42,0.0,Nenhuma
+2026-05-20,Noite,R02,Norte,Viação Alfa,21:45,21:43,-2,38,0.0,Nenhuma
+2026-05-20,Noite,R03,Leste,Viação Beta,21:45,21:43,-2,30,0.0,Nenhuma
+2026-05-20,Noite,R04,Sul,Viação Alfa,21:45,21:38,-7,27,0.0,Nenhuma
+2026-05-20,Noite,R05,Leste,Viação Beta,21:45,21h43,-2,37,0.0,Nenhuma
+2026-05-20,Noite,R06,Oeste,Viação Alfa,21:45,21:44,-1,38,0.0,Nenhuma
+2026-05-20,Noite,R07,Centro-Sul,Viação Beta,21:45,21:40,-5,40,0.0,Nenhuma
+2026-05-20,Noite,R08,Norte,Viação Beta,21:45,21:40,-5,39,0.0,Nenhuma
+2026-05-21,Manhã,R01,Norte,Viação Alfa,05:45,05:42,-3,32,0.0,Nenhuma
+2026-05-21,Manhã,R02,Norte,Viação Alfa,05:45,05:43,-2,41,0.0,Nenhuma
+2026-05-21,MANHÃ,R03,Leste,Viação Beta,05:45,06:04,19,39,0.0,Nenhuma
+2026-05-21,Manhã,R04,Sul,Viação Alfa,05:45,05:43,-2,34,0.0,Nenhuma
+2026-05-21,Manhã,R05,Leste,Viação Beta,05:45,18:04,739,39,0.0,Obra na via
+2026-05-21,Manhã,R06,Oeste,Viação Alfa,05:45,05h45,0,35,0.0,Nenhuma
+2026-05-21,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:37,-8,31,0.0,Nenhuma
+2026-05-21,Manhã,R08,Norte,Viação Beta,05:45,05:44,-1,36,0.0,Nenhuma
+2026-05-21,Tarde,R01,Norte,Viação Alfa,13:45,13:47,2,42,10.2,Nenhuma
+2026-05-21,Tarde,R02,Norte,Viação Alfa,13:45,13:45,0,32,10.2,Nenhuma
+2026-05-21,Tarde,R03,Leste,Viação Beta,13:45,14:03,18,38,10.2,Nenhuma
+2026-05-21,Tarde,R04,Sul,Viação Alfa,13:45,13:50,5,37,10.2,Nenhuma
+21/05/2026,Tarde,R05,Leste,Viação Beta,13:45,13:54,9,37,10.2,Obra na via
+2026-05-21,Tarde,R06,Oeste,Viação Alfa,13:45,13:44:00,-1,40,10.2,Nenhuma
+2026-05-21,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:43,-2,31,10.2,Nenhuma
+2026-05-21,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,44,10.2,Nenhuma
+2026-05-21,Noite,R01,Norte,Viação Alfa,21:45,21:45,0,38,0.0,Nenhuma
+2026-05-21,Noite,R02,Norte,Viação Alfa,21:45,21:38,-7,37,0.0,Nenhuma
+2026-05-21,Noite,R03,Leste,Viação Beta,21:45,22:12,27,37,0.0,Pane mecânica
+2026-05-21,Noite,R04,Sul,Viação Alfa,21:45,21:37,-8,38,0.0,Nenhuma
+2026-05-21,Noite,R05,Leste,Viação Beta,21:45,21:42,-3,44,0.0,Nenhuma
+2026-05-21,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,42,0.0,Nenhuma
+2026-05-21,Noite,R07,Centro-Sul,Viação Beta,21:45,21:43,-2,41,0.0,Nenhuma
+2026-05-21,Noite,R08,Norte,Viação Beta,21:45,21:39,-6,35,0.0,Nenhuma
+2026-05-22,Manhã,R01,Norte,Viação Alfa,05:45,05:46,1,44,0.0,Nenhuma
+2026-05-22,Manhã,R02,Norte,Viação Alfa,05:45,05:45,0,41,0.0,Nenhuma
+2026-05-22,Manhã,R03,Leste,Viação Beta,05:45,05:53,8,39,0.0,Nenhuma
+2026-05-22,Manhã,R04,Sul,Viação Alfa,05:45,05:46,1,32,0.0,Nenhuma
+2026-05-22,Manhã,R05,Leste,Viação Beta,05:45,05:47:00,2,36,0.0,Obra na via
+2026-05-22,Manhã,R06,Oeste,Viação Alfa,05:45,05:40,-5,38,0.0,Nenhuma
+2026-05-22,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:36,-9,33,0.0,Nenhuma
+2026-05-22,Manhã,R08,Norte,Viação Beta,05:45,06:14,29,41,0.0,Pane mecânica
+2026-05-22,Tarde,R01,Norte,Viação Alfa,13:45,13:45,0,31,5.0,Nenhuma
+2026-05-22,Tarde,R02,Norte,Viação Alfa,13:45,13:40,-5,37,5.0,Nenhuma
+2026-05-22,Tarde,R03,Leste,Viação Beta,13:45,14:37,52,35,5.0,Pane mecânica
+22/05/2026,Tarde,R04,Sul,Viação Alfa,13:45,13:44,-1,43,5.0,Nenhuma
+2026-05-22,Tarde,R05,Leste,Viação Beta,13:45,13:51,6,34,5.0,Nenhuma
+2026-05-22,Tarde,R06,Oeste,Viação Alfa,13:45,13:50,5,36,5.0,Nenhuma
+2026-05-22,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:41,-4,31,5.0,Nenhuma
+2026-05-22,Tarde,R08,Norte,Viação Beta,13:45,13:40,-5,29,5.0,Nenhuma
+2026-05-22,Noite,R01,Norte,Viação Alfa,21:45,21:50,5,38,7.8,Nenhuma
+2026-05-22,Noite,R2,Norte,Viação Alfa,21:45,21:47,2,44,7.8,Nenhuma
+2026-05-22,Noite,R03,Leste,Viação Beta,21:45,21:40,-5,31,7.8,Nenhuma
+2026-05-22,Noite,R04,Sul,Viação Alfa,21:45,21:46,1,34,7.8,Nenhuma
+2026-05-22,noite,R05,Leste,Viação Beta,21:45,21:44,-1,39,7.8,Nenhuma
+2026-05-22,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,40,7.8,Nenhuma
+2026-05-22,Noite,R07,Centro-Sul,Viação Beta,21:45,21:44,-1,34,7.8,Nenhuma
+2026-05-22,Noite,R08,Norte,Viação Beta,21:45,22:23,38,32,7.8,Pane mecânica
+2026-05-23,Manhã,R01,Norte,Viação Alfa,05:45,05:45,0,35,0.0,Trânsito intenso
+2026-05-23,Manhã,R02,Norte,Viação Alfa,05:45,05:47,2,38,0.0,Nenhuma
+2026-05-23,Manhã,R03,Leste,Viação Beta,05:45,06:02,17,32,0.0,Nenhuma
+2026-05-23,Manhã,R04,Sul,Viação Alfa,05:45,05:35,-10,34,0.0,Nenhuma
+2026-05-23,Manhã,R05,Leste,Viação Beta,05:45,05:56,11,44,0.0,Nenhuma
+2026-05-23,Manhã,R06,Oeste,Viação Alfa,05:45,05:39,-6,38,0.0,Nenhuma
+2026-05-23,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:45,0,38,0.0,Nenhuma
+23/05/2026,Manhã,R08,Norte,Viação Beta,05:45,05:38,-7,36,0.0,Nenhuma
+2026-05-23,Tarde,R01,Norte,Viação Alfa,13:45,13:45,0,44,0.0,Nenhuma
+2026-05-23,Tarde,R02,Norte,Viação Alfa,13:45,13:58,33,35,0.0,Trânsito intenso
+2026-05-23,Tarde,R03,Leste,Viação Beta,13:45,13:47,2,39,0.0,Nenhuma
+2026-05-23,Tarde,R04,Sul,Viação Alfa,13:45,13:42,-3,36,0.0,Nenhuma
+2026-05-23,Tarde,R05,Leste,Viação Beta,13:45,13:53,8,42,0.0,Nenhuma
+2026-05-23,Tarde,R06,Oeste,Viação Alfa,13:45,13:44,-1,36,0.0,Nenhuma
+2026-05-23,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:36,-9,38,0.0,Nenhuma
+2026-05-23,Tarde,R08,Norte,Viação Beta,13:45,13:47,2,32,0.0,Nenhuma
+2026-05-23,Noite,R01,Norte,Viação Alfa,21:45,21:44,-1,40,0.0,Nenhuma
+2026-05-23,Noite,R02,Norte,Viação Alfa,21:45,21:48,3,40,0.0,Trânsito intenso
+2026-05-23,Noite,R03,Leste,Viação Beta,21:45,21h43,-2,35,0.0,Nenhuma
+2026-05-23,Noite,R04,Sul,Viação Alfa,21:45,21:48,3,37,0.0,Nenhuma
+2026-05-23,Noite,R05,Leste,Viação Beta,21:45,21:46,1,35,0.0,Nenhuma
+2026-05-23,Noite,R06,Oeste,Viação Alfa,21:45,21:43,-2,38,0.0,Nenhuma
+23/05/2026,Noite,R07,Centro-Sul,Viação Beta,21:45,21:40,-5,32,0.0,Nenhuma
+2026-05-23,Noite,R08,Norte,Viação Beta,21:45,21:56,11,35,0.0,Pneu furado
+2026-05-25,Manhã,R01,Norte,Viação Alfa,05:45,06:20,35,37,0.1,Pane mecânica
+2026-05-25,MANHÃ,R02,Norte,Viação Alfa,05:45,05:38,-7,41,0.1,Nenhuma
+2026-05-25,Manhã,R03,Leste,Viação Beta,05:45,06:00,15,37,0.1,Nenhuma
+2026-05-25,Manhã,R04,Sul,Viação Alfa,05:45,05:43,-2,33,0.1,Nenhuma
+2026-05-25,Manhã,R05,Leste,Viação Beta,05:45,05:58,13,41,0.1,Nenhuma
+2026-05-25,Manhã,R06,Oeste,Viação Alfa,05:45,05:46,1,43,0.1,Nenhuma
+2026-05-25,Manhã,R07,Centro-Sul,Viação Beta,05:45,05h46,1,36,0.1,Nenhuma
+2026-05-25,Manhã,R08,Norte,Viação Beta,05:45,05:41,-4,40,0.1,Nenhuma
+2026-05-25,Tarde,R01,Norte,Viação Alfa,13:45,13:45:00,0,33,8.2,Nenhuma
+2026-05-25,Tarde,R02,Norte,Viação Alfa,13:45,13:59,14,37,8.2,Trânsito intenso
+2026-05-25,Tarde,R03,Leste,Viação Beta,13:45,13:50,5,29,8.2,Nenhuma
+2026-05-25,Tarde,R04,Sul,Viação Alfa,13:45,13:43,-2,40,8.2,Nenhuma
+2026-05-25,Tarde,R05,Leste,Viação Beta,13:45,13:58:00,13,39,8.2,Nenhuma
+2026-05-25,Tarde,R06,Oeste,Viação Alfa,13:45,13:47,2,40,8.2,Nenhuma
+2026-05-25,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:41,-4,43,8.2,Nenhuma
+2026-05-25,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,35,8.2,Nenhuma
+2026-05-25,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,39,0.9,Nenhuma
+2026-05-25,Noite,R02,Norte,Viação Alfa,21:45,21:42,-3,38,0.9,Nenhuma
+2026-05-25,Noite,R03,Leste,Viação Beta,21:45,21:40,-5,37,0.9,Nenhuma
+2026-05-25,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,42,0.9,Nenhuma
+2026-05-25,Noite,R05,Leste,Viação Beta,21:45,21:38,-7,41,0.9,Nenhuma
+2026-05-25,Noite,R06,Oeste,Viação Alfa,21:45,21:40,-5,42,0.9,Nenhuma
+2026-05-25,Noite,R07,Centro-Sul,Viação Beta,21:45,21:42:00,-3,30,0.9,Nenhuma
+2026-05-25,Noite,R08,Norte,Viação Beta,21:45,21:40,-5,44,0.9,Nenhuma
+2026-05-26,Manhã,R01,Norte,Viação Alfa,05:45,05h42,-3,29,0.0,Nenhuma
+2026-05-26,Manhã,R02,Norte,Viação Alfa,05:45,05:47,2,33,0.0,Nenhuma
+2026-05-26,Manhã,R03,Leste,Viação Beta,05:45,05:56,11,32,0.0,Nenhuma
+2026-05-26,Manhã,R04,Sul,Viação Alfa,05:45,05:38,-7,38,0.0,Nenhuma
+2026-05-26,Manhã,R05,Leste,Viação Beta,05:45,05:52,7,38,0.0,Obra na via
+2026-05-26,Manhã,R06,Oeste,Viação Alfa,05:45,05:40,-5,35,0.0,Nenhuma
+2026-05-26,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:49,4,42,0.0,Nenhuma
+2026-05-26,Manhã,R08,Norte,Viação Beta,05:45,05:39,-6,40,0.0,Nenhuma
+26/05/2026,Tarde,R01,Norte,Viação Alfa,13:45,13:39:00,-6,38,0.0,Nenhuma
+2026-05-26,Tarde,R02,Norte,Viação Alfa,13:45,13:43,-2,32,0.0,Nenhuma
+2026-05-26,Tarde,R03,Leste,Viação Beta,13:45,13:47,2,36,0.0,Nenhuma
+2026-05-26,Tarde,R04,Sul,Viação Alfa,13:45,13:38,-7,37,0.0,Nenhuma
+2026-05-26,Tarde,R05,Leste,Viação Beta,13:45,14:00,15,34,0.0,Obra na via
+2026-05-26,Tarde,R06,Oeste,Viação Alfa,13:45,13:40,-5,44,0.0,Nenhuma
+2026-05-26,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:50,5,35,0.0,Pneu furado
+2026-05-26,Tarde,R08,Norte,Viação Beta,13:45,13:40,-5,34,0.0,Nenhuma
+2026-05-26,Noite,R01,Norte,Viação Alfa,21:45,21:41,-4,34,0.8,Nenhuma
+2026-05-26,Noite,R02,Norte,Viação Alfa,21:45,21:44,-1,42,0.8,Nenhuma
+2026-05-26,Noite,R03,Leste,Viação Beta,21:45,21:38,-7,39,0.8,Nenhuma
+2026-05-26,Noite,R04,Sul,Viação Alfa,21:45,21:36,-9,40,0.8,Nenhuma
+2026-05-26,Noite,R05,Leste,Viação Beta,21:45,21:41,-4,31,0.8,Nenhuma
+2026-05-26,Noite,R06,Oeste,Viação Alfa,21:45,21:42,-3,35,0.8,Nenhuma
+2026-05-26,Noite,R07,Centro-Sul,Viação Beta,21:45,21:42,-3,32,0.8,Nenhuma
+2026-05-26,Noite,R08,Norte,Viação Beta,21:45,21:37,-8,39,0.8,Nenhuma
+2026-05-27,Manhã,R01,Norte,Viação Alfa,05:45,05:40,-5,42,1.9,Nenhuma
+2026-05-27,Manhã,R02,Norte,Viação Alfa,05:45,05:37,-8,42,1.9,Nenhuma
+2026-05-27,Manhã,R03,Leste,Viação Beta,05:45,05:59,14,42,1.9,Nenhuma
+27/05/2026,Manhã,R04,Sul,Viação Alfa,05:45,05:45,0,39,1.9,Nenhuma
+2026-05-27,Manhã,R05,Leste,Viação Beta,05:45,06:09,24,33,1.9,Trânsito intenso
+2026-05-27,Manhã,R06,Oeste,Viação Alfa,05:45,05:39,-6,41,1.9,Nenhuma
+2026-05-27,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:47,2,43,1.9,Nenhuma
+2026-05-27,Manhã,R08,Norte,Viação Beta,05:45,05:42,-3,41,1.9,Nenhuma
+2026-05-27,Tarde,R01,Norte,Viação Alfa,13:45,13:47,2,41,19.7,Nenhuma
+2026-05-27,Tarde,R02,Norte,Viação Alfa,13:45,13:52,7,38,19.7,Nenhuma
+2026-05-27,Tarde,R03,Leste,Viação Beta,13:45,14:20,35,37,19.7,Trânsito intenso
+2026-05-27,Tarde,R04,Sul,Viação Alfa,13:45,13:49,4,44,19.7,Nenhuma
+2026-05-27,Tarde,R05,Leste,Viação Beta,13:45,13:57,12,44,19.7,Nenhuma
+2026-05-27,Tarde,R06,Oeste,Viação Alfa,13:45,13h49,4,39,19.7,Nenhuma
+2026-05-27,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:52,7,31,19.7,Nenhuma
+2026-05-27,Tarde,R08,Norte,Viação Beta,13:45,13:53,8,39,19.7,Nenhuma
+2026-05-27,Noite,R01,Norte,Viação Alfa,21:45,21:43,-2,39,14.5,Nenhuma
+2026-05-27,Noite,R02,Norte,Viação Alfa,21:45,21:48,3,44,14.5,Nenhuma
+2026-05-27,Noite,R03,Leste,Viação Beta,21:45,21:48,3,42,14.5,Nenhuma
+2026-05-27,Noite,R04,Sul,Viação Alfa,21:45,21:45,0,36,14.5,Nenhuma
+2026-05-27,Noite,R05,Leste,Viação Beta,21:45,21:46,1,39,14.5,Nenhuma
+2026-05-27,Noite,R06,Oeste,Viação Alfa,21:45,21:41,-4,35,14.5,Nenhuma
+2026-05-27,Noite,R07,Centro-Sul,Viação Beta,21:45,21:47,2,32,14.5,Nenhuma
+2026-05-27,Noite,R08,Norte,Viação Beta,21:45,21:45,0,32,14.5,Nenhuma
+2026-05-28,Manhã,R01,Norte,Viação Alfa,05:45,05:47,2,36,10.3,Nenhuma
+2026-05-28,Manhã,R02,Norte,Viação Alfa,05:45,05:47,2,41,10.3,Nenhuma
+2026-05-28,Manhã,R03,Leste,Viação Beta,05:45,05:59,14,40,10.3,Obra na via
+2026-05-28,Manhã,R04,Sul,Viação Alfa,05:45,05:53,8,35,10.3,Nenhuma
+2026-05-28,Manhã,R05,Leste,Viação Beta,05:45,05:58,13,41,10.3,Nenhuma
+2026-05-28,MANHÃ,R06,Oeste,Viação Alfa,05:45,05:46,1,33,10.3,Nenhuma
+2026-05-28,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:44,-1,41,10.3,Nenhuma
+2026-05-28,Manhã,R08,Norte,Viação Beta,05:45,05:48,3,36,10.3,Nenhuma
+2026-05-28,Tarde,R01,Norte,Viação Alfa,13:45,13:41,-4,22,0.0,Nenhuma
+2026-05-28,Tarde,R02,Norte,Viação Alfa,13:45,13:49,4,35,0.0,Nenhuma
+2026-05-28,tarde,R03,Leste,Viação Beta,13:45,13:46,1,39,0.0,Nenhuma
+2026-05-28,Tarde,R04,Sul,Viação Alfa,13:45,13:44,-1,34,0.0,Nenhuma
+2026-05-28,Tarde,R05,Leste,Viação Beta,13:45,13:57,12,31,0.0,Nenhuma
+2026-05-28,Tarde,R06,Oeste,Viação Alfa,13:45,13:44,-1,34,0.0,Nenhuma
+2026-05-28,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:44,-1,34,0.0,Nenhuma
+28/05/2026,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,29,0.0,Nenhuma
+2026-05-28,Noite,R01,Norte,Viação Alfa,21:45,22:16,31,40,0.0,Pane mecânica
+2026-05-28,Noite,R02,Norte,Viação Alfa,21:45,21:46,1,42,0.0,Nenhuma
+2026-05-28,Noite,R03,Leste,Viação Beta,21:45,21:43,-2,36,0.0,Nenhuma
+2026-05-28,Noite,R04,Sul,Viação Alfa,21:45,21:42,-3,38,0.0,Nenhuma
+2026-05-28,Noite,R05,Leste,Viação Beta,21:45,21:37,-8,41,0.0,Nenhuma
+2026-05-28,Noite,R06,Oeste,Viação Alfa,21:45,21:40,-5,43,0.0,Nenhuma
+2026-05-28,Noite,R07,Centro-Sul,Viação Beta,21:45,21:43,-2,33,0.0,Nenhuma
+2026-05-28,Noite,R08,Norte,Viação Beta,21:45,22:28,43,41,0.0,Pane mecânica
+2026-05-29,Manhã,R01,Norte,Viação Alfa,05:45,05:55,10,35,0.0,Trânsito intenso
+2026-05-29,Manhã,R02,Norte,Viação Alfa,05:45,05:39,-6,37,0.0,Nenhuma
+2026-05-29,Manhã,R03,Leste,Viação Beta,05:45,05:56,11,44,0.0,Nenhuma
+2026-05-29,Manhã,R04,Sul,Viação Alfa,05:45,05:45,0,34,0.0,Nenhuma
+2026-05-29,Manhã,R05,Leste,Viação Beta,05:45,06:01,16,35,0.0,Obra na via
+2026-05-29,Manhã,R06,Oeste,Viação Alfa,05:45,05:37,-8,37,0.0,Nenhuma
+2026-05-29,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:42,-3,30,0.0,Nenhuma
+2026-05-29,Manhã,R08,Norte,Viação Beta,05:45,05:46,1,34,0.0,Nenhuma
+2026-05-29,Tarde,R01,Norte,Viação Alfa,13:45,13:47,2,41,0.0,Nenhuma
+2026-05-29,Tarde,R02,Norte,Viação Alfa,13:45,13:41,-4,37,0.0,Nenhuma
+2026-05-29,tarde,R03,Leste,Viação Beta,13:45,13:48,3,34,0.0,Nenhuma
+2026-05-29,Tarde,R04,Sul,Viação Alfa,13:45,13:51,6,42,0.0,Nenhuma
+2026-05-29,Tarde,R05,Leste,Viação Beta,13:45,13:50,5,44,0.0,Obra na via
+2026-05-29,Tarde,R06,Oeste,Viação Alfa,13:45,13:39,-6,39,0.0,Nenhuma
+2026-05-29,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:44,-1,35,0.0,Nenhuma
+2026-05-29,Tarde,R08,Norte,Viação Beta,13:45,13:42,-3,36,0.0,Nenhuma
+2026-05-29,Noite,R01,Norte,Viação Alfa,21:45,21:38,-7,38,0.8,Nenhuma
+2026-05-29,Noite,R02,Norte,Viação Alfa,21:45,21:41,-4,32,0.8,Nenhuma
+2026-05-29,Noite,R03,Leste,Viação Beta,21:45,21:40,-5,34,0.8,Nenhuma
+2026-05-29,Noite,R04,Sul,Viação Alfa,21:45,21:36,-9,36,0.8,Nenhuma
+2026-05-29,Noite,R05,Leste,Viação Beta,21:45,21:40,-5,41,0.8,Nenhuma
+2026-05-29,Noite,R06,Oeste,Viação Alfa,21:45,21h42,-3,35,0.8,Nenhuma
+2026-05-29,Noite,R07,Centro-Sul,Viação Beta,21:45,21:38,-7,27,0.8,Nenhuma
+29/05/2026,Noite,R08,Norte,Viação Beta,21:45,21:42,-3,37,0.8,Nenhuma
+2026-05-30,Manhã,R01,Norte,Viação Alfa,05:45,06:22,37,32,2.5,Pane mecânica
+2026-05-30,Manhã,R02,Norte,Viação Alfa,05:45,05:40,-5,34,2.5,Nenhuma
+2026-05-30,Manhã,R03,Leste,Viação Beta,05:45,06:02,17,41,2.5,Nenhuma
+30/05/2026,Manhã,R04,Sul,Viação Alfa,05:45,05:42,-3,42,2.5,Nenhuma
+2026-05-30,Manhã,r05,Leste,Viação Beta,05:45,05:51,6,38,2.5,Nenhuma
+2026-05-30,MANHÃ,R06,Oeste,Viação Alfa,05:45,05:45,0,41,2.5,Nenhuma
+2026-05-30,Manhã,R07,Centro-Sul,Viação Beta,05:45,05:41,-4,39,2.5,Nenhuma
+2026-05-30,Manhã,R08,Norte,Viação Beta,05:45,05:43,-2,40,2.5,Nenhuma
+2026-05-30,Tarde,R01,Norte,Viação Alfa,13:45,13:47,2,39,2.4,Nenhuma
+2026-05-30,Tarde,R02,Norte,Viação Alfa,13:45,13:43:00,-2,42,2.4,Nenhuma
+2026-05-30,Tarde,R03,Leste,Viação Beta,13:45,13:55,10,36,2.4,Nenhuma
+2026-05-30,Tarde,R04,Sul,Viação Alfa,13:45,13:38,-7,31,2.4,Nenhuma
+2026-05-30,Tarde,R05,Leste,Viação Beta,13:45,14:00,15,37,2.4,Obra na via
+2026-05-30,Tarde,R06,Oeste,Viação Alfa,13:45,13:41,-4,34,2.4,Nenhuma
+2026-05-30,Tarde,R07,Centro-Sul,Viação Beta,13:45,13:49,4,35,2.4,Nenhuma
+2026-05-30,Tarde,R08,Norte,Viação Beta,13:45,13:43,-2,44,2.4,Nenhuma
+2026-05-30,Noite,R01,Norte,Viação Alfa,21:45,21:40,-5,37,0.0,Nenhuma
+2026-05-30,Noite,R02,Norte,Viação Alfa,21:45,21:40,-5,44,0.0,Nenhuma
+2026-05-30,Noite,R03,Leste,Viação Beta,21:45,21h37,-8,43,0.0,Nenhuma
+2026-05-30,Noite,R04,Sul,Viação Alfa,21:45,21:41,-4,38,0.0,Nenhuma
+2026-05-30,Noite,R05,Leste,Viação Beta,21:45,21:39,-6,42,0.0,Nenhuma
+2026-05-30,Noite,R06,Oeste,Viação Alfa,21:45,21:45,0,40,0.0,Nenhuma
+2026-05-30,Noite,R07,Centro-Sul,Viação Beta,21:45,21:42,-3,33,0.0,Nenhuma
+2026-05-30,Noite,R08,Norte,Viação Beta,21:45,21:43,-2,30,0.0,Nenhuma

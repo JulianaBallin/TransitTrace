@@ -1,0 +1,5 @@
+.ipynb_checkpoints/
+.venv-rota-em-dia/
+__pycache__/
+*.pyc
+
