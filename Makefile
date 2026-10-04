@@ -46,14 +46,14 @@ relatorio: analise
 	$(PYTHON) fontes/gerar_relatorio.py
 
 apresentacao-pdf: slides
-	libreoffice --headless --convert-to pdf --outdir . apresentacao_rota_em_dia.pptx
+	libreoffice --headless --convert-to pdf --outdir docs/apresentacao docs/apresentacao/apresentacao_rota_em_dia.pptx
 
 tudo: analise notebook slides relatorio apresentacao-pdf
 	@echo "Entregáveis gerados com sucesso."
 
 validar:
 	$(PYTHON) -m py_compile fontes/*.py
-	unzip -t apresentacao_rota_em_dia.pptx
-	pdfinfo relatorio_tecnico_rota_em_dia.pdf | grep -E 'Pages|Page size'
-	pdfinfo apresentacao_rota_em_dia.pdf | grep -E 'Pages|Page size'
+	unzip -t docs/apresentacao/apresentacao_rota_em_dia.pptx
+	pdfinfo docs/relatorio/relatorio_tecnico_rota_em_dia.pdf | grep -E 'Pages|Page size'
+	pdfinfo docs/apresentacao/apresentacao_rota_em_dia.pdf | grep -E 'Pages|Page size'
 	@echo "Validação estrutural concluída."

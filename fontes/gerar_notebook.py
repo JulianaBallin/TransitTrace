@@ -49,6 +49,8 @@ def build_notebook() -> Path:
             **Equipe:** Juliana Ballin Lima · Fernanda de Oliveira da Costa · Pedro Henrique Oliveira Dias  
             **Período analisado:** fevereiro a maio de 2026 · **Escopo:** 8 rotas e 3 turnos
 
+            [Consultar o relatório técnico descritivo](https://github.com/JulianaBallin/TransitTrace/blob/main/docs/relatorio/relatorio_tecnico_rota_em_dia.pdf)
+
             > **Pergunta central:** por que os atrasos aumentaram, onde se concentram e quais evidências sustentam a explicação mais plausível?
             """
         ),
@@ -102,10 +104,9 @@ def build_notebook() -> Path:
         code(
             """
             candidates = [
+                Path("dataset/projeto_integrador_transporte_fretado.csv"),
                 Path("projeto_integrador_transporte_fretado.csv"),
                 Path("/content/projeto_integrador_transporte_fretado.csv"),
-                Path("entrega-final/projeto_integrador_transporte_fretado.csv"),
-                Path("../roteiro-entrega/projeto_integrador_transporte_fretado.csv"),
             ]
             data_path = next((path for path in candidates if path.exists()), None)
 
@@ -685,7 +686,11 @@ def build_notebook() -> Path:
                 "passageiros", "chuva_mm", "ocorrencia", "pontual",
                 "apos_inicio_turno",
             ]
-            treated_path = Path("dados_tratados_transporte_fretado.csv")
+            treated_path = (
+                Path("dataset/dados_tratados_transporte_fretado.csv")
+                if Path("dataset").is_dir()
+                else Path("dados_tratados_transporte_fretado.csv")
+            )
             data[output_columns].to_csv(treated_path, index=False, date_format="%Y-%m-%d")
             print(f"Base tratada salva em: {treated_path.resolve()}")
             """

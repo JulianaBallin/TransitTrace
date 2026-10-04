@@ -14,7 +14,8 @@ import seaborn as sns
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
-DATA_PATH = PROJECT_DIR / "projeto_integrador_transporte_fretado.csv"
+DATASET_DIR = PROJECT_DIR / "dataset"
+DATA_PATH = DATASET_DIR / "projeto_integrador_transporte_fretado.csv"
 CHART_DIR = PROJECT_DIR / "graficos"
 
 CREAM = "#FFF8E8"
@@ -398,7 +399,8 @@ def export_clean_data(data: pd.DataFrame) -> Path:
         "pontual",
         "apos_inicio_turno",
     ]
-    output = PROJECT_DIR / "dados_tratados_transporte_fretado.csv"
+    DATASET_DIR.mkdir(parents=True, exist_ok=True)
+    output = DATASET_DIR / "dados_tratados_transporte_fretado.csv"
     data[columns].to_csv(output, index=False, date_format="%Y-%m-%d")
     return output
 

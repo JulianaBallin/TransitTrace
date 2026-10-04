@@ -27,17 +27,17 @@ Equipe:
 | Arquivo | Finalidade |
 | --- | --- |
 | [transporte_fretado_rota_em_dia.ipynb](transporte_fretado_rota_em_dia.ipynb) | Notebook Colab executado, com as quatro etapas e a narrativa final |
-| [apresentacao_rota_em_dia.pptx](apresentacao_rota_em_dia.pptx) | Apresentação editável de oito slides |
-| [apresentacao_rota_em_dia.pdf](apresentacao_rota_em_dia.pdf) | Versão da apresentação para visualização e compartilhamento |
-| [relatorio_tecnico_rota_em_dia.pdf](relatorio_tecnico_rota_em_dia.pdf) | Relatório técnico A4 com 14 páginas |
-| [projeto_integrador_transporte_fretado.csv](projeto_integrador_transporte_fretado.csv) | Base bruta preservada |
-| [dados_tratados_transporte_fretado.csv](dados_tratados_transporte_fretado.csv) | Base resultante do pipeline reproduzível |
+| [apresentacao_rota_em_dia.pptx](docs/apresentacao/apresentacao_rota_em_dia.pptx) | Apresentação editável de nove slides |
+| [apresentacao_rota_em_dia.pdf](docs/apresentacao/apresentacao_rota_em_dia.pdf) | Versão da apresentação para visualização e compartilhamento |
+| [relatorio_tecnico_rota_em_dia.pdf](docs/relatorio/relatorio_tecnico_rota_em_dia.pdf) | Relatório técnico descritivo em formato A4 |
+| [projeto_integrador_transporte_fretado.csv](dataset/projeto_integrador_transporte_fretado.csv) | Base bruta preservada |
+| [dados_tratados_transporte_fretado.csv](dataset/dados_tratados_transporte_fretado.csv) | Base resultante do pipeline reproduzível |
 | [assets/logo-rota-em-dia.png](assets/logo-rota-em-dia.png) | Logo do projeto com fundo transparente |
 
 ## Execução no Google Colab
 
 1. Abra o Google Colab.
-2. Faça upload do notebook e do CSV bruto.
+2. Faça upload do notebook e do CSV bruto disponível em `dataset/`.
 3. Abra `transporte_fretado_rota_em_dia.ipynb`.
 4. Selecione **Ambiente de execução > Executar tudo**.
 
@@ -52,12 +52,13 @@ A pontualidade de R03 e R05 caiu nos turnos diurnos desde 6 de abril. Obras no c
 ```text
 TransitTrace/
 ├── assets/                 # Logos do projeto e institucionais
+├── dataset/                # Bases bruta e tratada
+├── docs/
+│   ├── apresentacao/       # Slides editáveis e PDF
+│   └── relatorio/          # Relatório técnico descritivo
 ├── fontes/                 # Scripts reprodutíveis
 ├── graficos/               # Figuras usadas nos documentos
-├── *.csv                   # Bases bruta e tratada
-├── *.ipynb                 # Notebook Colab
-├── *.pptx                  # Slides editáveis
-└── *.pdf                   # Slides e relatório para compartilhamento
+└── transporte_fretado_rota_em_dia.ipynb
 ```
 
 ## Regeneração local

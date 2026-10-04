@@ -1,6 +1,6 @@
 """Build the final A4 technical report as a styled PDF."""
 
-# pylint: disable=line-too-long,too-many-arguments,too-many-positional-arguments
+# pylint: disable=line-too-long,too-many-arguments,too-many-positional-arguments,too-many-lines
 # pylint: disable=too-many-locals,too-many-statements,non-ascii-name
 
 from __future__ import annotations
@@ -52,8 +52,9 @@ from analise import (
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 ASSET_DIR = PROJECT_DIR / "assets"
 CHART_DIR = PROJECT_DIR / "graficos"
-OUTPUT = PROJECT_DIR / "relatorio_tecnico_rota_em_dia.pdf"
+OUTPUT = PROJECT_DIR / "docs" / "relatorio" / "relatorio_tecnico_rota_em_dia.pdf"
 FONT_DIR = Path("/usr/share/fonts/truetype/noto")
+CONTENT_WIDTH = A4[0] - 3.3 * cm
 
 
 pdfmetrics.registerFont(TTFont("NotoSans", FONT_DIR / "NotoSans-Regular.ttf"))
@@ -134,7 +135,7 @@ def cover_page(canvas, _doc):
 
     draw_image_contain(canvas, ASSET_DIR / "logo-uea.png", 45, height - 105, 150, 62)
     draw_image_contain(canvas, ASSET_DIR / "logo-sialabs.png", width - 114, height - 115, 68, 78)
-    draw_image_contain(canvas, ASSET_DIR / "logo-rota-em-dia.png", width - 248, 425, 192, 145)
+    draw_image_contain(canvas, ASSET_DIR / "logo-rota-em-dia.png", width - 286, 520, 238, 154)
 
     canvas.setFont("NotoSans-Bold", 10)
     canvas.setFillColor(hex_color(YELLOW))
@@ -278,6 +279,15 @@ def build_styles():
             alignment=TA_CENTER,
             textColor=colors.white,
         ),
+        "CalloutDark": ParagraphStyle(
+            "CalloutDark",
+            parent=sample["BodyText"],
+            fontName="NotoSans-Bold",
+            fontSize=10.5,
+            leading=15,
+            alignment=TA_CENTER,
+            textColor=hex_color(INK),
+        ),
         "Bullet": ParagraphStyle(
             "Bullet",
             parent=sample["BodyText"],
@@ -305,9 +315,24 @@ def bullet(text: str, styles):
     return Paragraph(f"•&nbsp;&nbsp;{text}", styles["Bullet"])
 
 
-def styled_table(data, widths, *, header=True, font_size=7.3, alignments=None):
+def styled_table(
+    data,
+    widths,
+    *,
+    header=True,
+    font_size=7.3,
+    alignments=None,
+    highlight_rows=None,
+):
     """Create a striped table with the project palette."""
-    table = Table(data, colWidths=widths, repeatRows=1 if header else 0, hAlign="LEFT")
+    scale = CONTENT_WIDTH / sum(widths)
+    full_widths = [width * scale for width in widths]
+    table = Table(
+        data,
+        colWidths=full_widths,
+        repeatRows=1 if header else 0,
+        hAlign="LEFT",
+    )
     commands = [
         ("FONTNAME", (0, 0), (-1, -1), "NotoSans"),
         ("FONTSIZE", (0, 0), (-1, -1), font_size),
@@ -334,6 +359,14 @@ def styled_table(data, widths, *, header=True, font_size=7.3, alignments=None):
     if alignments:
         for column, alignment in enumerate(alignments):
             commands.append(("ALIGN", (column, 0), (column, -1), alignment))
+    for row, background in highlight_rows or []:
+        commands.extend(
+            [
+                ("BACKGROUND", (0, row), (-1, row), hex_color(background)),
+                ("FONTNAME", (0, row), (-1, row), "NotoSans-Bold"),
+                ("TEXTCOLOR", (0, row), (-1, row), hex_color(INK)),
+            ]
+        )
     table.setStyle(TableStyle(commands))
     return table
 
@@ -359,7 +392,7 @@ def metric_cards(metrics):
                         textColor=hex_color(INK), alignment=TA_CENTER, leading=10
                     ))],
                 ],
-                colWidths=[5.05 * cm],
+                colWidths=[CONTENT_WIDTH / 3],
                 rowHeights=[0.72 * cm, 0.66 * cm],
                 style=TableStyle(
                     [
@@ -370,7 +403,36 @@ def metric_cards(metrics):
                 ),
             )
         )
-    return Table([[cards[0], cards[1], cards[2]]], colWidths=[5.2 * cm] * 3)
+    return Table(
+        [[cards[0], cards[1], cards[2]]],
+        colWidths=[CONTENT_WIDTH / 3] * 3,
+        style=TableStyle(
+            [
+                ("LEFTPADDING", (0, 0), (-1, -1), 2),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 2),
+                ("TOPPADDING", (0, 0), (-1, -1), 0),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+            ]
+        ),
+    )
+
+
+def highlight_box(text: str, styles, background: str, *, light_text: bool = False):
+    """Create a full-width highlighted statement with accessible contrast."""
+    style = styles["Callout"] if light_text else styles["CalloutDark"]
+    return Table(
+        [[Paragraph(text, style)]],
+        colWidths=[CONTENT_WIDTH],
+        style=TableStyle(
+            [
+                ("BACKGROUND", (0, 0), (-1, -1), hex_color(background)),
+                ("LEFTPADDING", (0, 0), (-1, -1), 16),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 16),
+                ("TOPPADDING", (0, 0), (-1, -1), 12),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 12),
+            ]
+        ),
+    )
 
 
 def figure(path: Path, title: str, caption: str, styles, width=16.0 * cm):
@@ -390,6 +452,7 @@ def figure(path: Path, title: str, caption: str, styles, width=16.0 * cm):
 
 def build_report() -> Path:
     """Build and save the complete technical report."""
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     raw = read_raw_data()
     data, quality = clean_data(raw)
     metrics = summary_metrics(data)
@@ -462,22 +525,11 @@ def build_report() -> Path:
             ),
             metric_cards(metrics),
             Spacer(1, 9),
-            Table(
-                [[Paragraph(
-                    "A pontualidade de R03 e R05 caiu nos turnos diurnos desde 6 de abril; obras no corredor são a explicação mais plausível, a confirmar com GPS e cronogramas.",
-                    styles["Callout"],
-                )]],
-                colWidths=[16.0 * cm],
-                style=TableStyle(
-                    [
-                        ("BACKGROUND", (0, 0), (-1, -1), hex_color(TEAL)),
-                        ("BOX", (0, 0), (-1, -1), 0, colors.white),
-                        ("LEFTPADDING", (0, 0), (-1, -1), 16),
-                        ("RIGHTPADDING", (0, 0), (-1, -1), 16),
-                        ("TOPPADDING", (0, 0), (-1, -1), 15),
-                        ("BOTTOMPADDING", (0, 0), (-1, -1), 15),
-                    ]
-                ),
+            highlight_box(
+                "A pontualidade de R03 e R05 caiu nos turnos diurnos desde 6 de abril; obras no corredor são a explicação mais plausível, a confirmar com GPS e cronogramas.",
+                styles,
+                TEAL,
+                light_text=True,
             ),
             Spacer(1, 10),
             paragraph(
@@ -570,7 +622,11 @@ def build_report() -> Path:
         Paragraph("4<br/><b>explicar</b>", styles["BodySmall"]),
         Paragraph("5<br/><b>recomendar</b>", styles["BodySmall"]),
     ]]
-    workflow_table = Table(workflow, colWidths=[3.1 * cm] * 5, rowHeights=[1.45 * cm])
+    workflow_table = Table(
+        workflow,
+        colWidths=[CONTENT_WIDTH / 5] * 5,
+        rowHeights=[1.45 * cm],
+    )
     workflow_table.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (0, 0), hex_color(BLUE)),
         ("BACKGROUND", (1, 0), (1, 0), hex_color(YELLOW)),
@@ -671,7 +727,13 @@ def build_report() -> Path:
                 f"Na base tratada, a pontualidade geral é {metrics['punctuality']:.1f}%, a mediana do atraso é {metrics['median_delay']:.0f} minuto e {metrics['after_shift']} viagens ({metrics['after_shift_pct']:.1f}%) chegam depois do início do turno. A tabela evidencia que R03 e R05 são as únicas rotas com pontualidade abaixo de 70%.",
                 styles["Body"],
             ),
-            styled_table(route_rows, [2.0 * cm, 2.2 * cm, 3.0 * cm, 2.2 * cm, 2.2 * cm, 2.2 * cm, 2.2 * cm], font_size=7.3, alignments=["LEFT", "CENTER", "CENTER", "CENTER", "CENTER", "CENTER", "CENTER"]),
+            styled_table(
+                route_rows,
+                [2.0 * cm, 2.2 * cm, 3.0 * cm, 2.2 * cm, 2.2 * cm, 2.2 * cm, 2.2 * cm],
+                font_size=7.3,
+                alignments=["LEFT", "CENTER", "CENTER", "CENTER", "CENTER", "CENTER", "CENTER"],
+                highlight_rows=[(3, "#FBE3DC"), (5, "#DDF2EB")],
+            ),
             Paragraph("5.2 Variabilidade", styles["Heading2"]),
             paragraph(
                 "R03 e R05 apresentam mediana positiva e desvio padrão próximo de dez minutos. As demais rotas têm mediana negativa, indicando chegada adiantada, e dispersão menor. Esse contraste mostra por que duas médias parecidas em um recorte agregado não garantem o mesmo risco operacional.",
@@ -698,6 +760,12 @@ def build_report() -> Path:
                 styles,
                 width=16.2 * cm,
             ),
+            highlight_box(
+                "Ponto de atenção: R03 e R05 mudam juntas a partir de 6 de abril, enquanto as demais rotas permanecem próximas do padrão anterior.",
+                styles,
+                YELLOW,
+            ),
+            Spacer(1, 7),
             Paragraph("6.1 Evidência", styles["Heading2"]),
             paragraph(
                 f"Até 4 de abril, R03 e R05 se comportam de forma semelhante às demais rotas. A partir de 6 de abril, a mediana móvel das duas rotas diurnas sobe para uma faixa de aproximadamente 7 a 15 minutos. No período posterior, a pontualidade do grupo crítico é {metrics['target_punctuality']:.1f}%, contra {metrics['other_punctuality']:.1f}% nas demais rotas diurnas.",
@@ -726,6 +794,11 @@ def build_report() -> Path:
                 "O heatmap reduz duas explicações alternativas. Primeiro, o problema não afeta todas as rotas da Viação Beta: R07 e R08 permanecem estáveis. Segundo, R03 e R05 alcançam 96% de pontualidade no turno noturno. A combinação rota × turno aponta para uma condição diurna no corredor compartilhado, e não para falha geral da empresa ou dos veículos.",
                 styles["Body"],
             ),
+            highlight_box(
+                "Comparação decisiva: nas mesmas rotas, a noite preserva 96% de pontualidade; a queda está concentrada nos turnos diurnos.",
+                styles,
+                MINT,
+            ),
             Paragraph("7.1 Mudança por turno", styles["Heading2"]),
         ]
     )
@@ -737,7 +810,13 @@ def build_report() -> Path:
     ]
     story.extend(
         [
-            styled_table(turn_table, [2.4 * cm, 2.5 * cm, 2.5 * cm, 2.5 * cm, 6.1 * cm], font_size=7.7, alignments=["LEFT", "CENTER", "CENTER", "CENTER", "LEFT"]),
+            styled_table(
+                turn_table,
+                [2.4 * cm, 2.5 * cm, 2.5 * cm, 2.5 * cm, 6.1 * cm],
+                font_size=7.7,
+                alignments=["LEFT", "CENTER", "CENTER", "CENTER", "LEFT"],
+                highlight_rows=[(1, "#FBE3DC"), (2, "#FBE3DC")],
+            ),
             Spacer(1, 9),
             paragraph(
                 "O turno noturno funciona como grupo de comparação dentro das mesmas rotas. A estabilidade noturna enfraquece a hipótese de defeito permanente nos ônibus e fortalece a busca por uma condição de tráfego ou via que opere principalmente durante o dia.",
@@ -811,7 +890,19 @@ def build_report() -> Path:
                 styles,
                 width=15.3 * cm,
             ),
-            styled_table(rain_rows, [4.2 * cm, 2.8 * cm, 3.2 * cm, 3.0 * cm, 2.8 * cm], font_size=7.5, alignments=["LEFT", "CENTER", "CENTER", "CENTER", "CENTER"]),
+            styled_table(
+                rain_rows,
+                [4.2 * cm, 2.8 * cm, 3.2 * cm, 3.0 * cm, 2.8 * cm],
+                font_size=7.5,
+                alignments=["LEFT", "CENTER", "CENTER", "CENTER", "CENTER"],
+                highlight_rows=[(4, "#DCEFFD")],
+            ),
+            Spacer(1, 8),
+            highlight_box(
+                "A chuva forte agrava os atrasos em toda a operação, mas não explica a ruptura localizada em R03 e R05.",
+                styles,
+                BLUE,
+            ),
             Spacer(1, 8),
             paragraph(
                 f"A correlação de Spearman entre chuva e atraso é {correlation:.2f}, compatível com associação moderada. Acima de 25 mm, a pontualidade cai acentuadamente em toda a operação. Entretanto, depois de 6 de abril R03/R05 continuam atrasadas mesmo com chuva baixa, enquanto as demais rotas permanecem próximas do planejado. A chuva agrava, mas não é explicação suficiente para a ruptura localizada.",
@@ -849,7 +940,12 @@ def build_report() -> Path:
     ]
     story.extend(
         [
-            styled_table(final_hypotheses, [3.0 * cm, 4.6 * cm, 4.9 * cm, 3.5 * cm], font_size=6.7),
+            styled_table(
+                final_hypotheses,
+                [3.0 * cm, 4.6 * cm, 4.9 * cm, 3.5 * cm],
+                font_size=6.7,
+                highlight_rows=[(2, "#FCE9A9")],
+            ),
             Paragraph("10.1 Explicação mais plausível", styles["Heading2"]),
             paragraph(
                 "A explicação mais plausível é uma restrição diurna no corredor compartilhado pelas rotas R03 e R05, compatível com obra na via. A ruptura começa em 6 de abril; o primeiro registro de obra aparece em 7 de abril; os registros de obra se limitam às duas rotas; e o turno noturno permanece estável. O conjunto é coerente, mas ainda observacional.",
@@ -913,23 +1009,14 @@ def build_report() -> Path:
                 "A chuva forte aumenta o risco de atraso em toda a operação e precisa ser considerada no planejamento. Contudo, ela não explica por que apenas R03 e R05 mudam de patamar. A sequência temporal, a concentração diurna e os registros de obra exclusivamente nas duas rotas tornam a restrição no corredor compartilhado a explicação mais plausível. A confirmação depende do cruzamento com cronogramas de obra e dados de GPS.",
                 styles["Body"],
             ),
-            Table(
-                [[Paragraph(
-                    "Conclusão técnica: evidência suficiente para priorizar investigação e piloto operacional, mas insuficiente para declarar causalidade.",
-                    styles["Callout"],
-                )]],
-                colWidths=[16.0 * cm],
-                style=TableStyle([
-                    ("BACKGROUND", (0, 0), (-1, -1), hex_color(CORAL)),
-                    ("LEFTPADDING", (0, 0), (-1, -1), 16),
-                    ("RIGHTPADDING", (0, 0), (-1, -1), 16),
-                    ("TOPPADDING", (0, 0), (-1, -1), 14),
-                    ("BOTTOMPADDING", (0, 0), (-1, -1), 14),
-                ]),
+            highlight_box(
+                "Conclusão técnica: evidência suficiente para priorizar investigação e piloto operacional, mas insuficiente para declarar causalidade.",
+                styles,
+                CORAL,
             ),
             Paragraph("12.1 Reprodutibilidade", styles["Heading2"]),
             paragraph(
-                "O arquivo transporte_fretado_rota_em_dia.ipynb contém a exploração, as estatísticas, o pipeline de limpeza, as cinco visualizações, a revisão das hipóteses e a preparação da narrativa. O arquivo pode ser aberto no Google Colab e executado integralmente com o CSV entregue na mesma pasta.",
+                "O arquivo transporte_fretado_rota_em_dia.ipynb contém a exploração, as estatísticas, o pipeline de limpeza, as cinco visualizações, a revisão das hipóteses e a preparação da narrativa. O arquivo pode ser aberto no Google Colab e executado integralmente com o CSV bruto disponível na pasta dataset.",
                 styles["Body"],
             ),
             Paragraph("12.2 Materiais do curso utilizados", styles["Heading2"]),
