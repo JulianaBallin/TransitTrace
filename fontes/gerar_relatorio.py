@@ -673,7 +673,8 @@ def build_report() -> Path:
             styled_table(quality_rows, [3.1 * cm, 4.0 * cm, 5.2 * cm, 3.7 * cm], font_size=6.8),
             Paragraph("4.1 Decisões críticas", styles["Heading2"]),
             bullet("Os horários são padronizados para HH:MM e o atraso é recalculado para resolver 12 divergências.", styles),
-            bullet("Seis atrasos acima de 12 horas são fisicamente incompatíveis com a operação descrita e ficam ausentes no indicador.", styles),
+            bullet("As 15 duplicatas são cópias exatas inseridas logo após o registro original; apenas a segunda ocorrência é removida.", styles),
+            bullet("Seis atrasos acima de 12 horas combinam horário previsto às 05:45 com chegada registrada perto das 18:00. O padrão sugere erro de AM e PM, por isso o atraso fica ausente sem excluir a viagem.", styles),
             bullet("Cinco valores de passageiros acima de 44 lugares ficam ausentes apenas nessa variável.", styles),
             bullet("As 145 ausências de chuva não são imputadas; o gráfico chuva × atraso usa somente pares observados.", styles),
             Paragraph("4.2 Antes e depois", styles["Heading2"]),
@@ -681,18 +682,21 @@ def build_report() -> Path:
     )
     comparison_table = [
         ["Indicador", "Antes", "Depois"],
-        ["Registros", f"{len(raw):,}", f"{len(data):,}"],
+        ["Viagens na base", f"{len(raw):,}", f"{len(data):,}"],
+        ["Atrasos válidos", f"{raw['atraso_min'].notna().sum():,}", f"{data['atraso_min'].notna().sum():,}"],
         ["Rótulos de rota", f"{raw['rota'].nunique()}", f"{data['rota'].nunique()}"],
         ["Rótulos de turno", f"{raw['turno'].nunique()}", f"{data['turno'].nunique()}"],
         ["Atraso médio", f"{raw['atraso_min'].mean():.2f} min", f"{data['atraso_min'].mean():.2f} min"],
+        ["Mediana do atraso", f"{raw['atraso_min'].median():.0f} min", f"{data['atraso_min'].median():.0f} min"],
         ["Pontualidade", f"{raw['atraso_min'].le(5).mean() * 100:.1f}%", f"{data['pontual'].mean() * 100:.1f}%"],
+        ["Chegadas > 15 min", f"{raw['atraso_min'].gt(15).sum()}", f"{data['apos_inicio_turno'].sum():.0f}"],
     ]
     story.extend(
         [
             styled_table(comparison_table, [6.0 * cm, 5.0 * cm, 5.0 * cm], font_size=8, alignments=["LEFT", "CENTER", "CENTER"]),
             Spacer(1, 8),
             paragraph(
-                "A média cai de forma importante porque os extremos inválidos deixam de distorcer o resultado. A mediana, a ruptura temporal e a concentração em R03/R05 permanecem. Assim, a conclusão principal sobrevive ao processo de limpeza.",
+                "Todos os indicadores gerais puderam ser calculados antes da limpeza porque o atraso já era numérico e estava preenchido. A comparação por rota e turno, entretanto, não era confiável antes da padronização, pois grafias diferentes fragmentavam os mesmos grupos. A média cai porque extremos inválidos deixam de distorcer o resultado; a mediana, a ruptura temporal e a concentração em R03/R05 permanecem.",
                 styles["Body"],
             ),
             PageBreak(),
@@ -756,7 +760,7 @@ def build_report() -> Path:
             figure(
                 CHART_DIR / "01_serie_rotas.png",
                 "Figura 2 · R03 e R05 mudam de patamar a partir de 6 de abril",
-                "Série da mediana diária com janela móvel de sete dias de operação. R03 e R05 são destacadas; as demais rotas ficam em cinza. A linha amarela marca 6 de abril de 2026.",
+                "Média móvel de sete dias de operação calculada sobre a média diária do atraso. R03 e R05 são destacadas; as demais rotas ficam em cinza. A linha amarela marca 6 de abril de 2026.",
                 styles,
                 width=16.2 * cm,
             ),
@@ -768,7 +772,7 @@ def build_report() -> Path:
             Spacer(1, 7),
             Paragraph("6.1 Evidência", styles["Heading2"]),
             paragraph(
-                f"Até 4 de abril, R03 e R05 se comportam de forma semelhante às demais rotas. A partir de 6 de abril, a mediana móvel das duas rotas diurnas sobe para uma faixa de aproximadamente 7 a 15 minutos. No período posterior, a pontualidade do grupo crítico é {metrics['target_punctuality']:.1f}%, contra {metrics['other_punctuality']:.1f}% nas demais rotas diurnas.",
+                f"A média móvel é calculável porque há datas ordenadas e observações diárias por rota. Até 4 de abril, R03 e R05 se comportam de forma semelhante às demais rotas. A partir de 6 de abril, a média móvel das duas rotas passa a registrar atrasos recorrentes. No período posterior, a pontualidade do grupo crítico é {metrics['target_punctuality']:.1f}%, contra {metrics['other_punctuality']:.1f}% nas demais rotas diurnas.",
                 styles["Body"],
             ),
             Paragraph("6.2 Interpretação e limitação", styles["Heading2"]),
@@ -880,6 +884,22 @@ def build_report() -> Path:
             str(label), f"{int(row['viagens'])}", f"{row['pontualidade'] * 100:.1f}%",
             f"{row['mediana']:.1f} min", f"{int(row['após'])}",
         ])
+    controlled = rain[
+        rain["data"].ge("2026-04-06")
+        & rain["turno"].isin(["Manhã", "Tarde"])
+    ]
+    controlled_stats = controlled.groupby(
+        ["faixa", "grupo_rotas"], observed=True
+    )["pontual"].agg(viagens="size", pontualidade="mean")
+    controlled_rows = [["Chuva desde 06/04", "R03 e R05", "Demais rotas"]]
+    for label in rain_stats.index:
+        cells = []
+        for group in ["R03 e R05", "Demais rotas"]:
+            row = controlled_stats.loc[(label, group)]
+            cells.append(
+                f"{row['pontualidade'] * 100:.0f}% ({int(row['viagens'])} viagens)"
+            )
+        controlled_rows.append([str(label), *cells])
     story.extend(
         [
             Paragraph("9. Chuva como fator agravante", styles["Heading1"]),
@@ -905,8 +925,14 @@ def build_report() -> Path:
             ),
             Spacer(1, 8),
             paragraph(
-                f"A correlação de Spearman entre chuva e atraso é {correlation:.2f}, compatível com associação moderada. Acima de 25 mm, a pontualidade cai acentuadamente em toda a operação. Entretanto, depois de 6 de abril R03/R05 continuam atrasadas mesmo com chuva baixa, enquanto as demais rotas permanecem próximas do planejado. A chuva agrava, mas não é explicação suficiente para a ruptura localizada.",
+                f"A correlação de Spearman entre chuva e atraso é {correlation:.2f}, compatível com associação moderada. Para separar chuva, período e turno, a tabela compara os grupos desde 6 de abril apenas de manhã e à tarde. Sem chuva, R03/R05 têm {metrics['dry_target_punctuality']:.0f}% de pontualidade contra {metrics['dry_other_punctuality']:.0f}% nas demais rotas. A chuva agrava os atrasos, mas não explica sozinha a ruptura localizada.",
                 styles["Body"],
+            ),
+            styled_table(
+                controlled_rows,
+                [6.0 * cm, 4.8 * cm, 4.8 * cm],
+                font_size=7.5,
+                alignments=["LEFT", "CENTER", "CENTER"],
             ),
             PageBreak(),
         ]
@@ -922,7 +948,7 @@ def build_report() -> Path:
         [
             Paragraph("H1 · Chuva", styles["BodySmall"]),
             Paragraph("Associação moderada e 180 atrasos com chuva forte.", styles["BodySmall"]),
-            Paragraph("Efeito geral; não coincide com a concentração em R03/R05.", styles["BodySmall"]),
+            Paragraph(f"Efeito geral; sem chuva, R03/R05 têm {metrics['dry_target_punctuality']:.0f}% de pontualidade diurna contra {metrics['dry_other_punctuality']:.0f}% nas demais.", styles["BodySmall"]),
             Paragraph("Agravante, não causa principal.", styles["BodySmall"]),
         ],
         [
@@ -986,7 +1012,7 @@ def build_report() -> Path:
             Paragraph("11.2 Monitoramento recomendado", styles["Heading2"]),
             bullet("Painel semanal de pontualidade por rota × turno, com mediana e P90 do atraso.", styles),
             bullet("Registro obrigatório de ocorrência para atrasos acima de cinco minutos.", styles),
-            bullet("Alerta quando a mediana móvel de sete dias superar cinco minutos por três dias de operação.", styles),
+            bullet("Alerta quando a média móvel de sete dias de operação superar cinco minutos.", styles),
             bullet("Revisão do piloto após duas semanas, comparando com as demais rotas e com o turno noturno.", styles),
             Paragraph("11.3 Pontos de aprendizado", styles["Heading2"]),
             bullet("A média geral pode esconder um problema localizado em rota, turno e período.", styles),
