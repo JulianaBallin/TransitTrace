@@ -148,7 +148,7 @@ def clean_data(raw: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
                     f"{int(impossible_delay.sum())} atrasos > 120 min e "
                     f"{int(impossible_capacity.sum())} lotações > 44"
                 ),
-                "tratamento": "Marcar como ausente, preservando a viagem",
+                "tratamento": "Marcar como ausente, preservando a viagem; os atrasos parecem erro de 12 h",
                 "impacto": "Extremos impossíveis não distorcem médias",
             },
         ]

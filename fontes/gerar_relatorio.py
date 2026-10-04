@@ -673,7 +673,8 @@ def build_report() -> Path:
             styled_table(quality_rows, [3.1 * cm, 4.0 * cm, 5.2 * cm, 3.7 * cm], font_size=6.8),
             Paragraph("4.1 Decisões críticas", styles["Heading2"]),
             bullet("Os horários são padronizados para HH:MM e o atraso é recalculado para resolver 12 divergências.", styles),
-            bullet("Seis atrasos acima de 12 horas são fisicamente incompatíveis com a operação descrita e ficam ausentes no indicador.", styles),
+            bullet("As 15 duplicatas estão na linha imediatamente seguinte ao registro original. Como cada rota faz uma viagem por turno e por dia, uma segunda linha idêntica não é outra viagem.", styles),
+            bullet("Seis atrasos entre 714 e 739 minutos, todos da manhã, chegaram registrados entre 17:39 e 18:04 para uma viagem prevista às 05:45. Subtrair 12 horas dá entre -6 e +19 minutos, o que sugere erro de AM/PM no registro. Como é uma hipótese, o atraso fica ausente em vez de corrigido; o efeito é de 6 em 2.448 viagens.", styles),
             bullet("Cinco valores de passageiros acima de 44 lugares ficam ausentes apenas nessa variável.", styles),
             bullet("As 145 ausências de chuva não são imputadas; o gráfico chuva × atraso usa somente pares observados.", styles),
             Paragraph("4.2 Antes e depois", styles["Heading2"]),
@@ -708,6 +709,8 @@ def build_report() -> Path:
         após_turno=("apos_inicio_turno", "sum"),
     )
     route_summary["pontualidade"] *= 100
+    zone_punctuality = data.groupby("zona_origem")["pontual"].mean() * 100
+    company_punctuality = data.groupby("empresa")["pontual"].mean() * 100
     route_rows = [["Rota", "Viagens", "Pontualidade", "Média", "Mediana", "Desvio", "> 15 min"]]
     for route, row in route_summary.iterrows():
         route_rows.append([
@@ -736,7 +739,8 @@ def build_report() -> Path:
             ),
             Paragraph("5.2 Variabilidade", styles["Heading2"]),
             paragraph(
-                "R03 e R05 apresentam mediana positiva e desvio padrão próximo de dez minutos. As demais rotas têm mediana negativa, indicando chegada adiantada, e dispersão menor. Esse contraste mostra por que duas médias parecidas em um recorte agregado não garantem o mesmo risco operacional.",
+                "R03 e R05 apresentam mediana positiva e desvio padrão próximo de dez minutos. As demais rotas têm mediana negativa, indicando chegada adiantada, e dispersão menor. Esse contraste mostra por que duas médias parecidas em um recorte agregado não garantem o mesmo risco operacional. "
+                f"Por zona de origem, a Leste tem a menor pontualidade ({zone_punctuality['Leste']:.1f}%); por empresa, a Viação Beta ({company_punctuality['Viação Beta']:.1f}% contra {company_punctuality['Viação Alfa']:.1f}% da Alfa). Nenhum dos dois recortes isola o problema: a zona Leste reúne apenas R03 e R05, e a Beta também opera R07 e R08.",
                 styles["Body"],
             ),
             figure(
@@ -880,6 +884,19 @@ def build_report() -> Path:
             str(label), f"{int(row['viagens'])}", f"{row['pontualidade'] * 100:.1f}%",
             f"{row['mediana']:.1f} min", f"{int(row['após'])}",
         ])
+    controlled = rain[
+        rain["data"].ge("2026-04-06") & rain["turno"].isin(["Manhã", "Tarde"])
+    ]
+    controlled_stats = controlled.groupby(["faixa", "grupo_rotas"], observed=True)["pontual"].agg(
+        viagens="size", pontualidade="mean"
+    )
+    controlled_rows = [["Chuva (desde 06/04, manhã e tarde)", "R03 e R05", "Demais rotas"]]
+    for label in rain_stats.index:
+        cells = []
+        for group in ["R03 e R05", "Demais rotas"]:
+            row = controlled_stats.loc[(label, group)]
+            cells.append(f"{row['pontualidade'] * 100:.0f}% ({int(row['viagens'])} viagens)")
+        controlled_rows.append([str(label), *cells])
     story.extend(
         [
             Paragraph("9. Chuva como fator agravante", styles["Heading1"]),
@@ -905,8 +922,14 @@ def build_report() -> Path:
             ),
             Spacer(1, 8),
             paragraph(
-                f"A correlação de Spearman entre chuva e atraso é {correlation:.2f}, compatível com associação moderada. Acima de 25 mm, a pontualidade cai acentuadamente em toda a operação. Entretanto, depois de 6 de abril R03/R05 continuam atrasadas mesmo com chuva baixa, enquanto as demais rotas permanecem próximas do planejado. A chuva agrava, mas não é explicação suficiente para a ruptura localizada.",
+                f"A correlação de Spearman entre chuva e atraso é {correlation:.2f}, compatível com associação moderada. Acima de 25 mm, a pontualidade cai acentuadamente em toda a operação. Para separar a chuva do efeito da rota, a tabela abaixo compara os dois grupos no mesmo período e nos mesmos turnos: sem chuva, R03/R05 já têm {metrics['dry_target_punctuality']:.0f}% de pontualidade contra {metrics['dry_other_punctuality']:.0f}% nas demais. Com chuva forte as duas caem a 0%, mas são poucas viagens. A chuva agrava, mas não é explicação suficiente para a ruptura localizada.",
                 styles["Body"],
+            ),
+            styled_table(
+                controlled_rows,
+                [6.0 * cm, 4.8 * cm, 4.8 * cm],
+                font_size=7.5,
+                alignments=["LEFT", "CENTER", "CENTER"],
             ),
             PageBreak(),
         ]
@@ -922,7 +945,7 @@ def build_report() -> Path:
         [
             Paragraph("H1 · Chuva", styles["BodySmall"]),
             Paragraph("Associação moderada e 180 atrasos com chuva forte.", styles["BodySmall"]),
-            Paragraph("Efeito geral; não coincide com a concentração em R03/R05.", styles["BodySmall"]),
+            Paragraph(f"Efeito geral; sem chuva, R03/R05 têm {metrics['dry_target_punctuality']:.0f}% de pontualidade diurna contra {metrics['dry_other_punctuality']:.0f}% nas demais.", styles["BodySmall"]),
             Paragraph("Agravante, não causa principal.", styles["BodySmall"]),
         ],
         [
@@ -960,7 +983,7 @@ def build_report() -> Path:
             figure(
                 CHART_DIR / "06_exploratorio_explicativo.png",
                 "Figura 6 · Comparação entre a visão exploratória e a mensagem final",
-                "A versão final reduz as oito linhas a dois grupos comparáveis, destaca a data de ruptura e mantém unidades e contexto. A seleção visual não altera os dados; apenas prioriza a mensagem sustentada pelas evidências.",
+                "A versão final reduz as oito linhas a dois grupos comparáveis, afirma o achado no título, anota a data da ruptura, os valores de cada grupo e o limite de pontualidade, e mantém eixos com título e unidade. A seleção visual não altera os dados; apenas prioriza a mensagem sustentada pelas evidências.",
                 styles,
                 width=15.5 * cm,
             ),
