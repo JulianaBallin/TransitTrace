@@ -173,7 +173,23 @@ def summary_metrics(data: pd.DataFrame) -> dict[str, float | int | str]:
         & data["turno"].isin(["Manhã", "Tarde"])
     ]
 
+    dry_day = after_change[
+        after_change["turno"].isin(["Manhã", "Tarde"]) & after_change["chuva_mm"].eq(0)
+    ]
+    late = data[data["pontual"].eq(False)]
+
     return {
+        "target_trips": int(target_day["atraso_min"].notna().sum()),
+        "target_after_shift": int(target_day["apos_inicio_turno"].sum()),
+        "other_after_shift": int(other_day["apos_inicio_turno"].sum()),
+        "dry_target_punctuality": float(
+            dry_day.loc[dry_day["rota"].isin(["R03", "R05"]), "pontual"].mean() * 100
+        ),
+        "dry_other_punctuality": float(
+            dry_day.loc[~dry_day["rota"].isin(["R03", "R05"]), "pontual"].mean() * 100
+        ),
+        "mechanical_late": int(late["ocorrencia"].isin(["Pane mecânica", "Pneu furado"]).sum()),
+        "mean_delay": float(data["atraso_min"].mean()),
         "rows_raw": 2463,
         "rows_clean": int(len(data)),
         "valid_delays": int(data["atraso_min"].notna().sum()),
