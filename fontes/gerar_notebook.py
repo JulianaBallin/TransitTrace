@@ -51,7 +51,24 @@ def build_notebook() -> Path:
 
             [Consultar o relatório técnico descritivo](https://github.com/JulianaBallin/TransitTrace/blob/main/docs/relatorio/relatorio_tecnico_rota_em_dia.pdf)
 
-            > **Pergunta central:** por que os atrasos aumentaram, onde se concentram e quais evidências sustentam a explicação mais plausível?
+            > **Pergunta central:** Por que os atrasos do transporte fretado aumentaram, onde se concentram e quais evidências sustentam a explicação mais plausível?
+            """
+        ),
+        markdown(
+            """
+            ## Pergunta Central do Projeto
+
+            > **Por que os atrasos do transporte fretado aumentaram, onde se concentram e quais evidências sustentam a explicação mais plausível?**
+
+            O notebook foi estruturado para responder diretamente às três partes da pergunta:
+
+            | Parte da pergunta | Como será respondida |
+            |---|---|
+            | Por que aumentaram? | Comparação de hipóteses sobre chuva, corredor compartilhado e ocorrências pontuais |
+            | Onde se concentram? | Análises por rota, turno, período, zona e empresa |
+            | Quais evidências sustentam a explicação? | Estatísticas, média móvel, cinco visualizações e validação antes e depois da limpeza |
+
+            A resposta final retoma essas três partes e separa evidência observada, explicação plausível e limitação causal.
             """
         ),
         markdown(
@@ -158,6 +175,8 @@ def build_notebook() -> Path:
             # Etapa 1 · Primeiro diagnóstico
 
             Nesta etapa a base é observada como foi recebida. Não corrigimos rótulos, duplicatas ou valores extremos.
+
+            **Contribuição para a pergunta central:** localizar os primeiros indícios do problema e formular explicações concorrentes.
             """
         ),
         code(
@@ -247,6 +266,8 @@ def build_notebook() -> Path:
             # Etapa 2 · Estatística descritiva
 
             Comparamos tendência central, variabilidade, quartis, outliers, rotas, turnos, zonas, empresas e evolução temporal. A base ainda não foi corrigida, portanto as conclusões permanecem provisórias.
+
+            **Contribuição para a pergunta central:** medir onde, quando e com que intensidade os atrasos aumentaram.
             """
         ),
         code(
@@ -413,6 +434,8 @@ def build_notebook() -> Path:
             # Etapa 3 · Limpeza e validação
 
             O pipeline segue quatro princípios: preservar a base bruta, declarar critérios, investigar antes de remover e não imputar informação desconhecida sem justificativa.
+
+            **Contribuição para a pergunta central:** verificar se as evidências continuam válidas depois da correção dos problemas de qualidade.
 
             **Regras adotadas:**
 
@@ -656,6 +679,8 @@ def build_notebook() -> Path:
             # Etapa 4 · EDA e visualização
 
             Cada gráfico responde uma pergunta. Depois de cada figura registramos evidência, interpretação, hipótese e limitação.
+
+            **Contribuição para a pergunta central:** comparar as explicações e reunir as evidências que sustentam a resposta final.
 
             ### Média móvel
 
@@ -954,14 +979,19 @@ def build_notebook() -> Path:
         ),
         markdown(
             """
-            # Conclusão e recomendações
+            # Resposta à Pergunta Central
 
-            1. **O que aconteceu?** A pontualidade geral ficou em 81,9%, mas a média esconde uma mudança brusca nas rotas R03 e R05.
-            2. **Onde aconteceu?** Nos turnos da manhã e da tarde das duas rotas, ambas da zona Leste. O turno noturno permaneceu estável.
-            3. **Quando começou?** Em 6 de abril de 2026. O primeiro registro de “Obra na via” aparece em 7 de abril.
-            4. **Quais evidências sustentam a explicação?** Série temporal, heatmap rota × turno, deslocamento das distribuições e registros de obra somente em R03/R05.
-            5. **Qual explicação é mais plausível?** Interferência diurna no corredor compartilhado, compatível com obra na via. Chuva agrava o atraso, mas não explica a concentração.
-            6. **O que ainda não pode ser afirmado?** Os dados não provam causalidade nem identificam o trecho exato.
+            > **Por que os atrasos do transporte fretado aumentaram, onde se concentram e quais evidências sustentam a explicação mais plausível?**
+
+            | Parte da pergunta | Resposta sustentada pelos dados |
+            |---|---|
+            | Por que aumentaram? | A explicação mais plausível é uma restrição diurna no corredor compartilhado por R03 e R05, compatível com obra na via. A chuva agrava os atrasos, mas não explica a concentração. |
+            | Onde se concentram? | Em R03 e R05, nos turnos da manhã e tarde, a partir de 6 de abril de 2026. O turno noturno e as demais rotas permanecem próximos do padrão anterior. |
+            | Quais evidências sustentam a explicação? | A média móvel muda de patamar em 06/04; a pontualidade diurna de R03/R05 cai para 18,8% contra 88,5% nas demais; a mediana chega a 12 minutos; o problema permanece sem chuva; e os registros de obra aparecem somente nas duas rotas. |
+
+            **Resposta integrada:** os atrasos aumentaram de forma localizada, não em toda a operação. O conjunto das evidências favorece a hipótese de uma restrição diurna no corredor de R03 e R05.
+
+            **Limitação central:** a base mostra associação temporal e operacional, mas não prova causalidade nem identifica o trecho exato. A confirmação exige GPS e cronogramas de obra.
 
             ### Próximas ações
 

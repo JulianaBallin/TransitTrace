@@ -401,28 +401,40 @@ def slide_problem(prs: Presentation, metrics: dict) -> None:
         1.83,
         opacity=0.28,
     )
-    add_header(slide, "O Problema", "02", color=INK)
-    add_card(slide, 0.72, 1.22, 7.35, 3.25, color=CREAM)
+    add_header(slide, "Problema e Pergunta Central", "02", color=INK)
+    add_card(slide, 0.72, 1.22, 7.35, 3.50, color=CREAM)
     add_text(
         slide,
         "Colaboradores chegam atrasados à linha porque os ônibus fretados não cumprem o horário planejado.",
         1.08,
-        1.72,
+        1.50,
         6.65,
-        1.12,
-        size=24,
+        0.66,
+        size=16,
         color=TEAL,
         bold=True,
     )
     add_text(
         slide,
-        "O RH precisa saber se a piora é geral, onde ela se concentra e qual explicação os dados realmente sustentam.",
+        "PERGUNTA CENTRAL",
         1.08,
-        3.18,
+        2.28,
         6.5,
-        0.88,
-        size=16,
-        color=INK,
+        0.30,
+        size=12,
+        color=CORAL,
+        bold=True,
+    )
+    add_text(
+        slide,
+        "Por que os atrasos do transporte fretado aumentaram, onde se concentram e quais evidências sustentam a explicação mais plausível?",
+        1.08,
+        2.65,
+        6.55,
+        1.58,
+        size=20,
+        color=TEAL,
+        bold=True,
     )
     add_metric_card(slide, "8", "Rotas", 8.48, 1.30, 1.75, TEAL)
     add_metric_card(slide, "3", "Turnos", 10.39, 1.30, 1.75, CORAL)
@@ -446,11 +458,11 @@ def slide_questions(prs: Presentation) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_background(slide, CREAM)
     add_corner_details(slide, variant=2)
-    add_header(slide, "Perguntas e Hipóteses", "03")
+    add_header(slide, "Hipóteses Para Responder", "03")
     add_card(slide, 0.78, 1.12, 11.75, 1.18, color=TEAL)
     add_text(
         slide,
-        "A queda é geral por causa da chuva ou está concentrada em rotas, turnos e períodos específicos?",
+        "Testamos três explicações concorrentes para responder por que os atrasos aumentaram.",
         1.15,
         1.43,
         11.0,
@@ -472,7 +484,7 @@ def slide_questions(prs: Presentation) -> None:
         add_text(slide, title, x + 1.02, 3.05, 2.25, 0.45, size=18, color=TEAL, bold=True)
         add_text(slide, text, x + 0.30, 3.81, 3.05, 0.90, size=15, color=INK, align=PP_ALIGN.CENTER)
         add_text(slide, "Testar · Comparar · Limitar", x + 0.42, 5.03, 2.80, 0.25, size=10, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
-    add_text(slide, "Não buscamos uma resposta escondida. Construímos a explicação mais defensável.", 1.8, 6.35, 9.8, 0.38, size=16, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
+    add_text(slide, "Cada hipótese foi confrontada com evidências, comparações e limitações.", 1.8, 6.35, 9.8, 0.38, size=16, color=TEAL, bold=True, align=PP_ALIGN.CENTER)
 
 
 def slide_dataset(prs: Presentation) -> None:
@@ -538,12 +550,12 @@ def slide_evidence(prs: Presentation) -> None:
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_background(slide, YELLOW)
     add_corner_details(slide, variant=2)
-    add_header(slide, "Evidências e Conclusão", "06", color=TEAL)
+    add_header(slide, "Resposta à Pergunta Central", "06", color=TEAL)
     add_picture_contain(slide, CHART_DIR / "02_heatmap_rota_turno.png", 0.55, 1.06, 6.58, 5.78)
     cards = [
-        ("Chuva Agrava", "Correlação moderada, mas o efeito aparece em toda a operação.", PASTEL_BLUE),
-        ("Obra Localiza", "“Obra na via” surge em 07/04 somente em R03 e R05.", PASTEL_CORAL),
-        ("Noite Preserva", "As duas rotas mantêm 96% de pontualidade no turno noturno.", PASTEL_MINT),
+        ("Onde?", "R03 e R05, nos turnos da manhã e tarde, desde 06/04.", PASTEL_BLUE),
+        ("Por quê?", "Restrição diurna no corredor é a explicação mais plausível.", PASTEL_CORAL),
+        ("Evidências", "Média móvel, heatmap, distribuição, chuva controlada e registros de obra.", PASTEL_MINT),
     ]
     for index, (title, text, color) in enumerate(cards):
         y = 1.23 + index * 1.48
@@ -553,12 +565,12 @@ def slide_evidence(prs: Presentation) -> None:
     add_card(slide, 7.27, 5.72, 5.45, 0.88, color=TEAL)
     add_text(
         slide,
-        "Hipótese mais plausível: restrição diurna no corredor compartilhado.",
+        "A resposta ainda precisa de confirmação com GPS e cronogramas de obra.",
         7.54,
         5.95,
         4.92,
         0.42,
-        size=16,
+        size=15,
         color=CREAM,
         bold=True,
         align=PP_ALIGN.CENTER,

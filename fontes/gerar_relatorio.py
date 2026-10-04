@@ -457,6 +457,10 @@ def build_report() -> Path:
     data, quality = clean_data(raw)
     metrics = summary_metrics(data)
     styles = build_styles()
+    central_question = (
+        "Por que os atrasos do transporte fretado aumentaram, onde se concentram "
+        "e quais evidências sustentam a explicação mais plausível?"
+    )
 
     left_margin = 1.65 * cm
     right_margin = 1.65 * cm
@@ -557,13 +561,20 @@ def build_report() -> Path:
                 "Identificar quando a pontualidade se deteriorou, em quais rotas e turnos a mudança se concentra, quais hipóteses são compatíveis com os dados e quais informações adicionais são necessárias para confirmar a explicação operacional.",
                 styles["Body"],
             ),
-            Paragraph("2.3 Perguntas investigativas", styles["Heading2"]),
+            Paragraph("2.3 Pergunta central", styles["Heading2"]),
+            highlight_box(
+                central_question,
+                styles,
+                TEAL,
+                light_text=True,
+            ),
+            Paragraph("2.4 Perguntas investigativas", styles["Heading2"]),
             bullet("A piora ocorre em toda a operação ou em grupos específicos?", styles),
             bullet("Duas rotas com atraso médio semelhante apresentam a mesma variabilidade?", styles),
             bullet("Existe um ponto de ruptura temporal ou apenas oscilação por chuva?", styles),
             bullet("Ocorrências severas representam casos isolados ou um padrão recorrente?", styles),
             bullet("A limpeza altera o diagnóstico inicial?", styles),
-            Paragraph("2.4 Hipóteses concorrentes", styles["Heading2"]),
+            Paragraph("2.5 Hipóteses concorrentes", styles["Heading2"]),
         ]
     )
     hypothesis_table = [
@@ -1024,28 +1035,63 @@ def build_report() -> Path:
         ]
     )
 
+    central_answers = [
+        ["Parte da pergunta", "Resposta sustentada pelos dados"],
+        [
+            Paragraph("Por que aumentaram?", styles["BodySmall"]),
+            Paragraph(
+                "A explicação mais plausível é uma restrição diurna no corredor "
+                "compartilhado por R03 e R05, compatível com obra na via. A chuva "
+                "agrava os atrasos, mas não explica a concentração.",
+                styles["BodySmall"],
+            ),
+        ],
+        [
+            Paragraph("Onde se concentram?", styles["BodySmall"]),
+            Paragraph(
+                "Em R03 e R05, nos turnos da manhã e tarde, a partir de 6 de abril "
+                "de 2026. O turno noturno e as demais rotas permanecem próximos do "
+                "padrão anterior.",
+                styles["BodySmall"],
+            ),
+        ],
+        [
+            Paragraph("Quais evidências sustentam a explicação?", styles["BodySmall"]),
+            Paragraph(
+                "Mudança da média móvel em 06/04; pontualidade diurna de 18,8% em "
+                "R03/R05 contra 88,5% nas demais; mediana de 12 minutos; diferença "
+                "mantida sem chuva; e registros de obra somente nas duas rotas.",
+                styles["BodySmall"],
+            ),
+        ],
+    ]
     story.extend(
         [
             Paragraph("12. Conclusão", styles["Heading1"]),
-            paragraph(
-                "A análise mostra que o problema não é uma piora uniforme do transporte fretado. O principal movimento ocorre a partir de 6 de abril de 2026 nas rotas R03 e R05, durante manhã e tarde. A pontualidade noturna das mesmas rotas permanece elevada, e as demais rotas mantêm desempenho próximo do planejado.",
-                styles["Body"],
-            ),
-            paragraph(
-                "A chuva forte aumenta o risco de atraso em toda a operação e precisa ser considerada no planejamento. Contudo, ela não explica por que apenas R03 e R05 mudam de patamar. A sequência temporal, a concentração diurna e os registros de obra exclusivamente nas duas rotas tornam a restrição no corredor compartilhado a explicação mais plausível. A confirmação depende do cruzamento com cronogramas de obra e dados de GPS.",
-                styles["Body"],
-            ),
             highlight_box(
-                "Conclusão técnica: evidência suficiente para priorizar investigação e piloto operacional, mas insuficiente para declarar causalidade.",
+                f"Pergunta central: {central_question}",
+                styles,
+                TEAL,
+                light_text=True,
+            ),
+            Paragraph("12.1 Resposta direta", styles["Heading2"]),
+            styled_table(
+                central_answers,
+                [4.3 * cm, 11.7 * cm],
+                font_size=7.2,
+            ),
+            Spacer(1, 9),
+            highlight_box(
+                "Limitação central: a base sustenta a explicação mais plausível, mas não prova causalidade nem identifica o trecho exato. A confirmação exige GPS e cronogramas de obra.",
                 styles,
                 CORAL,
             ),
-            Paragraph("12.1 Reprodutibilidade", styles["Heading2"]),
+            Paragraph("12.2 Reprodutibilidade", styles["Heading2"]),
             paragraph(
                 "O arquivo transporte_fretado_rota_em_dia.ipynb contém a exploração, as estatísticas, o pipeline de limpeza, as cinco visualizações, a revisão das hipóteses e a preparação da narrativa. O arquivo pode ser aberto no Google Colab e executado integralmente com o CSV bruto disponível na pasta dataset.",
                 styles["Body"],
             ),
-            Paragraph("12.2 Materiais do curso utilizados", styles["Heading2"]),
+            Paragraph("12.3 Materiais do curso utilizados", styles["Heading2"]),
             bullet("Unidade 1: fundamentos de Python para dados e IA.", styles),
             bullet("Unidade 2: tendência central, variabilidade, quartis e outliers.", styles),
             bullet("Unidade 3: diagnóstico, padronização, filtragem e rastreabilidade.", styles),
