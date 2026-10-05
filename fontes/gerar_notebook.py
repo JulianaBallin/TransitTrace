@@ -56,19 +56,15 @@ def build_notebook() -> Path:
         ),
         markdown(
             """
-            ## Pergunta Central do Projeto
+            ## Contexto do Desafio
 
-            > **Por que os atrasos do transporte fretado aumentaram, onde se concentram e quais evidências sustentam a explicação mais plausível?**
+            Os colaboradores de uma fábrica de eletroeletrônicos do Distrito Industrial de Manaus chegam para os três turnos em ônibus fretados, em oito rotas que saem de diferentes zonas da cidade. Cada ônibus deve chegar à fábrica 15 minutos antes do início do turno. O RH recebeu reclamações de colaboradores chegando atrasados à linha e pediu uma análise das viagens de fevereiro a maio de 2026, período de chuvas. O desafio é investigar os dados ao longo das quatro unidades do curso e construir uma explicação tecnicamente defensável.
 
-            O notebook foi estruturado para responder diretamente às três partes da pergunta:
+            **Dataset principal:** `projeto_integrador_transporte_fretado.csv`
 
-            | Parte da pergunta | Como será respondida |
-            |---|---|
-            | Por que aumentaram? | Comparação de hipóteses sobre chuva, corredor compartilhado e ocorrências pontuais |
-            | Onde se concentram? | Análises por rota, turno, período, zona e empresa |
-            | Quais evidências sustentam a explicação? | Estatísticas, média móvel, cinco visualizações e validação antes e depois da limpeza |
+            **Indicador principal:** pontualidade (%) = viagens que chegaram até 5 minutos depois do horário previsto ÷ total de viagens × 100.
 
-            A resposta final retoma essas três partes e separa evidência observada, explicação plausível e limitação causal.
+            **Indicadores complementares:** atraso em minutos, representado pela mediana, e viagens que chegaram depois do início do turno, com atraso maior que 15 minutos.
             """
         ),
         markdown(
